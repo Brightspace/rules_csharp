@@ -14,6 +14,7 @@ load(
 load(
     "//csharp/private:rules/imports.bzl",
     _import_library = "import_library",
+    _import_multiframework_library = "import_multiframework_library",
 )
 load(
     "//csharp/private:rules/nuget.bzl",
@@ -30,5 +31,6 @@ csharp_library = _csharp_library
 #csharp_nunit_test = _csharp_nunit_test
 csharp_register_toolchains = _csharp_register_toolchains
 csharp_repositories = _csharp_repositories
+import_multiframework_library = _import_multiframework_library
 import_library = _import_library
 nuget_package = _nuget_package
