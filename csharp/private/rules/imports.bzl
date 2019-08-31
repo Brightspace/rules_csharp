@@ -1,9 +1,8 @@
 load(
     "@d2l_rules_csharp//csharp/private:common.bzl",
-    "get_target_framework_provider",
     "get_transitive_compile_refs",
 )
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework")
+load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework", "CSharpAssembly")
 
 def _import_library(ctx):
     files = []
@@ -20,19 +19,19 @@ def _import_library(ctx):
     if ctx.file.refdll != None:
         files += [ctx.file.refdll]
 
-    target_framework = get_target_framework_provider(ctx.attr.target_framework)
+    tf_provider = CSharpAssembly[ctx.attr.target_framework]
 
     return [
         DefaultInfo(
             files = depset(files),
         ),
-        target_framework(
+        tf_provider(
             out = ctx.file.dll,
             refout = ctx.file.refdll,
             pdb = ctx.file.pdb,
             transitive_compile_refs = get_transitive_compile_refs(
                 ctx.attr.deps,
-                target_framework,
+                ctx.attr.target_framework,
             ),
         ),
     ]

@@ -4,16 +4,13 @@ load(
     "@d2l_rules_csharp//csharp/private:common.bzl",
     "DEFAULT_LANGVERSION",
     "DEFAULT_TARGET_FRAMEWORK",
-    "get_target_framework_provider",
     "is_debug",
 )
 
 def _library_impl(ctx):
     providers = []
 
-    for tf_name in ctx.attr.target_frameworks:
-        target_framework = get_target_framework_provider(tf_name)
-
+    for tfm in ctx.attr.target_frameworks:
         assembly = AssemblyAction(
             ctx.actions,
             name = ctx.attr.name,
@@ -26,7 +23,7 @@ def _library_impl(ctx):
             resources = ctx.files.resources,
             srcs = ctx.files.srcs,
             target = "library",
-            target_framework = target_framework,
+            target_framework = tfm,
             toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"],
         )
 

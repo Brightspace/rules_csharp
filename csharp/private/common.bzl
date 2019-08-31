@@ -1,4 +1,4 @@
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "CSharpAssembly_net472")
+load("@d2l_rules_csharp//csharp/private:providers.bzl", "CompatibleFrameworks", "CSharpAssembly")
 
 # TODO: make this configurable
 DEFAULT_LANGVERSION = "7.3"
@@ -12,20 +12,23 @@ def is_debug(ctx):
     # equivalent to dbg right now but might want to support this in the future.
     return ctx.var["COMPILATION_MODE"] != "opt"
 
-def _resolve_dep(dep, wanted_provider):
+def _resolve_dep(dep, desired_tfm):
     # easy case: we want X, they have X
-    if wanted_provider in dep:
-        return dep[wanted_provider]
+    compatible_tfms = CompatibleFrameworks[desired_tfm]
 
-    # TODO find the next best option if one exists (mirror msbuild behaviour).
-    fail("Couldn't resolve dep to a compatible DLL")
+    for possible_tfm in compatible_tfms:
+        tf_provider = CSharpAssembly[possible_tfm]
+        if tf_provider in dep:
+            return dep[tf_provider]
 
-def get_transitive_compile_refs(deps, provider):
+    fail("The dependency %s is not compatible with %s!" % (str(dep.label), desired_tfm))
+
+def get_transitive_compile_refs(deps, desired_tfm):
     direct = []
     transitive = []
 
     for dep in deps:
-        resolved_dep = _resolve_dep(dep, provider)
+        resolved_dep = _resolve_dep(dep, desired_tfm)
 
         direct.append(
             # If our dependency has a reference assembly, prefer it during
@@ -39,13 +42,5 @@ def get_transitive_compile_refs(deps, provider):
 
     return depset(direct = direct, transitive = transitive)
 
-def get_target_framework_provider(tf_name):
-    if tf_name == "net472":
-        return CSharpAssembly_net472
-    else:
-        fail("Unexpected target framwork \"" + tf_name + "\".")
-
 def get_analyzer_dll(analyzer_target):
-    # I can't think of any reason to do anything other than find the newest
-    # target framework provided by analyzer_target and use that.
-    return analyzer_target[CSharpAssembly_net472].out
+    return analyzer_target[CSharpAssembly["netstandard"]]

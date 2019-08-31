@@ -3,6 +3,7 @@ load(
     "get_analyzer_dll",
     "get_transitive_compile_refs",
 )
+load("@d2l_rules_csharp//csharp/private:providers.bzl", "CSharpAssembly")
 
 def _format_ref_arg(assembly):
     return "/r:" + assembly.path
@@ -33,6 +34,8 @@ def AssemblyAction(
     out = actions.declare_file(name + ".dll")
     refout = actions.declare_file(name + ".ref.dll")
     pdb = actions.declare_file(name + ".pdb")
+
+    tf_provider = CSharpAssembly[target_framework]
 
     transitive_compile_refs = get_transitive_compile_refs(
         deps + extra_deps,
@@ -142,7 +145,7 @@ def AssemblyAction(
         ],
     )
 
-    return target_framework(
+    return tf_provider(
         out = out,
         refout = refout,
         pdb = pdb,
