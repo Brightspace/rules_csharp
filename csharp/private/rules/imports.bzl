@@ -42,8 +42,7 @@ import_library = rule(
     attrs = {
         "target_framework": attr.string(
             doc = "The target framework for this DLL",
-            # mandatory = True,
-            default = "net472",  # TODO: remove this default
+            mandatory = True,
         ),
         "dll": attr.label(
             doc = "A static DLL",

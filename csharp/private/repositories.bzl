@@ -10,14 +10,15 @@ def csharp_repositories():
         build_file = "@d2l_rules_csharp//csharp/private:build-tools.BUILD",
     )
 
-    # TODO: rename this to net472 and make @net// targets the union of targets
-    # from different frameworks.
+    # TODO: create @net namespace to aggregate @net472 etc. with
+    # import_multiframework_library rules.
+
     nuget_package(
-        name = "net",
+        name = "net472",
         package = "Microsoft.NETFramework.ReferenceAssemblies.net472",
         version = "1.0.0-preview.2",
         sha256 = "ebca4bd6142f768e9ab96115a820fa2f5705cb07355e67f67613f58b0c0e3e97",
-        build_file = "@d2l_rules_csharp//csharp/private:netframework.BUILD",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net472.BUILD",
     )
 
     # We need the .NET Core runtime for whatever OS where executing our build

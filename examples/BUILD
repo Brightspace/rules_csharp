@@ -9,5 +9,5 @@ csharp_binary(
 csharp_library(
     name = "lib",
     srcs = ["lib.cs"],
-    deps = ["@net//:System.Linq"],
+    deps = ["@net472//:System.Linq"],
 )
