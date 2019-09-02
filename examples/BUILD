@@ -1,4 +1,10 @@
-load("@d2l_rules_csharp//csharp:defs.bzl", "csharp_binary", "csharp_library", "import_multiframework_library", "csharp_nunit_test")
+load(
+    "@d2l_rules_csharp//csharp:defs.bzl",
+    "csharp_binary",
+    "csharp_library",
+    "import_multiframework_library",
+    "csharp_nunit_test",
+)
 
 # bazel run //examples:hello
 csharp_binary(
@@ -8,6 +14,9 @@ csharp_binary(
 )
 
 # bazel test //examples:lib_test
+# NOTE: this doesn't work yet because we aren't setting up the runfiles
+# correctly. If you copy out all the dlls/exes to a common folder it does
+# though.
 csharp_nunit_test(
     name = "lib_test",
     srcs = ["libtest.cs"],

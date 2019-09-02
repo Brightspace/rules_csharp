@@ -31,8 +31,10 @@ def AssemblyAction(
         target,
         target_framework,
         toolchain):
-    out = actions.declare_file(name + ".dll")
-    refout = actions.declare_file(name + ".ref.dll")
+
+    out_ext = "dll" if target == "library" else "exe"
+    out = actions.declare_file("%s.%s" % (name, out_ext))
+    refout = actions.declare_file("%s.ref.%s" % (name, out_ext))
     pdb = actions.declare_file(name + ".pdb")
 
     tf_provider = CSharpAssembly[target_framework]
