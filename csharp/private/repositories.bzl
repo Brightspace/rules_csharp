@@ -21,6 +21,22 @@ def csharp_repositories():
         build_file = "@d2l_rules_csharp//csharp/private:frameworks/net472.BUILD",
     )
 
+    nuget_package(
+        name = "NUnitLite",
+        package = "NUnitLite",
+        version = "3.12.0",
+        sha256 = "0b05b83f05b4eee07152e88b7b60b093fa408bfea56489a977ae655b640992f2",
+        build_file = "@d2l_rules_csharp//csharp/private:nunit/nunitlite.BUILD",
+    )
+
+    nuget_package(
+        name = "NUnit",
+        package = "NUnit",
+        version = "3.12.0",
+        sha256 = "62b67516a08951a20b12b02e5d20b5045edbb687c3aabe9170286ec5bb9000a1",
+        build_file = "@d2l_rules_csharp//csharp/private:nunit/nunitframework.BUILD",
+    )
+
     # We need the .NET Core runtime for whatever OS where executing our build
     # on so that we can run the .NET core build of the compiler (from
     # @csharp-build-tools).

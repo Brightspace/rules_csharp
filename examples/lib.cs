@@ -9,10 +9,10 @@ namespace Lib {
 
     public static IEnumerable<int> Fibonacci( int x0, int x1 ) {
       while (true) {
+        yield return x0;
         var next = x0 + x1;
         x0 = x1;
         x1 = next;
-        yield return next;
       }
     }
 

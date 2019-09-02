@@ -20,15 +20,14 @@ load(
     "//csharp/private:rules/nuget.bzl",
     _nuget_package = "nuget_package",
 )
-#load(
-#    "//csharp/private:rules/test.bzl",
-#    _csharp_nunit_test = "csharp_nunit_test",
-#)
+load(
+    "//csharp/private:rules/nunit_test.bzl",
+    _csharp_nunit_test = "csharp_nunit_test",
+)
 
 csharp_binary = _csharp_binary
 csharp_library = _csharp_library
-
-#csharp_nunit_test = _csharp_nunit_test
+csharp_nunit_test = _csharp_nunit_test
 csharp_register_toolchains = _csharp_register_toolchains
 csharp_repositories = _csharp_repositories
 import_multiframework_library = _import_multiframework_library

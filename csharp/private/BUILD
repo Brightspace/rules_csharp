@@ -1,5 +1,7 @@
 load(":toolchains.bzl", "configure_toolchain")
 
+exports_files(["nunit/shim.cs"])
+
 toolchain_type(name = "toolchain_type")
 
 configure_toolchain(
