@@ -24,7 +24,6 @@ def AssemblyAction(
         analyzers,
         debug,
         deps,
-        extra_deps,
         langversion,
         resources,
         srcs,
@@ -40,7 +39,7 @@ def AssemblyAction(
     tf_provider = CSharpAssembly[target_framework]
 
     transitive_compile_refs = get_transitive_compile_refs(
-        deps + extra_deps,
+        deps,
         target_framework,
     )
 

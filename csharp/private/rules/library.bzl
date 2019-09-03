@@ -18,7 +18,6 @@ def _library_impl(ctx):
             analyzers = ctx.attr.analyzers,
             debug = is_debug(ctx),
             deps = ctx.attr.deps,
-            extra_deps = [],
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
             srcs = ctx.files.srcs,

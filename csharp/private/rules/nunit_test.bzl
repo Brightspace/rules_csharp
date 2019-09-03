@@ -10,6 +10,8 @@ load(
 def _nunit_test_impl(ctx):
     providers = []
 
+    extra_deps = [ctx.attr._nunitlite, ctx.attr._nunitframework]
+
     for tfm in ctx.attr.target_frameworks:
         assembly = AssemblyAction(
             ctx.actions,
@@ -17,8 +19,7 @@ def _nunit_test_impl(ctx):
             additionalfiles = ctx.files.additionalfiles,
             analyzers = ctx.attr.analyzers,
             debug = is_debug(ctx),
-            deps = ctx.attr.deps,
-            extra_deps = [ctx.attr._nunitlite, ctx.attr._nunitframework],
+            deps = ctx.attr.deps + extra_deps,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
             srcs = ctx.files.srcs + [ctx.file._nunit_shim],
