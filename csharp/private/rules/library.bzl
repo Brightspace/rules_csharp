@@ -4,14 +4,15 @@ load(
     "@d2l_rules_csharp//csharp/private:common.bzl",
     "DEFAULT_LANGVERSION",
     "DEFAULT_TARGET_FRAMEWORK",
+    "fill_in_missing_frameworks",
     "is_debug",
 )
 
 def _library_impl(ctx):
-    providers = []
+    providers = {}
 
     for tfm in ctx.attr.target_frameworks:
-        assembly = AssemblyAction(
+        providers[tfm] = AssemblyAction(
             ctx.actions,
             name = ctx.attr.name,
             additionalfiles = ctx.files.additionalfiles,
@@ -26,13 +27,14 @@ def _library_impl(ctx):
             toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"],
         )
 
-        providers.append(assembly)
+    fill_in_missing_frameworks(providers)
 
-    providers.append(DefaultInfo(
-        files = depset([providers[0].out, providers[0].refout, providers[0].pdb]),
+    result = providers.values()
+    result.append(DefaultInfo(
+        files = depset([result[0].out, result[0].refout, result[0].pdb]),
     ))
 
-    return providers
+    return result
 
 csharp_library = rule(
     _library_impl,

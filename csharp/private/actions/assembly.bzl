@@ -1,7 +1,7 @@
 load(
     "@d2l_rules_csharp//csharp/private:common.bzl",
+    "collect_transitive_info",
     "get_analyzer_dll",
-    "get_transitive_compile_refs",
 )
 load("@d2l_rules_csharp//csharp/private:providers.bzl", "CSharpAssembly")
 
@@ -30,18 +30,11 @@ def AssemblyAction(
         target,
         target_framework,
         toolchain):
-
     out_ext = "dll" if target == "library" else "exe"
+
     out = actions.declare_file("%s.%s" % (name, out_ext))
     refout = actions.declare_file("%s.ref.%s" % (name, out_ext))
     pdb = actions.declare_file(name + ".pdb")
-
-    tf_provider = CSharpAssembly[target_framework]
-
-    transitive_compile_refs = get_transitive_compile_refs(
-        deps,
-        target_framework,
-    )
 
     # Our goal is to match msbuild as much as reasonable
     # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically
@@ -77,31 +70,20 @@ def AssemblyAction(
     args.add("/pdb:" + pdb.path)
 
     # assembly references
-    args.add_all(
-        transitive_compile_refs,
-        map_each = _format_ref_arg,
-    )
+    refs = collect_transitive_info(deps, target_framework)
+    args.add_all(refs, map_each = _format_ref_arg)
 
-    analyzerInputs = [get_analyzer_dll(a) for a in analyzers]
+    # analyzers
+    analyzer_assemblies = [get_analyzer_dll(a) for a in analyzers]
 
-    args.add_all(
-        analyzerInputs,
-        map_each = _format_analyzer_arg,
-    )
-
-    args.add_all(
-        additionalfiles,
-        map_each = _format_additionalfile_arg,
-    )
+    args.add_all(analyzer_assemblies, map_each = _format_analyzer_arg)
+    args.add_all(additionalfiles, map_each = _format_additionalfile_arg)
 
     # .cs files
     args.add_all([cs.path for cs in srcs])
 
     # resources
-    args.add_all(
-        resources,
-        map_each = _format_resource_arg,
-    )
+    args.add_all(resources, map_each = _format_resource_arg)
 
     # TODO:
     # - appconfig(?)
@@ -130,9 +112,9 @@ def AssemblyAction(
         mnemonic = "CSharpCompile",
         progress_message = "Compiling " + name,
         inputs = depset(
-            direct = srcs + resources + analyzerInputs + additionalfiles +
+            direct = srcs + resources + analyzer_assemblies + additionalfiles +
                      [toolchain.compiler],
-            transitive = [transitive_compile_refs],
+            transitive = [refs],
         ),
         outputs = [out, refout, pdb],
         executable = toolchain.runtime,
@@ -146,9 +128,10 @@ def AssemblyAction(
         ],
     )
 
-    return tf_provider(
+    return CSharpAssembly[target_framework](
         out = out,
         refout = refout,
         pdb = pdb,
-        transitive_compile_refs = transitive_compile_refs,
+        deps = deps,
+        transitive_refs = refs,
     )
