@@ -34,64 +34,6 @@ def collect_transitive_info(deps, tfm):
 
     return depset(direct = direct, transitive = transitive)
 
-def _find_framework_gaps(providers):
-    """Compute info about gaps in our providers to fill in.
-
-    Returns a list of (base, framework set, start, end) tuples. Where:
-
-    * "base" is the provider to use to "fill in" the gap
-    * "framework set" is an index into FrameworkCompatability
-    * "start" is an index into FrameworkCompatibility[framework set] for the
-      first missing provider in the gap
-    * "end" is likewise one past that last missing provider
-
-    This function is written in a pretty complicated way and could use some
-    more thought.
-
-    Args:
-      providers: a dict from tfm to provider
-    """
-
-    # 3 arrays, one for each framework set, where the values are the integers
-    # for each tfm from that set that appears in providers.
-    have = [[], [], []]
-
-    for tfm in providers.keys():
-        is_standard = tfm in FrameworkCompatibility[0]
-
-        # Check every framework we have against the 3 compatibility sequences.
-        for compat_seq_idx in [0, 1, 2]:
-            if compat_seq_idx != 0 and is_standard:
-                # TODO this algorithm is wrong and doesn't mix .NET Standard and
-                # others correctly.
-                continue
-
-            if tfm in FrameworkCompatibility[compat_seq_idx]:
-                fw_idx = FrameworkCompatibility[compat_seq_idx][tfm]
-                have[compat_seq_idx].append(fw_idx)
-
-    # Sort the have lists by priority, ascending. We add an extra number that's
-    # higher priorty than all the other things in seq for the zip below.
-    have = [sorted(seq) for seq in have]
-
-    gap_sets = [
-        # Create closed-open ranges of frameworks that are missing.
-        zip(
-            # Chose the provider that we have before this gap
-            [providers[FrameworkCompatibility[idx].keys()[p]] for p in seq],
-            # Indicate which compatibility set this gap refers to
-            [idx for _ in seq],
-            # We already have providers for things in seq, so each range by 1.
-            [p + 1 for p in seq],
-            # We need up to (but not including) the next framework we have. We
-            # append the # of frameworks to the end for completeness.
-            seq[1:] + [len(FrameworkCompatibility[idx])],
-        )
-        for (idx, seq) in enumerate(have)
-    ]
-
-    return gap_sets[0] + gap_sets[1] + gap_sets[2]
-
 def fill_in_missing_frameworks(providers):
     """Creates extra providers for frameworks that are compatible with us.
 
@@ -105,15 +47,18 @@ def fill_in_missing_frameworks(providers):
       deps: the original deps used to generate the providers.
     """
 
-    for gap_info in _find_framework_gaps(providers):
-        (base, compat_set_idx, start_idx, end_idx) = gap_info
+    # iterate through the compatability table since it's in preference order
+    for tfm in FrameworkCompatibility.keys():
+        if tfm in providers:
+            continue
 
-        tfms = FrameworkCompatibility[compat_set_idx].keys()[start_idx:end_idx]
+        for compatible_tfm in FrameworkCompatibility[tfm]:
+            if compatible_tfm not in providers:
+                continue
 
-        # Copy the output from base and re-resolve deps for each tfm
-        for tfm in tfms:
+            # Copy the output from the compatible tfm, re-resolving the deps
+            base = providers[compatible_tfm]
             refs = collect_transitive_info(base.deps, tfm)
-
             providers[tfm] = CSharpAssembly[tfm](
                 out = base.out,
                 refout = base.refout,
