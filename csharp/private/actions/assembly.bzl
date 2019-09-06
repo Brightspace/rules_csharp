@@ -23,6 +23,7 @@ def AssemblyAction(
         additionalfiles,
         analyzers,
         debug,
+        defines,
         deps,
         langversion,
         resources,
@@ -84,6 +85,9 @@ def AssemblyAction(
 
     # resources
     args.add_all(resources, map_each = _format_resource_arg)
+
+    # defines
+    args.add_joined("/define", defines, join_with=";")
 
     # TODO:
     # - appconfig(?)
