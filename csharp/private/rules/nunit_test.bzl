@@ -20,6 +20,7 @@ def _nunit_test_impl(ctx):
             additionalfiles = ctx.files.additionalfiles,
             analyzers = ctx.attr.analyzers,
             debug = is_debug(ctx),
+            defines = ctx.attr.defines,
             deps = ctx.attr.deps + extra_deps,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
@@ -68,6 +69,11 @@ csharp_nunit_test = rule(
                   "See https://docs.microsoft.com/en-us/dotnet/standard/frameworks",
             default = [DEFAULT_TARGET_FRAMEWORK],
             allow_empty = False,
+        ),
+        "defines": attr.string_list(
+            doc = "A list of preprocessor directive symbols to define.",
+            default = [],
+            allow_empty = True,
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",

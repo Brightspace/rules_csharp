@@ -18,6 +18,7 @@ def _binary_impl(ctx):
             additionalfiles = ctx.files.additionalfiles,
             analyzers = ctx.attr.analyzers,
             debug = is_debug(ctx),
+            defines = ctx.attr.defines,
             deps = ctx.attr.deps,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
@@ -66,6 +67,11 @@ csharp_binary = rule(
                   "See https://docs.microsoft.com/en-us/dotnet/standard/frameworks",
             default = [DEFAULT_TARGET_FRAMEWORK],
             allow_empty = False,
+        ),
+		"defines": attr.string_list(
+            doc = "A list of preprocessor directive symbols to define.",
+            default = [],
+            allow_empty = True,
         ),
         "winexe": attr.bool(
             doc = "If true, output a winexe-style executable, otherwise" +
