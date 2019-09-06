@@ -81,54 +81,30 @@ CSharpAssembly = {
     "netcoreapp3.0": CSharpAssembly_netcoreapp30,
 }
 
-# A sequence of frameworks, each ordered ascending in time. The sequences are
-# dicts from TFM to the index into that dicts keys (relying on the iteration
-# order of Starlark dicts). These indexes are used to calculate priority. The
-# order here is derived from NuGet (MSBuild's ProjectReference shares this
-# logic, mercifully).
-FrameworkCompatibility = [{
+# A dict of target frameworks to the set of other framworks it can compile
+# against. This relationship is transitive. The order of this dictionary also
+# matters. netstandard should appear first, and keys within a family should
+# proceed from oldest to newest
+FrameworkCompatibility = {
     # .NET Standard
-    "netstandard": 0,
-    "netstandard1.0": 1,
-    "netstandard1.1": 2,
-    "netstandard1.2": 3,
-    "netstandard1.3": 4,
-    "netstandard1.4": 5,
-    "netstandard1.5": 6,
-    "netstandard1.6": 7,
-    "netstandard2.0": 8,
-    "netstandard2.1": 9,
-}, {
-    # .NET Core
-    "netstandard": 0,
-    "netstandard1.0": 1,
-    "netstandard1.1": 2,
-    "netstandard1.2": 3,
-    "netstandard1.3": 4,
-    "netstandard1.4": 5,
-    "netstandard1.5": 6,
-    "netstandard1.6": 7,
-    "netcoreapp1.0": 8,
-    "netcoreapp1.1": 9,
-    "netstandard2.0": 10,
-    "netcoreapp2.0": 11,
-    "netcoreapp2.1": 12,
-    "netcoreapp2.2": 13,
-    "netstandard2.1": 14,
-    "netcoreapp3.0": 15,
-}, {
+    "netstandard": [],
+    "netstandard1.0": ["netstandard"],
+    "netstandard1.1": ["netstandard1.0"],
+    "netstandard1.2": ["netstandard1.1"],
+    "netstandard1.3": ["netstandard1.2"],
+    "netstandard1.4": ["netstandard1.3"],
+    "netstandard1.5": ["netstandard1.4"],
+    "netstandard1.6": ["netstandard1.5"],
+    "netstandard2.0": ["netstandard1.6"],
+    "netstandard2.1": ["netstandard2.0"],
+
     # .NET Framework
-    "net20": 0,
-    "net40": 1,
-    "netstandard": 2,
-    "netstandard1.0": 3,
-    "netstandard1.1": 4,
-    "net45": 5,
-    "netstandard1.2": 6,
-    "net451": 7,
-    "net452": 8,
-    "netstandard1.3": 9,
-    "net46": 10,
+    "net20": [],
+    "net40": ["net20"],
+    "net45": ["net40", "netstandard1.1"],
+    "net451": ["net45", "netstandard1.2"],
+    "net452": ["net451"],
+    "net46": ["net452", "netstandard1.3"],
 
     # NOTE: Microsoft has this to say:
     #   While NuGet considers .NET Framework 4.6.1 as supporting .NET Standard
@@ -141,17 +117,21 @@ FrameworkCompatibility = [{
     #
     # We've deviated from NuGet's behaviour based on this scary sounding
     # warning. We might want to reconsider this.
-    "net461": 11,
-    "net462": 12,
-    "net47": 13,
-    "net471": 14,
-    "netstandard1.4": 15,
-    "netstandard1.5": 16,
-    "netstandard1.6": 17,
-    "netstandard2.0": 18,
-    "net472": 19,
-    "net48": 20,
-}]
+    "net461": ["net46"],
+    "net462": ["net461"],
+    "net47": ["net462"],
+    "net471": ["net47"],
+    "net472": ["net471", "netstandard2.0"],
+    "net48": ["net472"],
+
+    # .NET Core
+    "netcoreapp1.0": ["netstandard1.6"],
+    "netcoreapp1.1": ["netcoreapp1.0"],
+    "netcoreapp2.0": ["netcoreapp1.1", "netstandard2.0"],
+    "netcoreapp2.1": ["netcoreapp2.0"],
+    "netcoreapp2.2": ["netcoreapp2.1"],
+    "netcoreapp3.0": ["netcoreapp2.2", "netstandard2.1"],
+}
 
 # A convenience used in attributes that need to specify that they accept any
 # kind of C# assembly. This is an array of single-element arrays.
