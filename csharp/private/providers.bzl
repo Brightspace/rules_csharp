@@ -105,23 +105,11 @@ FrameworkCompatibility = {
     "net451": ["net45", "netstandard1.2"],
     "net452": ["net451"],
     "net46": ["net452", "netstandard1.3"],
-
-    # NOTE: Microsoft has this to say:
-    #   While NuGet considers .NET Framework 4.6.1 as supporting .NET Standard
-    #   1.5 through 2.0, there are several issues with consuming .NET Standard
-    #   libraries that were built for those versions from .NET Framework 4.6.1
-    #   projects. For .NET Framework projects that need to use such libraries,
-    #   we recommend that you upgrade the project to target .NET Framework
-    #   4.7.2 or higher.
-    # https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support
-    #
-    # We've deviated from NuGet's behaviour based on this scary sounding
-    # warning. We might want to reconsider this.
-    "net461": ["net46"],
+    "net461": ["net46", "netstandard2.0"],
     "net462": ["net461"],
     "net47": ["net462"],
     "net471": ["net47"],
-    "net472": ["net471", "netstandard2.0"],
+    "net472": ["net471"],
     "net48": ["net472"],
 
     # .NET Core
