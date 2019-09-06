@@ -68,7 +68,7 @@ csharp_binary = rule(
             default = [DEFAULT_TARGET_FRAMEWORK],
             allow_empty = False,
         ),
-		"defines": attr.string_list(
+        "defines": attr.string_list(
             doc = "A list of preprocessor directive symbols to define.",
             default = [],
             allow_empty = True,
