@@ -52,6 +52,8 @@ def fill_in_missing_frameworks(providers):
         if tfm in providers:
             continue
 
+        # There are at most 2 elements in FrameworkCompatibility[tfm], so this
+        # nested loop isn't bad.
         for compatible_tfm in FrameworkCompatibility[tfm]:
             if compatible_tfm not in providers:
                 continue

@@ -4,8 +4,8 @@
 
 * [Usage](#usage)
 * [Open issues](#open-issues)
-* [How we want it to work](#background)
-* [Implementation](#intenrnals)
+* [How we want it to work](#how-we-want-it-to-work)
+* [Implementation](#implementation)
   * [`import_library` vs `import_multiframework_library`](#import_library-vs-import_multiframework_library)
   * [The `CSharpAssembly_`-providers](#the-CSharpAssembly_-providers)
   * [The `fill_in_missing_frameworks` helper](#the-fill_in_missing_frameworks-helper)
@@ -79,19 +79,20 @@ per-workspace).
 
 This isn't fully implemented yet. It works well enough for NuGet packages (e.g.
 `csharp_nunit_test` pulls in NUnit pacakges under the hood) but it's a work in
-progress.
+progress. The most important open issues are:
 
-* Meta-TODO: create these issues!
-* [Fix mixing .NET Standard with .NET Core/Framework](#)
-* [Make the default framework configurable in the workspace](#)
-* [Support more .NET Framework stdlbsi](#)
-* [Support .NET Standard stdlibs](#)
-* [Support .NET Core stdlibs](#)
-* [Create `@net//` meta targets](#)
+* The logic for multi-targetting is complete, but until we download the
+  framework DLLs for more frameworks we can only see this via external NuGet
+	packages.
+	* [Add additional .NET Frameworks](https://github.com/Brightspace/rules_csharp/issues/6)
+	* [Add .NET Standard frameworks](https://github.com/Brightspace/rules_csharp/issues/7)
+	* [Add .NET Core frameworks](https://github.com/Brightspace/rules_csharp/issues/8)
+* [Make the "default framework" configurable](https://github.com/Brightspace/rules_csharp/issues/16)
+* [Create @net targets](https://github.com/Brightspace/rules_csharp/issues/21)
 
 ## How we want it to work
 
-Consider the following (pathelogical) example of a diamond dependency:
+Consider the following example of a diamond dependency:
 
 ```python
 csharp_library(
@@ -133,6 +134,11 @@ When we compile `Top`, we will use the `net45` variant of `Left` and the
 made are correct for `Top`. Instead, we choose the `net48` variant of `Bottom`.
 This demonstrates that transitive references are not straight-forward.
 
+We will end up compiling `Bottom` three times. In practice multi-targeting is
+mostly likely to happen due to NuGet packages, which won't result in
+recompilation. This is a pathelogical example meant to demonstrate the rules
+concisely but is not realistic.
+
 The phrase "(framework) X is compatible with (framework Y" means that
 assemblies compiled against X can be referenced when compiling against Y.
 Compatability is non-commutative. If X is compatible with Y, and Y is
@@ -151,9 +157,9 @@ To enable Bazel to make these computations we:
 
 1. Have one provider per framework
 2. If a target has a provider for framework Y, and framework X is compatible
-  with Y, then the target also has a provider for X.
+   with Y, then the target also has a provider for X.
 3. If X is not compatible with anything in `target_frameworks` for a particular
-  target, then there is no X-provider for that target. 
+   target, then there is no X-provider for that target. 
 
 To make (2) concrete, in `Bottom` from the above example we will have a
 `net45` provider even though it isn't listed in `target_frameworks`. It will
@@ -172,7 +178,7 @@ rules private, and have increased visibility for your
 
 For an example of how this is done, see [how we import NUnit](../csharp/private/nunit/nunitframework.BUILD).
 Note that the plan is to do this by default for NuGet packages (with a macro
-in a default BUILD file) soon.
+in a default BUILD file) soon (issue [#22](https://github.com/Brightspace/rules_csharp/issues/22)).
 
 ### The `CSharpAssembly_`-providers
 
@@ -194,11 +200,12 @@ of an assembly have different dependencies.
 We output a provider per framwork listed in `target_frameworks`, but because of
 (2) above we need to output additional providers for other frameworks. These
 additional providers aid dependers by caching assembly resolution for the
-necessary target framework.
+necessary target framework via `depset`s.
 
-This is done by the helper function `fill_in_missing_frameworks`. It figures
-out the "gaps" that can be "filled in" by frameworks we already have by
-using their build output but recalulating transitive dependencies.
+This is done by the helper function `fill_in_missing_frameworks`. It works
+from most-compatible to least-compatible framework, "filling in" missing
+providers when there is a compatible replacement by reusing the compatible
+frameworks build output and recalculating the transitive dependencies.
 
 This design was chosen so that the computations could be based on `depset`s
 without coercing them to lists during analysis time, and so that the inputs
@@ -214,11 +221,11 @@ require adding many more DLLs to the inputs for an action. This raises two
 problems:
 
 1. We would need to compile more DLLs then necessary. For example, we would
-  need to compile both variants of `:MyLib` in the `bazel run` example above,
-  rather than just the `net40` variant. This is unavoidable.
+   need to compile both variants of `:MyLib` in the `bazel run` example above,
+   rather than just the `net40` variant. This is unavoidable.
 2. We would have worse action caching. This could be partial mitigated by
-  using [unused_inputs_list](https://docs.bazel.build/versions/master/skylark/lib/actions.html#run)
-  but that's not perfect either.
+   using [unused_inputs_list](https://docs.bazel.build/versions/master/skylark/lib/actions.html#run)
+   but that's not perfect either.
 
 If we kept the resolution in Starlark as far as I can tell we'd need to stop
 using `depset` which could be a performance problem.
