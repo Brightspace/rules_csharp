@@ -16,6 +16,9 @@ def is_debug(ctx):
     # equivalent to dbg right now but might want to support this in the future.
     return ctx.var["COMPILATION_MODE"] != "opt"
 
+def is_standard_framework(tfm):
+    return tfm.startswith("netstandard")
+
 def collect_transitive_info(deps, tfm):
     direct = []
     transitive = []

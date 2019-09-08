@@ -6,6 +6,7 @@ load(
     "DEFAULT_TARGET_FRAMEWORK",
     "fill_in_missing_frameworks",
     "is_debug",
+    "is_standard_framework",
 )
 
 def _nunit_test_impl(ctx):
@@ -14,6 +15,9 @@ def _nunit_test_impl(ctx):
     extra_deps = [ctx.attr._nunitlite, ctx.attr._nunitframework]
 
     for tfm in ctx.attr.target_frameworks:
+        if is_standard_framework(tfm):
+            fail("It doesn't make sense to build an executable for " + tfm)
+
         providers[tfm] = AssemblyAction(
             ctx.actions,
             name = ctx.attr.name,
