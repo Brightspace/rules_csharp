@@ -68,6 +68,7 @@ def fill_in_missing_frameworks(providers):
                 deps = base.deps,
                 transitive_refs = refs,
             )
+            break
 
 def get_analyzer_dll(analyzer_target):
     return analyzer_target[CSharpAssembly["netstandard"]]
