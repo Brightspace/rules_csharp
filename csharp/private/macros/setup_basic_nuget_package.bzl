@@ -44,8 +44,8 @@ def setup_basic_nuget_package():
        This has to be public so that packages can call it but you probably
        shouldn't use it directly.
     """
-    dlls = native.glob(["**/*.dll"])
-    pdbs = native.glob(["**/*.pdb"])
+    dlls = native.glob(["lib/*/*.dll"])
+    pdbs = native.glob(["lib/*/*.pdb"])
 
     has_pdb = { (pdb[:-3] + "dll"): 1 for pdb in pdbs }
 
