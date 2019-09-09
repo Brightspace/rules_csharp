@@ -12,6 +12,12 @@ def nuget_package(
         "https://www.nuget.org/api/v2/package",
     ]]
 
+    if build_file == None and build_file_content == None:
+        build_file_content = """
+load("@d2l_rules_csharp//csharp:defs.bzl", "setup_basic_nuget_package")
+setup_basic_nuget_package()
+        """
+
     http_archive(
         name = name,
         urls = urls,
