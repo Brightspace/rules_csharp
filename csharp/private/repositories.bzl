@@ -98,12 +98,42 @@ def csharp_repositories():
         sha256 = "912f6eed993e77c83cb8b92db72d50df7d06e4c4a02486474eae460728291989",
     )
 
-	nuget_package(
-		name = "netstandard2plus"
-		package = "NetStandard.Library"
-		version = "2.0.3"
-		sha256 = "3eb87644f79bcffb3c0331dbdac3c7837265f2cdf58a7bfd93e431776f77c9ba"
-	)
+    # .NET Core
+    nuget_package(
+        name = "Microsoft.NETCore.App"
+        package = "Microsoft.NETCore.App"
+        version = "2.2.6"
+        sha256 = "9b0ede75a9cc8311d503172ffa0177dc8b00bbfd2f3586a6b7d6152c0005f5ad"
+    )
+
+    nuget_package(
+        name = "Microsoft.NETCore.DotNetAppHost"
+        package = "Microsoft.NETCore.DotNetAppHost"
+        version = "2.2.6"
+        sha256 = "a91c0aa20a2665f4475cc66b92b9a4f1a908d1f1d711f0163f4e9ca3366a97e8"
+    )
+
+    nuget_package(
+        name = "Microsoft.NETCore.DotNetHostPolicy"
+        package = "Microsoft.NETCore.DotNetHostPolicy"
+        version = "2.2.6"
+        sha256 = "2e0eb87a29502de80a3d06a74b475158d18d5f87e2e0bbe95b9e68feefbd820c"
+    )
+
+    nuget_package(
+        name = "Microsoft.NETCore.DotNetHostResolver"
+        package = "Microsoft.NETCore.DotNetHostResolver"
+        version = "2.2.6"
+        sha256 = "56d91d2046eb952c2704b459c8e89c0061dd41fcdb4ed00d1ad0d5552cbfdb64"
+    )
+
+    # .NET Standard (& .NET Core)
+    nuget_package(
+        name = "NetStandard.Library"
+        package = "NetStandard.Library"
+        version = "2.0.3"
+        sha256 = "3eb87644f79bcffb3c0331dbdac3c7837265f2cdf58a7bfd93e431776f77c9ba"
+    )
 
     nuget_package(
         name = "System.Collections"
@@ -483,6 +513,7 @@ def csharp_repositories():
         sha256 = "679ad77c9d445e9dc6df620a646899ea4a0c8d1bb49fc0b5346af0a5d21e9f8c"
     )
 
+    # NUnit
     nuget_package(
         name = "NUnitLite",
         package = "NUnitLite",
