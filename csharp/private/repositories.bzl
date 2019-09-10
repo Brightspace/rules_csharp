@@ -129,10 +129,31 @@ def csharp_repositories():
 
     # .NET Standard (& .NET Core)
     nuget_package(
+        name = "Microsoft.Win32.Primitives"
+        package = "Microsoft.Win32.Primitives"
+        version = "4.3.0"
+        sha256 = "98134398f5cd4d6e785cb9cf014c0146f90839114ceff8f40f42364b240f0c48"
+    )
+
+    nuget_package(
         name = "NetStandard.Library"
         package = "NetStandard.Library"
         version = "2.0.3"
         sha256 = "3eb87644f79bcffb3c0331dbdac3c7837265f2cdf58a7bfd93e431776f77c9ba"
+    )
+
+    nuget_package(
+        name = "System.AppContext"
+        package = "System.AppContext"
+        version = "4.3.0"
+        sha256 = "ca0f792cd40ec05940d6d5b15dd42457226a4f8027a0373e0029ab36fcc68998"
+    )
+
+    nuget_package(
+        name = "System.Buffers"
+        package = "System.Buffers"
+        version = "4.5.0"
+        sha256 = "4c7c36ce7bbe2a26df2517c3edc1379d1607b26ec5ca7e698ce3995689c58efb"
     )
 
     nuget_package(
@@ -143,10 +164,31 @@ def csharp_repositories():
     )
 
     nuget_package(
+        name = "System.Collections.Concurrent"
+        package = "System.Collections.Concurrent"
+        version = "4.3.0"
+        sha256 = "28c6390df2670de22c6b5dc3a6abf237c36445e644300167966360955a052172"
+    )
+
+    nuget_package(
+        name = "System.Diagnostics.Contracts"
+        package = "System.Diagnostics.Contracts"
+        version = "4.3.0"
+        sha256 = "2bbe28c949f456b8afde6c2b6d9c10150e8403433b1e6f5895c58b4632e3aabf"
+    )
+
+    nuget_package(
         name = "System.Diagnostics.Debug"
         package = "System.Diagnostics.Debug"
         version = "4.3.0"
         sha256 = "7e403bf528cf6d27a211cadb6d4b1bef4bbd07bc2a6ec74cf6cd4b9e82a3d203"
+    )
+
+    nuget_package(
+        name = "System.Diagnostics.DiagnosticSource"
+        package = "System.Diagnostics.DiagnosticSource"
+        version = "4.5.1"
+        sha256 = "81910346fd2fd0001ab90dfa0565e4264dc62d6d2c607e903f16b4a7697c0dc9"
     )
 
     nuget_package(
@@ -157,10 +199,59 @@ def csharp_repositories():
     )
 
     nuget_package(
+        name = "System.Diagnostics.Tracing"
+        package = "System.Diagnostics.Tracing"
+        version = "4.3.0"
+        sha256 = "8421136691c719584f62f6f80b47e1e33b3ef33bf818fa22c5a8242d98e96bd4"
+    )
+
+    nuget_package(
         name = "System.Globalization"
         package = "System.Globalization"
         version = "4.3.0"
         sha256 = "71a2f4a51985484b1aa1e65e58de414d0b46ac0b5a40fc058bc60e64f646e6b2"
+    )
+
+    nuget_package(
+        name = "System.Globalization.Calendars"
+        package = "System.Globalization.Calendars"
+        version = "4.3.0"
+        sha256 = "b8d383d043951609d2d9f30abcc884b48f5a3b0d34f8f7f2fc7faab9c01094f7"
+    )
+
+    nuget_package(
+        name = "System.IO"
+        package = "System.IO"
+        version = "4.3.0"
+        sha256 = "aeeca74077a414fe703eb0e257284d891217799fc8f4da632b9a54f873c38916"
+    )
+
+    nuget_package(
+        name = "System.IO.Compression"
+        package = "System.IO.Compression"
+        version = "4.3.0"
+        sha256 = "7f93eb4254208f95e3d999c7c575bc5e23a2bda06f7ea0daa3d49be805629f20"
+    )
+
+    nuget_package(
+        name = "System.IO.Compression.ZipFile"
+        package = "System.IO.Compression.ZipFile"
+        version = "4.3.0"
+        sha256 = "59097e2605acf8669131e89a8531546eb8655c81daa737294c55db46f02dbefb"
+    )
+
+    nuget_package(
+        name = "System.IO.FileSystem"
+        package = "System.IO.FileSystem"
+        version = "4.3.0"
+        sha256 = "bcd2189ef95acae563d167d17d82a90eb843a6d961a75a4df026269557764d7c"
+    )
+
+    nuget_package(
+        name = "System.IO.FileSystem.Primitives"
+        package = "System.IO.FileSystem.Primitives"
+        version = "4.3.0"
+        sha256 = "2cc9df83c5706afb3d70c9eaf67347f085ad02d49f934fc5cb8b3846df6bd648"
     )
 
     nuget_package(
@@ -171,38 +262,45 @@ def csharp_repositories():
     )
 
     nuget_package(
-        name = "System.Reflection"
-        package = "System.Reflection"
-        version = "4.3.0"
-        sha256 = "35049946964bbed3d60e5be6308746c5c56ec949f0f76654468d215ec12c8576"
-    )
-
-    nuget_package(
-        name = "System.Reflection.Primitives"
-        package = "System.Reflection.Primitives"
-        version = "4.3.0"
-        sha256 = "e68830581e2f9504e5de38e4d718e7886da8cdb1488d94cbf6e834bac650b813"
-    )
-
-    nuget_package(
-        name = "System.Runtime.Extensions"
-        package = "System.Runtime.Extensions"
-        version = "4.3.1"
-        sha256 = "c6597f005eac175b28435e69ac03c8547487ebd0a22f813d3875431f2ae6f3af"
-    )
-
-    nuget_package(
-        name = "System.Resources.ResourceManager"
-        package = "System.Resources.ResourceManager"
-        version = "4.3.0"
-        sha256 = "89d88e0fddf16dbadbc304a70f898e440f51622fc3fd4e3c79152c9ff5a7586a"
-    )
-
-    nuget_package(
         name = "System.Linq.Expressions"
         package = "System.Linq.Expressions"
         version = "4.3.0"
         sha256 = "fb7a6f85963bae2a7c1c26df7542f38e50bd14f645a58a10c6191cb859b6c24f"
+    )
+
+    nuget_package(
+        name = "System.Net.Http"
+        package = "System.Net.Http"
+        version = "4.3.4"
+        sha256 = "14ca14d0aee794f2f1a038eed0d2f6d568e581af46a67028423b05845618b74d"
+    )
+
+    nuget_package(
+        name = "System.Net.Primitives"
+        package = "System.Net.Primitives"
+        version = "4.3.1"
+        sha256 = "a880858d0a3915c49f35279bf1738cc00e5a5203fe3ced227653b91d5a60bac3"
+    )
+
+    nuget_package(
+        name = "System.Net.Sockets"
+        package = "System.Net.Sockets"
+        version = "4.3.0"
+        sha256 = "8a5eddaf9553fd058383fd1cba1fb812cdaef0b63fffeaaa898f416666314aeb"
+    )
+
+    nuget_package(
+        name = "System.ObjectModel"
+        package = "System.ObjectModel"
+        version = "4.3.0"
+        sha256 = "82d9919163f62b0af79c7b43874c98b5c7b7f33d70ac6cdbe9f8e6e2ff3037a4"
+    )
+
+    nuget_package(
+        name = "System.Reflection"
+        package = "System.Reflection"
+        version = "4.3.0"
+        sha256 = "35049946964bbed3d60e5be6308746c5c56ec949f0f76654468d215ec12c8576"
     )
 
     nuget_package(
@@ -227,6 +325,13 @@ def csharp_repositories():
     )
 
     nuget_package(
+        name = "System.Reflection.Primitives"
+        package = "System.Reflection.Primitives"
+        version = "4.3.0"
+        sha256 = "e68830581e2f9504e5de38e4d718e7886da8cdb1488d94cbf6e834bac650b813"
+    )
+
+    nuget_package(
         name = "System.Reflection.TypeExtensions"
         package = "System.Reflection.TypeExtensions"
         version = "4.5.1"
@@ -234,87 +339,17 @@ def csharp_repositories():
     )
 
     nuget_package(
-        name = "System.Diagnostics.Contracts"
-        package = "System.Diagnostics.Contracts"
+        name = "System.Resources.ResourceManager"
+        package = "System.Resources.ResourceManager"
         version = "4.3.0"
-        sha256 = "2bbe28c949f456b8afde6c2b6d9c10150e8403433b1e6f5895c58b4632e3aabf"
+        sha256 = "89d88e0fddf16dbadbc304a70f898e440f51622fc3fd4e3c79152c9ff5a7586a"
     )
 
     nuget_package(
-        name = "System.Threading"
-        package = "System.Threading"
-        version = "4.3.0"
-        sha256 = "643437751e29cd5c266aa060e2169c65a55e9d0ff7c8017fb95ec15d95e38967"
-    )
-
-    nuget_package(
-        name = "System.Net.Primitives"
-        package = "System.Net.Primitives"
+        name = "System.Runtime"
+        package = "System.Runtime"
         version = "4.3.1"
-        sha256 = "a880858d0a3915c49f35279bf1738cc00e5a5203fe3ced227653b91d5a60bac3"
-    )
-
-    nuget_package(
-        name = "System.Runtime.Handles"
-        package = "System.Runtime.Handles"
-        version = "4.3.0"
-        sha256 = "289e5a5e81a9079e98ebe89ea4191da71fc07da243022b71e2fae42ea47b826b"
-    )
-
-    nuget_package(
-        name = "System.ObjectModel"
-        package = "System.ObjectModel"
-        version = "4.3.0"
-        sha256 = "82d9919163f62b0af79c7b43874c98b5c7b7f33d70ac6cdbe9f8e6e2ff3037a4"
-    )
-
-    nuget_package(
-        name = "System.Text.Encoding.Extensions"
-        package = "System.Text.Encoding.Extensions"
-        version = "4.3.0"
-        sha256 = "bee7c75e0f1000ac4796e8cf1c772bb46c00a859ac083e872a37c30221f20187"
-    )
-
-    nuget_package(
-        name = "System.Text.RegularExpressions"
-        package = "System.Text.RegularExpressions"
-        version = "4.3.1"
-        sha256 = "0f1b046749e73e8cf20b55b5eb8cab3145f09c07474a14bd127ec8983fc624c3"
-    )
-
-    nuget_package(
-        name = "System.Xml.ReaderWriter"
-        package = "System.Xml.ReaderWriter"
-        version = "4.3.1"
-        sha256 = "7e32092b98e9cfdf6038dd933694eada3c37595b680852cef6b52f904fdbc995"
-    )
-
-    nuget_package(
-        name = "System.IO.FileSystem"
-        package = "System.IO.FileSystem"
-        version = "4.3.0"
-        sha256 = "bcd2189ef95acae563d167d17d82a90eb843a6d961a75a4df026269557764d7c"
-    )
-
-    nuget_package(
-        name = "System.IO.FileSystem.Primitives"
-        package = "System.IO.FileSystem.Primitives"
-        version = "4.3.0"
-        sha256 = "2cc9df83c5706afb3d70c9eaf67347f085ad02d49f934fc5cb8b3846df6bd648"
-    )
-
-    nuget_package(
-        name = "System.Runtime.InteropServices"
-        package = "System.Runtime.InteropServices"
-        version = "4.3.0"
-        sha256 = "f2c0c7f965097c247eedee277e97ed8fffa5b2d122662c56501b9e476ce61e02"
-    )
-
-    nuget_package(
-        name = "System.Threading.Tasks.Extensions"
-        package = "System.Threading.Tasks.Extensions"
-        version = "4.5.3"
-        sha256 = "f138256c2e8a0479437927e0afa7797469fbc2ef2d7785c4465d89532a34f93c"
+        sha256 = "47d4faf00cd2d4f249eefe80473f6fa3cf2928bd5d5aa2ce00d838a64423900d"
     )
 
     nuget_package(
@@ -325,73 +360,31 @@ def csharp_repositories():
     )
 
     nuget_package(
-        name = "System.Xml.XDocument"
-        package = "System.Xml.XDocument"
+        name = "System.Runtime.Extensions"
+        package = "System.Runtime.Extensions"
+        version = "4.3.1"
+        sha256 = "c6597f005eac175b28435e69ac03c8547487ebd0a22f813d3875431f2ae6f3af"
+    )
+
+    nuget_package(
+        name = "System.Runtime.Handles"
+        package = "System.Runtime.Handles"
         version = "4.3.0"
-        sha256 = "ad6b5d72672e12534e4b309e85f9722b01e40d1a623a1249b3c09e4349750822"
+        sha256 = "289e5a5e81a9079e98ebe89ea4191da71fc07da243022b71e2fae42ea47b826b"
     )
 
     nuget_package(
-        name = "System.Collections.Concurrent"
-        package = "System.Collections.Concurrent"
+        name = "System.Runtime.InteropServices"
+        package = "System.Runtime.InteropServices"
         version = "4.3.0"
-        sha256 = "28c6390df2670de22c6b5dc3a6abf237c36445e644300167966360955a052172"
-    )
+        sha256 = "f2c0c7f965097c247eedee277e97ed8fffa5b2d122662c56501b9e476ce61e02"
+	)
 
     nuget_package(
-        name = "System.Diagnostics.Tracing"
-        package = "System.Diagnostics.Tracing"
+        name = "System.Runtime.InteropServices.RuntimeInformation"
+        package = "System.Runtime.InteropServices.RuntimeInformation"
         version = "4.3.0"
-        sha256 = "8421136691c719584f62f6f80b47e1e33b3ef33bf818fa22c5a8242d98e96bd4"
-    )
-
-    nuget_package(
-        name = "System.IO.Compression"
-        package = "System.IO.Compression"
-        version = "4.3.0"
-        sha256 = "7f93eb4254208f95e3d999c7c575bc5e23a2bda06f7ea0daa3d49be805629f20"
-    )
-
-    nuget_package(
-        name = "System.Buffers"
-        package = "System.Buffers"
-        version = "4.5.0"
-        sha256 = "4c7c36ce7bbe2a26df2517c3edc1379d1607b26ec5ca7e698ce3995689c58efb"
-    )
-
-    nuget_package(
-        name = "System.Net.Http"
-        package = "System.Net.Http"
-        version = "4.3.4"
-        sha256 = "14ca14d0aee794f2f1a038eed0d2f6d568e581af46a67028423b05845618b74d"
-    )
-
-    nuget_package(
-        name = "System.Diagnostics.DiagnosticSource"
-        package = "System.Diagnostics.DiagnosticSource"
-        version = "4.5.1"
-        sha256 = "81910346fd2fd0001ab90dfa0565e4264dc62d6d2c607e903f16b4a7697c0dc9"
-    )
-
-    nuget_package(
-        name = "System.Runtime.WindowsRuntime"
-        package = "System.Runtime.WindowsRuntime"
-        version = "4.3.0"
-        sha256 = "b45f553582e4b7f774c8f543252d1f7698f4829210ce8d578138dcaab810eb14"
-    )
-
-    nuget_package(
-        name = "System.Security.Cryptography.X509Certificates"
-        package = "System.Security.Cryptography.X509Certificates"
-        version = "4.3.2"
-        sha256 = "b24680b48aa291b06fd79f3a1287128b083e42a06cf6de6329402bfd06fdca2d"
-    )
-
-    nuget_package(
-        name = "System.Security.Cryptography.Cng"
-        package = "System.Security.Cryptography.Cng"
-        version = "4.5.0"
-        sha256 = "f659516c4718d5f1d8b939f7bc665a0b1b05c5202a5e5e1b0c0e91cfd6f4a4de"
+        sha256 = "318a65ebf6720ba8639b359121efa20e895d38c5b599f6f05ec76e0275c82860"
     )
 
     nuget_package(
@@ -402,17 +395,10 @@ def csharp_repositories():
     )
 
     nuget_package(
-        name = "System.Globalization.Calendars"
-        package = "System.Globalization.Calendars"
+        name = "System.Runtime.WindowsRuntime"
+        package = "System.Runtime.WindowsRuntime"
         version = "4.3.0"
-        sha256 = "b8d383d043951609d2d9f30abcc884b48f5a3b0d34f8f7f2fc7faab9c01094f7"
-    )
-
-    nuget_package(
-        name = "System.Security.Cryptography.Csp"
-        package = "System.Security.Cryptography.Csp"
-        version = "4.3.0"
-        sha256 = "a1e7dd4d4fd9d8f594f6795ab7cba24431aafcf199a123d182430bd75a66bcf4"
+        sha256 = "b45f553582e4b7f774c8f543252d1f7698f4829210ce8d578138dcaab810eb14"
     )
 
     nuget_package(
@@ -420,6 +406,20 @@ def csharp_repositories():
         package = "System.Security.Cryptography.Algorithms"
         version = "4.3.1"
         sha256 = "4253bfa69464fcec836070a2983f3aed102528839a922743d0808d3adeb75cd4"
+    )
+
+    nuget_package(
+        name = "System.Security.Cryptography.Cng"
+        package = "System.Security.Cryptography.Cng"
+        version = "4.5.0"
+        sha256 = "f659516c4718d5f1d8b939f7bc665a0b1b05c5202a5e5e1b0c0e91cfd6f4a4de"
+    )
+
+    nuget_package(
+        name = "System.Security.Cryptography.Csp"
+        package = "System.Security.Cryptography.Csp"
+        version = "4.3.0"
+        sha256 = "a1e7dd4d4fd9d8f594f6795ab7cba24431aafcf199a123d182430bd75a66bcf4"
     )
 
     nuget_package(
@@ -443,60 +443,11 @@ def csharp_repositories():
         sha256 = "7e7162ec1dd29d58f96be05b8179db8e718dbd6ac2114e87a7fc23b235b3df5f"
     )
 
-    nuget_package(
-        name = "System.Runtime.InteropServices.RuntimeInformation"
-        package = "System.Runtime.InteropServices.RuntimeInformation"
-        version = "4.3.0"
-        sha256 = "318a65ebf6720ba8639b359121efa20e895d38c5b599f6f05ec76e0275c82860"
-    )
-
-    nuget_package(
-        name = "System.IO.Compression.ZipFile"
-        package = "System.IO.Compression.ZipFile"
-        version = "4.3.0"
-        sha256 = "59097e2605acf8669131e89a8531546eb8655c81daa737294c55db46f02dbefb"
-    )
-
-    nuget_package(
-        name = "System.AppContext"
-        package = "System.AppContext"
-        version = "4.3.0"
-        sha256 = "ca0f792cd40ec05940d6d5b15dd42457226a4f8027a0373e0029ab36fcc68998"
-    )
-
-    nuget_package(
-        name = "Microsoft.Win32.Primitives"
-        package = "Microsoft.Win32.Primitives"
-        version = "4.3.0"
-        sha256 = "98134398f5cd4d6e785cb9cf014c0146f90839114ceff8f40f42364b240f0c48"
-    )
-
-    nuget_package(
-        name = "System.Net.Sockets"
-        package = "System.Net.Sockets"
-        version = "4.3.0"
-        sha256 = "8a5eddaf9553fd058383fd1cba1fb812cdaef0b63fffeaaa898f416666314aeb"
-    )
-
-    nuget_package(
-        name = "System.Threading.Timer"
-        package = "System.Threading.Timer"
-        version = "4.3.0"
-        sha256 = "a6686c96685084fdf64d66c1ce82132d9e01a0e441a98936e4e59baeed38a7db"
-    )
-
-    nuget_package(
-        name = "System.IO"
-        package = "System.IO"
-        version = "4.3.0"
-        sha256 = "aeeca74077a414fe703eb0e257284d891217799fc8f4da632b9a54f873c38916"
-    )
-
-    nuget_package(
-        name = "System.Runtime"
-        package = "System.Runtime"
-        version = "4.3.1"
-        sha256 = "47d4faf00cd2d4f249eefe80473f6fa3cf2928bd5d5aa2ce00d838a64423900d"
+    nuget_package
+        name = "System.Security.Cryptography.X509Certificates"
+        package = "System.Security.Cryptography.X509Certificates"
+        version = "4.3.2"
+        sha256 = "b24680b48aa291b06fd79f3a1287128b083e42a06cf6de6329402bfd06fdca2d"
     )
 
     nuget_package(
@@ -507,10 +458,59 @@ def csharp_repositories():
     )
 
     nuget_package(
+        name = "System.Text.Encoding.Extensions"
+        package = "System.Text.Encoding.Extensions"
+        version = "4.3.0"
+        sha256 = "bee7c75e0f1000ac4796e8cf1c772bb46c00a859ac083e872a37c30221f20187"
+    )
+
+    nuget_package(
+        name = "System.Text.RegularExpressions"
+        package = "System.Text.RegularExpressions"
+        version = "4.3.1"
+        sha256 = "0f1b046749e73e8cf20b55b5eb8cab3145f09c07474a14bd127ec8983fc624c3"
+    )
+
+    nuget_package(
+        name = "System.Threading"
+        package = "System.Threading"
+        version = "4.3.0"
+        sha256 = "643437751e29cd5c266aa060e2169c65a55e9d0ff7c8017fb95ec15d95e38967"
+    )
+
+    nuget_package(
         name = "System.Threading.Tasks"
         package = "System.Threading.Tasks"
         version = "4.3.0"
         sha256 = "679ad77c9d445e9dc6df620a646899ea4a0c8d1bb49fc0b5346af0a5d21e9f8c"
+    )
+
+    nuget_package(
+        name = "System.Threading.Tasks.Extensions"
+        package = "System.Threading.Tasks.Extensions"
+        version = "4.5.3"
+        sha256 = "f138256c2e8a0479437927e0afa7797469fbc2ef2d7785c4465d89532a34f93c"
+    )
+
+    nuget_package(
+        name = "System.Threading.Timer"
+        package = "System.Threading.Timer"
+        version = "4.3.0"
+        sha256 = "a6686c96685084fdf64d66c1ce82132d9e01a0e441a98936e4e59baeed38a7db"
+    )
+
+    nuget_package(
+        name = "System.Xml.ReaderWriter"
+        package = "System.Xml.ReaderWriter"
+        version = "4.3.1"
+        sha256 = "7e32092b98e9cfdf6038dd933694eada3c37595b680852cef6b52f904fdbc995"
+    )
+
+    nuget_package(
+        name = "System.Xml.XDocument"
+        package = "System.Xml.XDocument"
+        version = "4.3.0"
+        sha256 = "ad6b5d72672e12534e4b309e85f9722b01e40d1a623a1249b3c09e4349750822"
     )
 
     # NUnit
