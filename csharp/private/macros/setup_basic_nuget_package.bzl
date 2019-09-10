@@ -28,7 +28,7 @@ def _import_dll(dll, has_pdb, imports):
         )
     else:
         import_library(
-            name = "%s-%s" % (lib_name, tfm),
+            name = target_name,
             target_framework = tfm,
             dll = dll,
         )
