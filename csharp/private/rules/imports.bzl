@@ -22,16 +22,16 @@ def _import_library(ctx):
 
     tfm = ctx.attr.target_framework
 
+    (refs, runfiles) = collect_transitive_info(ctx.attr.deps, tfm)
+
     providers = {
         tfm: CSharpAssembly[tfm](
             out = ctx.file.dll,
             refout = ctx.file.refdll,
             pdb = ctx.file.pdb,
             deps = ctx.attr.deps,
-            transitive_refs = collect_transitive_info(
-                ctx.attr.deps,
-                tfm,
-            ),
+            transitive_refs = refs,
+            transitive_runfiles = runfiles,
         ),
     }
 

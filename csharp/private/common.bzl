@@ -20,8 +20,11 @@ def is_standard_framework(tfm):
     return tfm.startswith("netstandard")
 
 def collect_transitive_info(deps, tfm):
-    direct = []
-    transitive = []
+    direct_refs = []
+    transitive_refs = []
+    direct_runfiles = []
+    transitive_runfiles = []
+
     provider = CSharpAssembly[tfm]
 
     for dep in deps:
@@ -31,11 +34,20 @@ def collect_transitive_info(deps, tfm):
         assembly = dep[provider]
 
         # See docs/ReferenceAssemblies.md for more info on why we use refout
-        direct.append(assembly.refout or assembly.out)
+        direct_refs.append(assembly.refout or assembly.out)
+        transitive_refs.append(assembly.transitive_refs)
 
-        transitive.append(assembly.transitive_refs)
+        if assembly.out:
+            direct_runfiles.append(assembly.out)
+        if assembly.pdb:
+            direct_runfiles.append(assembly.pdb)
 
-    return depset(direct = direct, transitive = transitive)
+        transitive_runfiles.append(assembly.transitive_runfiles)
+
+    return (
+        depset(direct = direct_refs, transitive = transitive_refs),
+        depset(direct = direct_runfiles, transitive = transitive_runfiles),
+    )
 
 def fill_in_missing_frameworks(providers):
     """Creates extra providers for frameworks that are compatible with us.
@@ -63,13 +75,14 @@ def fill_in_missing_frameworks(providers):
 
             # Copy the output from the compatible tfm, re-resolving the deps
             base = providers[compatible_tfm]
-            refs = collect_transitive_info(base.deps, tfm)
+            (refs, runfiles) = collect_transitive_info(base.deps, tfm)
             providers[tfm] = CSharpAssembly[tfm](
                 out = base.out,
                 refout = base.refout,
                 pdb = base.pdb,
                 deps = base.deps,
                 transitive_refs = refs,
+                transitive_runfiles = runfiles,
             )
             break
 
