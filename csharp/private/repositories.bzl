@@ -10,9 +10,66 @@ def csharp_repositories():
         build_file = "@d2l_rules_csharp//csharp/private:build-tools.BUILD",
     )
 
-    # TODO: create @net namespace to aggregate @net472 etc. with
-    # import_multiframework_library rules.
+    _net_workspace()
 
+    native.local_repository(
+        name = "net",
+        path = "csharp/private/net",
+    )
+
+    # NUnit
+    nuget_package(
+        name = "NUnitLite",
+        package = "NUnitLite",
+        version = "3.12.0",
+        sha256 = "0b05b83f05b4eee07152e88b7b60b093fa408bfea56489a977ae655b640992f2",
+    )
+
+    nuget_package(
+        name = "NUnit",
+        package = "NUnit",
+        version = "3.12.0",
+        sha256 = "62b67516a08951a20b12b02e5d20b5045edbb687c3aabe9170286ec5bb9000a1",
+    )
+
+    # We need the .NET Core runtime for whatever OS where executing our build
+    # on so that we can run the .NET core build of the compiler (from
+    # @csharp-build-tools).
+
+    _download_runtime(
+        os = "windows",
+        url = "https://download.visualstudio.microsoft.com/download/pr/4fc551ff-0fbc-45ae-b35f-a8666ff1986f/0a6f2d0cf10379b47f6d55be5c31b95b/dotnet-runtime-3.0.0-preview3-27503-5-win-x64.zip",
+        hash = "e648aafbfdbbdc6bac14c052a9e05f43aa916412971e0ccace0b958279c488e0",
+    )
+
+    _download_runtime(
+        os = "linux",
+        url = "https://download.visualstudio.microsoft.com/download/pr/01cf5a3b-24a5-4de1-8a25-9b57583bd737/f27582e4520e14b7e9ab3f7f239e1e3c/dotnet-runtime-3.0.0-preview3-27503-5-linux-x64.tar.gz",
+        hash = "0435409448dd6c07ea4eef1921c480c8b68044c8601d5d9f549f54d16083433f",
+    )
+
+    _download_runtime(
+        os = "osx",
+        url = "https://download.visualstudio.microsoft.com/download/pr/4af9752c-5280-4594-a64d-f352ca5eb6bf/144f1f651ea56bd42eb124e9193531ad/dotnet-runtime-3.0.0-preview3-27503-5-osx-x64.tar.gz",
+        hash = "2a1615aaf64bc8d8f26c15f81b9e1457770d910ea6ebe7458f309326de863552",
+    )
+
+def csharp_register_toolchains():
+    native.register_toolchains(
+        "@d2l_rules_csharp//csharp/private:csharp_windows_toolchain",
+        "@d2l_rules_csharp//csharp/private:csharp_linux_toolchain",
+        "@d2l_rules_csharp//csharp/private:csharp_osx_toolchain",
+    )
+
+def _download_runtime(os, url, hash):
+    http_archive(
+        name = "netcore-runtime-%s" % os,
+        urls = [url],
+        sha256 = hash,
+        build_file = "@d2l_rules_csharp//csharp/private:runtime.BUILD",
+    )
+
+def _net_workspace():
     nuget_package(
         name = "net20",
         package = "Microsoft.NETFramework.ReferenceAssemblies.net20",
@@ -511,56 +568,4 @@ def csharp_repositories():
         package = "System.Xml.XDocument",
         version = "4.3.0",
         sha256 = "ad6b5d72672e12534e4b309e85f9722b01e40d1a623a1249b3c09e4349750822",
-    )
-
-    # NUnit
-    nuget_package(
-        name = "NUnitLite",
-        package = "NUnitLite",
-        version = "3.12.0",
-        sha256 = "0b05b83f05b4eee07152e88b7b60b093fa408bfea56489a977ae655b640992f2",
-    )
-
-    nuget_package(
-        name = "NUnit",
-        package = "NUnit",
-        version = "3.12.0",
-        sha256 = "62b67516a08951a20b12b02e5d20b5045edbb687c3aabe9170286ec5bb9000a1",
-    )
-
-    # We need the .NET Core runtime for whatever OS where executing our build
-    # on so that we can run the .NET core build of the compiler (from
-    # @csharp-build-tools).
-
-    _download_runtime(
-        os = "windows",
-        url = "https://download.visualstudio.microsoft.com/download/pr/4fc551ff-0fbc-45ae-b35f-a8666ff1986f/0a6f2d0cf10379b47f6d55be5c31b95b/dotnet-runtime-3.0.0-preview3-27503-5-win-x64.zip",
-        hash = "e648aafbfdbbdc6bac14c052a9e05f43aa916412971e0ccace0b958279c488e0",
-    )
-
-    _download_runtime(
-        os = "linux",
-        url = "https://download.visualstudio.microsoft.com/download/pr/01cf5a3b-24a5-4de1-8a25-9b57583bd737/f27582e4520e14b7e9ab3f7f239e1e3c/dotnet-runtime-3.0.0-preview3-27503-5-linux-x64.tar.gz",
-        hash = "0435409448dd6c07ea4eef1921c480c8b68044c8601d5d9f549f54d16083433f",
-    )
-
-    _download_runtime(
-        os = "osx",
-        url = "https://download.visualstudio.microsoft.com/download/pr/4af9752c-5280-4594-a64d-f352ca5eb6bf/144f1f651ea56bd42eb124e9193531ad/dotnet-runtime-3.0.0-preview3-27503-5-osx-x64.tar.gz",
-        hash = "2a1615aaf64bc8d8f26c15f81b9e1457770d910ea6ebe7458f309326de863552",
-    )
-
-def csharp_register_toolchains():
-    native.register_toolchains(
-        "@d2l_rules_csharp//csharp/private:csharp_windows_toolchain",
-        "@d2l_rules_csharp//csharp/private:csharp_linux_toolchain",
-        "@d2l_rules_csharp//csharp/private:csharp_osx_toolchain",
-    )
-
-def _download_runtime(os, url, hash):
-    http_archive(
-        name = "netcore-runtime-%s" % os,
-        urls = [url],
-        sha256 = hash,
-        build_file = "@d2l_rules_csharp//csharp/private:runtime.BUILD",
     )
