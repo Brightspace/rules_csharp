@@ -17,6 +17,25 @@ def _format_additionalfile_arg(additionalfile):
 def _format_resource_arg(resource):
     return "/resource:" + resource.path
 
+def _format_define(symbol):
+    return "/d:" + symbol
+
+def _framework_preprocessor_symbols(tfm):
+    """Gets the standard preprocessor symbols for the target framework.
+
+    See https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if#remarks
+    for the official list.
+    """
+
+    specific = tfm.upper().replace(".", "_")
+
+    if tfm.startswith("netstandard"):
+        return ["NETSTANDARD", specific]
+    elif tfm.startswith("netcoreapp"):
+        return ["NETCOREAPP", specific]
+    else:
+        return ["NETFRAMEWORK", specific]
+
 def AssemblyAction(
         actions,
         name,
@@ -87,7 +106,10 @@ def AssemblyAction(
     args.add_all(resources, map_each = _format_resource_arg)
 
     # defines
-    args.add_joined("/define", defines, join_with=";")
+    args.add_all(
+        _framework_preprocessor_symbols(target_framework) + defines,
+        map_each = _format_define,
+    )
 
     # TODO:
     # - appconfig(?)
