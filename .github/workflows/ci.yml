@@ -1,0 +1,16 @@
+name: CI
+on: pull_request
+
+jobs:
+  build:
+    name: Build examples
+    runs-on: ubuntu-latest
+    container: gcr.io/cloud-marketplace-containers/google/bazel:0.29.1
+    steps:
+      - name: Clone
+        uses: actions/checkout@v1
+      - name: Build all targets
+        run: bazel build //examples:*
+      - name: Dump the action graph
+        run: bazel aquery 'deps(//examples:*)'
+
