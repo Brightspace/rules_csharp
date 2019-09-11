@@ -39,6 +39,10 @@ def _nunit_test_impl(ctx):
     result = providers.values()
     result.append(DefaultInfo(
         executable = result[0].out,
+        runfiles = ctx.runfiles(
+            files = [result[0].out, result[0].pdb],
+            transitive_files = result[0].transitive_runfiles,
+        ),
         files = depset([result[0].out, result[0].refout, result[0].pdb]),
     ))
 

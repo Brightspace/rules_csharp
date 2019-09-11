@@ -90,7 +90,7 @@ def AssemblyAction(
     args.add("/pdb:" + pdb.path)
 
     # assembly references
-    refs = collect_transitive_info(deps, target_framework)
+    (refs, runfiles) = collect_transitive_info(deps, target_framework)
     args.add_all(refs, map_each = _format_ref_arg)
 
     # analyzers
@@ -160,4 +160,5 @@ def AssemblyAction(
         pdb = pdb,
         deps = deps,
         transitive_refs = refs,
+        transitive_runfiles = runfiles,
     )
