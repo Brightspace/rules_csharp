@@ -5,12 +5,18 @@ jobs:
   build:
     name: Build examples
     runs-on: ubuntu-latest
-    container: gcr.io/cloud-marketplace-containers/google/bazel:0.29.1
+    container:
+      image: gcr.io/cloud-marketplace-containers/google/bazel:0.29.1
     steps:
       - name: Clone
         uses: actions/checkout@v1
-      - name: Build all targets
-        run: bazel build //examples:*
       - name: Dump the action graph
         run: bazel aquery 'deps(//examples:*)'
+      - name: Build all targets
+        run: bazel build --action_env=CORECLR_GLOBAL_INVARIANT //examples:* --verbose_failures
+        env:
+          # dotnet assumes ICU is installed system wide, along with other deps
+          # https://github.com/dotnet/core/blob/master/Documentation/build-and-install-rhel6-prerequisites.md
+          # TODO: document this in our rules, or vendor more of this.
+          CORECLR_GLOBAL_INVARIANT: 1
 
