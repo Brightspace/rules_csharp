@@ -50,11 +50,12 @@ def AssemblyAction(
         target,
         target_framework,
         toolchain):
-    out_ext = "dll" if target == "library" else "exe"
 
-    out = actions.declare_file("%s.%s" % (name, out_ext))
-    refout = actions.declare_file("%s.ref.%s" % (name, out_ext))
-    pdb = actions.declare_file(name + ".pdb")
+    out_dir = "bazelout/" + target_framework
+    out_ext = "dll" if target == "library" else "exe"
+    out = actions.declare_file("%s/%s.%s" % (out_dir, name, out_ext))
+    refout = actions.declare_file("%s/%s.ref.%s" % (out_dir, name, out_ext))
+    pdb = actions.declare_file("%s/%s.pdb" % (out_dir, name))
 
     # Our goal is to match msbuild as much as reasonable
     # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically
