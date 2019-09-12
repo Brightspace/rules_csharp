@@ -92,7 +92,7 @@ progress. The most important open issues are:
 
 ## How we want it to work
 
-Consider the following example of a diamond dependency:
+Consider the following example of a diamond dependency (also available in [`examples/diamond/`](../examples/diamond/)):
 
 ```python
 csharp_library(
