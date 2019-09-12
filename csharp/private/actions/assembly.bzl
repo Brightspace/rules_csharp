@@ -52,9 +52,10 @@ def AssemblyAction(
         toolchain):
     out_ext = "dll" if target == "library" else "exe"
 
-    out = actions.declare_file("%s.%s" % (name, out_ext))
-    refout = actions.declare_file("%s.ref.%s" % (name, out_ext))
-    pdb = actions.declare_file(name + ".pdb")
+    sanitized_tfm = target_framework.replace(".", "_")
+    out = actions.declare_file("%s.%s.%s" % (name, sanitized_tfm, out_ext))
+    refout = actions.declare_file("%s.%s.ref.%s" % (name, sanitized_tfm, out_ext))
+    pdb = actions.declare_file("%s.%s.pdb" % (name, sanitized_tfm))
 
     # Our goal is to match msbuild as much as reasonable
     # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically
