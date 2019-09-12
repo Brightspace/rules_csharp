@@ -53,9 +53,9 @@ def AssemblyAction(
     out_ext = "dll" if target == "library" else "exe"
 
     sanitized_tfm = target_framework.replace(".", "_")
-    out = actions.declare_file("%s.%s.%s" % (name, sanitized_tfm, out_ext))
-    refout = actions.declare_file("%s.%s.ref.%s" % (name, sanitized_tfm, out_ext))
-    pdb = actions.declare_file("%s.%s.pdb" % (name, sanitized_tfm))
+    out = actions.declare_file("%s.bazelout/%s.%s" % (sanitized_tfm, name, out_ext))
+    refout = actions.declare_file("%s.bazelout/%s.ref.%s" % (sanitized_tfm, name, out_ext))
+    pdb = actions.declare_file("%s.bazelout/%s.pdb" % (sanitized_tfm, name))
 
     # Our goal is to match msbuild as much as reasonable
     # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically
