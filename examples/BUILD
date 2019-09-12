@@ -26,5 +26,5 @@ csharp_nunit_test(
 csharp_library(
     name = "lib",
     srcs = ["lib.cs"],
-    deps = ["@net472//:System.Linq"],
+    deps = ["@net//:System.Linq"],
 )
