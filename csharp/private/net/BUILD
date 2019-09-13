@@ -5,6 +5,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:Accessibility",
+    net40 = "@net40//:Accessibility",
     net45 = "@net45//:Accessibility",
     net451 = "@net451//:Accessibility",
     net452 = "@net452//:Accessibility",
@@ -34,6 +35,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:CustomMarshalers",
+    net40 = "@net40//:CustomMarshalers",
     net45 = "@net45//:CustomMarshalers",
     net451 = "@net451//:CustomMarshalers",
     net452 = "@net452//:CustomMarshalers",
@@ -63,6 +65,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:ISymWrapper",
+    net40 = "@net40//:ISymWrapper",
     net45 = "@net45//:ISymWrapper",
     net451 = "@net451//:ISymWrapper",
     net452 = "@net452//:ISymWrapper",
@@ -95,6 +98,7 @@ import_multiframework_library(
     name = "Microsoft.Build",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:Microsoft.Build",
     net45 = "@net45//:Microsoft.Build",
     net451 = "@net451//:Microsoft.Build",
     net452 = "@net452//:Microsoft.Build",
@@ -111,6 +115,7 @@ import_multiframework_library(
     name = "Microsoft.Build.Conversion.v4.0",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:Microsoft.Build.Conversion.v4.0",
     net45 = "@net45//:Microsoft.Build.Conversion.v4.0",
     net451 = "@net451//:Microsoft.Build.Conversion.v4.0",
     net452 = "@net452//:Microsoft.Build.Conversion.v4.0",
@@ -128,6 +133,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:Microsoft.Build.Engine",
+    net40 = "@net40//:Microsoft.Build.Engine",
     net45 = "@net45//:Microsoft.Build.Engine",
     net451 = "@net451//:Microsoft.Build.Engine",
     net452 = "@net452//:Microsoft.Build.Engine",
@@ -145,6 +151,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:Microsoft.Build.Framework",
+    net40 = "@net40//:Microsoft.Build.Framework",
     net45 = "@net45//:Microsoft.Build.Framework",
     net451 = "@net451//:Microsoft.Build.Framework",
     net452 = "@net452//:Microsoft.Build.Framework",
@@ -173,6 +180,7 @@ import_multiframework_library(
     name = "Microsoft.Build.Tasks.v4.0",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:Microsoft.Build.Tasks.v4.0",
     net45 = "@net45//:Microsoft.Build.Tasks.v4.0",
     net451 = "@net451//:Microsoft.Build.Tasks.v4.0",
     net452 = "@net452//:Microsoft.Build.Tasks.v4.0",
@@ -189,6 +197,7 @@ import_multiframework_library(
     name = "Microsoft.Build.Utilities.v4.0",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:Microsoft.Build.Utilities.v4.0",
     net45 = "@net45//:Microsoft.Build.Utilities.v4.0",
     net451 = "@net451//:Microsoft.Build.Utilities.v4.0",
     net452 = "@net452//:Microsoft.Build.Utilities.v4.0",
@@ -205,6 +214,7 @@ import_multiframework_library(
     name = "Microsoft.CSharp",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:Microsoft.CSharp",
     net45 = "@net45//:Microsoft.CSharp",
     net451 = "@net451//:Microsoft.CSharp",
     net452 = "@net452//:Microsoft.CSharp",
@@ -222,6 +232,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:Microsoft.JScript",
+    net40 = "@net40//:Microsoft.JScript",
     net45 = "@net45//:Microsoft.JScript",
     net451 = "@net451//:Microsoft.JScript",
     net452 = "@net452//:Microsoft.JScript",
@@ -239,6 +250,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:Microsoft.VisualBasic",
+    net40 = "@net40//:Microsoft.VisualBasic",
     net45 = "@net45//:Microsoft.VisualBasic",
     net451 = "@net451//:Microsoft.VisualBasic",
     net452 = "@net452//:Microsoft.VisualBasic",
@@ -256,6 +268,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:Microsoft.VisualBasic.Compatibility",
+    net40 = "@net40//:Microsoft.VisualBasic.Compatibility",
     net45 = "@net45//:Microsoft.VisualBasic.Compatibility",
     net451 = "@net451//:Microsoft.VisualBasic.Compatibility",
     net452 = "@net452//:Microsoft.VisualBasic.Compatibility",
@@ -273,6 +286,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:Microsoft.VisualBasic.Compatibility.Data",
+    net40 = "@net40//:Microsoft.VisualBasic.Compatibility.Data",
     net45 = "@net45//:Microsoft.VisualBasic.Compatibility.Data",
     net451 = "@net451//:Microsoft.VisualBasic.Compatibility.Data",
     net452 = "@net452//:Microsoft.VisualBasic.Compatibility.Data",
@@ -296,6 +310,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:Microsoft.VisualC",
+    net40 = "@net40//:Microsoft.VisualC",
     net45 = "@net45//:Microsoft.VisualC",
     net451 = "@net451//:Microsoft.VisualC",
     net452 = "@net452//:Microsoft.VisualC",
@@ -312,6 +327,7 @@ import_multiframework_library(
     name = "Microsoft.VisualC.STLCLR",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:Microsoft.VisualC.STLCLR",
     net45 = "@net45//:Microsoft.VisualC.STLCLR",
     net451 = "@net451//:Microsoft.VisualC.STLCLR",
     net452 = "@net452//:Microsoft.VisualC.STLCLR",
@@ -355,6 +371,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:mscorlib",
+    net40 = "@net40//:mscorlib",
     net45 = "@net45//:mscorlib",
     net451 = "@net451//:mscorlib",
     net452 = "@net452//:mscorlib",
@@ -380,6 +397,7 @@ import_multiframework_library(
     name = "PresentationBuildTasks",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:PresentationBuildTasks",
     net45 = "@net45//:PresentationBuildTasks",
     net451 = "@net451//:PresentationBuildTasks",
     net452 = "@net452//:PresentationBuildTasks",
@@ -396,6 +414,7 @@ import_multiframework_library(
     name = "PresentationCore",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:PresentationCore",
     net45 = "@net45//:PresentationCore",
     net451 = "@net451//:PresentationCore",
     net452 = "@net452//:PresentationCore",
@@ -412,6 +431,7 @@ import_multiframework_library(
     name = "PresentationFramework",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:PresentationFramework",
     net45 = "@net45//:PresentationFramework",
     net451 = "@net451//:PresentationFramework",
     net452 = "@net452//:PresentationFramework",
@@ -428,6 +448,7 @@ import_multiframework_library(
     name = "PresentationFramework.Aero",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:PresentationFramework.Aero",
     net45 = "@net45//:PresentationFramework.Aero",
     net451 = "@net451//:PresentationFramework.Aero",
     net452 = "@net452//:PresentationFramework.Aero",
@@ -444,6 +465,7 @@ import_multiframework_library(
     name = "PresentationFramework.Aero2",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:PresentationFramework.Aero2",
     net45 = "@net45//:PresentationFramework.Aero2",
     net451 = "@net451//:PresentationFramework.Aero2",
     net452 = "@net452//:PresentationFramework.Aero2",
@@ -460,6 +482,7 @@ import_multiframework_library(
     name = "PresentationFramework.AeroLite",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:PresentationFramework.AeroLite",
     net45 = "@net45//:PresentationFramework.AeroLite",
     net451 = "@net451//:PresentationFramework.AeroLite",
     net452 = "@net452//:PresentationFramework.AeroLite",
@@ -476,6 +499,7 @@ import_multiframework_library(
     name = "PresentationFramework.Classic",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:PresentationFramework.Classic",
     net45 = "@net45//:PresentationFramework.Classic",
     net451 = "@net451//:PresentationFramework.Classic",
     net452 = "@net452//:PresentationFramework.Classic",
@@ -492,6 +516,7 @@ import_multiframework_library(
     name = "PresentationFramework.Luna",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:PresentationFramework.Luna",
     net45 = "@net45//:PresentationFramework.Luna",
     net451 = "@net451//:PresentationFramework.Luna",
     net452 = "@net452//:PresentationFramework.Luna",
@@ -508,6 +533,7 @@ import_multiframework_library(
     name = "PresentationFramework.Royale",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:PresentationFramework.Royale",
     net45 = "@net45//:PresentationFramework.Royale",
     net451 = "@net451//:PresentationFramework.Royale",
     net452 = "@net452//:PresentationFramework.Royale",
@@ -524,6 +550,7 @@ import_multiframework_library(
     name = "ReachFramework",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:ReachFramework",
     net45 = "@net45//:ReachFramework",
     net451 = "@net451//:ReachFramework",
     net452 = "@net452//:ReachFramework",
@@ -541,6 +568,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:sysglobl",
+    net40 = "@net40//:sysglobl",
     net45 = "@net45//:sysglobl",
     net451 = "@net451//:sysglobl",
     net452 = "@net452//:sysglobl",
@@ -558,6 +586,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System",
+    net40 = "@net40//:System",
     net45 = "@net45//:System",
     net451 = "@net451//:System",
     net452 = "@net452//:System",
@@ -574,6 +603,7 @@ import_multiframework_library(
     name = "System.Activities",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Activities",
     net45 = "@net45//:System.Activities",
     net451 = "@net451//:System.Activities",
     net452 = "@net452//:System.Activities",
@@ -590,6 +620,7 @@ import_multiframework_library(
     name = "System.Activities.Core.Presentation",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Activities.Core.Presentation",
     net45 = "@net45//:System.Activities.Core.Presentation",
     net451 = "@net451//:System.Activities.Core.Presentation",
     net452 = "@net452//:System.Activities.Core.Presentation",
@@ -606,6 +637,7 @@ import_multiframework_library(
     name = "System.Activities.DurableInstancing",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Activities.DurableInstancing",
     net45 = "@net45//:System.Activities.DurableInstancing",
     net451 = "@net451//:System.Activities.DurableInstancing",
     net452 = "@net452//:System.Activities.DurableInstancing",
@@ -622,6 +654,7 @@ import_multiframework_library(
     name = "System.Activities.Presentation",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Activities.Presentation",
     net45 = "@net45//:System.Activities.Presentation",
     net451 = "@net451//:System.Activities.Presentation",
     net452 = "@net452//:System.Activities.Presentation",
@@ -638,6 +671,7 @@ import_multiframework_library(
     name = "System.AddIn",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.AddIn",
     net45 = "@net45//:System.AddIn",
     net451 = "@net451//:System.AddIn",
     net452 = "@net452//:System.AddIn",
@@ -654,6 +688,7 @@ import_multiframework_library(
     name = "System.AddIn.Contract",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.AddIn.Contract",
     net45 = "@net45//:System.AddIn.Contract",
     net451 = "@net451//:System.AddIn.Contract",
     net452 = "@net452//:System.AddIn.Contract",
@@ -761,6 +796,7 @@ import_multiframework_library(
     name = "System.ComponentModel.Composition",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.ComponentModel.Composition",
     net45 = "@net45//:System.ComponentModel.Composition",
     net451 = "@net451//:System.ComponentModel.Composition",
     net452 = "@net452//:System.ComponentModel.Composition",
@@ -793,6 +829,7 @@ import_multiframework_library(
     name = "System.ComponentModel.DataAnnotations",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.ComponentModel.DataAnnotations",
     net45 = "@net45//:System.ComponentModel.DataAnnotations",
     net451 = "@net451//:System.ComponentModel.DataAnnotations",
     net452 = "@net452//:System.ComponentModel.DataAnnotations",
@@ -844,6 +881,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.configuration",
+    net40 = "@net40//:System.Configuration",
     net45 = "@net45//:System.Configuration",
     net451 = "@net451//:System.Configuration",
     net452 = "@net452//:System.Configuration",
@@ -861,6 +899,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Configuration.Install",
+    net40 = "@net40//:System.Configuration.Install",
     net45 = "@net45//:System.Configuration.Install",
     net451 = "@net451//:System.Configuration.Install",
     net452 = "@net452//:System.Configuration.Install",
@@ -886,6 +925,7 @@ import_multiframework_library(
     name = "System.Core",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Core",
     net45 = "@net45//:System.Core",
     net451 = "@net451//:System.Core",
     net452 = "@net452//:System.Core",
@@ -903,6 +943,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Data",
+    net40 = "@net40//:System.Data",
     net45 = "@net45//:System.Data",
     net451 = "@net451//:System.Data",
     net452 = "@net452//:System.Data",
@@ -928,6 +969,7 @@ import_multiframework_library(
     name = "System.Data.DataSetExtensions",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Data.DataSetExtensions",
     net45 = "@net45//:System.Data.DataSetExtensions",
     net451 = "@net451//:System.Data.DataSetExtensions",
     net452 = "@net452//:System.Data.DataSetExtensions",
@@ -944,6 +986,7 @@ import_multiframework_library(
     name = "System.Data.Entity",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Data.Entity",
     net45 = "@net45//:System.Data.Entity",
     net451 = "@net451//:System.Data.Entity",
     net452 = "@net452//:System.Data.Entity",
@@ -960,6 +1003,7 @@ import_multiframework_library(
     name = "System.Data.Entity.Design",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Data.Entity.Design",
     net45 = "@net45//:System.Data.Entity.Design",
     net451 = "@net451//:System.Data.Entity.Design",
     net452 = "@net452//:System.Data.Entity.Design",
@@ -976,6 +1020,7 @@ import_multiframework_library(
     name = "System.Data.Linq",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Data.Linq",
     net45 = "@net45//:System.Data.Linq",
     net451 = "@net451//:System.Data.Linq",
     net452 = "@net452//:System.Data.Linq",
@@ -993,6 +1038,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Data.OracleClient",
+    net40 = "@net40//:System.Data.OracleClient",
     net45 = "@net45//:System.Data.OracleClient",
     net451 = "@net451//:System.Data.OracleClient",
     net452 = "@net452//:System.Data.OracleClient",
@@ -1009,6 +1055,7 @@ import_multiframework_library(
     name = "System.Data.Services",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Data.Services",
     net45 = "@net45//:System.Data.Services",
     net451 = "@net451//:System.Data.Services",
     net452 = "@net452//:System.Data.Services",
@@ -1025,6 +1072,7 @@ import_multiframework_library(
     name = "System.Data.Services.Client",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Data.Services.Client",
     net45 = "@net45//:System.Data.Services.Client",
     net451 = "@net451//:System.Data.Services.Client",
     net452 = "@net452//:System.Data.Services.Client",
@@ -1041,6 +1089,7 @@ import_multiframework_library(
     name = "System.Data.Services.Design",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Data.Services.Design",
     net45 = "@net45//:System.Data.Services.Design",
     net451 = "@net451//:System.Data.Services.Design",
     net452 = "@net452//:System.Data.Services.Design",
@@ -1058,6 +1107,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Data.SqlXml",
+    net40 = "@net40//:System.Data.SqlXml",
     net45 = "@net45//:System.Data.SqlXml",
     net451 = "@net451//:System.Data.SqlXml",
     net452 = "@net452//:System.Data.SqlXml",
@@ -1075,6 +1125,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Deployment",
+    net40 = "@net40//:System.Deployment",
     net45 = "@net45//:System.Deployment",
     net451 = "@net451//:System.Deployment",
     net452 = "@net452//:System.Deployment",
@@ -1092,6 +1143,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Design",
+    net40 = "@net40//:System.Design",
     net45 = "@net45//:System.Design",
     net451 = "@net451//:System.Design",
     net452 = "@net452//:System.Design",
@@ -1108,6 +1160,7 @@ import_multiframework_library(
     name = "System.Device",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Device",
     net45 = "@net45//:System.Device",
     net451 = "@net451//:System.Device",
     net452 = "@net452//:System.Device",
@@ -1234,6 +1287,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.DirectoryServices",
+    net40 = "@net40//:System.DirectoryServices",
     net45 = "@net45//:System.DirectoryServices",
     net451 = "@net451//:System.DirectoryServices",
     net452 = "@net452//:System.DirectoryServices",
@@ -1250,6 +1304,7 @@ import_multiframework_library(
     name = "System.DirectoryServices.AccountManagement",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.DirectoryServices.AccountManagement",
     net45 = "@net45//:System.DirectoryServices.AccountManagement",
     net451 = "@net451//:System.DirectoryServices.AccountManagement",
     net452 = "@net452//:System.DirectoryServices.AccountManagement",
@@ -1267,6 +1322,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.DirectoryServices.Protocols",
+    net40 = "@net40//:System.DirectoryServices.Protocols",
     net45 = "@net45//:System.DirectoryServices.Protocols",
     net451 = "@net451//:System.DirectoryServices.Protocols",
     net452 = "@net452//:System.DirectoryServices.Protocols",
@@ -1284,6 +1340,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Drawing",
+    net40 = "@net40//:System.Drawing",
     net45 = "@net45//:System.Drawing",
     net451 = "@net451//:System.Drawing",
     net452 = "@net452//:System.Drawing",
@@ -1301,6 +1358,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Drawing.Design",
+    net40 = "@net40//:System.Drawing.Design",
     net45 = "@net45//:System.Drawing.Design",
     net451 = "@net451//:System.Drawing.Design",
     net452 = "@net452//:System.Drawing.Design",
@@ -1356,6 +1414,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.EnterpriseServices",
+    net40 = "@net40//:System.EnterpriseServices",
     net45 = "@net45//:System.EnterpriseServices",
     net451 = "@net451//:System.EnterpriseServices",
     net452 = "@net452//:System.EnterpriseServices",
@@ -1373,6 +1432,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.EnterpriseServices.Thunk",
+    net40 = "@net40//:System.EnterpriseServices.Thunk",
     net45 = "@net45//:System.EnterpriseServices.Thunk",
     net451 = "@net451//:System.EnterpriseServices.Thunk",
     net452 = "@net452//:System.EnterpriseServices.Thunk",
@@ -1390,6 +1450,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.EnterpriseServices.Thunk",
+    net40 = "@net40//:System.EnterpriseServices.Thunk",
     net45 = "@net45//:System.EnterpriseServices.Thunk",
     net451 = "@net451//:System.EnterpriseServices.Thunk",
     net452 = "@net452//:System.EnterpriseServices.Thunk",
@@ -1440,6 +1501,7 @@ import_multiframework_library(
     name = "System.IdentityModel",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.IdentityModel",
     net45 = "@net45//:System.IdentityModel",
     net451 = "@net451//:System.IdentityModel",
     net452 = "@net452//:System.IdentityModel",
@@ -1456,6 +1518,7 @@ import_multiframework_library(
     name = "System.IdentityModel.Selectors",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.IdentityModel.Selectors",
     net45 = "@net45//:System.IdentityModel.Selectors",
     net451 = "@net451//:System.IdentityModel.Selectors",
     net452 = "@net452//:System.IdentityModel.Selectors",
@@ -1590,6 +1653,7 @@ import_multiframework_library(
     name = "System.IO.Log",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.IO.Log",
     net45 = "@net45//:System.IO.Log",
     net451 = "@net451//:System.IO.Log",
     net452 = "@net452//:System.IO.Log",
@@ -1698,6 +1762,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Management",
+    net40 = "@net40//:System.Management",
     net45 = "@net45//:System.Management",
     net451 = "@net451//:System.Management",
     net452 = "@net452//:System.Management",
@@ -1714,6 +1779,7 @@ import_multiframework_library(
     name = "System.Management.Instrumentation",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Management.Instrumentation",
     net45 = "@net45//:System.Management.Instrumentation",
     net451 = "@net451//:System.Management.Instrumentation",
     net452 = "@net452//:System.Management.Instrumentation",
@@ -1731,6 +1797,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Messaging",
+    net40 = "@net40//:System.Messaging",
     net45 = "@net45//:System.Messaging",
     net451 = "@net451//:System.Messaging",
     net452 = "@net452//:System.Messaging",
@@ -1747,6 +1814,7 @@ import_multiframework_library(
     name = "System.Net",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Net",
     net45 = "@net45//:System.Net",
     net451 = "@net451//:System.Net",
     net452 = "@net452//:System.Net",
@@ -1919,6 +1987,7 @@ import_multiframework_library(
     name = "System.Numerics",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Numerics",
     net45 = "@net45//:System.Numerics",
     net451 = "@net451//:System.Numerics",
     net452 = "@net452//:System.Numerics",
@@ -1951,6 +2020,7 @@ import_multiframework_library(
     name = "System.Printing",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Printing",
     net45 = "@net45//:System.Printing",
     net451 = "@net451//:System.Printing",
     net452 = "@net452//:System.Printing",
@@ -2129,6 +2199,7 @@ import_multiframework_library(
     name = "System.Runtime.Caching",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Runtime.Caching",
     net45 = "@net45//:System.Runtime.Caching",
     net451 = "@net451//:System.Runtime.Caching",
     net452 = "@net452//:System.Runtime.Caching",
@@ -2154,6 +2225,7 @@ import_multiframework_library(
     name = "System.Runtime.DurableInstancing",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Runtime.DurableInstancing",
     net45 = "@net45//:System.Runtime.DurableInstancing",
     net451 = "@net451//:System.Runtime.DurableInstancing",
     net452 = "@net452//:System.Runtime.DurableInstancing",
@@ -2257,6 +2329,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Runtime.Remoting",
+    net40 = "@net40//:System.Runtime.Remoting",
     net45 = "@net45//:System.Runtime.Remoting",
     net451 = "@net451//:System.Runtime.Remoting",
     net452 = "@net452//:System.Runtime.Remoting",
@@ -2273,6 +2346,7 @@ import_multiframework_library(
     name = "System.Runtime.Serialization",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Runtime.Serialization",
     net45 = "@net45//:System.Runtime.Serialization",
     net451 = "@net451//:System.Runtime.Serialization",
     net452 = "@net452//:System.Runtime.Serialization",
@@ -2299,6 +2373,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Runtime.Serialization.Formatters.Soap",
+    net40 = "@net40//:System.Runtime.Serialization.Formatters.Soap",
     net45 = "@net45//:System.Runtime.Serialization.Formatters.Soap",
     net451 = "@net451//:System.Runtime.Serialization.Formatters.Soap",
     net452 = "@net452//:System.Runtime.Serialization.Formatters.Soap",
@@ -2364,6 +2439,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Security",
+    net40 = "@net40//:System.Security",
     net45 = "@net45//:System.Security",
     net451 = "@net451//:System.Security",
     net452 = "@net452//:System.Security",
@@ -2459,6 +2535,7 @@ import_multiframework_library(
     name = "System.ServiceModel",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.ServiceModel",
     net45 = "@net45//:System.ServiceModel",
     net451 = "@net451//:System.ServiceModel",
     net452 = "@net452//:System.ServiceModel",
@@ -2475,6 +2552,7 @@ import_multiframework_library(
     name = "System.ServiceModel.Activation",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.ServiceModel.Activation",
     net45 = "@net45//:System.ServiceModel.Activation",
     net451 = "@net451//:System.ServiceModel.Activation",
     net452 = "@net452//:System.ServiceModel.Activation",
@@ -2491,6 +2569,7 @@ import_multiframework_library(
     name = "System.ServiceModel.Activities",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.ServiceModel.Activities",
     net45 = "@net45//:System.ServiceModel.Activities",
     net451 = "@net451//:System.ServiceModel.Activities",
     net452 = "@net452//:System.ServiceModel.Activities",
@@ -2507,6 +2586,7 @@ import_multiframework_library(
     name = "System.ServiceModel.Channels",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.ServiceModel.Channels",
     net45 = "@net45//:System.ServiceModel.Channels",
     net451 = "@net451//:System.ServiceModel.Channels",
     net452 = "@net452//:System.ServiceModel.Channels",
@@ -2523,6 +2603,7 @@ import_multiframework_library(
     name = "System.ServiceModel.Discovery",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.ServiceModel.Discovery",
     net45 = "@net45//:System.ServiceModel.Discovery",
     net451 = "@net451//:System.ServiceModel.Discovery",
     net452 = "@net452//:System.ServiceModel.Discovery",
@@ -2603,6 +2684,7 @@ import_multiframework_library(
     name = "System.ServiceModel.Routing",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.ServiceModel.Routing",
     net45 = "@net45//:System.ServiceModel.Routing",
     net451 = "@net451//:System.ServiceModel.Routing",
     net452 = "@net452//:System.ServiceModel.Routing",
@@ -2635,6 +2717,7 @@ import_multiframework_library(
     name = "System.ServiceModel.Web",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.ServiceModel.Web",
     net45 = "@net45//:System.ServiceModel.Web",
     net451 = "@net451//:System.ServiceModel.Web",
     net452 = "@net452//:System.ServiceModel.Web",
@@ -2652,6 +2735,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.ServiceProcess",
+    net40 = "@net40//:System.ServiceProcess",
     net45 = "@net45//:System.ServiceProcess",
     net451 = "@net451//:System.ServiceProcess",
     net452 = "@net452//:System.ServiceProcess",
@@ -2668,6 +2752,7 @@ import_multiframework_library(
     name = "System.Speech",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Speech",
     net45 = "@net45//:System.Speech",
     net451 = "@net451//:System.Speech",
     net452 = "@net452//:System.Speech",
@@ -2823,6 +2908,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Transactions",
+    net40 = "@net40//:System.Transactions",
     net45 = "@net45//:System.Transactions",
     net451 = "@net451//:System.Transactions",
     net452 = "@net452//:System.Transactions",
@@ -2849,6 +2935,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Web",
+    net40 = "@net40//:System.Web",
     net45 = "@net45//:System.Web",
     net451 = "@net451//:System.Web",
     net452 = "@net452//:System.Web",
@@ -2865,6 +2952,7 @@ import_multiframework_library(
     name = "System.Web.Abstractions",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.Abstractions",
     net45 = "@net45//:System.Web.Abstractions",
     net451 = "@net451//:System.Web.Abstractions",
     net452 = "@net452//:System.Web.Abstractions",
@@ -2881,6 +2969,7 @@ import_multiframework_library(
     name = "System.Web.ApplicationServices",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.ApplicationServices",
     net45 = "@net45//:System.Web.ApplicationServices",
     net451 = "@net451//:System.Web.ApplicationServices",
     net452 = "@net452//:System.Web.ApplicationServices",
@@ -2897,6 +2986,7 @@ import_multiframework_library(
     name = "System.Web.DataVisualization",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.DataVisualization",
     net45 = "@net45//:System.Web.DataVisualization",
     net451 = "@net451//:System.Web.DataVisualization",
     net452 = "@net452//:System.Web.DataVisualization",
@@ -2913,6 +3003,7 @@ import_multiframework_library(
     name = "System.Web.DataVisualization.Design",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.DataVisualization.Design",
     net45 = "@net45//:System.Web.DataVisualization.Design",
     net451 = "@net451//:System.Web.DataVisualization.Design",
     net452 = "@net452//:System.Web.DataVisualization.Design",
@@ -2929,6 +3020,7 @@ import_multiframework_library(
     name = "System.Web.DynamicData",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.DynamicData",
     net45 = "@net45//:System.Web.DynamicData",
     net451 = "@net451//:System.Web.DynamicData",
     net452 = "@net452//:System.Web.DynamicData",
@@ -2945,6 +3037,7 @@ import_multiframework_library(
     name = "System.Web.DynamicData.Design",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.DynamicData.Design",
     net45 = "@net45//:System.Web.DynamicData.Design",
     net451 = "@net451//:System.Web.DynamicData.Design",
     net452 = "@net452//:System.Web.DynamicData.Design",
@@ -2961,6 +3054,7 @@ import_multiframework_library(
     name = "System.Web.Entity",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.Entity",
     net45 = "@net45//:System.Web.Entity",
     net451 = "@net451//:System.Web.Entity",
     net452 = "@net452//:System.Web.Entity",
@@ -2977,6 +3071,7 @@ import_multiframework_library(
     name = "System.Web.Entity.Design",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.Entity.Design",
     net45 = "@net45//:System.Web.Entity.Design",
     net451 = "@net451//:System.Web.Entity.Design",
     net452 = "@net452//:System.Web.Entity.Design",
@@ -2993,6 +3088,7 @@ import_multiframework_library(
     name = "System.Web.Extensions",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.Extensions",
     net45 = "@net45//:System.Web.Extensions",
     net451 = "@net451//:System.Web.Extensions",
     net452 = "@net452//:System.Web.Extensions",
@@ -3009,6 +3105,7 @@ import_multiframework_library(
     name = "System.Web.Extensions.Design",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.Extensions.Design",
     net45 = "@net45//:System.Web.Extensions.Design",
     net451 = "@net451//:System.Web.Extensions.Design",
     net452 = "@net452//:System.Web.Extensions.Design",
@@ -3026,6 +3123,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Web.Mobile",
+    net40 = "@net40//:System.Web.Mobile",
     net45 = "@net45//:System.Web.Mobile",
     net451 = "@net451//:System.Web.Mobile",
     net452 = "@net452//:System.Web.Mobile",
@@ -3043,6 +3141,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Web.RegularExpressions",
+    net40 = "@net40//:System.Web.RegularExpressions",
     net45 = "@net45//:System.Web.RegularExpressions",
     net451 = "@net451//:System.Web.RegularExpressions",
     net452 = "@net452//:System.Web.RegularExpressions",
@@ -3059,6 +3158,7 @@ import_multiframework_library(
     name = "System.Web.Routing",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Web.Routing",
     net45 = "@net45//:System.Web.Routing",
     net451 = "@net451//:System.Web.Routing",
     net452 = "@net452//:System.Web.Routing",
@@ -3076,6 +3176,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Web.Services",
+    net40 = "@net40//:System.Web.Services",
     net45 = "@net45//:System.Web.Services",
     net451 = "@net451//:System.Web.Services",
     net452 = "@net452//:System.Web.Services",
@@ -3125,6 +3226,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Windows.Forms",
+    net40 = "@net40//:System.Windows.Forms",
     net45 = "@net45//:System.Windows.Forms",
     net451 = "@net451//:System.Windows.Forms",
     net452 = "@net452//:System.Windows.Forms",
@@ -3141,6 +3243,7 @@ import_multiframework_library(
     name = "System.Windows.Forms.DataVisualization",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Windows.Forms.DataVisualization",
     net45 = "@net45//:System.Windows.Forms.DataVisualization",
     net451 = "@net451//:System.Windows.Forms.DataVisualization",
     net452 = "@net452//:System.Windows.Forms.DataVisualization",
@@ -3157,6 +3260,7 @@ import_multiframework_library(
     name = "System.Windows.Forms.DataVisualization.Design",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Windows.Forms.DataVisualization.Design",
     net45 = "@net45//:System.Windows.Forms.DataVisualization.Design",
     net451 = "@net451//:System.Windows.Forms.DataVisualization.Design",
     net452 = "@net452//:System.Windows.Forms.DataVisualization.Design",
@@ -3173,6 +3277,7 @@ import_multiframework_library(
     name = "System.Windows.Input.Manipulations",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Windows.Input.Manipulations",
     net45 = "@net45//:System.Windows.Input.Manipulations",
     net451 = "@net451//:System.Windows.Input.Manipulations",
     net452 = "@net452//:System.Windows.Input.Manipulations",
@@ -3189,6 +3294,7 @@ import_multiframework_library(
     name = "System.Windows.Presentation",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Windows.Presentation",
     net45 = "@net45//:System.Windows.Presentation",
     net451 = "@net451//:System.Windows.Presentation",
     net452 = "@net452//:System.Windows.Presentation",
@@ -3205,6 +3311,7 @@ import_multiframework_library(
     name = "System.Workflow.Activities",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Workflow.Activities",
     net45 = "@net45//:System.Workflow.Activities",
     net451 = "@net451//:System.Workflow.Activities",
     net452 = "@net452//:System.Workflow.Activities",
@@ -3221,6 +3328,7 @@ import_multiframework_library(
     name = "System.Workflow.ComponentModel",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Workflow.ComponentModel",
     net45 = "@net45//:System.Workflow.ComponentModel",
     net451 = "@net451//:System.Workflow.ComponentModel",
     net452 = "@net452//:System.Workflow.ComponentModel",
@@ -3237,6 +3345,7 @@ import_multiframework_library(
     name = "System.Workflow.Runtime",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Workflow.Runtime",
     net45 = "@net45//:System.Workflow.Runtime",
     net451 = "@net451//:System.Workflow.Runtime",
     net452 = "@net452//:System.Workflow.Runtime",
@@ -3253,6 +3362,7 @@ import_multiframework_library(
     name = "System.WorkflowServices",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.WorkflowServices",
     net45 = "@net45//:System.WorkflowServices",
     net451 = "@net451//:System.WorkflowServices",
     net452 = "@net452//:System.WorkflowServices",
@@ -3269,6 +3379,7 @@ import_multiframework_library(
     name = "System.Xaml",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Xaml",
     net45 = "@net45//:System.Xaml",
     net451 = "@net451//:System.Xaml",
     net452 = "@net452//:System.Xaml",
@@ -3286,6 +3397,7 @@ import_multiframework_library(
     visibility = ["//visibility:public"],
 
     net20 = "@net20//:System.Xml",
+    net40 = "@net40//:System.Xml",
     net45 = "@net45//:System.Xml",
     net451 = "@net451//:System.Xml",
     net452 = "@net452//:System.Xml",
@@ -3302,6 +3414,7 @@ import_multiframework_library(
     name = "System.Xml.Linq",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:System.Xml.Linq",
     net45 = "@net45//:System.Xml.Linq",
     net451 = "@net451//:System.Xml.Linq",
     net452 = "@net452//:System.Xml.Linq",
@@ -3409,6 +3522,7 @@ import_multiframework_library(
     name = "UIAutomationClient",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:UIAutomationClient",
     net45 = "@net45//:UIAutomationClient",
     net451 = "@net451//:UIAutomationClient",
     net452 = "@net452//:UIAutomationClient",
@@ -3425,6 +3539,7 @@ import_multiframework_library(
     name = "UIAutomationClientsideProviders",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:UIAutomationClientsideProviders",
     net45 = "@net45//:UIAutomationClientsideProviders",
     net451 = "@net451//:UIAutomationClientsideProviders",
     net452 = "@net452//:UIAutomationClientsideProviders",
@@ -3441,6 +3556,7 @@ import_multiframework_library(
     name = "UIAutomationProvider",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:UIAutomationProvider",
     net45 = "@net45//:UIAutomationProvider",
     net451 = "@net451//:UIAutomationProvider",
     net452 = "@net452//:UIAutomationProvider",
@@ -3457,6 +3573,7 @@ import_multiframework_library(
     name = "UIAutomationTypes",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:UIAutomationTypes",
     net45 = "@net45//:UIAutomationTypes",
     net451 = "@net451//:UIAutomationTypes",
     net452 = "@net452//:UIAutomationTypes",
@@ -3473,6 +3590,7 @@ import_multiframework_library(
     name = "WindowsBase",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:WindowsBase",
     net45 = "@net45//:WindowsBase",
     net451 = "@net451//:WindowsBase",
     net452 = "@net452//:WindowsBase",
@@ -3489,6 +3607,7 @@ import_multiframework_library(
     name = "WindowsFormsIntegration",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:WindowsFormsIntegration",
     net45 = "@net45//:WindowsFormsIntegration",
     net451 = "@net451//:WindowsFormsIntegration",
     net452 = "@net452//:WindowsFormsIntegration",
@@ -3505,6 +3624,7 @@ import_multiframework_library(
     name = "XamlBuildTask",
     visibility = ["//visibility:public"],
 
+    net40 = "@net40//:XamlBuildTask",
     net45 = "@net45//:XamlBuildTask",
     net451 = "@net451//:XamlBuildTask",
     net452 = "@net452//:XamlBuildTask",

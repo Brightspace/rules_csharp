@@ -5,52 +5,39 @@ load("@d2l_rules_csharp//csharp:defs.bzl", "import_library")
 
 import_library(
     name = "Accessibility",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Accessibility.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Accessibility.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "CustomMarshalers",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/CustomMarshalers.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "ISymWrapper",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/ISymWrapper.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/CustomMarshalers.dll",
     deps = [
+        "//:Microsoft.VisualC",
         "//:mscorlib",
-        "//:System",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
-    name = "Microsoft.Activities.Build",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.Activities.Build.dll",
+    name = "ISymWrapper",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/ISymWrapper.dll",
     deps = [
-        "//:Microsoft.Build.Framework",
-        "//:Microsoft.Build.Utilities.v4.0",
+        "//:Microsoft.VisualC",
         "//:mscorlib",
         "//:System",
-        "//:System.Activities",
-        "//:System.Runtime.Serialization",
-        "//:System.Xaml",
-        "//:XamlBuildTask",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "Microsoft.Build",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.Build.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.Build.dll",
     deps = [
         "//:Microsoft.Build.Engine",
         "//:Microsoft.Build.Framework",
@@ -65,14 +52,13 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Conversion.v4.0",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.Build.Conversion.v4.0.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.Build.Conversion.v4.0.dll",
     deps = [
         "//:Microsoft.Build",
         "//:Microsoft.Build.Engine",
         "//:mscorlib",
         "//:System",
-        "//:System.Core",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -80,8 +66,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Engine",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.Build.Engine.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.Build.Engine.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
@@ -94,8 +80,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Framework",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.Build.Framework.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.Build.Framework.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -106,8 +92,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Tasks.v4.0",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.Build.Tasks.v4.0.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.Build.Tasks.v4.0.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",
@@ -124,8 +110,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Utilities.v4.0",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.Build.Utilities.v4.0.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.Build.Utilities.v4.0.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
@@ -138,8 +124,8 @@ import_library(
 
 import_library(
     name = "Microsoft.CSharp",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.CSharp.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.CSharp.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -150,8 +136,8 @@ import_library(
 
 import_library(
     name = "Microsoft.JScript",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.JScript.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.JScript.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -162,8 +148,8 @@ import_library(
 
 import_library(
     name = "Microsoft.VisualBasic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.VisualBasic.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.VisualBasic.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -180,8 +166,8 @@ import_library(
 
 import_library(
     name = "Microsoft.VisualBasic.Compatibility",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.VisualBasic.Compatibility.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.VisualBasic.Compatibility.dll",
     deps = [
         "//:Microsoft.VisualBasic",
         "//:mscorlib",
@@ -196,8 +182,8 @@ import_library(
 
 import_library(
     name = "Microsoft.VisualBasic.Compatibility.Data",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.VisualBasic.Compatibility.Data.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.VisualBasic.Compatibility.Data.dll",
     deps = [
         "//:Microsoft.VisualBasic",
         "//:Microsoft.VisualBasic.Compatibility",
@@ -212,16 +198,16 @@ import_library(
 
 import_library(
     name = "Microsoft.VisualC",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.VisualC.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.VisualC.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "Microsoft.VisualC.STLCLR",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Microsoft.VisualC.STLCLR.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/Microsoft.VisualC.STLCLR.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -231,15 +217,15 @@ import_library(
 
 import_library(
     name = "mscorlib",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/mscorlib.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/mscorlib.dll",
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "PresentationBuildTasks",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/PresentationBuildTasks.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/PresentationBuildTasks.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",
@@ -252,12 +238,14 @@ import_library(
 
 import_library(
     name = "PresentationCore",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/PresentationCore.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/PresentationCore.dll",
     deps = [
+        "//:Microsoft.VisualC",
         "//:mscorlib",
         "//:System",
         "//:System.Deployment",
+        "//:System.Drawing",
         "//:System.Windows.Input.Manipulations",
         "//:System.Xaml",
         "//:System.Xml",
@@ -270,17 +258,18 @@ import_library(
 
 import_library(
     name = "PresentationFramework",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/PresentationFramework.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/PresentationFramework.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
         "//:PresentationCore",
         "//:ReachFramework-noncyclic",
         "//:System",
-        "//:System.Configuration",
         "//:System.Core",
+        "//:System.Data",
         "//:System.Deployment",
+        "//:System.Drawing",
         "//:System.Printing-noncyclic",
         "//:System.Xaml",
         "//:System.Xml",
@@ -293,38 +282,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.Aero",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/PresentationFramework.Aero.dll",
-    deps = [
-        "//:mscorlib",
-        "//:PresentationCore",
-        "//:PresentationFramework",
-        "//:System",
-        "//:System.Xaml",
-        "//:WindowsBase",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "PresentationFramework.Aero2",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/PresentationFramework.Aero2.dll",
-    deps = [
-        "//:mscorlib",
-        "//:PresentationCore",
-        "//:PresentationFramework",
-        "//:System",
-        "//:System.Xaml",
-        "//:WindowsBase",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "PresentationFramework.AeroLite",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/PresentationFramework.AeroLite.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/PresentationFramework.Aero.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -338,8 +297,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.Classic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/PresentationFramework.Classic.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/PresentationFramework.Classic.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -353,8 +312,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.Luna",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/PresentationFramework.Luna.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/PresentationFramework.Luna.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -368,8 +327,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.Royale",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/PresentationFramework.Royale.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/PresentationFramework.Royale.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -389,8 +348,8 @@ alias(
 
 import_library(
     name = "ReachFramework-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/ReachFramework.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/ReachFramework.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -406,8 +365,8 @@ import_library(
 
 import_library(
     name = "sysglobl",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/sysglobl.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/sysglobl.dll",
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -417,8 +376,8 @@ import_library(
 
 import_library(
     name = "System",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.dll",
     deps = [
         "//:mscorlib",
         "//:System.Configuration-noncyclic",
@@ -429,8 +388,8 @@ import_library(
 
 import_library(
     name = "System.Activities",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Activities.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Activities.dll",
     deps = [
         "//:Microsoft.VisualBasic",
         "//:mscorlib",
@@ -448,8 +407,8 @@ import_library(
 
 import_library(
     name = "System.Activities.Core.Presentation",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Activities.Core.Presentation.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Activities.Core.Presentation.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -459,6 +418,7 @@ import_library(
         "//:System.Activities.Presentation",
         "//:System.Configuration",
         "//:System.Core",
+        "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
         "//:System.ServiceModel",
         "//:System.ServiceModel.Activities",
@@ -473,8 +433,8 @@ import_library(
 
 import_library(
     name = "System.Activities.DurableInstancing",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Activities.DurableInstancing.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Activities.DurableInstancing.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -492,8 +452,8 @@ import_library(
 
 import_library(
     name = "System.Activities.Presentation",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Activities.Presentation.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Activities.Presentation.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -501,10 +461,10 @@ import_library(
         "//:ReachFramework",
         "//:System",
         "//:System.Activities",
-        "//:System.ComponentModel.Composition",
         "//:System.Core",
         "//:System.Drawing",
         "//:System.Printing",
+        "//:System.Runtime.DurableInstancing",
         "//:System.ServiceModel.Activities",
         "//:System.Windows.Forms",
         "//:System.Xaml",
@@ -520,8 +480,8 @@ import_library(
 
 import_library(
     name = "System.AddIn",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.AddIn.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.AddIn.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -533,102 +493,32 @@ import_library(
 
 import_library(
     name = "System.AddIn.Contract",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.AddIn.Contract.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.AddIn.Contract.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
-    name = "System.Collections",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Collections.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Collections.Concurrent",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Collections.Concurrent.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ComponentModel",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.ComponentModel.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ComponentModel.Annotations",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.ComponentModel.Annotations.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.ComponentModel.DataAnnotations",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.ComponentModel.Composition",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ComponentModel.Composition.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ComponentModel.Composition.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ComponentModel.Composition.Registration",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ComponentModel.Composition.Registration.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.ComponentModel.Composition",
-        "//:System.Core",
-        "//:System.Reflection.Context",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.ComponentModel.DataAnnotations",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ComponentModel.DataAnnotations.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ComponentModel.DataAnnotations.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ComponentModel.EventBasedAsync",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.ComponentModel.EventBasedAsync.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -641,8 +531,8 @@ alias(
 
 import_library(
     name = "System.Configuration-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Configuration.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Configuration.dll",
     deps = [
         "//:mscorlib",
         "//:System.Security-noncyclic",
@@ -653,8 +543,8 @@ import_library(
 
 import_library(
     name = "System.Configuration.Install",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Configuration.Install.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Configuration.Install.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -667,8 +557,8 @@ import_library(
 
 import_library(
     name = "System.Core",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Core.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Core.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -681,9 +571,10 @@ import_library(
 
 import_library(
     name = "System.Data",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.dll",
     deps = [
+        "//:Microsoft.VisualC",
         "//:mscorlib",
         "//:System",
         "//:System.Configuration",
@@ -698,8 +589,8 @@ import_library(
 
 import_library(
     name = "System.Data.DataSetExtensions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.DataSetExtensions.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.DataSetExtensions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -711,12 +602,11 @@ import_library(
 
 import_library(
     name = "System.Data.Entity",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.Entity.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.Entity.dll",
     deps = [
         "//:mscorlib",
         "//:System",
-        "//:System.ComponentModel.DataAnnotations",
         "//:System.Configuration",
         "//:System.Core",
         "//:System.Data",
@@ -730,26 +620,24 @@ import_library(
 
 import_library(
     name = "System.Data.Entity.Design",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.Entity.Design.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.Entity.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Core",
         "//:System.Data",
-        "//:System.Data.DataSetExtensions",
         "//:System.Data.Entity",
         "//:System.Web",
         "//:System.Xml",
-        "//:System.Xml.Linq",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Data.Linq",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.Linq.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.Linq.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -771,8 +659,8 @@ alias(
 
 import_library(
     name = "System.Data.OracleClient-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.OracleClient.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.OracleClient.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -783,12 +671,11 @@ import_library(
 
 import_library(
     name = "System.Data.Services",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.Services.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.Services.dll",
     deps = [
         "//:mscorlib",
         "//:System",
-        "//:System.Configuration",
         "//:System.Core",
         "//:System.Data",
         "//:System.Data.Entity",
@@ -807,8 +694,8 @@ import_library(
 
 import_library(
     name = "System.Data.Services.Client",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.Services.Client.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.Services.Client.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -827,8 +714,8 @@ alias(
 
 import_library(
     name = "System.Data.Services.Design-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.Services.Design.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.Services.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -850,8 +737,8 @@ alias(
 
 import_library(
     name = "System.Data.SqlXml-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Data.SqlXml.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Data.SqlXml.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -864,12 +751,11 @@ alias(
 
 import_library(
     name = "System.Deployment-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Deployment.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Deployment.dll",
     deps = [
         "//:mscorlib",
         "//:System",
-        "//:System.Core",
         "//:System.Drawing",
         "//:System.Security",
         "//:System.Xml",
@@ -885,8 +771,8 @@ alias(
 
 import_library(
     name = "System.Design-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Design.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Design.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -906,57 +792,19 @@ import_library(
 
 import_library(
     name = "System.Device",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Device.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Device.dll",
     deps = [
         "//:mscorlib",
         "//:System",
     ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Diagnostics.Contracts",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Diagnostics.Contracts.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Diagnostics.Debug",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Diagnostics.Debug.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Diagnostics.Tools",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Diagnostics.Tools.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Diagnostics.Tracing",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Diagnostics.Tracing.dll",
-    deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.DirectoryServices",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.DirectoryServices.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.DirectoryServices.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -968,8 +816,8 @@ import_library(
 
 import_library(
     name = "System.DirectoryServices.AccountManagement",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.DirectoryServices.AccountManagement.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.DirectoryServices.AccountManagement.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -983,8 +831,8 @@ import_library(
 
 import_library(
     name = "System.DirectoryServices.Protocols",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.DirectoryServices.Protocols.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.DirectoryServices.Protocols.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -996,36 +844,24 @@ import_library(
 
 import_library(
     name = "System.Drawing",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Drawing.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Drawing.dll",
     deps = [
         "//:mscorlib",
         "//:System",
-        "//:System.Configuration",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Drawing.Design",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Drawing.Design.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Drawing.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Drawing",
         "//:System.Windows.Forms",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Dynamic.Runtime",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Dynamic.Runtime.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Core",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -1038,9 +874,10 @@ alias(
 
 import_library(
     name = "System.EnterpriseServices-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.EnterpriseServices.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.EnterpriseServices.dll",
     deps = [
+        "//:Microsoft.VisualC",
         "//:mscorlib",
         "//:System",
         "//:System.DirectoryServices",
@@ -1051,22 +888,14 @@ import_library(
 )
 
 import_library(
-    name = "System.Globalization",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Globalization.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.IdentityModel",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.IdentityModel.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.IdentityModel.dll",
     deps = [
         "//:mscorlib",
         "//:System",
-        "//:System.Configuration",
         "//:System.Core",
+        "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
         "//:System.Security",
         "//:System.Web.ApplicationServices",
@@ -1077,129 +906,35 @@ import_library(
 
 import_library(
     name = "System.IdentityModel.Selectors",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.IdentityModel.Selectors.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.IdentityModel.Selectors.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.IdentityModel",
+        "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
         "//:System.Xml",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IdentityModel.Services",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.IdentityModel.Services.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.Configuration",
-        "//:System.IdentityModel",
-        "//:System.Runtime.Serialization",
-        "//:System.ServiceModel",
-        "//:System.Web",
-        "//:System.Web.ApplicationServices",
-        "//:System.Xml",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.IO.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.Compression",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.IO.Compression.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.Compression.FileSystem",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.IO.Compression.FileSystem.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.IO.Compression",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.IO.Log",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.IO.Log.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.IO.Log.dll",
     deps = [
         "//:mscorlib",
         "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Linq",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Linq.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Linq.Expressions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Linq.Expressions.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Linq.Parallel",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Linq.Parallel.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Linq.Queryable",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Linq.Queryable.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Core",
+        "//:System.Runtime.DurableInstancing",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Management",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Management.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Management.dll",
     deps = [
         "//:Microsoft.JScript",
         "//:mscorlib",
@@ -1211,8 +946,8 @@ import_library(
 
 import_library(
     name = "System.Management.Instrumentation",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Management.Instrumentation.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Management.Instrumentation.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1225,8 +960,8 @@ import_library(
 
 import_library(
     name = "System.Messaging",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Messaging.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Messaging.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1242,65 +977,8 @@ import_library(
 
 import_library(
     name = "System.Net",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Net.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.Http",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Net.Http.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.Http.WebRequest",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Net.Http.WebRequest.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.Net.Http",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.NetworkInformation",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Net.NetworkInformation.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.Primitives",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Net.Primitives.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.Requests",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Net.Requests.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Net.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1310,20 +988,9 @@ import_library(
 
 import_library(
     name = "System.Numerics",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Numerics.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Numerics.dll",
     deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ObjectModel",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.ObjectModel.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
     visibility = ["@net//:__pkg__"],
 )
 
@@ -1335,93 +1002,16 @@ alias(
 
 import_library(
     name = "System.Printing-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Printing.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Printing.dll",
     deps = [
+        "//:Microsoft.VisualC",
         "//:mscorlib",
         "//:PresentationCore",
         "//:System",
         "//:System.Drawing",
-        "//:System.Xaml",
         "//:System.Xml",
         "//:WindowsBase",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Reflection",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Reflection.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Reflection.Context",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Reflection.Context.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Reflection.Emit",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Reflection.Emit.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Reflection.Emit.ILGeneration",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Reflection.Emit.ILGeneration.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Reflection.Emit.Lightweight",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Reflection.Emit.Lightweight.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Reflection.Extensions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Reflection.Extensions.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Reflection.Primitives",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Reflection.Primitives.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Resources.ResourceManager",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Resources.ResourceManager.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Runtime",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Runtime.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.ComponentModel.Composition",
-        "//:System.Core",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -1434,8 +1024,8 @@ alias(
 
 import_library(
     name = "System.Runtime.Caching-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Runtime.Caching.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Runtime.Caching.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1444,67 +1034,32 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "System.Runtime.DurableInstancing",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Runtime.DurableInstancing.dll",
+    actual = "//:System.Transactions",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "System.Runtime.DurableInstancing-noncyclic",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Runtime.DurableInstancing.dll",
     deps = [
         "//:mscorlib",
         "//:System",
+        "//:System.Configuration",
         "//:System.Core",
-        "//:System.Runtime.Serialization",
-        "//:System.Transactions",
-        "//:System.Xml.Linq",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Runtime.Extensions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Runtime.Extensions.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Runtime.InteropServices",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Runtime.InteropServices.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Runtime.InteropServices.WindowsRuntime",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Runtime.InteropServices.WindowsRuntime.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Runtime.Numerics",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Runtime.Numerics.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Numerics",
+        "//:System.Xaml",
+        "//:System.Xml",
+        "//:System.Xml.Linq-noncyclic",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Runtime.Remoting",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Runtime.Remoting.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Runtime.Remoting.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1518,12 +1073,14 @@ import_library(
 
 import_library(
     name = "System.Runtime.Serialization",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Runtime.Serialization.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Runtime.Serialization.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Configuration",
+        "//:System.Core",
+        "//:System.Runtime.DurableInstancing-noncyclic",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -1531,44 +1088,11 @@ import_library(
 
 import_library(
     name = "System.Runtime.Serialization.Formatters.Soap",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Runtime.Serialization.Formatters.Soap.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Runtime.Serialization.Formatters.Soap.dll",
     deps = [
         "//:mscorlib",
         "//:System.Xml",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Runtime.Serialization.Json",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Runtime.Serialization.Json.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Runtime.Serialization",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Runtime.Serialization.Primitives",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Runtime.Serialization.Primitives.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Runtime.Serialization",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Runtime.Serialization.Xml",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Runtime.Serialization.Xml.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Runtime.Serialization",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -1581,20 +1105,12 @@ alias(
 
 import_library(
     name = "System.Security-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Security.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Security.dll",
     deps = [
         "//:mscorlib",
         "//:System.Xml-noncyclic",
     ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Security.Principal",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Security.Principal.dll",
-    deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
@@ -1606,8 +1122,8 @@ alias(
 
 import_library(
     name = "System.ServiceModel-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ServiceModel.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ServiceModel.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1618,7 +1134,6 @@ import_library(
         "//:System.IdentityModel",
         "//:System.IdentityModel.Selectors",
         "//:System.Messaging",
-        "//:System.Net.Http",
         "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
         "//:System.Security",
@@ -1635,15 +1150,14 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Activation",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ServiceModel.Activation.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ServiceModel.Activation.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Activities",
         "//:System.Configuration",
         "//:System.Core",
-        "//:System.Net.Http",
         "//:System.Runtime.DurableInstancing",
         "//:System.ServiceModel-noncyclic",
         "//:System.ServiceModel.Activities",
@@ -1659,8 +1173,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Activities",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ServiceModel.Activities.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ServiceModel.Activities.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1682,16 +1196,16 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Channels",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ServiceModel.Channels.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ServiceModel.Channels.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Configuration",
-        "//:System.Net.Http",
+        "//:System.Core",
+        "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
         "//:System.ServiceModel",
-        "//:System.Web.Services",
         "//:System.Xaml",
         "//:System.Xml",
     ],
@@ -1700,15 +1214,16 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Discovery",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ServiceModel.Discovery.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ServiceModel.Discovery.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Configuration",
+        "//:System.Core",
+        "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
         "//:System.ServiceModel",
-        "//:System.ServiceModel.Channels",
         "//:System.Xml",
         "//:System.Xml.Linq",
     ],
@@ -1716,53 +1231,9 @@ import_library(
 )
 
 import_library(
-    name = "System.ServiceModel.Duplex",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.ServiceModel.Duplex.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.ServiceModel",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ServiceModel.Http",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.ServiceModel.Http.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.ServiceModel",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ServiceModel.NetTcp",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.ServiceModel.NetTcp.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.ServiceModel",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ServiceModel.Primitives",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.ServiceModel.Primitives.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.ServiceModel",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.ServiceModel.Routing",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ServiceModel.Routing.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ServiceModel.Routing.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1777,32 +1248,26 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
-    name = "System.ServiceModel.Security",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.ServiceModel.Security.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.ServiceModel",
-    ],
+alias(
+    name = "System.ServiceModel.Web",
+    actual = "//:System.Web.Extensions",
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
-    name = "System.ServiceModel.Web",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ServiceModel.Web.dll",
+    name = "System.ServiceModel.Web-noncyclic",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ServiceModel.Web.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Configuration",
         "//:System.Core",
+        "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
         "//:System.ServiceModel",
         "//:System.ServiceModel.Activation",
-        "//:System.ServiceModel.Channels",
         "//:System.Web",
-        "//:System.Web.Extensions",
         "//:System.Xml",
         "//:System.Xml.Linq",
     ],
@@ -1811,8 +1276,8 @@ import_library(
 
 import_library(
     name = "System.ServiceProcess",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.ServiceProcess.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.ServiceProcess.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1825,8 +1290,8 @@ import_library(
 
 import_library(
     name = "System.Speech",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Speech.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Speech.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1836,75 +1301,9 @@ import_library(
 )
 
 import_library(
-    name = "System.Text.Encoding",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Text.Encoding.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Text.Encoding.Extensions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Text.Encoding.Extensions.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Text.RegularExpressions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Text.RegularExpressions.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Threading",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Threading.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Threading.Tasks",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Threading.Tasks.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Threading.Tasks.Parallel",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Threading.Tasks.Parallel.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Threading.Timer",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Threading.Timer.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Transactions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Transactions.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Transactions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1923,15 +1322,14 @@ alias(
 
 import_library(
     name = "System.Web-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Tasks.v4.0",
         "//:Microsoft.Build.Utilities.v4.0",
         "//:mscorlib",
         "//:System",
-        "//:System.ComponentModel.DataAnnotations",
         "//:System.Configuration",
         "//:System.Core",
         "//:System.Design-noncyclic",
@@ -1939,7 +1337,6 @@ import_library(
         "//:System.DirectoryServices.Protocols",
         "//:System.Drawing",
         "//:System.Runtime.Caching-noncyclic",
-        "//:System.Security",
         "//:System.ServiceProcess",
         "//:System.Web.ApplicationServices",
         "//:System.Web.RegularExpressions",
@@ -1952,8 +1349,8 @@ import_library(
 
 import_library(
     name = "System.Web.Abstractions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.Abstractions.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.Abstractions.dll",
     deps = [
         "//:mscorlib",
         "//:System.Web",
@@ -1963,8 +1360,8 @@ import_library(
 
 import_library(
     name = "System.Web.ApplicationServices",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.ApplicationServices.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.ApplicationServices.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1975,8 +1372,8 @@ import_library(
 
 import_library(
     name = "System.Web.DataVisualization",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.DataVisualization.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.DataVisualization.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1990,8 +1387,8 @@ import_library(
 
 import_library(
     name = "System.Web.DataVisualization.Design",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.DataVisualization.Design.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.DataVisualization.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2009,8 +1406,8 @@ import_library(
 
 import_library(
     name = "System.Web.DynamicData",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.DynamicData.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.DynamicData.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2030,8 +1427,8 @@ import_library(
 
 import_library(
     name = "System.Web.DynamicData.Design",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.DynamicData.Design.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.DynamicData.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2046,8 +1443,8 @@ import_library(
 
 import_library(
     name = "System.Web.Entity",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.Entity.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.Entity.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2063,8 +1460,8 @@ import_library(
 
 import_library(
     name = "System.Web.Entity.Design",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.Entity.Design.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.Entity.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2083,8 +1480,8 @@ import_library(
 
 import_library(
     name = "System.Web.Extensions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.Extensions.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.Extensions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2100,6 +1497,7 @@ import_library(
         "//:System.Runtime.Serialization",
         "//:System.ServiceModel",
         "//:System.ServiceModel.Activation",
+        "//:System.ServiceModel.Web-noncyclic",
         "//:System.Web",
         "//:System.Web.ApplicationServices",
         "//:System.Web.Services",
@@ -2111,8 +1509,8 @@ import_library(
 
 import_library(
     name = "System.Web.Extensions.Design",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.Extensions.Design.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.Extensions.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2129,8 +1527,8 @@ import_library(
 
 import_library(
     name = "System.Web.Mobile",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.Mobile.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.Mobile.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2148,8 +1546,8 @@ import_library(
 
 import_library(
     name = "System.Web.RegularExpressions",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.RegularExpressions.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.RegularExpressions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2159,8 +1557,8 @@ import_library(
 
 import_library(
     name = "System.Web.Routing",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.Routing.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.Routing.dll",
     deps = [
         "//:mscorlib",
         "//:System.Web",
@@ -2176,8 +1574,8 @@ alias(
 
 import_library(
     name = "System.Web.Services-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Web.Services.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Web.Services.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2190,44 +1588,14 @@ import_library(
 )
 
 import_library(
-    name = "System.Windows",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Windows.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Windows.Controls.Ribbon",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Windows.Controls.Ribbon.dll",
-    deps = [
-        "//:mscorlib",
-        "//:PresentationCore",
-        "//:PresentationFramework",
-        "//:System",
-        "//:System.Xaml",
-        "//:System.Xml",
-        "//:UIAutomationProvider",
-        "//:UIAutomationTypes",
-        "//:WindowsBase",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Windows.Forms",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Windows.Forms.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Windows.Forms.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
         "//:System",
         "//:System.Configuration",
-        "//:System.Core",
         "//:System.Deployment-noncyclic",
         "//:System.Drawing",
         "//:System.Runtime.Serialization.Formatters.Soap",
@@ -2239,8 +1607,8 @@ import_library(
 
 import_library(
     name = "System.Windows.Forms.DataVisualization",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Windows.Forms.DataVisualization.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Windows.Forms.DataVisualization.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2254,8 +1622,8 @@ import_library(
 
 import_library(
     name = "System.Windows.Forms.DataVisualization.Design",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Windows.Forms.DataVisualization.Design.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Windows.Forms.DataVisualization.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2270,8 +1638,8 @@ import_library(
 
 import_library(
     name = "System.Windows.Input.Manipulations",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Windows.Input.Manipulations.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Windows.Input.Manipulations.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2282,15 +1650,15 @@ import_library(
 
 import_library(
     name = "System.Windows.Presentation",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Windows.Presentation.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Windows.Presentation.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
         "//:PresentationFramework",
-        "//:System",
         "//:System.AddIn",
         "//:System.AddIn.Contract",
+        "//:System.Core",
         "//:WindowsBase",
     ],
     visibility = ["@net//:__pkg__"],
@@ -2298,8 +1666,8 @@ import_library(
 
 import_library(
     name = "System.Workflow.Activities",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Workflow.Activities.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Workflow.Activities.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2320,8 +1688,8 @@ import_library(
 
 import_library(
     name = "System.Workflow.ComponentModel",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Workflow.ComponentModel.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Workflow.ComponentModel.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Tasks.v4.0",
@@ -2347,8 +1715,8 @@ alias(
 
 import_library(
     name = "System.Workflow.Runtime-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Workflow.Runtime.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Workflow.Runtime.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2371,8 +1739,8 @@ import_library(
 
 import_library(
     name = "System.WorkflowServices",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.WorkflowServices.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.WorkflowServices.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2383,6 +1751,7 @@ import_library(
         "//:System.Drawing",
         "//:System.IdentityModel",
         "//:System.Messaging",
+        "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
         "//:System.ServiceModel",
         "//:System.ServiceModel.Activation",
@@ -2400,8 +1769,8 @@ import_library(
 
 import_library(
     name = "System.Xaml",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Xaml.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Xaml.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2418,8 +1787,8 @@ alias(
 
 import_library(
     name = "System.Xml-noncyclic",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Xml.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Xml.dll",
     deps = [
         "//:mscorlib",
         "//:System.Data.SqlXml-noncyclic",
@@ -2427,60 +1796,20 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "System.Xml.Linq",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Xml.Linq.dll",
+    actual = "//:System.Runtime.Serialization",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "System.Xml.Linq-noncyclic",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/System.Xml.Linq.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Core",
-        "//:System.Runtime.Serialization",
-        "//:System.Xml",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Xml.ReaderWriter",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Xml.ReaderWriter.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Xml",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Xml.Serialization",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/System.Xml.Serialization.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.ServiceModel",
-        "//:System.Xml",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Xml.XDocument",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Xml.XDocument.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Xml.Linq",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Xml.XmlSerializer",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/Facades/System.Xml.XmlSerializer.dll",
-    deps = [
-        "//:mscorlib",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -2488,8 +1817,8 @@ import_library(
 
 import_library(
     name = "UIAutomationClient",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/UIAutomationClient.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/UIAutomationClient.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -2503,8 +1832,8 @@ import_library(
 
 import_library(
     name = "UIAutomationClientsideProviders",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/UIAutomationClientsideProviders.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/UIAutomationClientsideProviders.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -2519,8 +1848,8 @@ import_library(
 
 import_library(
     name = "UIAutomationProvider",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/UIAutomationProvider.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/UIAutomationProvider.dll",
     deps = [
         "//:mscorlib",
         "//:UIAutomationTypes",
@@ -2531,31 +1860,35 @@ import_library(
 
 import_library(
     name = "UIAutomationTypes",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/UIAutomationTypes.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/UIAutomationTypes.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "WindowsBase",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/WindowsBase.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/WindowsBase.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
         "//:System",
+        "//:System.Core",
+        "//:System.Data",
+        "//:System.Drawing",
         "//:System.Security",
         "//:System.Xaml",
         "//:System.Xml",
+        "//:System.Xml.Linq",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "WindowsFormsIntegration",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/WindowsFormsIntegration.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/WindowsFormsIntegration.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -2572,14 +1905,15 @@ import_library(
 
 import_library(
     name = "XamlBuildTask",
-    target_framework = "net451",
-    refdll = "//:build/.NETFramework/v4.5.1/XamlBuildTask.dll",
+    target_framework = "net40",
+    refdll = "//:build/.NETFramework/v4.0/XamlBuildTask.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",
         "//:mscorlib",
         "//:System",
         "//:System.Core",
+        "//:System.Runtime.DurableInstancing",
         "//:System.Xaml",
         "//:System.Xml",
         "//:System.Xml.Linq",

@@ -268,20 +268,15 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-alias(
-    name = "PresentationFramework",
-    actual = "//:ReachFramework",
-    visibility = ["@net//:__pkg__"],
-)
-
 import_library(
-    name = "PresentationFramework-noncyclic",
+    name = "PresentationFramework",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/PresentationFramework.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
         "//:PresentationCore",
+        "//:ReachFramework-noncyclic",
         "//:System",
         "//:System.Core",
         "//:System.Deployment",
@@ -385,14 +380,19 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "ReachFramework",
+    actual = "//:PresentationFramework",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "ReachFramework-noncyclic",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/ReachFramework.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
-        "//:PresentationFramework-noncyclic",
         "//:System",
         "//:System.Drawing",
         "//:System.Printing-noncyclic",
@@ -762,17 +762,20 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "System.Data.OracleClient",
+    actual = "//:System.EnterpriseServices",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "System.Data.OracleClient-noncyclic",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/System.Data.OracleClient.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Configuration",
-        "//:System.Data",
-        "//:System.EnterpriseServices-noncyclic",
-        "//:System.Transactions",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -840,7 +843,7 @@ import_library(
 
 alias(
     name = "System.Data.SqlXml",
-    actual = "//:System",
+    actual = "//:System.Xml",
     visibility = ["@net//:__pkg__"],
 )
 
@@ -852,8 +855,14 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "System.Deployment",
+    actual = "//:System.Windows.Forms",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "System.Deployment-noncyclic",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/System.Deployment.dll",
     deps = [
@@ -862,7 +871,6 @@ import_library(
         "//:System.Core",
         "//:System.Drawing",
         "//:System.Security",
-        "//:System.Windows.Forms-noncyclic",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -870,7 +878,7 @@ import_library(
 
 alias(
     name = "System.Design",
-    actual = "//:System.Web",
+    actual = "//:System.Data",
     visibility = ["@net//:__pkg__"],
 )
 
@@ -884,8 +892,7 @@ import_library(
         "//:System",
         "//:System.Configuration",
         "//:System.Core",
-        "//:System.Data",
-        "//:System.Data.OracleClient",
+        "//:System.Data.OracleClient-noncyclic",
         "//:System.Drawing",
         "//:System.Drawing.Design",
         "//:System.Runtime.Serialization.Formatters.Soap",
@@ -1036,7 +1043,7 @@ import_library(
         "//:mscorlib",
         "//:System",
         "//:System.DirectoryServices",
-        "//:System.Runtime.Remoting-noncyclic",
+        "//:System.Runtime.Remoting",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -1321,7 +1328,7 @@ import_library(
 
 alias(
     name = "System.Printing",
-    actual = "//:ReachFramework",
+    actual = "//:PresentationFramework",
     visibility = ["@net//:__pkg__"],
 )
 
@@ -1418,15 +1425,20 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "System.Runtime.Caching",
+    actual = "//:System.Data",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "System.Runtime.Caching-noncyclic",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/System.Runtime.Caching.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Configuration",
-        "//:System.Data",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -1488,14 +1500,8 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-alias(
-    name = "System.Runtime.Remoting",
-    actual = "//:System.Web",
-    visibility = ["@net//:__pkg__"],
-)
-
 import_library(
-    name = "System.Runtime.Remoting-noncyclic",
+    name = "System.Runtime.Remoting",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/System.Runtime.Remoting.dll",
     deps = [
@@ -1503,6 +1509,7 @@ import_library(
         "//:System",
         "//:System.DirectoryServices",
         "//:System.Runtime.Serialization.Formatters.Soap",
+        "//:System.Web-noncyclic",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -1590,8 +1597,14 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "System.ServiceModel",
+    actual = "//:System.ServiceModel.Activation",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "System.ServiceModel-noncyclic",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/System.ServiceModel.dll",
     deps = [
@@ -1608,7 +1621,6 @@ import_library(
         "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
         "//:System.Security",
-        "//:System.ServiceModel.Activation-noncyclic",
         "//:System.ServiceProcess",
         "//:System.Transactions",
         "//:System.Web.ApplicationServices",
@@ -1620,14 +1632,8 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-alias(
-    name = "System.ServiceModel.Activation",
-    actual = "//:System.ServiceModel",
-    visibility = ["@net//:__pkg__"],
-)
-
 import_library(
-    name = "System.ServiceModel.Activation-noncyclic",
+    name = "System.ServiceModel.Activation",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/System.ServiceModel.Activation.dll",
     deps = [
@@ -1638,7 +1644,8 @@ import_library(
         "//:System.Core",
         "//:System.Net.Http",
         "//:System.Runtime.DurableInstancing",
-        "//:System.ServiceModel.Activities-noncyclic",
+        "//:System.ServiceModel-noncyclic",
+        "//:System.ServiceModel.Activities",
         "//:System.Transactions",
         "//:System.Web",
         "//:System.Web.RegularExpressions",
@@ -1649,14 +1656,8 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-alias(
-    name = "System.ServiceModel.Activities",
-    actual = "//:System.ServiceModel",
-    visibility = ["@net//:__pkg__"],
-)
-
 import_library(
-    name = "System.ServiceModel.Activities-noncyclic",
+    name = "System.ServiceModel.Activities",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/System.ServiceModel.Activities.dll",
     deps = [
@@ -1669,6 +1670,7 @@ import_library(
         "//:System.IdentityModel",
         "//:System.Runtime.DurableInstancing",
         "//:System.Runtime.Serialization",
+        "//:System.ServiceModel-noncyclic",
         "//:System.Transactions",
         "//:System.Xaml",
         "//:System.Xml",
@@ -1904,8 +1906,14 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "System.Web",
+    actual = "//:System.EnterpriseServices",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "System.Web-noncyclic",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/System.Web.dll",
     deps = [
@@ -1917,13 +1925,11 @@ import_library(
         "//:System.ComponentModel.DataAnnotations",
         "//:System.Configuration",
         "//:System.Core",
-        "//:System.Data",
         "//:System.Design-noncyclic",
         "//:System.DirectoryServices",
         "//:System.DirectoryServices.Protocols",
         "//:System.Drawing",
-        "//:System.EnterpriseServices-noncyclic",
-        "//:System.Runtime.Caching",
+        "//:System.Runtime.Caching-noncyclic",
         "//:System.Security",
         "//:System.ServiceProcess",
         "//:System.Web.ApplicationServices",
@@ -2155,7 +2161,7 @@ import_library(
 
 alias(
     name = "System.Web.Services",
-    actual = "//:System.Web",
+    actual = "//:System.EnterpriseServices",
     visibility = ["@net//:__pkg__"],
 )
 
@@ -2167,10 +2173,8 @@ import_library(
         "//:mscorlib",
         "//:System",
         "//:System.Configuration",
-        "//:System.Data",
         "//:System.Design-noncyclic",
         "//:System.DirectoryServices",
-        "//:System.EnterpriseServices-noncyclic",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -2205,14 +2209,8 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-alias(
-    name = "System.Windows.Forms",
-    actual = "//:System.Deployment",
-    visibility = ["@net//:__pkg__"],
-)
-
 import_library(
-    name = "System.Windows.Forms-noncyclic",
+    name = "System.Windows.Forms",
     target_framework = "net45",
     refdll = "//:build/.NETFramework/v4.5/System.Windows.Forms.dll",
     deps = [
@@ -2221,6 +2219,7 @@ import_library(
         "//:System",
         "//:System.Configuration",
         "//:System.Core",
+        "//:System.Deployment-noncyclic",
         "//:System.Drawing",
         "//:System.Runtime.Serialization.Formatters.Soap",
         "//:System.Security",

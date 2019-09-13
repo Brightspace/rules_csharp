@@ -271,17 +271,14 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-alias(
-    name = "System",
-    actual = "//:System.Xml",
-    visibility = ["@net//:__pkg__"],
-)
-
 import_library(
-    name = "System-noncyclic",
+    name = "System",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.dll",
-    deps = ["//:mscorlib"],
+    deps = [
+        "//:mscorlib",
+        "//:System.Xml-noncyclic",
+    ],
     visibility = ["@net//:__pkg__"],
 )
 
@@ -350,10 +347,7 @@ import_library(
     name = "System.Data.SqlXml-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Data.SqlXml.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System-noncyclic",
-    ],
+    deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
@@ -377,8 +371,14 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "System.Design",
+    actual = "//:System.Web",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "System.Design-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Design.dll",
     deps = [
@@ -390,7 +390,6 @@ import_library(
         "//:System.Drawing",
         "//:System.Drawing.Design",
         "//:System.Runtime.Serialization.Formatters.Soap",
-        "//:System.Web-noncyclic",
         "//:System.Web.RegularExpressions",
         "//:System.Windows.Forms",
         "//:System.Xml",
@@ -462,7 +461,6 @@ import_library(
         "//:mscorlib",
         "//:System",
         "//:System.DirectoryServices",
-        "//:System.Runtime.Remoting-noncyclic",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -498,14 +496,8 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-alias(
-    name = "System.Runtime.Remoting",
-    actual = "//:System.Web",
-    visibility = ["@net//:__pkg__"],
-)
-
 import_library(
-    name = "System.Runtime.Remoting-noncyclic",
+    name = "System.Runtime.Remoting",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Runtime.Remoting.dll",
     deps = [
@@ -513,6 +505,7 @@ import_library(
         "//:System",
         "//:System.DirectoryServices",
         "//:System.Runtime.Serialization.Formatters.Soap",
+        "//:System.Web",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -568,20 +561,15 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-alias(
-    name = "System.Web",
-    actual = "//:System.Design",
-    visibility = ["@net//:__pkg__"],
-)
-
 import_library(
-    name = "System.Web-noncyclic",
+    name = "System.Web",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Web.dll",
     deps = [
         "//:mscorlib",
         "//:System",
         "//:System.Data",
+        "//:System.Design-noncyclic",
         "//:System.DirectoryServices",
         "//:System.DirectoryServices.Protocols",
         "//:System.Drawing",
@@ -626,7 +614,7 @@ import_library(
 
 alias(
     name = "System.Web.Services",
-    actual = "//:System.Design",
+    actual = "//:System.Web",
     visibility = ["@net//:__pkg__"],
 )
 
@@ -638,6 +626,7 @@ import_library(
         "//:mscorlib",
         "//:System",
         "//:System.Data",
+        "//:System.Design-noncyclic",
         "//:System.DirectoryServices",
         "//:System.EnterpriseServices-noncyclic",
         "//:System.Xml",
@@ -662,13 +651,18 @@ import_library(
     visibility = ["@net//:__pkg__"],
 )
 
-import_library(
+alias(
     name = "System.Xml",
+    actual = "//:System",
+    visibility = ["@net//:__pkg__"],
+)
+
+import_library(
+    name = "System.Xml-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Xml.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
         "//:System.Data.SqlXml-noncyclic",
     ],
     visibility = ["@net//:__pkg__"],
