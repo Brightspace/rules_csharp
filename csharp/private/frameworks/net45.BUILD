@@ -271,6 +271,7 @@ import_library(
 alias(
     name = "PresentationFramework",
     actual = "//:ReachFramework",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -634,6 +635,7 @@ import_library(
 alias(
     name = "System.Configuration",
     actual = "//:System",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -816,6 +818,7 @@ import_library(
 alias(
     name = "System.Data.Services.Design",
     actual = "//:System.Web.Extensions",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -838,6 +841,7 @@ import_library(
 alias(
     name = "System.Data.SqlXml",
     actual = "//:System",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -867,6 +871,7 @@ import_library(
 alias(
     name = "System.Design",
     actual = "//:System.Web",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1020,6 +1025,7 @@ import_library(
 alias(
     name = "System.EnterpriseServices",
     actual = "//:System.Transactions",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1316,6 +1322,7 @@ import_library(
 alias(
     name = "System.Printing",
     actual = "//:ReachFramework",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1484,6 +1491,7 @@ import_library(
 alias(
     name = "System.Runtime.Remoting",
     actual = "//:System.Web",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1560,6 +1568,7 @@ import_library(
 alias(
     name = "System.Security",
     actual = "//:System",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1614,6 +1623,7 @@ import_library(
 alias(
     name = "System.ServiceModel.Activation",
     actual = "//:System.ServiceModel",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1642,6 +1652,7 @@ import_library(
 alias(
     name = "System.ServiceModel.Activities",
     actual = "//:System.ServiceModel",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -2145,6 +2156,7 @@ import_library(
 alias(
     name = "System.Web.Services",
     actual = "//:System.Web",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -2196,6 +2208,7 @@ import_library(
 alias(
     name = "System.Windows.Forms",
     actual = "//:System.Deployment",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -2321,6 +2334,7 @@ import_library(
 alias(
     name = "System.Workflow.Runtime",
     actual = "//:System.Workflow.Activities",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -2391,6 +2405,7 @@ import_library(
 alias(
     name = "System.Xml",
     actual = "//:System",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(

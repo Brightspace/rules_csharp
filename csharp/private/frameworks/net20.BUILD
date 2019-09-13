@@ -274,6 +274,7 @@ import_library(
 alias(
     name = "System",
     actual = "//:System.Xml",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -342,6 +343,7 @@ import_library(
 alias(
     name = "System.Data.SqlXml",
     actual = "//:System.Xml",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -358,6 +360,7 @@ import_library(
 alias(
     name = "System.Deployment",
     actual = "//:System.Windows.Forms",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -447,6 +450,7 @@ import_library(
 alias(
     name = "System.EnterpriseServices",
     actual = "//:System.Transactions",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -497,6 +501,7 @@ import_library(
 alias(
     name = "System.Runtime.Remoting",
     actual = "//:System.Web",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -566,6 +571,7 @@ import_library(
 alias(
     name = "System.Web",
     actual = "//:System.Design",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -621,6 +627,7 @@ import_library(
 alias(
     name = "System.Web.Services",
     actual = "//:System.Design",
+    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
