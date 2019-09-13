@@ -5,24 +5,24 @@ load("@d2l_rules_csharp//csharp:defs.bzl", "import_library")
 
 import_library(
     name = "Accessibility",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Accessibility.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Accessibility.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "CustomMarshalers",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/CustomMarshalers.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/CustomMarshalers.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "ISymWrapper",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/ISymWrapper.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/ISymWrapper.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -32,8 +32,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Activities.Build",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.Activities.Build.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.Activities.Build.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",
@@ -49,8 +49,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.Build.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.Build.dll",
     deps = [
         "//:Microsoft.Build.Engine",
         "//:Microsoft.Build.Framework",
@@ -65,8 +65,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Conversion.v4.0",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.Build.Conversion.v4.0.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.Build.Conversion.v4.0.dll",
     deps = [
         "//:Microsoft.Build",
         "//:Microsoft.Build.Engine",
@@ -80,8 +80,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Engine",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.Build.Engine.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.Build.Engine.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
@@ -94,8 +94,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Framework",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.Build.Framework.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.Build.Framework.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -106,8 +106,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Tasks.v4.0",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.Build.Tasks.v4.0.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.Build.Tasks.v4.0.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",
@@ -124,8 +124,8 @@ import_library(
 
 import_library(
     name = "Microsoft.Build.Utilities.v4.0",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.Build.Utilities.v4.0.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.Build.Utilities.v4.0.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
@@ -138,8 +138,8 @@ import_library(
 
 import_library(
     name = "Microsoft.CSharp",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.CSharp.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.CSharp.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -151,8 +151,8 @@ import_library(
 
 import_library(
     name = "Microsoft.JScript",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.JScript.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.JScript.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -163,8 +163,8 @@ import_library(
 
 import_library(
     name = "Microsoft.VisualBasic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.VisualBasic.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.VisualBasic.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -181,8 +181,8 @@ import_library(
 
 import_library(
     name = "Microsoft.VisualBasic.Compatibility",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.VisualBasic.Compatibility.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.VisualBasic.Compatibility.dll",
     deps = [
         "//:Microsoft.VisualBasic",
         "//:mscorlib",
@@ -197,8 +197,8 @@ import_library(
 
 import_library(
     name = "Microsoft.VisualBasic.Compatibility.Data",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.VisualBasic.Compatibility.Data.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.VisualBasic.Compatibility.Data.dll",
     deps = [
         "//:Microsoft.VisualBasic",
         "//:Microsoft.VisualBasic.Compatibility",
@@ -213,27 +213,16 @@ import_library(
 
 import_library(
     name = "Microsoft.VisualC",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.VisualC.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.VisualC.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "Microsoft.VisualC.STLCLR",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Microsoft.VisualC.STLCLR.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "Microsoft.Win32.Primitives",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/Microsoft.Win32.Primitives.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Microsoft.VisualC.STLCLR.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -243,46 +232,20 @@ import_library(
 
 import_library(
     name = "mscorlib",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/mscorlib.dll",
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "netstandard",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/netstandard.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.ComponentModel.Composition",
-        "//:System.Core",
-        "//:System.Data",
-        "//:System.Diagnostics.Tracing",
-        "//:System.Drawing",
-        "//:System.IO.Compression",
-        "//:System.IO.Compression.FileSystem",
-        "//:System.Net.Http",
-        "//:System.Numerics",
-        "//:System.Runtime.Serialization",
-        "//:System.Transactions",
-        "//:System.Web",
-        "//:System.Xml",
-        "//:System.Xml.Linq",
-    ],
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/mscorlib.dll",
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "PresentationBuildTasks",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/PresentationBuildTasks.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/PresentationBuildTasks.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",
         "//:mscorlib",
         "//:System",
-        "//:System.Core",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -290,8 +253,8 @@ import_library(
 
 import_library(
     name = "PresentationCore",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/PresentationCore.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/PresentationCore.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -309,8 +272,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/PresentationFramework.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/PresentationFramework.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -332,8 +295,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.Aero",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/PresentationFramework.Aero.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/PresentationFramework.Aero.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -347,8 +310,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.Aero2",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/PresentationFramework.Aero2.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/PresentationFramework.Aero2.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -362,8 +325,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.AeroLite",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/PresentationFramework.AeroLite.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/PresentationFramework.AeroLite.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -377,8 +340,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.Classic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/PresentationFramework.Classic.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/PresentationFramework.Classic.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -392,8 +355,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.Luna",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/PresentationFramework.Luna.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/PresentationFramework.Luna.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -407,8 +370,8 @@ import_library(
 
 import_library(
     name = "PresentationFramework.Royale",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/PresentationFramework.Royale.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/PresentationFramework.Royale.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -428,8 +391,8 @@ alias(
 
 import_library(
     name = "ReachFramework-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/ReachFramework.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/ReachFramework.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -445,8 +408,8 @@ import_library(
 
 import_library(
     name = "sysglobl",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/sysglobl.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/sysglobl.dll",
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -456,8 +419,8 @@ import_library(
 
 import_library(
     name = "System",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.dll",
     deps = [
         "//:mscorlib",
         "//:System.Configuration-noncyclic",
@@ -468,8 +431,8 @@ import_library(
 
 import_library(
     name = "System.Activities",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Activities.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Activities.dll",
     deps = [
         "//:Microsoft.VisualBasic",
         "//:mscorlib",
@@ -487,8 +450,8 @@ import_library(
 
 import_library(
     name = "System.Activities.Core.Presentation",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Activities.Core.Presentation.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Activities.Core.Presentation.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -512,8 +475,8 @@ import_library(
 
 import_library(
     name = "System.Activities.DurableInstancing",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Activities.DurableInstancing.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Activities.DurableInstancing.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -531,8 +494,8 @@ import_library(
 
 import_library(
     name = "System.Activities.Presentation",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Activities.Presentation.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Activities.Presentation.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -559,8 +522,8 @@ import_library(
 
 import_library(
     name = "System.AddIn",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.AddIn.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.AddIn.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -572,24 +535,16 @@ import_library(
 
 import_library(
     name = "System.AddIn.Contract",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.AddIn.Contract.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.AppContext",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.AppContext.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.AddIn.Contract.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Collections",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Collections.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Collections.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -600,30 +555,8 @@ import_library(
 
 import_library(
     name = "System.Collections.Concurrent",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Collections.Concurrent.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Collections.NonGeneric",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Collections.NonGeneric.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Collections.Specialized",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Collections.Specialized.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Collections.Concurrent.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -633,8 +566,8 @@ import_library(
 
 import_library(
     name = "System.ComponentModel",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ComponentModel.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.ComponentModel.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -644,8 +577,8 @@ import_library(
 
 import_library(
     name = "System.ComponentModel.Annotations",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ComponentModel.Annotations.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.ComponentModel.Annotations.dll",
     deps = [
         "//:mscorlib",
         "//:System.ComponentModel.DataAnnotations",
@@ -655,8 +588,8 @@ import_library(
 
 import_library(
     name = "System.ComponentModel.Composition",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ComponentModel.Composition.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ComponentModel.Composition.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -667,8 +600,8 @@ import_library(
 
 import_library(
     name = "System.ComponentModel.Composition.Registration",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ComponentModel.Composition.Registration.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ComponentModel.Composition.Registration.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -681,8 +614,8 @@ import_library(
 
 import_library(
     name = "System.ComponentModel.DataAnnotations",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ComponentModel.DataAnnotations.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ComponentModel.DataAnnotations.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -694,30 +627,8 @@ import_library(
 
 import_library(
     name = "System.ComponentModel.EventBasedAsync",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ComponentModel.EventBasedAsync.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ComponentModel.Primitives",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ComponentModel.Primitives.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ComponentModel.TypeConverter",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ComponentModel.TypeConverter.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.ComponentModel.EventBasedAsync.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -733,8 +644,8 @@ alias(
 
 import_library(
     name = "System.Configuration-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Configuration.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Configuration.dll",
     deps = [
         "//:mscorlib",
         "//:System.Core-noncyclic",
@@ -746,8 +657,8 @@ import_library(
 
 import_library(
     name = "System.Configuration.Install",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Configuration.Install.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Configuration.Install.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -755,14 +666,6 @@ import_library(
         "//:System.Windows.Forms",
         "//:System.Xml",
     ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Console",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Console.dll",
-    deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
@@ -774,8 +677,8 @@ alias(
 
 import_library(
     name = "System.Core-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Core.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Core.dll",
     deps = [
         "//:mscorlib",
         "//:System.Numerics",
@@ -787,8 +690,8 @@ import_library(
 
 import_library(
     name = "System.Data",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -804,20 +707,9 @@ import_library(
 )
 
 import_library(
-    name = "System.Data.Common",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Data.Common.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Data",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Data.DataSetExtensions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.DataSetExtensions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.DataSetExtensions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -829,8 +721,8 @@ import_library(
 
 import_library(
     name = "System.Data.Entity",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.Entity.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.Entity.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -848,8 +740,8 @@ import_library(
 
 import_library(
     name = "System.Data.Entity.Design",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.Entity.Design.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.Entity.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -866,8 +758,8 @@ import_library(
 
 import_library(
     name = "System.Data.Linq",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.Linq.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.Linq.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -889,8 +781,8 @@ alias(
 
 import_library(
     name = "System.Data.OracleClient-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.OracleClient.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.OracleClient.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -901,8 +793,8 @@ import_library(
 
 import_library(
     name = "System.Data.Services",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.Services.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.Services.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -925,8 +817,8 @@ import_library(
 
 import_library(
     name = "System.Data.Services.Client",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.Services.Client.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.Services.Client.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -945,8 +837,8 @@ alias(
 
 import_library(
     name = "System.Data.Services.Design-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.Services.Design.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.Services.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -968,8 +860,8 @@ alias(
 
 import_library(
     name = "System.Data.SqlXml-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Data.SqlXml.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Data.SqlXml.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -982,8 +874,8 @@ alias(
 
 import_library(
     name = "System.Deployment-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Deployment.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Deployment.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1003,8 +895,8 @@ alias(
 
 import_library(
     name = "System.Design-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Design.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Design.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -1024,8 +916,8 @@ import_library(
 
 import_library(
     name = "System.Device",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Device.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Device.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1035,60 +927,16 @@ import_library(
 
 import_library(
     name = "System.Diagnostics.Contracts",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Diagnostics.Contracts.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Diagnostics.Contracts.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Diagnostics.Debug",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Diagnostics.Debug.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Diagnostics.FileVersionInfo",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Diagnostics.FileVersionInfo.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Diagnostics.Process",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Diagnostics.Process.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Diagnostics.StackTrace",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Diagnostics.StackTrace.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Diagnostics.TextWriterTraceListener",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Diagnostics.TextWriterTraceListener.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Diagnostics.Debug.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1098,19 +946,8 @@ import_library(
 
 import_library(
     name = "System.Diagnostics.Tools",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Diagnostics.Tools.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Diagnostics.TraceSource",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Diagnostics.TraceSource.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Diagnostics.Tools.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1120,16 +957,16 @@ import_library(
 
 import_library(
     name = "System.Diagnostics.Tracing",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Diagnostics.Tracing.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Diagnostics.Tracing.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.DirectoryServices",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.DirectoryServices.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.DirectoryServices.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1141,8 +978,8 @@ import_library(
 
 import_library(
     name = "System.DirectoryServices.AccountManagement",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.DirectoryServices.AccountManagement.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.DirectoryServices.AccountManagement.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1156,8 +993,8 @@ import_library(
 
 import_library(
     name = "System.DirectoryServices.Protocols",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.DirectoryServices.Protocols.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.DirectoryServices.Protocols.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1169,8 +1006,8 @@ import_library(
 
 import_library(
     name = "System.Drawing",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Drawing.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Drawing.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1181,8 +1018,8 @@ import_library(
 
 import_library(
     name = "System.Drawing.Design",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Drawing.Design.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Drawing.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1194,20 +1031,9 @@ import_library(
 )
 
 import_library(
-    name = "System.Drawing.Primitives",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Drawing.Primitives.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Drawing",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Dynamic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Dynamic.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Dynamic.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1218,8 +1044,8 @@ import_library(
 
 import_library(
     name = "System.Dynamic.Runtime",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Dynamic.Runtime.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Dynamic.Runtime.dll",
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1235,8 +1061,8 @@ alias(
 
 import_library(
     name = "System.EnterpriseServices-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.EnterpriseServices.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.EnterpriseServices.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1249,35 +1075,16 @@ import_library(
 
 import_library(
     name = "System.Globalization",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Globalization.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Globalization.dll",
     deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Globalization.Calendars",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Globalization.Calendars.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Globalization.Extensions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Globalization.Extensions.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.IdentityModel",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.IdentityModel.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.IdentityModel.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1293,8 +1100,8 @@ import_library(
 
 import_library(
     name = "System.IdentityModel.Selectors",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.IdentityModel.Selectors.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.IdentityModel.Selectors.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1307,8 +1114,8 @@ import_library(
 
 import_library(
     name = "System.IdentityModel.Services",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.IdentityModel.Services.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.IdentityModel.Services.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1325,8 +1132,8 @@ import_library(
 
 import_library(
     name = "System.IO",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.IO.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1336,8 +1143,8 @@ import_library(
 
 import_library(
     name = "System.IO.Compression",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.IO.Compression.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.IO.Compression.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1347,8 +1154,8 @@ import_library(
 
 import_library(
     name = "System.IO.Compression.FileSystem",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.IO.Compression.FileSystem.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.IO.Compression.FileSystem.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1358,104 +1165,20 @@ import_library(
 )
 
 import_library(
-    name = "System.IO.Compression.ZipFile",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.Compression.ZipFile.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.IO.Compression.FileSystem",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.FileSystem",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.FileSystem.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.FileSystem.DriveInfo",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.FileSystem.DriveInfo.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.FileSystem.Primitives",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.FileSystem.Primitives.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.FileSystem.Watcher",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.FileSystem.Watcher.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.IsolatedStorage",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.IsolatedStorage.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.IO.Log",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.IO.Log.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.IO.Log.dll",
     deps = [
         "//:mscorlib",
         "//:System",
     ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.MemoryMappedFiles",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.MemoryMappedFiles.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.Pipes",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.Pipes.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.IO.UnmanagedMemoryStream",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.IO.UnmanagedMemoryStream.dll",
-    deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Linq",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Linq.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Linq.dll",
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1465,8 +1188,8 @@ import_library(
 
 import_library(
     name = "System.Linq.Expressions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Linq.Expressions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Linq.Expressions.dll",
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1476,8 +1199,8 @@ import_library(
 
 import_library(
     name = "System.Linq.Parallel",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Linq.Parallel.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Linq.Parallel.dll",
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1487,8 +1210,8 @@ import_library(
 
 import_library(
     name = "System.Linq.Queryable",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Linq.Queryable.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Linq.Queryable.dll",
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1498,8 +1221,8 @@ import_library(
 
 import_library(
     name = "System.Management",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Management.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Management.dll",
     deps = [
         "//:Microsoft.JScript",
         "//:mscorlib",
@@ -1511,8 +1234,8 @@ import_library(
 
 import_library(
     name = "System.Management.Instrumentation",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Management.Instrumentation.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Management.Instrumentation.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1525,8 +1248,8 @@ import_library(
 
 import_library(
     name = "System.Messaging",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Messaging.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Messaging.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1542,8 +1265,8 @@ import_library(
 
 import_library(
     name = "System.Net",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Net.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Net.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1553,8 +1276,8 @@ import_library(
 
 import_library(
     name = "System.Net.Http",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Net.Http.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Net.Http.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1564,20 +1287,9 @@ import_library(
 )
 
 import_library(
-    name = "System.Net.Http.Rtc",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.Http.Rtc.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Net.Http.WebRequest",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Net.Http.WebRequest",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Net.Http.WebRequest.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Net.Http.WebRequest.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1587,31 +1299,9 @@ import_library(
 )
 
 import_library(
-    name = "System.Net.NameResolution",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.NameResolution.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Net.NetworkInformation",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.NetworkInformation.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.Ping",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.Ping.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Net.NetworkInformation.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1621,8 +1311,8 @@ import_library(
 
 import_library(
     name = "System.Net.Primitives",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.Primitives.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Net.Primitives.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1632,30 +1322,8 @@ import_library(
 
 import_library(
     name = "System.Net.Requests",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.Requests.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.Security",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.Security.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.Sockets",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.Sockets.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Net.Requests.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1665,30 +1333,8 @@ import_library(
 
 import_library(
     name = "System.Net.WebHeaderCollection",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.WebHeaderCollection.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.WebSockets",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.WebSockets.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Net.WebSockets.Client",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Net.WebSockets.Client.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Net.WebHeaderCollection.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1698,16 +1344,16 @@ import_library(
 
 import_library(
     name = "System.Numerics",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Numerics.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Numerics.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.ObjectModel",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ObjectModel.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.ObjectModel.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1723,8 +1369,8 @@ alias(
 
 import_library(
     name = "System.Printing-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Printing.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Printing.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -1739,88 +1385,72 @@ import_library(
 
 import_library(
     name = "System.Reflection",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Reflection.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Reflection.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Reflection.Context",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Reflection.Context.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Reflection.Context.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Reflection.Emit",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Reflection.Emit.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Reflection.Emit.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Reflection.Emit.ILGeneration",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Reflection.Emit.ILGeneration.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Reflection.Emit.ILGeneration.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Reflection.Emit.Lightweight",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Reflection.Emit.Lightweight.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Reflection.Emit.Lightweight.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Reflection.Extensions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Reflection.Extensions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Reflection.Extensions.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Reflection.Primitives",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Reflection.Primitives.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Resources.Reader",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Resources.Reader.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Reflection.Primitives.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Resources.ResourceManager",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Resources.ResourceManager.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Resources.Writer",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Resources.Writer.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Resources.ResourceManager.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Runtime",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Runtime.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1838,8 +1468,8 @@ alias(
 
 import_library(
     name = "System.Runtime.Caching-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Runtime.Caching.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Runtime.Caching.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1849,17 +1479,9 @@ import_library(
 )
 
 import_library(
-    name = "System.Runtime.CompilerServices.VisualC",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.CompilerServices.VisualC.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Runtime.DurableInstancing",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Runtime.DurableInstancing.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Runtime.DurableInstancing.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1873,8 +1495,8 @@ import_library(
 
 import_library(
     name = "System.Runtime.Extensions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.Extensions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Runtime.Extensions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1884,8 +1506,8 @@ import_library(
 
 import_library(
     name = "System.Runtime.Handles",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.Handles.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Runtime.Handles.dll",
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1895,8 +1517,8 @@ import_library(
 
 import_library(
     name = "System.Runtime.InteropServices",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.InteropServices.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Runtime.InteropServices.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1906,25 +1528,17 @@ import_library(
 )
 
 import_library(
-    name = "System.Runtime.InteropServices.RuntimeInformation",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.InteropServices.RuntimeInformation.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Runtime.InteropServices.WindowsRuntime",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.InteropServices.WindowsRuntime.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Runtime.InteropServices.WindowsRuntime.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Runtime.Numerics",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.Numerics.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Runtime.Numerics.dll",
     deps = [
         "//:mscorlib",
         "//:System.Numerics",
@@ -1934,8 +1548,8 @@ import_library(
 
 import_library(
     name = "System.Runtime.Remoting",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Runtime.Remoting.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Runtime.Remoting.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1949,8 +1563,8 @@ import_library(
 
 import_library(
     name = "System.Runtime.Serialization",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Runtime.Serialization.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Runtime.Serialization.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1961,17 +1575,9 @@ import_library(
 )
 
 import_library(
-    name = "System.Runtime.Serialization.Formatters",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.Serialization.Formatters.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Runtime.Serialization.Formatters.Soap",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Runtime.Serialization.Formatters.Soap.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Runtime.Serialization.Formatters.Soap.dll",
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -1981,8 +1587,8 @@ import_library(
 
 import_library(
     name = "System.Runtime.Serialization.Json",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.Serialization.Json.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Runtime.Serialization.Json.dll",
     deps = [
         "//:mscorlib",
         "//:System.Runtime.Serialization",
@@ -1992,8 +1598,8 @@ import_library(
 
 import_library(
     name = "System.Runtime.Serialization.Primitives",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.Serialization.Primitives.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Runtime.Serialization.Primitives.dll",
     deps = [
         "//:mscorlib",
         "//:System.Runtime.Serialization",
@@ -2003,8 +1609,8 @@ import_library(
 
 import_library(
     name = "System.Runtime.Serialization.Xml",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Runtime.Serialization.Xml.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Runtime.Serialization.Xml.dll",
     deps = [
         "//:mscorlib",
         "//:System.Runtime.Serialization",
@@ -2020,8 +1626,8 @@ alias(
 
 import_library(
     name = "System.Security-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Security.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Security.dll",
     deps = [
         "//:mscorlib",
         "//:System.Xml-noncyclic",
@@ -2030,79 +1636,10 @@ import_library(
 )
 
 import_library(
-    name = "System.Security.Claims",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Security.Claims.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Security.Cryptography.Algorithms",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Security.Cryptography.Algorithms.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Security.Cryptography.Csp",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Security.Cryptography.Csp.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Security.Cryptography.Encoding",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Security.Cryptography.Encoding.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Security.Cryptography.Primitives",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Security.Cryptography.Primitives.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Security.Cryptography.X509Certificates",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Security.Cryptography.X509Certificates.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-        "//:System.Core",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Security.Principal",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Security.Principal.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Security.Principal.dll",
     deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Security.SecureString",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Security.SecureString.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System",
-    ],
     visibility = ["@net//:__pkg__"],
 )
 
@@ -2114,8 +1651,8 @@ alias(
 
 import_library(
     name = "System.ServiceModel-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ServiceModel.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ServiceModel.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2143,8 +1680,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Activation",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ServiceModel.Activation.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ServiceModel.Activation.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2167,8 +1704,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Activities",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ServiceModel.Activities.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ServiceModel.Activities.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2190,8 +1727,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Channels",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ServiceModel.Channels.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ServiceModel.Channels.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2208,8 +1745,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Discovery",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ServiceModel.Discovery.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ServiceModel.Discovery.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2225,8 +1762,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Duplex",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ServiceModel.Duplex.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.ServiceModel.Duplex.dll",
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -2236,8 +1773,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Http",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ServiceModel.Http.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.ServiceModel.Http.dll",
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -2247,8 +1784,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.NetTcp",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ServiceModel.NetTcp.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.ServiceModel.NetTcp.dll",
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -2258,8 +1795,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Primitives",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ServiceModel.Primitives.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.ServiceModel.Primitives.dll",
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -2269,8 +1806,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Routing",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ServiceModel.Routing.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ServiceModel.Routing.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2287,8 +1824,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Security",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ServiceModel.Security.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.ServiceModel.Security.dll",
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -2298,8 +1835,8 @@ import_library(
 
 import_library(
     name = "System.ServiceModel.Web",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ServiceModel.Web.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ServiceModel.Web.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2319,8 +1856,8 @@ import_library(
 
 import_library(
     name = "System.ServiceProcess",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.ServiceProcess.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.ServiceProcess.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2333,8 +1870,8 @@ import_library(
 
 import_library(
     name = "System.Speech",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Speech.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Speech.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2345,24 +1882,24 @@ import_library(
 
 import_library(
     name = "System.Text.Encoding",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Text.Encoding.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Text.Encoding.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Text.Encoding.Extensions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Text.Encoding.Extensions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Text.Encoding.Extensions.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Text.RegularExpressions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Text.RegularExpressions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Text.RegularExpressions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2372,8 +1909,8 @@ import_library(
 
 import_library(
     name = "System.Threading",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Threading.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Threading.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2383,17 +1920,9 @@ import_library(
 )
 
 import_library(
-    name = "System.Threading.Overlapped",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Threading.Overlapped.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
     name = "System.Threading.Tasks",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Threading.Tasks.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Threading.Tasks.dll",
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -2403,40 +1932,24 @@ import_library(
 
 import_library(
     name = "System.Threading.Tasks.Parallel",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Threading.Tasks.Parallel.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Threading.Thread",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Threading.Thread.dll",
-    deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Threading.ThreadPool",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Threading.ThreadPool.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Threading.Tasks.Parallel.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Threading.Timer",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Threading.Timer.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Threading.Timer.dll",
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Transactions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Transactions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Transactions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2444,14 +1957,6 @@ import_library(
         "//:System.EnterpriseServices-noncyclic",
         "//:System.Xml",
     ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.ValueTuple",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.ValueTuple.dll",
-    deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
@@ -2463,8 +1968,8 @@ alias(
 
 import_library(
     name = "System.Web-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Tasks.v4.0",
@@ -2492,8 +1997,8 @@ import_library(
 
 import_library(
     name = "System.Web.Abstractions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.Abstractions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.Abstractions.dll",
     deps = [
         "//:mscorlib",
         "//:System.Web",
@@ -2503,8 +2008,8 @@ import_library(
 
 import_library(
     name = "System.Web.ApplicationServices",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.ApplicationServices.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.ApplicationServices.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2515,8 +2020,8 @@ import_library(
 
 import_library(
     name = "System.Web.DataVisualization",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.DataVisualization.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.DataVisualization.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2530,8 +2035,8 @@ import_library(
 
 import_library(
     name = "System.Web.DataVisualization.Design",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.DataVisualization.Design.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.DataVisualization.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2549,8 +2054,8 @@ import_library(
 
 import_library(
     name = "System.Web.DynamicData",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.DynamicData.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.DynamicData.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2570,8 +2075,8 @@ import_library(
 
 import_library(
     name = "System.Web.DynamicData.Design",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.DynamicData.Design.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.DynamicData.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2586,8 +2091,8 @@ import_library(
 
 import_library(
     name = "System.Web.Entity",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.Entity.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.Entity.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2603,8 +2108,8 @@ import_library(
 
 import_library(
     name = "System.Web.Entity.Design",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.Entity.Design.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.Entity.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2623,8 +2128,8 @@ import_library(
 
 import_library(
     name = "System.Web.Extensions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.Extensions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.Extensions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2651,8 +2156,8 @@ import_library(
 
 import_library(
     name = "System.Web.Extensions.Design",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.Extensions.Design.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.Extensions.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2669,8 +2174,8 @@ import_library(
 
 import_library(
     name = "System.Web.Mobile",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.Mobile.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.Mobile.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2689,8 +2194,8 @@ import_library(
 
 import_library(
     name = "System.Web.RegularExpressions",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.RegularExpressions.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.RegularExpressions.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2700,8 +2205,8 @@ import_library(
 
 import_library(
     name = "System.Web.Routing",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.Routing.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.Routing.dll",
     deps = [
         "//:mscorlib",
         "//:System.Web",
@@ -2717,8 +2222,8 @@ alias(
 
 import_library(
     name = "System.Web.Services-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Web.Services.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Web.Services.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2732,8 +2237,8 @@ import_library(
 
 import_library(
     name = "System.Windows",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Windows.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Windows.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2743,8 +2248,8 @@ import_library(
 
 import_library(
     name = "System.Windows.Controls.Ribbon",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Windows.Controls.Ribbon.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Windows.Controls.Ribbon.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -2761,8 +2266,8 @@ import_library(
 
 import_library(
     name = "System.Windows.Forms",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Windows.Forms.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Windows.Forms.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -2780,8 +2285,8 @@ import_library(
 
 import_library(
     name = "System.Windows.Forms.DataVisualization",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Windows.Forms.DataVisualization.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Windows.Forms.DataVisualization.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2795,8 +2300,8 @@ import_library(
 
 import_library(
     name = "System.Windows.Forms.DataVisualization.Design",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Windows.Forms.DataVisualization.Design.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Windows.Forms.DataVisualization.Design.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2811,8 +2316,8 @@ import_library(
 
 import_library(
     name = "System.Windows.Input.Manipulations",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Windows.Input.Manipulations.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Windows.Input.Manipulations.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2823,8 +2328,8 @@ import_library(
 
 import_library(
     name = "System.Windows.Presentation",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Windows.Presentation.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Windows.Presentation.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -2839,8 +2344,8 @@ import_library(
 
 import_library(
     name = "System.Workflow.Activities",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Workflow.Activities.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Workflow.Activities.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2861,8 +2366,8 @@ import_library(
 
 import_library(
     name = "System.Workflow.ComponentModel",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Workflow.ComponentModel.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Workflow.ComponentModel.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Tasks.v4.0",
@@ -2888,8 +2393,8 @@ alias(
 
 import_library(
     name = "System.Workflow.Runtime-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Workflow.Runtime.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Workflow.Runtime.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2912,8 +2417,8 @@ import_library(
 
 import_library(
     name = "System.WorkflowServices",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.WorkflowServices.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.WorkflowServices.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2941,8 +2446,8 @@ import_library(
 
 import_library(
     name = "System.Xaml",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Xaml.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Xaml.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2959,8 +2464,8 @@ alias(
 
 import_library(
     name = "System.Xml-noncyclic",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Xml.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Xml.dll",
     deps = [
         "//:mscorlib",
         "//:System.Data.SqlXml-noncyclic",
@@ -2970,8 +2475,8 @@ import_library(
 
 import_library(
     name = "System.Xml.Linq",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Xml.Linq.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Xml.Linq.dll",
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2984,8 +2489,8 @@ import_library(
 
 import_library(
     name = "System.Xml.ReaderWriter",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Xml.ReaderWriter.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Xml.ReaderWriter.dll",
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -2995,8 +2500,8 @@ import_library(
 
 import_library(
     name = "System.Xml.Serialization",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/System.Xml.Serialization.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/System.Xml.Serialization.dll",
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -3007,63 +2512,30 @@ import_library(
 
 import_library(
     name = "System.Xml.XDocument",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Xml.XDocument.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Xml.XDocument.dll",
     deps = [
         "//:mscorlib",
         "//:System.Xml.Linq",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Xml.XmlDocument",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Xml.XmlDocument.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "System.Xml.XmlSerializer",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Xml.XmlSerializer.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/Facades/System.Xml.XmlSerializer.dll",
     deps = [
         "//:mscorlib",
         "//:System.Xml",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Xml.XPath",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Xml.XPath.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Xml",
-    ],
-    visibility = ["@net//:__pkg__"],
-)
-
-import_library(
-    name = "System.Xml.XPath.XDocument",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/Facades/System.Xml.XPath.XDocument.dll",
-    deps = [
-        "//:mscorlib",
-        "//:System.Xml.Linq",
     ],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "UIAutomationClient",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/UIAutomationClient.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/UIAutomationClient.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -3077,8 +2549,8 @@ import_library(
 
 import_library(
     name = "UIAutomationClientsideProviders",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/UIAutomationClientsideProviders.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/UIAutomationClientsideProviders.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -3093,8 +2565,8 @@ import_library(
 
 import_library(
     name = "UIAutomationProvider",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/UIAutomationProvider.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/UIAutomationProvider.dll",
     deps = [
         "//:mscorlib",
         "//:UIAutomationTypes",
@@ -3105,21 +2577,16 @@ import_library(
 
 import_library(
     name = "UIAutomationTypes",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/UIAutomationTypes.dll",
-    deps = [
-        "//:Accessibility",
-        "//:mscorlib",
-        "//:System",
-        "//:WindowsBase",
-    ],
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/UIAutomationTypes.dll",
+    deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
 
 import_library(
     name = "WindowsBase",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/WindowsBase.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/WindowsBase.dll",
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -3135,8 +2602,8 @@ import_library(
 
 import_library(
     name = "WindowsFormsIntegration",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/WindowsFormsIntegration.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/WindowsFormsIntegration.dll",
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -3153,8 +2620,8 @@ import_library(
 
 import_library(
     name = "XamlBuildTask",
-    target_framework = "net472",
-    refdll = "//:build/.NETFramework/v4.7.2/XamlBuildTask.dll",
+    target_framework = "net47",
+    refdll = "//:build/.NETFramework/v4.7/XamlBuildTask.dll",
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",

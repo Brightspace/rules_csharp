@@ -75,6 +75,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net20",
         version = "1.0.0-preview.2",
         sha256 = "caaa20a20da4e5e3b408b5479fae15e81effb5601b303efc9d171fbb0f49ac18",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net20.BUILD",
     )
 
     nuget_package(
@@ -82,6 +83,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net40",
         version = "1.0.0-preview.2",
         sha256 = "65347e2f553081424aee2ed3507224d92bfee2b7d2e2bed66484bdc948d4637a",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net40.BUILD",
     )
 
     nuget_package(
@@ -89,6 +91,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net45",
         version = "1.0.0-preview.2",
         sha256 = "a39af6dc89f75a153661c9c98290da0a810ce431e0e3e10fa7d137eb73c0b837",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net45.BUILD",
     )
 
     nuget_package(
@@ -96,6 +99,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net451",
         version = "1.0.0-preview.2",
         sha256 = "dbb2cb1698d54f7b65b40cc8bb930915eb194bc967ea07521e47331c2277894f",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net451.BUILD",
     )
 
     nuget_package(
@@ -103,6 +107,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net452",
         version = "1.0.0-preview.2",
         sha256 = "fbf74fe47de381632ef1564d1599b503ece6e56674c43f5ac36846710bc05888",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net452.BUILD",
     )
 
     nuget_package(
@@ -110,6 +115,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net46",
         version = "1.0.0-preview.2",
         sha256 = "118fcb427ac365ad74d80a2906d412842548f58cf933ffcdf81c8ecf41225cd3",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net46.BUILD",
     )
 
     nuget_package(
@@ -117,6 +123,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net461",
         version = "1.0.0-preview.2",
         sha256 = "5ac0c8b6e26e6cb525a09cda5a47df971ca126e4c953d993c688b7a74ce40724",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net461.BUILD",
     )
 
     nuget_package(
@@ -124,6 +131,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net462",
         version = "1.0.0-preview.2",
         sha256 = "22fdc05543faa9ab7a638d9a238a6e6b4280bfac5348b96345062e10dc6c9b36",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net462.BUILD",
     )
 
     nuget_package(
@@ -131,6 +139,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net47",
         version = "1.0.0-preview.2",
         sha256 = "164d7cbcc3c020b06a0b28ebe60a3c291ce2c568e816ca6d8a0a7911694f6015",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net47.BUILD",
     )
 
     nuget_package(
@@ -138,6 +147,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net471",
         version = "1.0.0-preview.2",
         sha256 = "8d90b26b1bb7247ef8e52d46523532428b1043a53de5d5db08ed7f94b1a879f8",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net471.BUILD",
     )
 
     nuget_package(
@@ -153,6 +163,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net48",
         version = "1.0.0-preview.2",
         sha256 = "912f6eed993e77c83cb8b92db72d50df7d06e4c4a02486474eae460728291989",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net48.BUILD",
     )
 
     # .NET Core
