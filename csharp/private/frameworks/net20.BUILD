@@ -17,9 +17,9 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/AspNetMMCExt.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Drawing",
-        "//:System.Web-noncyclic",
+        "//:System.Web",
         "//:System.Windows.Forms",
     ],
     visibility = ["@net//:__pkg__"],
@@ -59,7 +59,7 @@ import_library(
     deps = [
         "//:IIEHost",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Security",
         "//:System.Xml",
     ],
@@ -92,7 +92,7 @@ import_library(
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -114,7 +114,7 @@ import_library(
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Design",
         "//:System.Drawing",
         "//:System.Security",
@@ -131,7 +131,7 @@ import_library(
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -143,7 +143,7 @@ import_library(
     deps = [
         "//:Microsoft.Vsa",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -155,12 +155,12 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/Microsoft.VisualBasic.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
-        "//:System.Deployment-noncyclic",
+        "//:System",
+        "//:System.Deployment",
         "//:System.Drawing",
         "//:System.Management",
-        "//:System.Runtime.Remoting-noncyclic",
-        "//:System.Web-noncyclic",
+        "//:System.Runtime.Remoting",
+        "//:System.Web",
         "//:System.Windows.Forms",
     ],
     visibility = ["@net//:__pkg__"],
@@ -173,10 +173,10 @@ import_library(
     deps = [
         "//:Microsoft.VisualBasic",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Design",
         "//:System.Drawing",
-        "//:System.Web-noncyclic",
+        "//:System.Web",
         "//:System.Windows.Forms",
     ],
     visibility = ["@net//:__pkg__"],
@@ -190,7 +190,7 @@ import_library(
         "//:Microsoft.VisualBasic",
         "//:Microsoft.VisualBasic.Compatibility",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Drawing",
         "//:System.Security",
         "//:System.Windows.Forms",
@@ -206,7 +206,7 @@ import_library(
         "//:Microsoft.Vsa",
         "//:Microsoft_VsaVb",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -225,7 +225,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/Microsoft.Vsa.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -236,7 +236,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/Microsoft.Vsa.Vb.CodeDOMProcessor.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -290,7 +290,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.configuration.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Security",
         "//:System.Xml",
     ],
@@ -303,7 +303,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Configuration.Install.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Runtime.Serialization.Formatters.Soap",
         "//:System.Windows.Forms",
     ],
@@ -317,7 +317,7 @@ import_library(
     deps = [
         "//:Microsoft.VisualC",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.EnterpriseServices-noncyclic",
         "//:System.Transactions",
         "//:System.Xml",
@@ -331,7 +331,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Data.OracleClient.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Data",
         "//:System.EnterpriseServices-noncyclic",
         "//:System.Transactions",
@@ -366,7 +366,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Deployment.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Drawing",
         "//:System.Security",
         "//:System.Xml",
@@ -381,7 +381,7 @@ import_library(
     deps = [
         "//:Accessibility",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Data",
         "//:System.Data.OracleClient",
         "//:System.Drawing",
@@ -401,7 +401,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.DirectoryServices.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -413,7 +413,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.DirectoryServices.Protocols.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.DirectoryServices",
         "//:System.Xml",
     ],
@@ -426,7 +426,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Drawing.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -437,7 +437,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Drawing.Design.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Drawing",
         "//:System.Windows.Forms",
     ],
@@ -456,7 +456,7 @@ import_library(
     deps = [
         "//:Microsoft.VisualC",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.DirectoryServices",
         "//:System.Runtime.Remoting-noncyclic",
         "//:System.Xml",
@@ -471,7 +471,7 @@ import_library(
     deps = [
         "//:Microsoft.JScript",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Configuration.Install",
     ],
     visibility = ["@net//:__pkg__"],
@@ -483,7 +483,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Messaging.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Configuration.Install",
         "//:System.DirectoryServices",
         "//:System.Drawing",
@@ -505,7 +505,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Runtime.Remoting.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.DirectoryServices",
         "//:System.Runtime.Serialization.Formatters.Soap",
         "//:System.Xml",
@@ -530,7 +530,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Security.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Xml",
     ],
     visibility = ["@net//:__pkg__"],
@@ -542,7 +542,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.ServiceProcess.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Configuration.Install",
         "//:System.Drawing",
         "//:System.Windows.Forms",
@@ -556,7 +556,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Transactions.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.EnterpriseServices-noncyclic",
         "//:System.Xml",
     ],
@@ -574,7 +574,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Web.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Data",
         "//:System.DirectoryServices",
         "//:System.DirectoryServices.Protocols",
@@ -595,11 +595,11 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Web.Mobile.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Data",
         "//:System.Design",
         "//:System.Drawing",
-        "//:System.Web-noncyclic",
+        "//:System.Web",
         "//:System.Web.RegularExpressions",
         "//:System.Windows.Forms",
         "//:System.Xml",
@@ -613,7 +613,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Web.RegularExpressions.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
     ],
     visibility = ["@net//:__pkg__"],
 )
@@ -629,7 +629,7 @@ import_library(
     refdll = "//:build/.NETFramework/v2.0/System.Web.Services.dll",
     deps = [
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Data",
         "//:System.DirectoryServices",
         "//:System.EnterpriseServices-noncyclic",
@@ -645,7 +645,7 @@ import_library(
     deps = [
         "//:Accessibility",
         "//:mscorlib",
-        "//:System-noncyclic",
+        "//:System",
         "//:System.Deployment-noncyclic",
         "//:System.Drawing",
         "//:System.Runtime.Serialization.Formatters.Soap",
