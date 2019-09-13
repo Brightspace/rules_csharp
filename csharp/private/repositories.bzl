@@ -83,6 +83,7 @@ def _net_workspace():
         package = "Microsoft.NETFramework.ReferenceAssemblies.net40",
         version = "1.0.0-preview.2",
         sha256 = "65347e2f553081424aee2ed3507224d92bfee2b7d2e2bed66484bdc948d4637a",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net40.BUILD",
     )
 
     nuget_package(
