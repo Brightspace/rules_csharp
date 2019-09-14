@@ -403,7 +403,6 @@ import_library(
         "//:System.Xml",
         "//:WindowsBase",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -651,7 +650,6 @@ import_library(
         "//:System.Security-noncyclic",
         "//:System.Xml-noncyclic",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -684,7 +682,6 @@ import_library(
         "//:System.Security-noncyclic",
         "//:System.Xml-noncyclic",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -786,7 +783,6 @@ import_library(
         "//:System",
         "//:System.Configuration",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -847,7 +843,6 @@ import_library(
         "//:System.Xml",
         "//:System.Xml.Linq",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 alias(
@@ -861,7 +856,6 @@ import_library(
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.SqlXml.dll",
     deps = ["//:mscorlib"],
-    visibility = ["@net//:__pkg__"],
 )
 
 alias(
@@ -882,7 +876,6 @@ import_library(
         "//:System.Security",
         "//:System.Xml",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 alias(
@@ -909,7 +902,6 @@ import_library(
         "//:System.Windows.Forms",
         "//:System.Xml",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1068,7 +1060,6 @@ import_library(
         "//:System.Runtime.Remoting",
         "//:System.Xml",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1389,7 +1380,6 @@ import_library(
         "//:System.Xml",
         "//:WindowsBase",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1484,7 +1474,6 @@ import_library(
         "//:System",
         "//:System.Configuration",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1641,7 +1630,6 @@ import_library(
         "//:mscorlib",
         "//:System.Xml-noncyclic",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -1684,7 +1672,6 @@ import_library(
         "//:System.Xml",
         "//:System.Xml.Linq",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -2001,7 +1988,6 @@ import_library(
         "//:System.Windows.Forms",
         "//:System.Xml",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -2241,7 +2227,6 @@ import_library(
         "//:System.DirectoryServices",
         "//:System.Xml",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -2421,7 +2406,6 @@ import_library(
         "//:System.Xml",
         "//:System.Xml.Linq",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
@@ -2479,7 +2463,6 @@ import_library(
         "//:mscorlib",
         "//:System.Data.SqlXml-noncyclic",
     ],
-    visibility = ["@net//:__pkg__"],
 )
 
 import_library(
