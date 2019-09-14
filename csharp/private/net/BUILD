@@ -2,8 +2,6 @@ load("@d2l_rules_csharp//csharp/private:rules/imports.bzl", "import_multiframewo
 
 import_multiframework_library(
     name = "Accessibility",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:Accessibility",
     net40 = "@net40//:Accessibility",
     net45 = "@net45//:Accessibility",
@@ -16,24 +14,23 @@ import_multiframework_library(
     net471 = "@net471//:Accessibility",
     net472 = "@net472//:Accessibility",
     net48 = "@net48//:Accessibility",
+    visibility = ["//visibility:public"],
 )
 
 alias(
     name = "AspNetMMCExt",
-    visibility = ["//visibility:public"],
     actual = "@net20//:AspNetMMCExt",
+    visibility = ["//visibility:public"],
 )
 
 alias(
     name = "cscompmgd",
-    visibility = ["//visibility:public"],
     actual = "@net20//:cscompmgd",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "CustomMarshalers",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:CustomMarshalers",
     net40 = "@net40//:CustomMarshalers",
     net45 = "@net45//:CustomMarshalers",
@@ -46,24 +43,23 @@ import_multiframework_library(
     net471 = "@net471//:CustomMarshalers",
     net472 = "@net472//:CustomMarshalers",
     net48 = "@net48//:CustomMarshalers",
+    visibility = ["//visibility:public"],
 )
 
 alias(
     name = "IEExecRemote",
-    visibility = ["//visibility:public"],
     actual = "@net20//:IEExecRemote",
+    visibility = ["//visibility:public"],
 )
 
 alias(
     name = "IIEHost",
-    visibility = ["//visibility:public"],
     actual = "@net20//:IIEHost",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "ISymWrapper",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:ISymWrapper",
     net40 = "@net40//:ISymWrapper",
     net45 = "@net45//:ISymWrapper",
@@ -76,12 +72,11 @@ import_multiframework_library(
     net471 = "@net471//:ISymWrapper",
     net472 = "@net472//:ISymWrapper",
     net48 = "@net48//:ISymWrapper",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.Activities.Build",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:Microsoft.Activities.Build",
     net451 = "@net451//:Microsoft.Activities.Build",
     net452 = "@net452//:Microsoft.Activities.Build",
@@ -92,12 +87,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Activities.Build",
     net472 = "@net472//:Microsoft.Activities.Build",
     net48 = "@net48//:Microsoft.Activities.Build",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.Build",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:Microsoft.Build",
     net45 = "@net45//:Microsoft.Build",
     net451 = "@net451//:Microsoft.Build",
@@ -109,12 +103,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build",
     net472 = "@net472//:Microsoft.Build",
     net48 = "@net48//:Microsoft.Build",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.Build.Conversion.v4.0",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:Microsoft.Build.Conversion.v4.0",
     net45 = "@net45//:Microsoft.Build.Conversion.v4.0",
     net451 = "@net451//:Microsoft.Build.Conversion.v4.0",
@@ -126,12 +119,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Conversion.v4.0",
     net472 = "@net472//:Microsoft.Build.Conversion.v4.0",
     net48 = "@net48//:Microsoft.Build.Conversion.v4.0",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.Build.Engine",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:Microsoft.Build.Engine",
     net40 = "@net40//:Microsoft.Build.Engine",
     net45 = "@net45//:Microsoft.Build.Engine",
@@ -144,12 +136,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Engine",
     net472 = "@net472//:Microsoft.Build.Engine",
     net48 = "@net48//:Microsoft.Build.Engine",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.Build.Framework",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:Microsoft.Build.Framework",
     net40 = "@net40//:Microsoft.Build.Framework",
     net45 = "@net45//:Microsoft.Build.Framework",
@@ -162,24 +153,23 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Framework",
     net472 = "@net472//:Microsoft.Build.Framework",
     net48 = "@net48//:Microsoft.Build.Framework",
+    visibility = ["//visibility:public"],
 )
 
 alias(
     name = "Microsoft.Build.Tasks",
-    visibility = ["//visibility:public"],
     actual = "@net20//:Microsoft.Build.Tasks",
+    visibility = ["//visibility:public"],
 )
 
 alias(
     name = "Microsoft.Build.Utilities",
-    visibility = ["//visibility:public"],
     actual = "@net20//:Microsoft.Build.Utilities",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.Build.Tasks.v4.0",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:Microsoft.Build.Tasks.v4.0",
     net45 = "@net45//:Microsoft.Build.Tasks.v4.0",
     net451 = "@net451//:Microsoft.Build.Tasks.v4.0",
@@ -191,12 +181,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Tasks.v4.0",
     net472 = "@net472//:Microsoft.Build.Tasks.v4.0",
     net48 = "@net48//:Microsoft.Build.Tasks.v4.0",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.Build.Utilities.v4.0",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:Microsoft.Build.Utilities.v4.0",
     net45 = "@net45//:Microsoft.Build.Utilities.v4.0",
     net451 = "@net451//:Microsoft.Build.Utilities.v4.0",
@@ -208,12 +197,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Utilities.v4.0",
     net472 = "@net472//:Microsoft.Build.Utilities.v4.0",
     net48 = "@net48//:Microsoft.Build.Utilities.v4.0",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.CSharp",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:Microsoft.CSharp",
     net45 = "@net45//:Microsoft.CSharp",
     net451 = "@net451//:Microsoft.CSharp",
@@ -225,12 +213,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.CSharp",
     net472 = "@net472//:Microsoft.CSharp",
     net48 = "@net48//:Microsoft.CSharp",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.JScript",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:Microsoft.JScript",
     net40 = "@net40//:Microsoft.JScript",
     net45 = "@net45//:Microsoft.JScript",
@@ -243,12 +230,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.JScript",
     net472 = "@net472//:Microsoft.JScript",
     net48 = "@net48//:Microsoft.JScript",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.VisualBasic",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:Microsoft.VisualBasic",
     net40 = "@net40//:Microsoft.VisualBasic",
     net45 = "@net45//:Microsoft.VisualBasic",
@@ -261,12 +247,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualBasic",
     net472 = "@net472//:Microsoft.VisualBasic",
     net48 = "@net48//:Microsoft.VisualBasic",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.VisualBasic.Compatibility",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:Microsoft.VisualBasic.Compatibility",
     net40 = "@net40//:Microsoft.VisualBasic.Compatibility",
     net45 = "@net45//:Microsoft.VisualBasic.Compatibility",
@@ -279,12 +264,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualBasic.Compatibility",
     net472 = "@net472//:Microsoft.VisualBasic.Compatibility",
     net48 = "@net48//:Microsoft.VisualBasic.Compatibility",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.VisualBasic.Compatibility.Data",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:Microsoft.VisualBasic.Compatibility.Data",
     net40 = "@net40//:Microsoft.VisualBasic.Compatibility.Data",
     net45 = "@net45//:Microsoft.VisualBasic.Compatibility.Data",
@@ -297,18 +281,17 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualBasic.Compatibility.Data",
     net472 = "@net472//:Microsoft.VisualBasic.Compatibility.Data",
     net48 = "@net48//:Microsoft.VisualBasic.Compatibility.Data",
+    visibility = ["//visibility:public"],
 )
 
 alias(
     name = "Microsoft.VisualBasic.Vsa",
-    visibility = ["//visibility:public"],
     actual = "@net20//:Microsoft.VisualBasic.Vsa",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.VisualC",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:Microsoft.VisualC",
     net40 = "@net40//:Microsoft.VisualC",
     net45 = "@net45//:Microsoft.VisualC",
@@ -321,12 +304,11 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualC",
     net472 = "@net472//:Microsoft.VisualC",
     net48 = "@net48//:Microsoft.VisualC",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.VisualC.STLCLR",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:Microsoft.VisualC.STLCLR",
     net45 = "@net45//:Microsoft.VisualC.STLCLR",
     net451 = "@net451//:Microsoft.VisualC.STLCLR",
@@ -338,38 +320,38 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualC.STLCLR",
     net472 = "@net472//:Microsoft.VisualC.STLCLR",
     net48 = "@net48//:Microsoft.VisualC.STLCLR",
+    visibility = ["//visibility:public"],
 )
 
 alias(
     name = "Microsoft.Vsa",
-    visibility = ["//visibility:public"],
     actual = "@net20//:Microsoft.Vsa",
+    visibility = ["//visibility:public"],
 )
 
 alias(
     name = "Microsoft.Vsa.Vb.CodeCOMProcessor",
-    visibility = ["//visibility:public"],
     actual = "@net20//:Microsoft.Vsa.Vb.CodeCOMProcessor",
+    visibility = ["//visibility:public"],
 )
+
 alias(
     name = "Microsoft_VsaVb",
-    visibility = ["//visibility:public"],
     actual = "@net20//:Microsoft_VsaVb",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.Win32.Primitives",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:Microsoft.Win32.Primitives",
     net472 = "@net472//:Microsoft.Win32.Primitives",
     net48 = "@net48//:Microsoft.Win32.Primitives",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "mscorlib",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:mscorlib",
     net40 = "@net40//:mscorlib",
     net45 = "@net45//:mscorlib",
@@ -382,21 +364,21 @@ import_multiframework_library(
     net471 = "@net471//:mscorlib",
     net472 = "@net472//:mscorlib",
     net48 = "@net48//:mscorlib",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "netstandard",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:netstandard",
     net472 = "@net472//:netstandard",
     net48 = "@net48//:netstandard",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "PresentationBuildTasks",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:PresentationBuildTasks",
     net45 = "@net45//:PresentationBuildTasks",
     net451 = "@net451//:PresentationBuildTasks",
@@ -408,12 +390,11 @@ import_multiframework_library(
     net471 = "@net471//:PresentationBuildTasks",
     net472 = "@net472//:PresentationBuildTasks",
     net48 = "@net48//:PresentationBuildTasks",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "PresentationCore",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:PresentationCore",
     net45 = "@net45//:PresentationCore",
     net451 = "@net451//:PresentationCore",
@@ -425,12 +406,11 @@ import_multiframework_library(
     net471 = "@net471//:PresentationCore",
     net472 = "@net472//:PresentationCore",
     net48 = "@net48//:PresentationCore",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "PresentationFramework",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:PresentationFramework",
     net45 = "@net45//:PresentationFramework",
     net451 = "@net451//:PresentationFramework",
@@ -442,12 +422,11 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework",
     net472 = "@net472//:PresentationFramework",
     net48 = "@net48//:PresentationFramework",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "PresentationFramework.Aero",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:PresentationFramework.Aero",
     net45 = "@net45//:PresentationFramework.Aero",
     net451 = "@net451//:PresentationFramework.Aero",
@@ -459,12 +438,11 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Aero",
     net472 = "@net472//:PresentationFramework.Aero",
     net48 = "@net48//:PresentationFramework.Aero",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "PresentationFramework.Aero2",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:PresentationFramework.Aero2",
     net45 = "@net45//:PresentationFramework.Aero2",
     net451 = "@net451//:PresentationFramework.Aero2",
@@ -476,12 +454,11 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Aero2",
     net472 = "@net472//:PresentationFramework.Aero2",
     net48 = "@net48//:PresentationFramework.Aero2",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "PresentationFramework.AeroLite",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:PresentationFramework.AeroLite",
     net45 = "@net45//:PresentationFramework.AeroLite",
     net451 = "@net451//:PresentationFramework.AeroLite",
@@ -493,12 +470,11 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.AeroLite",
     net472 = "@net472//:PresentationFramework.AeroLite",
     net48 = "@net48//:PresentationFramework.AeroLite",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "PresentationFramework.Classic",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:PresentationFramework.Classic",
     net45 = "@net45//:PresentationFramework.Classic",
     net451 = "@net451//:PresentationFramework.Classic",
@@ -510,12 +486,11 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Classic",
     net472 = "@net472//:PresentationFramework.Classic",
     net48 = "@net48//:PresentationFramework.Classic",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "PresentationFramework.Luna",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:PresentationFramework.Luna",
     net45 = "@net45//:PresentationFramework.Luna",
     net451 = "@net451//:PresentationFramework.Luna",
@@ -527,12 +502,11 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Luna",
     net472 = "@net472//:PresentationFramework.Luna",
     net48 = "@net48//:PresentationFramework.Luna",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "PresentationFramework.Royale",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:PresentationFramework.Royale",
     net45 = "@net45//:PresentationFramework.Royale",
     net451 = "@net451//:PresentationFramework.Royale",
@@ -544,12 +518,11 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Royale",
     net472 = "@net472//:PresentationFramework.Royale",
     net48 = "@net48//:PresentationFramework.Royale",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "ReachFramework",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:ReachFramework",
     net45 = "@net45//:ReachFramework",
     net451 = "@net451//:ReachFramework",
@@ -561,12 +534,11 @@ import_multiframework_library(
     net471 = "@net471//:ReachFramework",
     net472 = "@net472//:ReachFramework",
     net48 = "@net48//:ReachFramework",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "sysglobl",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:sysglobl",
     net40 = "@net40//:sysglobl",
     net45 = "@net45//:sysglobl",
@@ -579,12 +551,11 @@ import_multiframework_library(
     net471 = "@net471//:sysglobl",
     net472 = "@net472//:sysglobl",
     net48 = "@net48//:sysglobl",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System",
     net40 = "@net40//:System",
     net45 = "@net45//:System",
@@ -597,12 +568,12 @@ import_multiframework_library(
     net471 = "@net471//:System",
     net472 = "@net472//:System",
     net48 = "@net48//:System",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Activities",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Activities",
     net45 = "@net45//:System.Activities",
     net451 = "@net451//:System.Activities",
@@ -614,12 +585,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Activities",
     net472 = "@net472//:System.Activities",
     net48 = "@net48//:System.Activities",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Activities.Core.Presentation",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Activities.Core.Presentation",
     net45 = "@net45//:System.Activities.Core.Presentation",
     net451 = "@net451//:System.Activities.Core.Presentation",
@@ -631,12 +601,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Activities.Core.Presentation",
     net472 = "@net472//:System.Activities.Core.Presentation",
     net48 = "@net48//:System.Activities.Core.Presentation",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Activities.DurableInstancing",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Activities.DurableInstancing",
     net45 = "@net45//:System.Activities.DurableInstancing",
     net451 = "@net451//:System.Activities.DurableInstancing",
@@ -648,12 +617,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Activities.DurableInstancing",
     net472 = "@net472//:System.Activities.DurableInstancing",
     net48 = "@net48//:System.Activities.DurableInstancing",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Activities.Presentation",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Activities.Presentation",
     net45 = "@net45//:System.Activities.Presentation",
     net451 = "@net451//:System.Activities.Presentation",
@@ -665,12 +633,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Activities.Presentation",
     net472 = "@net472//:System.Activities.Presentation",
     net48 = "@net48//:System.Activities.Presentation",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.AddIn",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.AddIn",
     net45 = "@net45//:System.AddIn",
     net451 = "@net451//:System.AddIn",
@@ -682,12 +649,11 @@ import_multiframework_library(
     net471 = "@net471//:System.AddIn",
     net472 = "@net472//:System.AddIn",
     net48 = "@net48//:System.AddIn",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.AddIn.Contract",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.AddIn.Contract",
     net45 = "@net45//:System.AddIn.Contract",
     net451 = "@net451//:System.AddIn.Contract",
@@ -699,21 +665,20 @@ import_multiframework_library(
     net471 = "@net471//:System.AddIn.Contract",
     net472 = "@net472//:System.AddIn.Contract",
     net48 = "@net48//:System.AddIn.Contract",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.AppContext",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.AppContext",
     net472 = "@net472//:System.AppContext",
     net48 = "@net48//:System.AppContext",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Collections",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Collections",
     net451 = "@net451//:System.Collections",
     net452 = "@net452//:System.Collections",
@@ -724,12 +689,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Collections",
     net472 = "@net472//:System.Collections",
     net48 = "@net48//:System.Collections",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Collections.Concurrent",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Collections.Concurrent",
     net451 = "@net451//:System.Collections.Concurrent",
     net452 = "@net452//:System.Collections.Concurrent",
@@ -740,30 +705,30 @@ import_multiframework_library(
     net471 = "@net471//:System.Collections.Concurrent",
     net472 = "@net472//:System.Collections.Concurrent",
     net48 = "@net48//:System.Collections.Concurrent",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Collections.NonGeneric",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Collections.NonGeneric",
     net472 = "@net472//:System.Collections.NonGeneric",
     net48 = "@net48//:System.Collections.NonGeneric",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Collections.Specialized",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Collections.Specialized",
     net472 = "@net472//:System.Collections.Specialized",
     net48 = "@net48//:System.Collections.Specialized",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ComponentModel",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ComponentModel",
     net451 = "@net451//:System.ComponentModel",
     net452 = "@net452//:System.ComponentModel",
@@ -774,12 +739,12 @@ import_multiframework_library(
     net471 = "@net471//:System.ComponentModel",
     net472 = "@net472//:System.ComponentModel",
     net48 = "@net48//:System.ComponentModel",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ComponentModel.Annotations",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ComponentModel.Annotations",
     net451 = "@net451//:System.ComponentModel.Annotations",
     net452 = "@net452//:System.ComponentModel.Annotations",
@@ -790,12 +755,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ComponentModel.Annotations",
     net472 = "@net472//:System.ComponentModel.Annotations",
     net48 = "@net48//:System.ComponentModel.Annotations",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ComponentModel.Composition",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.ComponentModel.Composition",
     net45 = "@net45//:System.ComponentModel.Composition",
     net451 = "@net451//:System.ComponentModel.Composition",
@@ -807,12 +771,12 @@ import_multiframework_library(
     net471 = "@net471//:System.ComponentModel.Composition",
     net472 = "@net472//:System.ComponentModel.Composition",
     net48 = "@net48//:System.ComponentModel.Composition",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ComponentModel.Composition.Registration",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ComponentModel.Composition.Registration",
     net451 = "@net451//:System.ComponentModel.Composition.Registration",
     net452 = "@net452//:System.ComponentModel.Composition.Registration",
@@ -823,12 +787,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ComponentModel.Composition.Registration",
     net472 = "@net472//:System.ComponentModel.Composition.Registration",
     net48 = "@net48//:System.ComponentModel.Composition.Registration",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ComponentModel.DataAnnotations",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.ComponentModel.DataAnnotations",
     net45 = "@net45//:System.ComponentModel.DataAnnotations",
     net451 = "@net451//:System.ComponentModel.DataAnnotations",
@@ -840,12 +803,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ComponentModel.DataAnnotations",
     net472 = "@net472//:System.ComponentModel.DataAnnotations",
     net48 = "@net48//:System.ComponentModel.DataAnnotations",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ComponentModel.EventBasedAsync",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ComponentModel.EventBasedAsync",
     net451 = "@net451//:System.ComponentModel.EventBasedAsync",
     net452 = "@net452//:System.ComponentModel.EventBasedAsync",
@@ -856,30 +818,30 @@ import_multiframework_library(
     net471 = "@net471//:System.ComponentModel.EventBasedAsync",
     net472 = "@net472//:System.ComponentModel.EventBasedAsync",
     net48 = "@net48//:System.ComponentModel.EventBasedAsync",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ComponentModel.Primitives",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.ComponentModel.Primitives",
     net472 = "@net472//:System.ComponentModel.Primitives",
     net48 = "@net48//:System.ComponentModel.Primitives",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ComponentModel.TypeConverter",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.ComponentModel.TypeConverter",
     net472 = "@net472//:System.ComponentModel.TypeConverter",
     net48 = "@net48//:System.ComponentModel.TypeConverter",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Configuration",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.configuration",
     net40 = "@net40//:System.Configuration",
     net45 = "@net45//:System.Configuration",
@@ -892,12 +854,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Configuration",
     net472 = "@net472//:System.Configuration",
     net48 = "@net48//:System.Configuration",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Configuration.Install",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Configuration.Install",
     net40 = "@net40//:System.Configuration.Install",
     net45 = "@net45//:System.Configuration.Install",
@@ -910,21 +871,20 @@ import_multiframework_library(
     net471 = "@net471//:System.Configuration.Install",
     net472 = "@net472//:System.Configuration.Install",
     net48 = "@net48//:System.Configuration.Install",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Console",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Console",
     net472 = "@net472//:System.Console",
     net48 = "@net48//:System.Console",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Core",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Core",
     net45 = "@net45//:System.Core",
     net451 = "@net451//:System.Core",
@@ -936,12 +896,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Core",
     net472 = "@net472//:System.Core",
     net48 = "@net48//:System.Core",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Data",
     net40 = "@net40//:System.Data",
     net45 = "@net45//:System.Data",
@@ -954,21 +914,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Data",
     net472 = "@net472//:System.Data",
     net48 = "@net48//:System.Data",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.Common",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Data.Common",
     net472 = "@net472//:System.Data.Common",
     net48 = "@net48//:System.Data.Common",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.DataSetExtensions",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Data.DataSetExtensions",
     net45 = "@net45//:System.Data.DataSetExtensions",
     net451 = "@net451//:System.Data.DataSetExtensions",
@@ -980,12 +940,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.DataSetExtensions",
     net472 = "@net472//:System.Data.DataSetExtensions",
     net48 = "@net48//:System.Data.DataSetExtensions",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.Entity",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Data.Entity",
     net45 = "@net45//:System.Data.Entity",
     net451 = "@net451//:System.Data.Entity",
@@ -997,12 +956,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Entity",
     net472 = "@net472//:System.Data.Entity",
     net48 = "@net48//:System.Data.Entity",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.Entity.Design",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Data.Entity.Design",
     net45 = "@net45//:System.Data.Entity.Design",
     net451 = "@net451//:System.Data.Entity.Design",
@@ -1014,12 +972,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Entity.Design",
     net472 = "@net472//:System.Data.Entity.Design",
     net48 = "@net48//:System.Data.Entity.Design",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.Linq",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Data.Linq",
     net45 = "@net45//:System.Data.Linq",
     net451 = "@net451//:System.Data.Linq",
@@ -1031,12 +988,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Linq",
     net472 = "@net472//:System.Data.Linq",
     net48 = "@net48//:System.Data.Linq",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.OracleClient",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Data.OracleClient",
     net40 = "@net40//:System.Data.OracleClient",
     net45 = "@net45//:System.Data.OracleClient",
@@ -1049,12 +1005,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.OracleClient",
     net472 = "@net472//:System.Data.OracleClient",
     net48 = "@net48//:System.Data.OracleClient",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.Services",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Data.Services",
     net45 = "@net45//:System.Data.Services",
     net451 = "@net451//:System.Data.Services",
@@ -1066,12 +1021,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Services",
     net472 = "@net472//:System.Data.Services",
     net48 = "@net48//:System.Data.Services",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.Services.Client",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Data.Services.Client",
     net45 = "@net45//:System.Data.Services.Client",
     net451 = "@net451//:System.Data.Services.Client",
@@ -1083,12 +1037,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Services.Client",
     net472 = "@net472//:System.Data.Services.Client",
     net48 = "@net48//:System.Data.Services.Client",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.Services.Design",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Data.Services.Design",
     net45 = "@net45//:System.Data.Services.Design",
     net451 = "@net451//:System.Data.Services.Design",
@@ -1100,12 +1053,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Services.Design",
     net472 = "@net472//:System.Data.Services.Design",
     net48 = "@net48//:System.Data.Services.Design",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Data.SqlXml",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Data.SqlXml",
     net40 = "@net40//:System.Data.SqlXml",
     net45 = "@net45//:System.Data.SqlXml",
@@ -1118,12 +1070,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.SqlXml",
     net472 = "@net472//:System.Data.SqlXml",
     net48 = "@net48//:System.Data.SqlXml",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Deployment",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Deployment",
     net40 = "@net40//:System.Deployment",
     net45 = "@net45//:System.Deployment",
@@ -1136,12 +1087,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Deployment",
     net472 = "@net472//:System.Deployment",
     net48 = "@net48//:System.Deployment",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Design",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Design",
     net40 = "@net40//:System.Design",
     net45 = "@net45//:System.Design",
@@ -1154,12 +1104,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Design",
     net472 = "@net472//:System.Design",
     net48 = "@net48//:System.Design",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Device",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Device",
     net45 = "@net45//:System.Device",
     net451 = "@net451//:System.Device",
@@ -1171,12 +1120,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Device",
     net472 = "@net472//:System.Device",
     net48 = "@net48//:System.Device",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Diagnostics.Contracts",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Diagnostics.Contracts",
     net451 = "@net451//:System.Diagnostics.Contracts",
     net452 = "@net452//:System.Diagnostics.Contracts",
@@ -1187,12 +1135,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Diagnostics.Contracts",
     net472 = "@net472//:System.Diagnostics.Contracts",
     net48 = "@net48//:System.Diagnostics.Contracts",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Diagnostics.Debug",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Diagnostics.Debug",
     net451 = "@net451//:System.Diagnostics.Debug",
     net452 = "@net452//:System.Diagnostics.Debug",
@@ -1203,48 +1151,48 @@ import_multiframework_library(
     net471 = "@net471//:System.Diagnostics.Debug",
     net472 = "@net472//:System.Diagnostics.Debug",
     net48 = "@net48//:System.Diagnostics.Debug",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Diagnostics.FileVersionInfo",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Diagnostics.FileVersionInfo",
     net472 = "@net472//:System.Diagnostics.FileVersionInfo",
     net48 = "@net48//:System.Diagnostics.FileVersionInfo",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Diagnostics.Process",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Diagnostics.Process",
     net472 = "@net472//:System.Diagnostics.Process",
     net48 = "@net48//:System.Diagnostics.Process",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Diagnostics.StackTrace",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Diagnostics.StackTrace",
     net472 = "@net472//:System.Diagnostics.StackTrace",
     net48 = "@net48//:System.Diagnostics.StackTrace",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Diagnostics.TextWriterTraceListener",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Diagnostics.TextWriterTraceListener",
     net472 = "@net472//:System.Diagnostics.TextWriterTraceListener",
     net48 = "@net48//:System.Diagnostics.TextWriterTraceListener",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Diagnostics.Tools",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Diagnostics.Tools",
     net451 = "@net451//:System.Diagnostics.Tools",
     net452 = "@net452//:System.Diagnostics.Tools",
@@ -1255,21 +1203,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Diagnostics.Tools",
     net472 = "@net472//:System.Diagnostics.Tools",
     net48 = "@net48//:System.Diagnostics.Tools",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Diagnostics.TraceSource",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Diagnostics.TraceSource",
     net472 = "@net472//:System.Diagnostics.TraceSource",
     net48 = "@net48//:System.Diagnostics.TraceSource",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Diagnostics.Tracing",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Diagnostics.Tracing",
     net451 = "@net451//:System.Diagnostics.Tracing",
     net452 = "@net452//:System.Diagnostics.Tracing",
@@ -1280,12 +1228,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Diagnostics.Tracing",
     net472 = "@net472//:System.Diagnostics.Tracing",
     net48 = "@net48//:System.Diagnostics.Tracing",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.DirectoryServices",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.DirectoryServices",
     net40 = "@net40//:System.DirectoryServices",
     net45 = "@net45//:System.DirectoryServices",
@@ -1298,12 +1246,11 @@ import_multiframework_library(
     net471 = "@net471//:System.DirectoryServices",
     net472 = "@net472//:System.DirectoryServices",
     net48 = "@net48//:System.DirectoryServices",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.DirectoryServices.AccountManagement",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.DirectoryServices.AccountManagement",
     net45 = "@net45//:System.DirectoryServices.AccountManagement",
     net451 = "@net451//:System.DirectoryServices.AccountManagement",
@@ -1315,12 +1262,11 @@ import_multiframework_library(
     net471 = "@net471//:System.DirectoryServices.AccountManagement",
     net472 = "@net472//:System.DirectoryServices.AccountManagement",
     net48 = "@net48//:System.DirectoryServices.AccountManagement",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.DirectoryServices.Protocols",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.DirectoryServices.Protocols",
     net40 = "@net40//:System.DirectoryServices.Protocols",
     net45 = "@net45//:System.DirectoryServices.Protocols",
@@ -1333,12 +1279,11 @@ import_multiframework_library(
     net471 = "@net471//:System.DirectoryServices.Protocols",
     net472 = "@net472//:System.DirectoryServices.Protocols",
     net48 = "@net48//:System.DirectoryServices.Protocols",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Drawing",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Drawing",
     net40 = "@net40//:System.Drawing",
     net45 = "@net45//:System.Drawing",
@@ -1351,12 +1296,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Drawing",
     net472 = "@net472//:System.Drawing",
     net48 = "@net48//:System.Drawing",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Drawing.Design",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Drawing.Design",
     net40 = "@net40//:System.Drawing.Design",
     net45 = "@net45//:System.Drawing.Design",
@@ -1369,21 +1314,20 @@ import_multiframework_library(
     net471 = "@net471//:System.Drawing.Design",
     net472 = "@net472//:System.Drawing.Design",
     net48 = "@net48//:System.Drawing.Design",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Drawing.Primitives",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Drawing.Primitives",
     net472 = "@net472//:System.Drawing.Primitives",
     net48 = "@net48//:System.Drawing.Primitives",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Dynamic",
-    visibility = ["//visibility:public"],
-
     net46 = "@net46//:System.Dynamic",
     net461 = "@net461//:System.Dynamic",
     net462 = "@net462//:System.Dynamic",
@@ -1391,12 +1335,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Dynamic",
     net472 = "@net472//:System.Dynamic",
     net48 = "@net48//:System.Dynamic",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Dynamic.Runtime",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Dynamic.Runtime",
     net451 = "@net451//:System.Dynamic.Runtime",
     net452 = "@net452//:System.Dynamic.Runtime",
@@ -1407,12 +1350,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Dynamic.Runtime",
     net472 = "@net472//:System.Dynamic.Runtime",
     net48 = "@net48//:System.Dynamic.Runtime",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.EnterpriseServices",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.EnterpriseServices",
     net40 = "@net40//:System.EnterpriseServices",
     net45 = "@net45//:System.EnterpriseServices",
@@ -1425,12 +1368,11 @@ import_multiframework_library(
     net471 = "@net471//:System.EnterpriseServices",
     net472 = "@net472//:System.EnterpriseServices",
     net48 = "@net48//:System.EnterpriseServices",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.EnterpriseServices.Thunk",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.EnterpriseServices.Thunk",
     net40 = "@net40//:System.EnterpriseServices.Thunk",
     net45 = "@net45//:System.EnterpriseServices.Thunk",
@@ -1443,12 +1385,11 @@ import_multiframework_library(
     net471 = "@net471//:System.EnterpriseServices.Thunk",
     net472 = "@net472//:System.EnterpriseServices.Thunk",
     net48 = "@net48//:System.EnterpriseServices.Thunk",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.EnterpriseServices.Wrapper",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.EnterpriseServices.Thunk",
     net40 = "@net40//:System.EnterpriseServices.Thunk",
     net45 = "@net45//:System.EnterpriseServices.Thunk",
@@ -1461,12 +1402,11 @@ import_multiframework_library(
     net471 = "@net471//:System.EnterpriseServices.Thunk",
     net472 = "@net472//:System.EnterpriseServices.Thunk",
     net48 = "@net48//:System.EnterpriseServices.Thunk",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Globalization",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Globalization",
     net451 = "@net451//:System.Globalization",
     net452 = "@net452//:System.Globalization",
@@ -1477,30 +1417,30 @@ import_multiframework_library(
     net471 = "@net471//:System.Globalization",
     net472 = "@net472//:System.Globalization",
     net48 = "@net48//:System.Globalization",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Globalization.Calendars",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Globalization.Calendars",
     net472 = "@net472//:System.Globalization.Calendars",
     net48 = "@net48//:System.Globalization.Calendars",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Globalization.Extensions",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Globalization.Extensions",
     net472 = "@net472//:System.Globalization.Extensions",
     net48 = "@net48//:System.Globalization.Extensions",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IdentityModel",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.IdentityModel",
     net45 = "@net45//:System.IdentityModel",
     net451 = "@net451//:System.IdentityModel",
@@ -1512,12 +1452,11 @@ import_multiframework_library(
     net471 = "@net471//:System.IdentityModel",
     net472 = "@net472//:System.IdentityModel",
     net48 = "@net48//:System.IdentityModel",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IdentityModel.Selectors",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.IdentityModel.Selectors",
     net45 = "@net45//:System.IdentityModel.Selectors",
     net451 = "@net451//:System.IdentityModel.Selectors",
@@ -1529,12 +1468,11 @@ import_multiframework_library(
     net471 = "@net471//:System.IdentityModel.Selectors",
     net472 = "@net472//:System.IdentityModel.Selectors",
     net48 = "@net48//:System.IdentityModel.Selectors",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IdentityModel.Services",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.IdentityModel.Services",
     net451 = "@net451//:System.IdentityModel.Services",
     net452 = "@net452//:System.IdentityModel.Services",
@@ -1545,12 +1483,11 @@ import_multiframework_library(
     net471 = "@net471//:System.IdentityModel.Services",
     net472 = "@net472//:System.IdentityModel.Services",
     net48 = "@net48//:System.IdentityModel.Services",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.IO",
     net451 = "@net451//:System.IO",
     net452 = "@net452//:System.IO",
@@ -1561,12 +1498,12 @@ import_multiframework_library(
     net471 = "@net471//:System.IO",
     net472 = "@net472//:System.IO",
     net48 = "@net48//:System.IO",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.Compression",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.IO.Compression",
     net451 = "@net451//:System.IO.Compression",
     net452 = "@net452//:System.IO.Compression",
@@ -1577,12 +1514,12 @@ import_multiframework_library(
     net471 = "@net471//:System.IO.Compression",
     net472 = "@net472//:System.IO.Compression",
     net48 = "@net48//:System.IO.Compression",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.Compression.FileSystem",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.IO.Compression.FileSystem",
     net451 = "@net451//:System.IO.Compression.FileSystem",
     net452 = "@net452//:System.IO.Compression.FileSystem",
@@ -1593,66 +1530,66 @@ import_multiframework_library(
     net471 = "@net471//:System.IO.Compression.FileSystem",
     net472 = "@net472//:System.IO.Compression.FileSystem",
     net48 = "@net48//:System.IO.Compression.FileSystem",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.Compression.ZipFile",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.IO.Compression.ZipFile",
     net472 = "@net472//:System.IO.Compression.ZipFile",
     net48 = "@net48//:System.IO.Compression.ZipFile",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.FileSystem",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.IO.FileSystem",
     net472 = "@net472//:System.IO.FileSystem",
     net48 = "@net48//:System.IO.FileSystem",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.FileSystem.DriveInfo",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.IO.FileSystem.DriveInfo",
     net472 = "@net472//:System.IO.FileSystem.DriveInfo",
     net48 = "@net48//:System.IO.FileSystem.DriveInfo",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.FileSystem.Primitives",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.IO.FileSystem.Primitives",
     net472 = "@net472//:System.IO.FileSystem.Primitives",
     net48 = "@net48//:System.IO.FileSystem.Primitives",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.FileSystem.Watcher",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.IO.FileSystem.Watcher",
     net472 = "@net472//:System.IO.FileSystem.Watcher",
     net48 = "@net48//:System.IO.FileSystem.Watcher",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.IsolatedStorage",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.IO.IsolatedStorage",
     net472 = "@net472//:System.IO.IsolatedStorage",
     net48 = "@net48//:System.IO.IsolatedStorage",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.Log",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.IO.Log",
     net45 = "@net45//:System.IO.Log",
     net451 = "@net451//:System.IO.Log",
@@ -1664,39 +1601,38 @@ import_multiframework_library(
     net471 = "@net471//:System.IO.Log",
     net472 = "@net472//:System.IO.Log",
     net48 = "@net48//:System.IO.Log",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.MemoryMappedFiles",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.IO.MemoryMappedFiles",
     net472 = "@net472//:System.IO.MemoryMappedFiles",
     net48 = "@net48//:System.IO.MemoryMappedFiles",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.Pipes",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.IO.Pipes",
     net472 = "@net472//:System.IO.Pipes",
     net48 = "@net48//:System.IO.Pipes",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.IO.UnmanagedMemoryStream",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.IO.UnmanagedMemoryStream",
     net472 = "@net472//:System.IO.UnmanagedMemoryStream",
     net48 = "@net48//:System.IO.UnmanagedMemoryStream",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Linq",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Linq",
     net451 = "@net451//:System.Linq",
     net452 = "@net452//:System.Linq",
@@ -1707,12 +1643,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Linq",
     net472 = "@net472//:System.Linq",
     net48 = "@net48//:System.Linq",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Linq.Expressions",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Linq.Expressions",
     net451 = "@net451//:System.Linq.Expressions",
     net452 = "@net452//:System.Linq.Expressions",
@@ -1723,12 +1659,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Linq.Expressions",
     net472 = "@net472//:System.Linq.Expressions",
     net48 = "@net48//:System.Linq.Expressions",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Linq.Parallel",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Linq.Parallel",
     net451 = "@net451//:System.Linq.Parallel",
     net452 = "@net452//:System.Linq.Parallel",
@@ -1739,12 +1675,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Linq.Parallel",
     net472 = "@net472//:System.Linq.Parallel",
     net48 = "@net48//:System.Linq.Parallel",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Linq.Queryable",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Linq.Queryable",
     net451 = "@net451//:System.Linq.Queryable",
     net452 = "@net452//:System.Linq.Queryable",
@@ -1755,12 +1691,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Linq.Queryable",
     net472 = "@net472//:System.Linq.Queryable",
     net48 = "@net48//:System.Linq.Queryable",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Management",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Management",
     net40 = "@net40//:System.Management",
     net45 = "@net45//:System.Management",
@@ -1773,12 +1709,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Management",
     net472 = "@net472//:System.Management",
     net48 = "@net48//:System.Management",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Management.Instrumentation",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Management.Instrumentation",
     net45 = "@net45//:System.Management.Instrumentation",
     net451 = "@net451//:System.Management.Instrumentation",
@@ -1790,12 +1725,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Management.Instrumentation",
     net472 = "@net472//:System.Management.Instrumentation",
     net48 = "@net48//:System.Management.Instrumentation",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Messaging",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Messaging",
     net40 = "@net40//:System.Messaging",
     net45 = "@net45//:System.Messaging",
@@ -1808,12 +1742,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Messaging",
     net472 = "@net472//:System.Messaging",
     net48 = "@net48//:System.Messaging",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Net",
     net45 = "@net45//:System.Net",
     net451 = "@net451//:System.Net",
@@ -1825,12 +1758,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Net",
     net472 = "@net472//:System.Net",
     net48 = "@net48//:System.Net",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.Http",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Net.Http",
     net451 = "@net451//:System.Net.Http",
     net452 = "@net452//:System.Net.Http",
@@ -1841,21 +1774,20 @@ import_multiframework_library(
     net471 = "@net471//:System.Net.Http",
     net472 = "@net472//:System.Net.Http",
     net48 = "@net48//:System.Net.Http",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.Http.Rtc",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Net.Http.Rtc",
     net472 = "@net472//:System.Net.Http.Rtc",
     net48 = "@net48//:System.Net.Http.Rtc",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.Http.WebRequest",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Net.Http.WebRequest",
     net451 = "@net451//:System.Net.Http.WebRequest",
     net452 = "@net452//:System.Net.Http.WebRequest",
@@ -1866,21 +1798,20 @@ import_multiframework_library(
     net471 = "@net471//:System.Net.Http.WebRequest",
     net472 = "@net472//:System.Net.Http.WebRequest",
     net48 = "@net48//:System.Net.Http.WebRequest",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.NameResolution",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Net.NameResolution",
     net472 = "@net472//:System.Net.NameResolution",
     net48 = "@net48//:System.Net.NameResolution",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.NetworkInformation",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Net.NetworkInformation",
     net451 = "@net451//:System.Net.NetworkInformation",
     net452 = "@net452//:System.Net.NetworkInformation",
@@ -1891,21 +1822,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Net.NetworkInformation",
     net472 = "@net472//:System.Net.NetworkInformation",
     net48 = "@net48//:System.Net.NetworkInformation",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.Ping",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Net.Ping",
     net472 = "@net472//:System.Net.Ping",
     net48 = "@net48//:System.Net.Ping",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.Primitives",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Net.Primitives",
     net451 = "@net451//:System.Net.Primitives",
     net452 = "@net452//:System.Net.Primitives",
@@ -1916,12 +1847,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Net.Primitives",
     net472 = "@net472//:System.Net.Primitives",
     net48 = "@net48//:System.Net.Primitives",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.Requests",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Net.Requests",
     net451 = "@net451//:System.Net.Requests",
     net452 = "@net452//:System.Net.Requests",
@@ -1932,30 +1863,30 @@ import_multiframework_library(
     net471 = "@net471//:System.Net.Requests",
     net472 = "@net472//:System.Net.Requests",
     net48 = "@net48//:System.Net.Requests",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.Security",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Net.Security",
     net472 = "@net472//:System.Net.Security",
     net48 = "@net48//:System.Net.Security",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.Sockets",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Net.Sockets",
     net472 = "@net472//:System.Net.Sockets",
     net48 = "@net48//:System.Net.Sockets",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.WebHeaderCollection",
-    visibility = ["//visibility:public"],
-
     net46 = "@net46//:System.Net.WebHeaderCollection",
     net461 = "@net461//:System.Net.WebHeaderCollection",
     net462 = "@net462//:System.Net.WebHeaderCollection",
@@ -1963,30 +1894,30 @@ import_multiframework_library(
     net471 = "@net471//:System.Net.WebHeaderCollection",
     net472 = "@net472//:System.Net.WebHeaderCollection",
     net48 = "@net48//:System.Net.WebHeaderCollection",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.WebSockets",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Net.WebSockets",
     net472 = "@net472//:System.Net.WebSockets",
     net48 = "@net48//:System.Net.WebSockets",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Net.WebSockets.Client",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Net.WebSockets.Client",
     net472 = "@net472//:System.Net.WebSockets.Client",
     net48 = "@net48//:System.Net.WebSockets.Client",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Numerics",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Numerics",
     net45 = "@net45//:System.Numerics",
     net451 = "@net451//:System.Numerics",
@@ -1998,12 +1929,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Numerics",
     net472 = "@net472//:System.Numerics",
     net48 = "@net48//:System.Numerics",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ObjectModel",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ObjectModel",
     net451 = "@net451//:System.ObjectModel",
     net452 = "@net452//:System.ObjectModel",
@@ -2014,12 +1945,12 @@ import_multiframework_library(
     net471 = "@net471//:System.ObjectModel",
     net472 = "@net472//:System.ObjectModel",
     net48 = "@net48//:System.ObjectModel",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Printing",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Printing",
     net45 = "@net45//:System.Printing",
     net451 = "@net451//:System.Printing",
@@ -2031,12 +1962,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Printing",
     net472 = "@net472//:System.Printing",
     net48 = "@net48//:System.Printing",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Reflection",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Reflection",
     net451 = "@net451//:System.Reflection",
     net452 = "@net452//:System.Reflection",
@@ -2047,12 +1977,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Reflection",
     net472 = "@net472//:System.Reflection",
     net48 = "@net48//:System.Reflection",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Reflection.Context",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Reflection.Context",
     net451 = "@net451//:System.Reflection.Context",
     net452 = "@net452//:System.Reflection.Context",
@@ -2063,12 +1993,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Reflection.Context",
     net472 = "@net472//:System.Reflection.Context",
     net48 = "@net48//:System.Reflection.Context",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Reflection.Emit",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Reflection.Emit",
     net451 = "@net451//:System.Reflection.Emit",
     net452 = "@net452//:System.Reflection.Emit",
@@ -2079,12 +2008,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Reflection.Emit",
     net472 = "@net472//:System.Reflection.Emit",
     net48 = "@net48//:System.Reflection.Emit",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Reflection.Emit.ILGeneration",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Reflection.Emit.ILGeneration",
     net451 = "@net451//:System.Reflection.Emit.ILGeneration",
     net452 = "@net452//:System.Reflection.Emit.ILGeneration",
@@ -2095,12 +2023,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Reflection.Emit.ILGeneration",
     net472 = "@net472//:System.Reflection.Emit.ILGeneration",
     net48 = "@net48//:System.Reflection.Emit.ILGeneration",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Reflection.Emit.Lightweight",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Reflection.Emit.Lightweight",
     net451 = "@net451//:System.Reflection.Emit.Lightweight",
     net452 = "@net452//:System.Reflection.Emit.Lightweight",
@@ -2111,12 +2038,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Reflection.Emit.Lightweight",
     net472 = "@net472//:System.Reflection.Emit.Lightweight",
     net48 = "@net48//:System.Reflection.Emit.Lightweight",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Reflection.Extensions",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Reflection.Extensions",
     net451 = "@net451//:System.Reflection.Extensions",
     net452 = "@net452//:System.Reflection.Extensions",
@@ -2127,12 +2053,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Reflection.Extensions",
     net472 = "@net472//:System.Reflection.Extensions",
     net48 = "@net48//:System.Reflection.Extensions",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Reflection.Primitives",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Reflection.Primitives",
     net451 = "@net451//:System.Reflection.Primitives",
     net452 = "@net452//:System.Reflection.Primitives",
@@ -2143,21 +2069,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Reflection.Primitives",
     net472 = "@net472//:System.Reflection.Primitives",
     net48 = "@net48//:System.Reflection.Primitives",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Resources.Reader",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Resources.Reader",
     net472 = "@net472//:System.Resources.Reader",
     net48 = "@net48//:System.Resources.Reader",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Resources.ResourceManager",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Resources.ResourceManager",
     net451 = "@net451//:System.Resources.ResourceManager",
     net452 = "@net452//:System.Resources.ResourceManager",
@@ -2168,21 +2094,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Resources.ResourceManager",
     net472 = "@net472//:System.Resources.ResourceManager",
     net48 = "@net48//:System.Resources.ResourceManager",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Resources.Writer",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Resources.Writer",
     net472 = "@net472//:System.Resources.Writer",
     net48 = "@net48//:System.Resources.Writer",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Runtime",
     net451 = "@net451//:System.Runtime",
     net452 = "@net452//:System.Runtime",
@@ -2193,12 +2119,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime",
     net472 = "@net472//:System.Runtime",
     net48 = "@net48//:System.Runtime",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Caching",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Runtime.Caching",
     net45 = "@net45//:System.Runtime.Caching",
     net451 = "@net451//:System.Runtime.Caching",
@@ -2210,21 +2136,20 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Caching",
     net472 = "@net472//:System.Runtime.Caching",
     net48 = "@net48//:System.Runtime.Caching",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.CompilerServices.VisualC",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Runtime.CompilerServices.VisualC",
     net472 = "@net472//:System.Runtime.CompilerServices.VisualC",
     net48 = "@net48//:System.Runtime.CompilerServices.VisualC",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.DurableInstancing",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Runtime.DurableInstancing",
     net45 = "@net45//:System.Runtime.DurableInstancing",
     net451 = "@net451//:System.Runtime.DurableInstancing",
@@ -2236,12 +2161,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.DurableInstancing",
     net472 = "@net472//:System.Runtime.DurableInstancing",
     net48 = "@net48//:System.Runtime.DurableInstancing",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Extensions",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Runtime.Extensions",
     net451 = "@net451//:System.Runtime.Extensions",
     net452 = "@net452//:System.Runtime.Extensions",
@@ -2252,12 +2176,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Extensions",
     net472 = "@net472//:System.Runtime.Extensions",
     net48 = "@net48//:System.Runtime.Extensions",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Handles",
-    visibility = ["//visibility:public"],
-
     net46 = "@net46//:System.Runtime.Handles",
     net461 = "@net461//:System.Runtime.Handles",
     net462 = "@net462//:System.Runtime.Handles",
@@ -2265,12 +2189,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Handles",
     net472 = "@net472//:System.Runtime.Handles",
     net48 = "@net48//:System.Runtime.Handles",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.InteropServices",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Runtime.InteropServices",
     net451 = "@net451//:System.Runtime.InteropServices",
     net452 = "@net452//:System.Runtime.InteropServices",
@@ -2281,21 +2205,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.InteropServices",
     net472 = "@net472//:System.Runtime.InteropServices",
     net48 = "@net48//:System.Runtime.InteropServices",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.InteropServices.RuntimeInformation",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Runtime.InteropServices.RuntimeInformation",
     net472 = "@net472//:System.Runtime.InteropServices.RuntimeInformation",
     net48 = "@net48//:System.Runtime.InteropServices.RuntimeInformation",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.InteropServices.WindowsRuntime",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Runtime.InteropServices.WindowsRuntime",
     net451 = "@net451//:System.Runtime.InteropServices.WindowsRuntime",
     net452 = "@net452//:System.Runtime.InteropServices.WindowsRuntime",
@@ -2306,12 +2230,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.InteropServices.WindowsRuntime",
     net472 = "@net472//:System.Runtime.InteropServices.WindowsRuntime",
     net48 = "@net48//:System.Runtime.InteropServices.WindowsRuntime",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Numerics",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Runtime.Numerics",
     net451 = "@net451//:System.Runtime.Numerics",
     net452 = "@net452//:System.Runtime.Numerics",
@@ -2322,12 +2245,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Numerics",
     net472 = "@net472//:System.Runtime.Numerics",
     net48 = "@net48//:System.Runtime.Numerics",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Remoting",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Runtime.Remoting",
     net40 = "@net40//:System.Runtime.Remoting",
     net45 = "@net45//:System.Runtime.Remoting",
@@ -2340,12 +2263,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Remoting",
     net472 = "@net472//:System.Runtime.Remoting",
     net48 = "@net48//:System.Runtime.Remoting",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Serialization",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Runtime.Serialization",
     net45 = "@net45//:System.Runtime.Serialization",
     net451 = "@net451//:System.Runtime.Serialization",
@@ -2357,21 +2279,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Serialization",
     net472 = "@net472//:System.Runtime.Serialization",
     net48 = "@net48//:System.Runtime.Serialization",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Serialization.Formatters",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Runtime.Serialization.Formatters",
     net472 = "@net472//:System.Runtime.Serialization.Formatters",
     net48 = "@net48//:System.Runtime.Serialization.Formatters",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Serialization.Formatters.Soap",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Runtime.Serialization.Formatters.Soap",
     net40 = "@net40//:System.Runtime.Serialization.Formatters.Soap",
     net45 = "@net45//:System.Runtime.Serialization.Formatters.Soap",
@@ -2384,12 +2306,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Serialization.Formatters.Soap",
     net472 = "@net472//:System.Runtime.Serialization.Formatters.Soap",
     net48 = "@net48//:System.Runtime.Serialization.Formatters.Soap",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Serialization.Json",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Runtime.Serialization.Json",
     net451 = "@net451//:System.Runtime.Serialization.Json",
     net452 = "@net452//:System.Runtime.Serialization.Json",
@@ -2400,12 +2321,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Serialization.Json",
     net472 = "@net472//:System.Runtime.Serialization.Json",
     net48 = "@net48//:System.Runtime.Serialization.Json",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Serialization.Primitives",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Runtime.Serialization.Primitives",
     net451 = "@net451//:System.Runtime.Serialization.Primitives",
     net452 = "@net452//:System.Runtime.Serialization.Primitives",
@@ -2416,12 +2337,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Serialization.Primitives",
     net472 = "@net472//:System.Runtime.Serialization.Primitives",
     net48 = "@net48//:System.Runtime.Serialization.Primitives",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Serialization.Xml",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Runtime.Serialization.Xml",
     net451 = "@net451//:System.Runtime.Serialization.Xml",
     net452 = "@net452//:System.Runtime.Serialization.Xml",
@@ -2432,12 +2353,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Serialization.Xml",
     net472 = "@net472//:System.Runtime.Serialization.Xml",
     net48 = "@net48//:System.Runtime.Serialization.Xml",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Security",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Security",
     net40 = "@net40//:System.Security",
     net45 = "@net45//:System.Security",
@@ -2450,66 +2371,65 @@ import_multiframework_library(
     net471 = "@net471//:System.Security",
     net472 = "@net472//:System.Security",
     net48 = "@net48//:System.Security",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Security.Claims",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Security.Claims",
     net472 = "@net472//:System.Security.Claims",
     net48 = "@net48//:System.Security.Claims",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Security.Cryptography.Algorithms",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Security.Cryptography.Algorithms",
     net472 = "@net472//:System.Security.Cryptography.Algorithms",
     net48 = "@net48//:System.Security.Cryptography.Algorithms",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Security.Cryptography.Csp",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Security.Cryptography.Csp",
     net472 = "@net472//:System.Security.Cryptography.Csp",
     net48 = "@net48//:System.Security.Cryptography.Csp",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Security.Cryptography.Encoding",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Security.Cryptography.Encoding",
     net472 = "@net472//:System.Security.Cryptography.Encoding",
     net48 = "@net48//:System.Security.Cryptography.Encoding",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Security.Cryptography.Primitives",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Security.Cryptography.Primitives",
     net472 = "@net472//:System.Security.Cryptography.Primitives",
     net48 = "@net48//:System.Security.Cryptography.Primitives",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Security.Cryptography.X509Certificates",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Security.Cryptography.X509Certificates",
     net472 = "@net472//:System.Security.Cryptography.X509Certificates",
     net48 = "@net48//:System.Security.Cryptography.X509Certificates",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Security.Principal",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Security.Principal",
     net451 = "@net451//:System.Security.Principal",
     net452 = "@net452//:System.Security.Principal",
@@ -2520,21 +2440,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Security.Principal",
     net472 = "@net472//:System.Security.Principal",
     net48 = "@net48//:System.Security.Principal",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Security.SecureString",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Security.SecureString",
     net472 = "@net472//:System.Security.SecureString",
     net48 = "@net48//:System.Security.SecureString",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.ServiceModel",
     net45 = "@net45//:System.ServiceModel",
     net451 = "@net451//:System.ServiceModel",
@@ -2546,12 +2466,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel",
     net472 = "@net472//:System.ServiceModel",
     net48 = "@net48//:System.ServiceModel",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Activation",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.ServiceModel.Activation",
     net45 = "@net45//:System.ServiceModel.Activation",
     net451 = "@net451//:System.ServiceModel.Activation",
@@ -2563,12 +2482,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Activation",
     net472 = "@net472//:System.ServiceModel.Activation",
     net48 = "@net48//:System.ServiceModel.Activation",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Activities",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.ServiceModel.Activities",
     net45 = "@net45//:System.ServiceModel.Activities",
     net451 = "@net451//:System.ServiceModel.Activities",
@@ -2580,12 +2498,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Activities",
     net472 = "@net472//:System.ServiceModel.Activities",
     net48 = "@net48//:System.ServiceModel.Activities",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Channels",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.ServiceModel.Channels",
     net45 = "@net45//:System.ServiceModel.Channels",
     net451 = "@net451//:System.ServiceModel.Channels",
@@ -2597,12 +2514,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Channels",
     net472 = "@net472//:System.ServiceModel.Channels",
     net48 = "@net48//:System.ServiceModel.Channels",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Discovery",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.ServiceModel.Discovery",
     net45 = "@net45//:System.ServiceModel.Discovery",
     net451 = "@net451//:System.ServiceModel.Discovery",
@@ -2614,12 +2530,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Discovery",
     net472 = "@net472//:System.ServiceModel.Discovery",
     net48 = "@net48//:System.ServiceModel.Discovery",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Duplex",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ServiceModel.Duplex",
     net451 = "@net451//:System.ServiceModel.Duplex",
     net452 = "@net452//:System.ServiceModel.Duplex",
@@ -2630,12 +2545,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Duplex",
     net472 = "@net472//:System.ServiceModel.Duplex",
     net48 = "@net48//:System.ServiceModel.Duplex",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Http",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ServiceModel.Http",
     net451 = "@net451//:System.ServiceModel.Http",
     net452 = "@net452//:System.ServiceModel.Http",
@@ -2646,12 +2560,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Http",
     net472 = "@net472//:System.ServiceModel.Http",
     net48 = "@net48//:System.ServiceModel.Http",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.NetTcp",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ServiceModel.NetTcp",
     net451 = "@net451//:System.ServiceModel.NetTcp",
     net452 = "@net452//:System.ServiceModel.NetTcp",
@@ -2662,12 +2575,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.NetTcp",
     net472 = "@net472//:System.ServiceModel.NetTcp",
     net48 = "@net48//:System.ServiceModel.NetTcp",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Primitives",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ServiceModel.Primitives",
     net451 = "@net451//:System.ServiceModel.Primitives",
     net452 = "@net452//:System.ServiceModel.Primitives",
@@ -2678,12 +2590,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Primitives",
     net472 = "@net472//:System.ServiceModel.Primitives",
     net48 = "@net48//:System.ServiceModel.Primitives",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Routing",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.ServiceModel.Routing",
     net45 = "@net45//:System.ServiceModel.Routing",
     net451 = "@net451//:System.ServiceModel.Routing",
@@ -2695,12 +2606,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Routing",
     net472 = "@net472//:System.ServiceModel.Routing",
     net48 = "@net48//:System.ServiceModel.Routing",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Security",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.ServiceModel.Security",
     net451 = "@net451//:System.ServiceModel.Security",
     net452 = "@net452//:System.ServiceModel.Security",
@@ -2711,12 +2621,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Security",
     net472 = "@net472//:System.ServiceModel.Security",
     net48 = "@net48//:System.ServiceModel.Security",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceModel.Web",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.ServiceModel.Web",
     net45 = "@net45//:System.ServiceModel.Web",
     net451 = "@net451//:System.ServiceModel.Web",
@@ -2728,12 +2637,12 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Web",
     net472 = "@net472//:System.ServiceModel.Web",
     net48 = "@net48//:System.ServiceModel.Web",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ServiceProcess",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.ServiceProcess",
     net40 = "@net40//:System.ServiceProcess",
     net45 = "@net45//:System.ServiceProcess",
@@ -2746,12 +2655,11 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceProcess",
     net472 = "@net472//:System.ServiceProcess",
     net48 = "@net48//:System.ServiceProcess",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Speech",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Speech",
     net45 = "@net45//:System.Speech",
     net451 = "@net451//:System.Speech",
@@ -2763,12 +2671,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Speech",
     net472 = "@net472//:System.Speech",
     net48 = "@net48//:System.Speech",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Text.Encoding",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Text.Encoding",
     net451 = "@net451//:System.Text.Encoding",
     net452 = "@net452//:System.Text.Encoding",
@@ -2779,12 +2686,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Text.Encoding",
     net472 = "@net472//:System.Text.Encoding",
     net48 = "@net48//:System.Text.Encoding",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Text.Encoding.Extensions",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Text.Encoding.Extensions",
     net451 = "@net451//:System.Text.Encoding.Extensions",
     net452 = "@net452//:System.Text.Encoding.Extensions",
@@ -2795,12 +2702,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Text.Encoding.Extensions",
     net472 = "@net472//:System.Text.Encoding.Extensions",
     net48 = "@net48//:System.Text.Encoding.Extensions",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Text.RegularExpressions",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Text.RegularExpressions",
     net451 = "@net451//:System.Text.RegularExpressions",
     net452 = "@net452//:System.Text.RegularExpressions",
@@ -2811,12 +2718,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Text.RegularExpressions",
     net472 = "@net472//:System.Text.RegularExpressions",
     net48 = "@net48//:System.Text.RegularExpressions",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Threading",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Threading",
     net451 = "@net451//:System.Threading",
     net452 = "@net452//:System.Threading",
@@ -2827,21 +2734,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Threading",
     net472 = "@net472//:System.Threading",
     net48 = "@net48//:System.Threading",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Threading.Overlapped",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Threading.Overlapped",
     net472 = "@net472//:System.Threading.Overlapped",
     net48 = "@net48//:System.Threading.Overlapped",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Threading.Tasks",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Threading.Tasks",
     net451 = "@net451//:System.Threading.Tasks",
     net452 = "@net452//:System.Threading.Tasks",
@@ -2852,12 +2759,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Threading.Tasks",
     net472 = "@net472//:System.Threading.Tasks",
     net48 = "@net48//:System.Threading.Tasks",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Threading.Tasks.Parallel",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Threading.Tasks.Parallel",
     net451 = "@net451//:System.Threading.Tasks.Parallel",
     net452 = "@net452//:System.Threading.Tasks.Parallel",
@@ -2868,30 +2775,30 @@ import_multiframework_library(
     net471 = "@net471//:System.Threading.Tasks.Parallel",
     net472 = "@net472//:System.Threading.Tasks.Parallel",
     net48 = "@net48//:System.Threading.Tasks.Parallel",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Threading.Thread",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Threading.Thread",
     net472 = "@net472//:System.Threading.Thread",
     net48 = "@net48//:System.Threading.Thread",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Threading.ThreadPool",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Threading.ThreadPool",
     net472 = "@net472//:System.Threading.ThreadPool",
     net48 = "@net48//:System.Threading.ThreadPool",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Threading.Timer",
-    visibility = ["//visibility:public"],
-
     net451 = "@net451//:System.Threading.Timer",
     net452 = "@net452//:System.Threading.Timer",
     net46 = "@net46//:System.Threading.Timer",
@@ -2901,12 +2808,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Threading.Timer",
     net472 = "@net472//:System.Threading.Timer",
     net48 = "@net48//:System.Threading.Timer",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Transactions",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Transactions",
     net40 = "@net40//:System.Transactions",
     net45 = "@net45//:System.Transactions",
@@ -2919,21 +2826,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Transactions",
     net472 = "@net472//:System.Transactions",
     net48 = "@net48//:System.Transactions",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.ValueTuple",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.ValueTuple",
     net472 = "@net472//:System.ValueTuple",
     net48 = "@net48//:System.ValueTuple",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Web",
     net40 = "@net40//:System.Web",
     net45 = "@net45//:System.Web",
@@ -2946,12 +2853,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Web",
     net472 = "@net472//:System.Web",
     net48 = "@net48//:System.Web",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.Abstractions",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.Abstractions",
     net45 = "@net45//:System.Web.Abstractions",
     net451 = "@net451//:System.Web.Abstractions",
@@ -2963,12 +2870,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Abstractions",
     net472 = "@net472//:System.Web.Abstractions",
     net48 = "@net48//:System.Web.Abstractions",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.ApplicationServices",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.ApplicationServices",
     net45 = "@net45//:System.Web.ApplicationServices",
     net451 = "@net451//:System.Web.ApplicationServices",
@@ -2980,12 +2886,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.ApplicationServices",
     net472 = "@net472//:System.Web.ApplicationServices",
     net48 = "@net48//:System.Web.ApplicationServices",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.DataVisualization",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.DataVisualization",
     net45 = "@net45//:System.Web.DataVisualization",
     net451 = "@net451//:System.Web.DataVisualization",
@@ -2997,12 +2902,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.DataVisualization",
     net472 = "@net472//:System.Web.DataVisualization",
     net48 = "@net48//:System.Web.DataVisualization",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.DataVisualization.Design",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.DataVisualization.Design",
     net45 = "@net45//:System.Web.DataVisualization.Design",
     net451 = "@net451//:System.Web.DataVisualization.Design",
@@ -3014,12 +2918,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.DataVisualization.Design",
     net472 = "@net472//:System.Web.DataVisualization.Design",
     net48 = "@net48//:System.Web.DataVisualization.Design",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.DynamicData",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.DynamicData",
     net45 = "@net45//:System.Web.DynamicData",
     net451 = "@net451//:System.Web.DynamicData",
@@ -3031,12 +2934,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.DynamicData",
     net472 = "@net472//:System.Web.DynamicData",
     net48 = "@net48//:System.Web.DynamicData",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.DynamicData.Design",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.DynamicData.Design",
     net45 = "@net45//:System.Web.DynamicData.Design",
     net451 = "@net451//:System.Web.DynamicData.Design",
@@ -3048,12 +2950,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.DynamicData.Design",
     net472 = "@net472//:System.Web.DynamicData.Design",
     net48 = "@net48//:System.Web.DynamicData.Design",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.Entity",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.Entity",
     net45 = "@net45//:System.Web.Entity",
     net451 = "@net451//:System.Web.Entity",
@@ -3065,12 +2966,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Entity",
     net472 = "@net472//:System.Web.Entity",
     net48 = "@net48//:System.Web.Entity",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.Entity.Design",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.Entity.Design",
     net45 = "@net45//:System.Web.Entity.Design",
     net451 = "@net451//:System.Web.Entity.Design",
@@ -3082,12 +2982,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Entity.Design",
     net472 = "@net472//:System.Web.Entity.Design",
     net48 = "@net48//:System.Web.Entity.Design",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.Extensions",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.Extensions",
     net45 = "@net45//:System.Web.Extensions",
     net451 = "@net451//:System.Web.Extensions",
@@ -3099,12 +2998,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Extensions",
     net472 = "@net472//:System.Web.Extensions",
     net48 = "@net48//:System.Web.Extensions",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.Extensions.Design",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.Extensions.Design",
     net45 = "@net45//:System.Web.Extensions.Design",
     net451 = "@net451//:System.Web.Extensions.Design",
@@ -3116,12 +3014,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Extensions.Design",
     net472 = "@net472//:System.Web.Extensions.Design",
     net48 = "@net48//:System.Web.Extensions.Design",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.Mobile",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Web.Mobile",
     net40 = "@net40//:System.Web.Mobile",
     net45 = "@net45//:System.Web.Mobile",
@@ -3134,12 +3031,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Mobile",
     net472 = "@net472//:System.Web.Mobile",
     net48 = "@net48//:System.Web.Mobile",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.RegularExpressions",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Web.RegularExpressions",
     net40 = "@net40//:System.Web.RegularExpressions",
     net45 = "@net45//:System.Web.RegularExpressions",
@@ -3152,12 +3048,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.RegularExpressions",
     net472 = "@net472//:System.Web.RegularExpressions",
     net48 = "@net48//:System.Web.RegularExpressions",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.Routing",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Web.Routing",
     net45 = "@net45//:System.Web.Routing",
     net451 = "@net451//:System.Web.Routing",
@@ -3169,12 +3064,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Routing",
     net472 = "@net472//:System.Web.Routing",
     net48 = "@net48//:System.Web.Routing",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Web.Services",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Web.Services",
     net40 = "@net40//:System.Web.Services",
     net45 = "@net45//:System.Web.Services",
@@ -3187,12 +3081,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Services",
     net472 = "@net472//:System.Web.Services",
     net48 = "@net48//:System.Web.Services",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Windows",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Windows",
     net451 = "@net451//:System.Windows",
     net452 = "@net452//:System.Windows",
@@ -3203,12 +3096,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows",
     net472 = "@net472//:System.Windows",
     net48 = "@net48//:System.Windows",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Windows.Controls.Ribbon",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Windows.Controls.Ribbon",
     net451 = "@net451//:System.Windows.Controls.Ribbon",
     net452 = "@net452//:System.Windows.Controls.Ribbon",
@@ -3219,12 +3112,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Controls.Ribbon",
     net472 = "@net472//:System.Windows.Controls.Ribbon",
     net48 = "@net48//:System.Windows.Controls.Ribbon",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Windows.Forms",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Windows.Forms",
     net40 = "@net40//:System.Windows.Forms",
     net45 = "@net45//:System.Windows.Forms",
@@ -3237,12 +3129,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Forms",
     net472 = "@net472//:System.Windows.Forms",
     net48 = "@net48//:System.Windows.Forms",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Windows.Forms.DataVisualization",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Windows.Forms.DataVisualization",
     net45 = "@net45//:System.Windows.Forms.DataVisualization",
     net451 = "@net451//:System.Windows.Forms.DataVisualization",
@@ -3254,12 +3145,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Forms.DataVisualization",
     net472 = "@net472//:System.Windows.Forms.DataVisualization",
     net48 = "@net48//:System.Windows.Forms.DataVisualization",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Windows.Forms.DataVisualization.Design",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Windows.Forms.DataVisualization.Design",
     net45 = "@net45//:System.Windows.Forms.DataVisualization.Design",
     net451 = "@net451//:System.Windows.Forms.DataVisualization.Design",
@@ -3271,12 +3161,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Forms.DataVisualization.Design",
     net472 = "@net472//:System.Windows.Forms.DataVisualization.Design",
     net48 = "@net48//:System.Windows.Forms.DataVisualization.Design",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Windows.Input.Manipulations",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Windows.Input.Manipulations",
     net45 = "@net45//:System.Windows.Input.Manipulations",
     net451 = "@net451//:System.Windows.Input.Manipulations",
@@ -3288,12 +3177,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Input.Manipulations",
     net472 = "@net472//:System.Windows.Input.Manipulations",
     net48 = "@net48//:System.Windows.Input.Manipulations",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Windows.Presentation",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Windows.Presentation",
     net45 = "@net45//:System.Windows.Presentation",
     net451 = "@net451//:System.Windows.Presentation",
@@ -3305,12 +3193,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Presentation",
     net472 = "@net472//:System.Windows.Presentation",
     net48 = "@net48//:System.Windows.Presentation",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Workflow.Activities",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Workflow.Activities",
     net45 = "@net45//:System.Workflow.Activities",
     net451 = "@net451//:System.Workflow.Activities",
@@ -3322,12 +3209,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Workflow.Activities",
     net472 = "@net472//:System.Workflow.Activities",
     net48 = "@net48//:System.Workflow.Activities",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Workflow.ComponentModel",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Workflow.ComponentModel",
     net45 = "@net45//:System.Workflow.ComponentModel",
     net451 = "@net451//:System.Workflow.ComponentModel",
@@ -3339,12 +3225,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Workflow.ComponentModel",
     net472 = "@net472//:System.Workflow.ComponentModel",
     net48 = "@net48//:System.Workflow.ComponentModel",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Workflow.Runtime",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Workflow.Runtime",
     net45 = "@net45//:System.Workflow.Runtime",
     net451 = "@net451//:System.Workflow.Runtime",
@@ -3356,12 +3241,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Workflow.Runtime",
     net472 = "@net472//:System.Workflow.Runtime",
     net48 = "@net48//:System.Workflow.Runtime",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.WorkflowServices",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.WorkflowServices",
     net45 = "@net45//:System.WorkflowServices",
     net451 = "@net451//:System.WorkflowServices",
@@ -3373,12 +3257,11 @@ import_multiframework_library(
     net471 = "@net471//:System.WorkflowServices",
     net472 = "@net472//:System.WorkflowServices",
     net48 = "@net48//:System.WorkflowServices",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xaml",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Xaml",
     net45 = "@net45//:System.Xaml",
     net451 = "@net451//:System.Xaml",
@@ -3390,12 +3273,11 @@ import_multiframework_library(
     net471 = "@net471//:System.Xaml",
     net472 = "@net472//:System.Xaml",
     net48 = "@net48//:System.Xaml",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xml",
-    visibility = ["//visibility:public"],
-
     net20 = "@net20//:System.Xml",
     net40 = "@net40//:System.Xml",
     net45 = "@net45//:System.Xml",
@@ -3408,12 +3290,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Xml",
     net472 = "@net472//:System.Xml",
     net48 = "@net48//:System.Xml",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xml.Linq",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:System.Xml.Linq",
     net45 = "@net45//:System.Xml.Linq",
     net451 = "@net451//:System.Xml.Linq",
@@ -3425,12 +3307,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Xml.Linq",
     net472 = "@net472//:System.Xml.Linq",
     net48 = "@net48//:System.Xml.Linq",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xml.ReaderWriter",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Xml.ReaderWriter",
     net451 = "@net451//:System.Xml.ReaderWriter",
     net452 = "@net452//:System.Xml.ReaderWriter",
@@ -3441,12 +3323,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Xml.ReaderWriter",
     net472 = "@net472//:System.Xml.ReaderWriter",
     net48 = "@net48//:System.Xml.ReaderWriter",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xml.Serialization",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Xml.Serialization",
     net451 = "@net451//:System.Xml.Serialization",
     net452 = "@net452//:System.Xml.Serialization",
@@ -3457,12 +3339,12 @@ import_multiframework_library(
     net471 = "@net471//:System.Xml.Serialization",
     net472 = "@net472//:System.Xml.Serialization",
     net48 = "@net48//:System.Xml.Serialization",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xml.XDocument",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Xml.XDocument",
     net451 = "@net451//:System.Xml.XDocument",
     net452 = "@net452//:System.Xml.XDocument",
@@ -3473,21 +3355,21 @@ import_multiframework_library(
     net471 = "@net471//:System.Xml.XDocument",
     net472 = "@net472//:System.Xml.XDocument",
     net48 = "@net48//:System.Xml.XDocument",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xml.XmlDocument",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Xml.XmlDocument",
     net472 = "@net472//:System.Xml.XmlDocument",
     net48 = "@net48//:System.Xml.XmlDocument",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xml.XmlSerializer",
-    visibility = ["//visibility:public"],
-
     net45 = "@net45//:System.Xml.XmlSerializer",
     net451 = "@net451//:System.Xml.XmlSerializer",
     net452 = "@net452//:System.Xml.XmlSerializer",
@@ -3498,30 +3380,30 @@ import_multiframework_library(
     net471 = "@net471//:System.Xml.XmlSerializer",
     net472 = "@net472//:System.Xml.XmlSerializer",
     net48 = "@net48//:System.Xml.XmlSerializer",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xml.XPath",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Xml.XPath",
     net472 = "@net472//:System.Xml.XPath",
     net48 = "@net48//:System.Xml.XPath",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Xml.XPath.XDocument",
-    visibility = ["//visibility:public"],
-
     net471 = "@net471//:System.Xml.XPath.XDocument",
     net472 = "@net472//:System.Xml.XPath.XDocument",
     net48 = "@net48//:System.Xml.XPath.XDocument",
+    netstandard2_0 = "@NetStandard.Library//:netstandard",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "UIAutomationClient",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:UIAutomationClient",
     net45 = "@net45//:UIAutomationClient",
     net451 = "@net451//:UIAutomationClient",
@@ -3533,12 +3415,11 @@ import_multiframework_library(
     net471 = "@net471//:UIAutomationClient",
     net472 = "@net472//:UIAutomationClient",
     net48 = "@net48//:UIAutomationClient",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "UIAutomationClientsideProviders",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:UIAutomationClientsideProviders",
     net45 = "@net45//:UIAutomationClientsideProviders",
     net451 = "@net451//:UIAutomationClientsideProviders",
@@ -3550,12 +3431,11 @@ import_multiframework_library(
     net471 = "@net471//:UIAutomationClientsideProviders",
     net472 = "@net472//:UIAutomationClientsideProviders",
     net48 = "@net48//:UIAutomationClientsideProviders",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "UIAutomationProvider",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:UIAutomationProvider",
     net45 = "@net45//:UIAutomationProvider",
     net451 = "@net451//:UIAutomationProvider",
@@ -3567,12 +3447,11 @@ import_multiframework_library(
     net471 = "@net471//:UIAutomationProvider",
     net472 = "@net472//:UIAutomationProvider",
     net48 = "@net48//:UIAutomationProvider",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "UIAutomationTypes",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:UIAutomationTypes",
     net45 = "@net45//:UIAutomationTypes",
     net451 = "@net451//:UIAutomationTypes",
@@ -3584,12 +3463,11 @@ import_multiframework_library(
     net471 = "@net471//:UIAutomationTypes",
     net472 = "@net472//:UIAutomationTypes",
     net48 = "@net48//:UIAutomationTypes",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "WindowsBase",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:WindowsBase",
     net45 = "@net45//:WindowsBase",
     net451 = "@net451//:WindowsBase",
@@ -3601,12 +3479,11 @@ import_multiframework_library(
     net471 = "@net471//:WindowsBase",
     net472 = "@net472//:WindowsBase",
     net48 = "@net48//:WindowsBase",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "WindowsFormsIntegration",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:WindowsFormsIntegration",
     net45 = "@net45//:WindowsFormsIntegration",
     net451 = "@net451//:WindowsFormsIntegration",
@@ -3618,12 +3495,11 @@ import_multiframework_library(
     net471 = "@net471//:WindowsFormsIntegration",
     net472 = "@net472//:WindowsFormsIntegration",
     net48 = "@net48//:WindowsFormsIntegration",
+    visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "XamlBuildTask",
-    visibility = ["//visibility:public"],
-
     net40 = "@net40//:XamlBuildTask",
     net45 = "@net45//:XamlBuildTask",
     net451 = "@net451//:XamlBuildTask",
@@ -3635,4 +3511,5 @@ import_multiframework_library(
     net471 = "@net471//:XamlBuildTask",
     net472 = "@net472//:XamlBuildTask",
     net48 = "@net48//:XamlBuildTask",
+    visibility = ["//visibility:public"],
 )

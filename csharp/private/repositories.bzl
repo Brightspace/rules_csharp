@@ -208,6 +208,7 @@ def _net_workspace():
         package = "NetStandard.Library",
         version = "2.0.3",
         sha256 = "3eb87644f79bcffb3c0331dbdac3c7837265f2cdf58a7bfd93e431776f77c9ba",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/netstandard20.BUILD",
     )
 
     nuget_package(
