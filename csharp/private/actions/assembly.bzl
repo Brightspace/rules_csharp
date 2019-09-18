@@ -83,12 +83,13 @@ def AssemblyAction(
     if debug:
         args.add("/debug+")
         args.add("/optimize-")
+        args.add("/define:TRACE;DEBUG")
     else:
+        args.add("/debug-")
         args.add("/optimize+")
+        args.add("/define:TRACE;RELEASE")
 
-        # TODO: .NET core projects use debug:portable. Investigate this, maybe move
-        #       some of this into the toolchain later.
-        args.add("/debug:pdbonly")
+    args.add("/debug:portable")
 
     # outputs
     args.add("/out:" + out.path)
