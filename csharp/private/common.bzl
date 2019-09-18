@@ -16,6 +16,9 @@ def is_debug(ctx):
     # equivalent to dbg right now but might want to support this in the future.
     return ctx.var["COMPILATION_MODE"] != "opt"
 
+def use_highentropyva(tfm):
+    return tfm not in ["net20", "net40"]
+
 def is_standard_framework(tfm):
     return tfm.startswith("netstandard")
 

@@ -2,6 +2,7 @@ load(
     "@d2l_rules_csharp//csharp/private:common.bzl",
     "collect_transitive_info",
     "get_analyzer_dll",
+    "use_highentropyva",
 )
 load("@d2l_rules_csharp//csharp/private:providers.bzl", "CSharpAssembly")
 
@@ -68,7 +69,11 @@ def AssemblyAction(
     args.add("/filealign:512")
 
     args.add("/nologo")
-    args.add("/highentropyva")
+
+    if use_highentropyva(target_framework):
+        args.add("/highentropyva+")
+    else:
+        args.add("/highentropyva-")
 
     args.add("/warn:0")  # TODO: this stuff ought to be configurable
 
