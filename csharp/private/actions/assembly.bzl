@@ -4,7 +4,7 @@ load(
     "get_analyzer_dll",
     "use_highentropyva",
 )
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "CSharpAssembly")
+load("@d2l_rules_csharp//csharp/private:providers.bzl", "CSharpAssembly", "SubsystemVersion")
 
 def _format_ref_arg(assembly):
     return "/r:" + assembly.path
@@ -74,6 +74,10 @@ def AssemblyAction(
         args.add("/highentropyva+")
     else:
         args.add("/highentropyva-")
+
+    ssv = SubsystemVersion[target_framework]
+    if ssv != None:
+        args.add("/subsystemversion:" + ssv)
 
     args.add("/warn:0")  # TODO: this stuff ought to be configurable
 
