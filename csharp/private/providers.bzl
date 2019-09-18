@@ -122,6 +122,37 @@ FrameworkCompatibility = {
     "netcoreapp3.0": ["netcoreapp2.2", "netstandard2.1"],
 }
 
+SubsystemVersion = {
+    "netstandard": None,
+    "netstandard1.0": None,
+    "netstandard1.1": None,
+    "netstandard1.2": None,
+    "netstandard1.3": None,
+    "netstandard1.4": None,
+    "netstandard1.5": None,
+    "netstandard1.6": None,
+    "netstandard2.0": None,
+    "netstandard2.1": None,
+    "net20": None,
+    "net40": None,
+    "net45": "6.00",
+    "net451": "6.00",
+    "net452": "6.00",
+    "net46": "6.00",
+    "net461": "6.00",
+    "net462": "6.00",
+    "net47": "6.00",
+    "net471": "6.00",
+    "net472": "6.00",
+    "net48": "6.00",
+    "netcoreapp1.0": None,
+    "netcoreapp1.1": None,
+    "netcoreapp2.0": None,
+    "netcoreapp2.1": None,
+    "netcoreapp2.2": None,
+    "netcoreapp3.0": None,
+}
+
 # A convenience used in attributes that need to specify that they accept any
 # kind of C# assembly. This is an array of single-element arrays.
 AnyTargetFramework = [[a] for a in CSharpAssembly.values()]
