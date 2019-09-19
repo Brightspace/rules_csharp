@@ -39,7 +39,7 @@ def setup_basic_nuget_package():
        We are limited by the fact that Bazel does not allow the analysis phase to
        read the contents of source files, e.g. to correctly configure deps. For
        more advanced usages a BUILD file will need to be generated outside of
-       Bazel.
+       Bazel. See docs/UsingNuGetPackages.md for more info.
 
        This has to be public so that packages can call it but you probably
        shouldn't use it directly.
