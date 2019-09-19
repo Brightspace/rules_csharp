@@ -18,11 +18,11 @@ csharp_register_toolchains()
 
 import_nuget_package_directory(
     name = "ExamplePackageFolder",
-    dir = "examples/import_nuget_package/ExamplePackageFolder",
+    path = "examples/import_nuget_package/ExamplePackageFolder",
 )
 
 import_nuget_package(
     name = "ExampleNupkg",
-    file = "examples/import_nuget_package/Example.nupkg",
+	url = "file:examples/import_nuget_package/Example.nupkg",
     sha256 = "a658761334ffab1773c10dc53c7aa964f61a793963bb8111d416d2e1e1e95635",
 )

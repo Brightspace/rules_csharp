@@ -49,7 +49,7 @@ def import_nuget_package(
       sha256: The SHA256 of the package.
     """
 
-    if len([arg for arg in [package, url, urls] if arg != None]) != 0:
+    if len([arg for arg in [package, url, urls] if arg != None]) != 1:
         fail("One and only of of pacakge, url or urls must be provided.")
 
     if package == None and version != None:
@@ -61,7 +61,7 @@ def import_nuget_package(
     if url != None:
         urls = [url]
 
-    else if package != None:
+    elif package != None:
         if version == None:
             fail("package must be used with version.")
 
@@ -78,7 +78,7 @@ def import_nuget_package(
         name = name,
         urls = urls,
         type = "zip",
-        sha256 = "sha256",
+        sha256 = sha256,
         build_file = build_file,
         build_file_content = build_file_content,
     )
@@ -107,5 +107,5 @@ def import_nuget_package_directory(
         name = name,
         build_file = build_file,
         build_file_content = build_file_content,
-        path = dir,
+        path = path,
     )
