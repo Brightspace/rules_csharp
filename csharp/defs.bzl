@@ -23,7 +23,7 @@ load(
 load(
     "//csharp/private:macros/nuget.bzl",
     _import_nuget_package = "import_nuget_package",
-    _nuget_package = "nuget_package",
+    _import_nuget_package_directory = "import_nuget_package_directory",
 )
 load(
     "//csharp/private:macros/setup_basic_nuget_package.bzl",
@@ -38,5 +38,5 @@ csharp_repositories = _csharp_repositories
 import_multiframework_library = _import_multiframework_library
 import_library = _import_library
 import_nuget_package = _import_nuget_package
-nuget_package = _nuget_package
+import_nuget_package_directory = _import_nuget_package_directory
 setup_basic_nuget_package = _setup_basic_nuget_package

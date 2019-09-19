@@ -5,6 +5,7 @@ load(
     "csharp_register_toolchains",
     "csharp_repositories",
     "import_nuget_package",
+    "import_nuget_package_directory",
 )
 
 csharp_repositories()
@@ -15,7 +16,7 @@ csharp_register_toolchains()
 # Should this go here? Should we have a WORKSPACE inside csharp/ and one in
 # examples/?
 
-import_nuget_package(
+import_nuget_package_directory(
     name = "ExamplePackageFolder",
     dir = "examples/import_nuget_package/ExamplePackageFolder",
 )
