@@ -2,7 +2,6 @@ load(
     "@d2l_rules_csharp//csharp:defs.bzl",
     "csharp_binary",
     "csharp_library",
-    "import_multiframework_library",
     "csharp_nunit_test",
 )
 
