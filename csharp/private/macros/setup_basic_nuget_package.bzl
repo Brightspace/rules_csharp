@@ -1,23 +1,46 @@
 load("//csharp/private:providers.bzl", "CSharpAssembly")
 load("//csharp/private:rules/imports.bzl", "import_library", "import_multiframework_library")
 
+# We don't support compiling new DLLs against the frameworks listed in the keys
+# of this dict, but it's just fine to link against them. The values are the
+# closest framework to the quasi-supported framework.
+QUASI_SUPPORTED_TFMS = {
+    "net11": "net20",
+    "net35": "net40",
+    "net403": "net45",
+}
+
 def _import_dll(dll, has_pdb, imports):
     path = dll.split("/")
 
     tfm = path[1]
+    real_tfm = tfm
+    quasi_supported = False
 
-    # Ignore frameworks we don't support (like net35)
-    if tfm not in CSharpAssembly:
+    if tfm in QUASI_SUPPORTED_TFMS.keys():
+        tfm = QUASI_SUPPORTED_TFMS[tfm]
+        quasi_supported = True
+    elif tfm not in CSharpAssembly:
+        # Ignore any other frameworks (e.g. PCLs)
         return
 
     lib_name = path[-1].rsplit(".", 1)[0]
 
-    target_name = "%s-%s" % (lib_name, tfm)
+    # The target name always has the real tfm in it
+    target_name = "%s-%s" % (lib_name, real_tfm)
 
     if lib_name not in imports:
         imports[lib_name] = {tfm: target_name}
+    elif quasi_supported and tfm in imports[lib_name]:
+        # Don't bother with a quasi-supported framework if we also have a DLL for
+        # its closest framework.
+        return
     else:
         imports[lib_name][tfm] = target_name
+
+    # if quasi_supported is true we might eventually overwrite
+    # imports[lib_name][tfm] which means the import_library we're about to do
+    # would go unreferenced. It's a private target though so it's not a big deal.
 
     if dll in has_pdb:
         import_library(
