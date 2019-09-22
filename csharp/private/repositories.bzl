@@ -1,3 +1,4 @@
+load(":rules/create_net_workspace.bzl", "create_net_workspace")
 load(":macros/nuget.bzl", "nuget_package")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
@@ -12,10 +13,7 @@ def csharp_repositories():
 
     _net_workspace()
 
-    native.local_repository(
-        name = "net",
-        path = "csharp/private/net",
-    )
+    create_net_workspace()
 
     # NUnit
     nuget_package(

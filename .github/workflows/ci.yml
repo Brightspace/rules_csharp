@@ -11,4 +11,4 @@ jobs:
       - name: Clone
         uses: actions/checkout@v1
       - name: Dump the action graph
-        run: bazel aquery 'deps(...)'
+        run: cd examples && bazel aquery 'deps(...)'
