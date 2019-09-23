@@ -173,6 +173,13 @@ def _net_workspace():
     )
 
     nuget_package(
+        name = "Microsoft.NETCore.App.Ref",
+        package = "Microsoft.NETCore.App.Ref",
+        version = "3.0.0",
+        sha256 = "3c7a2fbddfa63cdf47a02174ac51274b4d79a7b623efaf9ef5c7d253824023e2",
+    )
+
+    nuget_package(
         name = "Microsoft.NETCore.DotNetAppHost",
         package = "Microsoft.NETCore.DotNetAppHost",
         version = "2.2.6",
@@ -207,6 +214,14 @@ def _net_workspace():
         version = "2.0.3",
         sha256 = "3eb87644f79bcffb3c0331dbdac3c7837265f2cdf58a7bfd93e431776f77c9ba",
         build_file = "@d2l_rules_csharp//csharp/private:frameworks/netstandard20.BUILD",
+    )
+
+    nuget_package(
+        name = "NetStandard.Library.Ref",
+        package = "NetStandard.Library.Ref",
+        version = "2.1.0",
+        sha256 = "46ea2fcbd10a817685b85af7ce0c397d12944bdc81209e272de1e05efd33c78a",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/netstandard21.BUILD",
     )
 
     nuget_package(
