@@ -213,6 +213,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.CSharp",
     net472 = "@net472//:Microsoft.CSharp",
     net48 = "@net48//:Microsoft.CSharp",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:Microsoft.CSharp",
     visibility = ["//visibility:public"],
 )
 
@@ -247,6 +248,13 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualBasic",
     net472 = "@net472//:Microsoft.VisualBasic",
     net48 = "@net48//:Microsoft.VisualBasic",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:Microsoft.VisualBasic",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "Microsoft.VisualBasic.Core",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:Microsoft.VisualBasic.Core",
     visibility = ["//visibility:public"],
 )
 
@@ -348,6 +356,7 @@ import_multiframework_library(
     net48 = "@net48//:Microsoft.Win32.Primitives",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:Microsoft.Win32.Primitives",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:Microsoft.Win32.Primitives",
     visibility = ["//visibility:public"],
 )
 
@@ -367,6 +376,7 @@ import_multiframework_library(
     net48 = "@net48//:mscorlib",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:mscorlib",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:mscorlib",
     visibility = ["//visibility:public"],
 )
 
@@ -377,6 +387,7 @@ import_multiframework_library(
     net48 = "@net48//:netstandard",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:netstandard",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:netstandard",
     visibility = ["//visibility:public"],
 )
 
@@ -573,6 +584,7 @@ import_multiframework_library(
     net48 = "@net48//:System",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System",
     visibility = ["//visibility:public"],
 )
 
@@ -679,12 +691,14 @@ import_multiframework_library(
     net48 = "@net48//:System.AppContext",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.AppContext",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.AppContext",
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Buffers",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Buffers",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Buffers",
     visibility = ["//visibility:public"],
 )
 
@@ -702,6 +716,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Collections",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Collections",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Collections",
     visibility = ["//visibility:public"],
 )
 
@@ -719,6 +734,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Collections.Concurrent",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Collections.Concurrent",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Collections.Concurrent",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Collections.Immutable",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Collections.Immutable",
     visibility = ["//visibility:public"],
 )
 
@@ -729,6 +751,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Collections.NonGeneric",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Collections.NonGeneric",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Collections.NonGeneric",
     visibility = ["//visibility:public"],
 )
 
@@ -739,6 +762,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Collections.Specialized",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Collections.Specialized",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Collections.Specialized",
     visibility = ["//visibility:public"],
 )
 
@@ -756,6 +780,7 @@ import_multiframework_library(
     net48 = "@net48//:System.ComponentModel",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.ComponentModel",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ComponentModel",
     visibility = ["//visibility:public"],
 )
 
@@ -771,6 +796,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ComponentModel.Annotations",
     net472 = "@net472//:System.ComponentModel.Annotations",
     net48 = "@net48//:System.ComponentModel.Annotations",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ComponentModel.Annotations",
     visibility = ["//visibility:public"],
 )
 
@@ -820,6 +846,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ComponentModel.DataAnnotations",
     net472 = "@net472//:System.ComponentModel.DataAnnotations",
     net48 = "@net48//:System.ComponentModel.DataAnnotations",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ComponentModel.DataAnnotations",
     visibility = ["//visibility:public"],
 )
 
@@ -837,6 +864,7 @@ import_multiframework_library(
     net48 = "@net48//:System.ComponentModel.EventBasedAsync",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.ComponentModel.EventBasedAsync",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ComponentModel.EventBasedAsync",
     visibility = ["//visibility:public"],
 )
 
@@ -847,6 +875,7 @@ import_multiframework_library(
     net48 = "@net48//:System.ComponentModel.Primitives",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.ComponentModel.Primitives",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ComponentModel.Primitives",
     visibility = ["//visibility:public"],
 )
 
@@ -857,6 +886,7 @@ import_multiframework_library(
     net48 = "@net48//:System.ComponentModel.TypeConverter",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.ComponentModel.TypeConverter",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ComponentModel.TypeConverter",
     visibility = ["//visibility:public"],
 )
 
@@ -874,6 +904,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Configuration",
     net472 = "@net472//:System.Configuration",
     net48 = "@net48//:System.Configuration",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Configuration",
     visibility = ["//visibility:public"],
 )
 
@@ -901,6 +932,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Console",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Console",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Console",
     visibility = ["//visibility:public"],
 )
 
@@ -919,6 +951,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Core",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Core",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Core",
     visibility = ["//visibility:public"],
 )
 
@@ -938,6 +971,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Data",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Data",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Data",
     visibility = ["//visibility:public"],
 )
 
@@ -948,6 +982,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Data.Common",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Data.Common",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Data.Common",
     visibility = ["//visibility:public"],
 )
 
@@ -964,6 +999,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.DataSetExtensions",
     net472 = "@net472//:System.Data.DataSetExtensions",
     net48 = "@net48//:System.Data.DataSetExtensions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Data.DataSetExtensions",
     visibility = ["//visibility:public"],
 )
 
@@ -1161,6 +1197,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Diagnostics.Contracts",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Diagnostics.Contracts",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.Contracts",
     visibility = ["//visibility:public"],
 )
 
@@ -1178,6 +1215,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Diagnostics.Debug",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Diagnostics.Debug",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.Debug",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Diagnostics.DiagnosticSource",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.DiagnosticSource",
     visibility = ["//visibility:public"],
 )
 
@@ -1188,6 +1232,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Diagnostics.FileVersionInfo",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Diagnostics.FileVersionInfo",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.FileVersionInfo",
     visibility = ["//visibility:public"],
 )
 
@@ -1198,6 +1243,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Diagnostics.Process",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Diagnostics.Process",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.Process",
     visibility = ["//visibility:public"],
 )
 
@@ -1208,6 +1254,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Diagnostics.StackTrace",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Diagnostics.StackTrace",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.StackTrace",
     visibility = ["//visibility:public"],
 )
 
@@ -1218,6 +1265,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Diagnostics.TextWriterTraceListener",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Diagnostics.TextWriterTraceListener",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.TextWriterTraceListener",
     visibility = ["//visibility:public"],
 )
 
@@ -1235,6 +1283,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Diagnostics.Tools",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Diagnostics.Tools",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.Tools",
     visibility = ["//visibility:public"],
 )
 
@@ -1245,6 +1294,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Diagnostics.TraceSource",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Diagnostics.TraceSource",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.TraceSource",
     visibility = ["//visibility:public"],
 )
 
@@ -1262,6 +1312,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Diagnostics.Tracing",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Diagnostics.Tracing",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Diagnostics.Tracing",
     visibility = ["//visibility:public"],
 )
 
@@ -1331,6 +1382,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Drawing",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Drawing",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Drawing",
     visibility = ["//visibility:public"],
 )
 
@@ -1358,6 +1410,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Drawing.Primitives",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Drawing.Primitives",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Drawing.Primitives",
     visibility = ["//visibility:public"],
 )
 
@@ -1387,6 +1440,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Dynamic.Runtime",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Dynamic.Runtime",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Dynamic.Runtime",
     visibility = ["//visibility:public"],
 )
 
@@ -1455,6 +1509,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Globalization",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Globalization",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Globalization",
     visibility = ["//visibility:public"],
 )
 
@@ -1465,6 +1520,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Globalization.Calendars",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Globalization.Calendars",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Globalization.Calendars",
     visibility = ["//visibility:public"],
 )
 
@@ -1475,6 +1531,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Globalization.Extensions",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Globalization.Extensions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Globalization.Extensions",
     visibility = ["//visibility:public"],
 )
 
@@ -1539,6 +1596,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO",
     visibility = ["//visibility:public"],
 )
 
@@ -1556,6 +1614,13 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.Compression",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.Compression",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.Compression",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.IO.Compression.Brotli",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.Compression.Brotli",
     visibility = ["//visibility:public"],
 )
 
@@ -1573,6 +1638,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.Compression.FileSystem",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.Compression.FileSystem",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.Compression.FileSystem",
     visibility = ["//visibility:public"],
 )
 
@@ -1583,6 +1649,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.Compression.ZipFile",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.Compression.ZipFile",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.Compression.ZipFile",
     visibility = ["//visibility:public"],
 )
 
@@ -1593,6 +1660,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.FileSystem",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.FileSystem",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.FileSystem",
     visibility = ["//visibility:public"],
 )
 
@@ -1603,6 +1671,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.FileSystem.DriveInfo",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.FileSystem.DriveInfo",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.FileSystem.DriveInfo",
     visibility = ["//visibility:public"],
 )
 
@@ -1613,6 +1682,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.FileSystem.Primitives",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.FileSystem.Primitives",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.FileSystem.Primitives",
     visibility = ["//visibility:public"],
 )
 
@@ -1623,6 +1693,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.FileSystem.Watcher",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.FileSystem.Watcher",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.FileSystem.Watcher",
     visibility = ["//visibility:public"],
 )
 
@@ -1633,6 +1704,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.IsolatedStorage",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.IsolatedStorage",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.IsolatedStorage",
     visibility = ["//visibility:public"],
 )
 
@@ -1659,6 +1731,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.MemoryMappedFiles",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.MemoryMappedFiles",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.MemoryMappedFiles",
     visibility = ["//visibility:public"],
 )
 
@@ -1669,6 +1742,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.Pipes",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.Pipes",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.Pipes",
     visibility = ["//visibility:public"],
 )
 
@@ -1679,6 +1753,7 @@ import_multiframework_library(
     net48 = "@net48//:System.IO.UnmanagedMemoryStream",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.IO.UnmanagedMemoryStream",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.IO.UnmanagedMemoryStream",
     visibility = ["//visibility:public"],
 )
 
@@ -1696,6 +1771,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Linq",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Linq",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Linq",
     visibility = ["//visibility:public"],
 )
 
@@ -1713,6 +1789,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Linq.Expressions",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Linq.Expressions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Linq.Expressions",
     visibility = ["//visibility:public"],
 )
 
@@ -1730,6 +1807,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Linq.Parallel",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Linq.Parallel",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Linq.Parallel",
     visibility = ["//visibility:public"],
 )
 
@@ -1747,12 +1825,14 @@ import_multiframework_library(
     net48 = "@net48//:System.Linq.Queryable",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Linq.Queryable",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Linq.Queryable",
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Memory",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Memory",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Memory",
     visibility = ["//visibility:public"],
 )
 
@@ -1821,6 +1901,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Net",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net",
     visibility = ["//visibility:public"],
 )
 
@@ -1838,6 +1919,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.Http",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.Http",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.Http",
     visibility = ["//visibility:public"],
 )
 
@@ -1865,12 +1947,25 @@ import_multiframework_library(
 )
 
 import_multiframework_library(
+    name = "System.Net.HttpListener",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.HttpListener",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Net.Mail",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.Mail",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
     name = "System.Net.NameResolution",
     net471 = "@net471//:System.Net.NameResolution",
     net472 = "@net472//:System.Net.NameResolution",
     net48 = "@net48//:System.Net.NameResolution",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.NameResolution",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.NameResolution",
     visibility = ["//visibility:public"],
 )
 
@@ -1888,6 +1983,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.NetworkInformation",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.NetworkInformation",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.NetworkInformation",
     visibility = ["//visibility:public"],
 )
 
@@ -1898,6 +1994,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.Ping",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.Ping",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.Ping",
     visibility = ["//visibility:public"],
 )
 
@@ -1915,6 +2012,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.Primitives",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.Primitives",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.Primitives",
     visibility = ["//visibility:public"],
 )
 
@@ -1932,6 +2030,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.Requests",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.Requests",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.Requests",
     visibility = ["//visibility:public"],
 )
 
@@ -1942,6 +2041,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.Security",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.Security",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.Security",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Net.ServicePoint",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.ServicePoint",
     visibility = ["//visibility:public"],
 )
 
@@ -1952,6 +2058,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.Sockets",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.Sockets",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.Sockets",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Net.WebClient",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.WebClient",
     visibility = ["//visibility:public"],
 )
 
@@ -1966,6 +2079,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.WebHeaderCollection",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.WebHeaderCollection",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.WebHeaderCollection",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Net.WebProxy",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.WebProxy",
     visibility = ["//visibility:public"],
 )
 
@@ -1976,6 +2096,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.WebSockets",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.WebSockets",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.WebSockets",
     visibility = ["//visibility:public"],
 )
 
@@ -1986,6 +2107,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Net.WebSockets.Client",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Net.WebSockets.Client",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Net.WebSockets.Client",
     visibility = ["//visibility:public"],
 )
 
@@ -2004,12 +2126,14 @@ import_multiframework_library(
     net48 = "@net48//:System.Numerics",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Numerics",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Numerics",
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Numerics.Vectors",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Numerics.Vectors",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Numerics.Vectors",
     visibility = ["//visibility:public"],
 )
 
@@ -2027,6 +2151,7 @@ import_multiframework_library(
     net48 = "@net48//:System.ObjectModel",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.ObjectModel",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ObjectModel",
     visibility = ["//visibility:public"],
 )
 
@@ -2060,6 +2185,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Reflection",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Reflection",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Reflection",
     visibility = ["//visibility:public"],
 )
 
@@ -2081,6 +2207,7 @@ import_multiframework_library(
 import_multiframework_library(
     name = "System.Reflection.DispatchProxy",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Reflection.DispatchProxy",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Reflection.DispatchProxy",
     visibility = ["//visibility:public"],
 )
 
@@ -2097,6 +2224,7 @@ import_multiframework_library(
     net472 = "@net472//:System.Reflection.Emit",
     net48 = "@net48//:System.Reflection.Emit",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Reflection.Emit",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Reflection.Emit",
     visibility = ["//visibility:public"],
 )
 
@@ -2113,6 +2241,7 @@ import_multiframework_library(
     net472 = "@net472//:System.Reflection.Emit.ILGeneration",
     net48 = "@net48//:System.Reflection.Emit.ILGeneration",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Reflection.Emit.ILGeneration",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Reflection.Emit.ILGeneration",
     visibility = ["//visibility:public"],
 )
 
@@ -2129,6 +2258,7 @@ import_multiframework_library(
     net472 = "@net472//:System.Reflection.Emit.Lightweight",
     net48 = "@net48//:System.Reflection.Emit.Lightweight",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Reflection.Emit.Lightweight",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Reflection.Emit.Lightweight",
     visibility = ["//visibility:public"],
 )
 
@@ -2146,6 +2276,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Reflection.Extensions",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Reflection.Extensions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Reflection.Extensions",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Reflection.Metadata",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Reflection.Metadata",
     visibility = ["//visibility:public"],
 )
 
@@ -2163,6 +2300,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Reflection.Primitives",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Reflection.Primitives",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Reflection.Primitives",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Reflection.TypeExtensions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Reflection.TypeExtensions",
     visibility = ["//visibility:public"],
 )
 
@@ -2173,6 +2317,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Resources.Reader",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Resources.Reader",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Resources.Reader",
     visibility = ["//visibility:public"],
 )
 
@@ -2190,6 +2335,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Resources.ResourceManager",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Resources.ResourceManager",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Resources.ResourceManager",
     visibility = ["//visibility:public"],
 )
 
@@ -2200,6 +2346,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Resources.Writer",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Resources.Writer",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Resources.Writer",
     visibility = ["//visibility:public"],
 )
 
@@ -2217,6 +2364,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime",
     visibility = ["//visibility:public"],
 )
 
@@ -2237,12 +2385,19 @@ import_multiframework_library(
 )
 
 import_multiframework_library(
+    name = "System.Runtime.CompilerServices.Unsafe",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.CompilerServices.Unsafe",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
     name = "System.Runtime.CompilerServices.VisualC",
     net471 = "@net471//:System.Runtime.CompilerServices.VisualC",
     net472 = "@net472//:System.Runtime.CompilerServices.VisualC",
     net48 = "@net48//:System.Runtime.CompilerServices.VisualC",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.CompilerServices.VisualC",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.CompilerServices.VisualC",
     visibility = ["//visibility:public"],
 )
 
@@ -2276,6 +2431,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.Extensions",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.Extensions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Extensions",
     visibility = ["//visibility:public"],
 )
 
@@ -2290,6 +2446,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.Handles",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.Handles",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Handles",
     visibility = ["//visibility:public"],
 )
 
@@ -2307,6 +2464,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.InteropServices",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.InteropServices",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.InteropServices",
     visibility = ["//visibility:public"],
 )
 
@@ -2317,6 +2475,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.InteropServices.RuntimeInformation",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.InteropServices.RuntimeInformation",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.InteropServices.RuntimeInformation",
     visibility = ["//visibility:public"],
 )
 
@@ -2332,6 +2491,19 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.InteropServices.WindowsRuntime",
     net472 = "@net472//:System.Runtime.InteropServices.WindowsRuntime",
     net48 = "@net48//:System.Runtime.InteropServices.WindowsRuntime",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.InteropServices.WindowsRuntime",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Runtime.Intrinsics",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Intrinsics",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Runtime.Loader",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Loader",
     visibility = ["//visibility:public"],
 )
 
@@ -2349,6 +2521,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.Numerics",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.Numerics",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Numerics",
     visibility = ["//visibility:public"],
 )
 
@@ -2384,6 +2557,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.Serialization",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.Serialization",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Serialization",
     visibility = ["//visibility:public"],
 )
 
@@ -2394,6 +2568,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.Serialization.Formatters",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.Serialization.Formatters",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Serialization.Formatters",
     visibility = ["//visibility:public"],
 )
 
@@ -2428,6 +2603,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.Serialization.Json",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.Serialization.Json",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Serialization.Json",
     visibility = ["//visibility:public"],
 )
 
@@ -2445,6 +2621,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.Serialization.Primitives",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.Serialization.Primitives",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Serialization.Primitives",
     visibility = ["//visibility:public"],
 )
 
@@ -2462,6 +2639,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Runtime.Serialization.Xml",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Runtime.Serialization.Xml",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Runtime.Serialization.Xml",
     visibility = ["//visibility:public"],
 )
 
@@ -2479,6 +2657,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Security",
     net472 = "@net472//:System.Security",
     net48 = "@net48//:System.Security",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Security",
     visibility = ["//visibility:public"],
 )
 
@@ -2489,6 +2668,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Security.Claims",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Security.Claims",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Security.Claims",
     visibility = ["//visibility:public"],
 )
 
@@ -2499,6 +2679,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Security.Cryptography.Algorithms",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Security.Cryptography.Algorithms",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Security.Cryptography.Algorithms",
     visibility = ["//visibility:public"],
 )
 
@@ -2509,6 +2690,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Security.Cryptography.Csp",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Security.Cryptography.Csp",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Security.Cryptography.Csp",
     visibility = ["//visibility:public"],
 )
 
@@ -2519,6 +2701,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Security.Cryptography.Encoding",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Security.Cryptography.Encoding",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Security.Cryptography.Encoding",
     visibility = ["//visibility:public"],
 )
 
@@ -2529,6 +2712,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Security.Cryptography.Primitives",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Security.Cryptography.Primitives",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Security.Cryptography.Primitives",
     visibility = ["//visibility:public"],
 )
 
@@ -2539,6 +2723,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Security.Cryptography.X509Certificates",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Security.Cryptography.X509Certificates",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Security.Cryptography.X509Certificates",
     visibility = ["//visibility:public"],
 )
 
@@ -2556,6 +2741,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Security.Principal",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Security.Principal",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Security.Principal",
     visibility = ["//visibility:public"],
 )
 
@@ -2566,6 +2752,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Security.SecureString",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Security.SecureString",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Security.SecureString",
     visibility = ["//visibility:public"],
 )
 
@@ -2755,6 +2942,7 @@ import_multiframework_library(
     net48 = "@net48//:System.ServiceModel.Web",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.ServiceModel.Web",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ServiceModel.Web",
     visibility = ["//visibility:public"],
 )
 
@@ -2772,6 +2960,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceProcess",
     net472 = "@net472//:System.ServiceProcess",
     net48 = "@net48//:System.ServiceProcess",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ServiceProcess",
     visibility = ["//visibility:public"],
 )
 
@@ -2805,6 +2994,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Text.Encoding",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Text.Encoding",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Text.Encoding",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Text.Encoding.CodePages",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Text.Encoding.CodePages",
     visibility = ["//visibility:public"],
 )
 
@@ -2822,6 +3018,19 @@ import_multiframework_library(
     net48 = "@net48//:System.Text.Encoding.Extensions",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Text.Encoding.Extensions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Text.Encoding.Extensions",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Text.Encodings.Web",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Text.Encodings.Web",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Text.Json",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Text.Json",
     visibility = ["//visibility:public"],
 )
 
@@ -2839,6 +3048,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Text.RegularExpressions",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Text.RegularExpressions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Text.RegularExpressions",
     visibility = ["//visibility:public"],
 )
 
@@ -2856,6 +3066,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Threading",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Threading",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Threading.Channels",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading.Channels",
     visibility = ["//visibility:public"],
 )
 
@@ -2866,6 +3083,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Threading.Overlapped",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Threading.Overlapped",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading.Overlapped",
     visibility = ["//visibility:public"],
 )
 
@@ -2883,6 +3101,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Threading.Tasks",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Threading.Tasks",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading.Tasks",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Threading.Tasks.Dataflow",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading.Tasks.Dataflow",
     visibility = ["//visibility:public"],
 )
 
@@ -2900,6 +3125,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Threading.Tasks",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Threading.Tasks.Extensions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading.Tasks.Extensions",
     visibility = ["//visibility:public"],
 )
 
@@ -2917,6 +3143,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Threading.Tasks.Parallel",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Threading.Tasks.Parallel",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading.Tasks.Parallel",
     visibility = ["//visibility:public"],
 )
 
@@ -2927,6 +3154,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Threading.Thread",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Threading.Thread",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading.Thread",
     visibility = ["//visibility:public"],
 )
 
@@ -2937,6 +3165,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Threading.ThreadPool",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Threading.ThreadPool",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading.ThreadPool",
     visibility = ["//visibility:public"],
 )
 
@@ -2953,6 +3182,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Threading.Timer",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Threading.Timer",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Threading.Timer",
     visibility = ["//visibility:public"],
 )
 
@@ -2972,6 +3202,13 @@ import_multiframework_library(
     net48 = "@net48//:System.Transactions",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Transactions",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Transactions",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
+    name = "System.Transactions.Local",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Transactions.Local",
     visibility = ["//visibility:public"],
 )
 
@@ -2982,6 +3219,7 @@ import_multiframework_library(
     net48 = "@net48//:System.ValueTuple",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.ValueTuple",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.ValueTuple",
     visibility = ["//visibility:public"],
 )
 
@@ -3001,6 +3239,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Web",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Web",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Web",
     visibility = ["//visibility:public"],
 )
 
@@ -3165,6 +3404,12 @@ import_multiframework_library(
 )
 
 import_multiframework_library(
+    name = "System.Web.HttpUtility",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Web.HttpUtility",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
     name = "System.Web.Mobile",
     net20 = "@net20//:System.Web.Mobile",
     net40 = "@net40//:System.Web.Mobile",
@@ -3245,6 +3490,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Windows",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Windows",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Windows",
     visibility = ["//visibility:public"],
 )
 
@@ -3440,6 +3686,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Xml",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Xml",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Xml",
     visibility = ["//visibility:public"],
 )
 
@@ -3458,6 +3705,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Xml.Linq",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Xml.Linq",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Xml.Linq",
     visibility = ["//visibility:public"],
 )
 
@@ -3475,6 +3723,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Xml.ReaderWriter",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Xml.ReaderWriter",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Xml.ReaderWriter",
     visibility = ["//visibility:public"],
 )
 
@@ -3492,6 +3741,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Xml.Serialization",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Xml.Serialization",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Xml.Serialization",
     visibility = ["//visibility:public"],
 )
 
@@ -3509,6 +3759,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Xml.XDocument",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Xml.XDocument",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Xml.XDocument",
     visibility = ["//visibility:public"],
 )
 
@@ -3519,6 +3770,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Xml.XmlDocument",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Xml.XmlDocument",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Xml.XmlDocument",
     visibility = ["//visibility:public"],
 )
 
@@ -3536,6 +3788,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Xml.XmlSerializer",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Xml.XmlSerializer",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Xml.XmlSerializer",
     visibility = ["//visibility:public"],
 )
 
@@ -3546,6 +3799,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Xml.XPath",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Xml.XPath",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Xml.XPath",
     visibility = ["//visibility:public"],
 )
 
@@ -3556,6 +3810,7 @@ import_multiframework_library(
     net48 = "@net48//:System.Xml.XPath.XDocument",
     netstandard2_0 = "@NetStandard.Library//:netstandard",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.Xml.XPath.XDocument",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:System.Xml.XPath.XDocument",
     visibility = ["//visibility:public"],
 )
 
@@ -3636,6 +3891,7 @@ import_multiframework_library(
     net471 = "@net471//:WindowsBase",
     net472 = "@net472//:WindowsBase",
     net48 = "@net48//:WindowsBase",
+    netcoreapp3_0 = "@Microsoft.NetCore.App.Ref//:WindowsBase",
     visibility = ["//visibility:public"],
 )
 
