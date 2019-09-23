@@ -166,7 +166,7 @@ def _net_workspace():
 
     # .NET Core
     nuget_package(
-        name = "Microsoft.NETCore.App_2.1",
+        name = "netcoreapp2.1",
         package = "Microsoft.NETCore.App",
         version = "2.1.13",
         sha256 = "8d4df9bf970096af0d73a0fd97384a98bce4bdb9006e8659b298c91f2fa2c47b",
@@ -174,7 +174,7 @@ def _net_workspace():
     )
 
     nuget_package(
-        name = "Microsoft.NETCore.App_2.2",
+        name = "netcoreapp2.2",
         package = "Microsoft.NETCore.App",
         version = "2.2.7",
         sha256 = "a4f166be783dedac38def8e9357ac74a4739119611635ac520b5fdd96645835e",
@@ -182,7 +182,7 @@ def _net_workspace():
     )
 
     nuget_package(
-        name = "Microsoft.NETCore.App.Ref",
+        name = "netcoreapp3.0",
         package = "Microsoft.NETCore.App.Ref",
         version = "3.0.0",
         sha256 = "3c7a2fbddfa63cdf47a02174ac51274b4d79a7b623efaf9ef5c7d253824023e2",
