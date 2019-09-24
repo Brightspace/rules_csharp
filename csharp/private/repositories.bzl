@@ -36,20 +36,20 @@ def csharp_repositories():
 
     _download_runtime(
         os = "windows",
-        url = "https://download.visualstudio.microsoft.com/download/pr/4fc551ff-0fbc-45ae-b35f-a8666ff1986f/0a6f2d0cf10379b47f6d55be5c31b95b/dotnet-runtime-3.0.0-preview3-27503-5-win-x64.zip",
-        hash = "e648aafbfdbbdc6bac14c052a9e05f43aa916412971e0ccace0b958279c488e0",
+        url = "https://download.visualstudio.microsoft.com/download/pr/f15b7c04-2900-4a14-9c01-ccd66a4323cc/17a6bbd44f0d0a85d219dd9e166a89ca/dotnet-runtime-3.0.0-win-x64.zip",
+        hash = "60ba0e6ed7ae18a0186e71d18c38c013355b1fadc5fb053f40e5af5e33fdcd97",
     )
 
     _download_runtime(
         os = "linux",
-        url = "https://download.visualstudio.microsoft.com/download/pr/01cf5a3b-24a5-4de1-8a25-9b57583bd737/f27582e4520e14b7e9ab3f7f239e1e3c/dotnet-runtime-3.0.0-preview3-27503-5-linux-x64.tar.gz",
-        hash = "0435409448dd6c07ea4eef1921c480c8b68044c8601d5d9f549f54d16083433f",
+        url = "https://download.visualstudio.microsoft.com/download/pr/a5ff9cbb-d558-49d1-9fd2-410cb1c8b095/a940644f4133b81446cb3733a620983a/dotnet-runtime-3.0.0-linux-x64.tar.gz",
+        hash = "dea07b9c3cb102c042f3c4b9a500347bdbf214f03e78dfe9738de974544fffa1",
     )
 
     _download_runtime(
         os = "osx",
-        url = "https://download.visualstudio.microsoft.com/download/pr/4af9752c-5280-4594-a64d-f352ca5eb6bf/144f1f651ea56bd42eb124e9193531ad/dotnet-runtime-3.0.0-preview3-27503-5-osx-x64.tar.gz",
-        hash = "2a1615aaf64bc8d8f26c15f81b9e1457770d910ea6ebe7458f309326de863552",
+        url = "https://download.visualstudio.microsoft.com/download/pr/68123d89-73c0-40b0-ba9b-93667c25663b/001f66f8ec4666421acc16f74209aa99/dotnet-runtime-3.0.0-osx-x64.tar.gz",
+        hash = "29799b7f40bc43d14f92ed6cd4d8eef9283f5b45cb8b3d49816c63e557958b81",
     )
 
 def csharp_register_toolchains():
