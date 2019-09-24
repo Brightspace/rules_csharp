@@ -53,7 +53,10 @@ def collect_transitive_info(deps, tfm):
     )
 
 def _get_provided_by_netstandard(providerInfo):
-    return providerInfo[0].provided_by_netstandard
+    actual_tfm = providerInfo[0].actual_tfm
+    tfm = providerInfo[1]
+
+    return is_standard_framework(actual_tfm) and not is_standard_framework(tfm)
 
 def fill_in_missing_frameworks(providers):
     """Creates extra providers for frameworks that are compatible with us.
@@ -87,7 +90,7 @@ def fill_in_missing_frameworks(providers):
                 deps = base.deps,
                 transitive_refs = refs,
                 transitive_runfiles = runfiles,
-                provided_by_netstandard = base.provided_by_netstandard or is_standard_framework(compatible_tfm) and not is_standard_framework(tfm) 
+                actual_tfm = base.actual_tfm
             )
             break
 
