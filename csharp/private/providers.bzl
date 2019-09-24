@@ -16,6 +16,7 @@ def _make_csharp_provider(tfm):
             "deps": "the non-transitive dependencies for this assembly (used by import_multiframework_library).",
             "transitive_refs": "A list of other assemblies to reference when referencing this assembly in a compilation.",
             "transitive_runfiles": "Runfiles from the transitive dependencies.",
+            "actual_tfm": "The target framework of the actual dlls"
         },
     )
 

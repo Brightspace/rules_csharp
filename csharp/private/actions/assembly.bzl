@@ -172,4 +172,5 @@ def AssemblyAction(
         deps = deps,
         transitive_refs = refs,
         transitive_runfiles = runfiles,
+        actual_tfm = target_framework
     )

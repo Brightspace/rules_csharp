@@ -52,6 +52,12 @@ def collect_transitive_info(deps, tfm):
         depset(direct = direct_runfiles, transitive = transitive_runfiles),
     )
 
+def _get_provided_by_netstandard(providerInfo):
+    actual_tfm = providerInfo[0].actual_tfm
+    tfm = providerInfo[1]
+
+    return is_standard_framework(actual_tfm) and not is_standard_framework(tfm)
+
 def fill_in_missing_frameworks(providers):
     """Creates extra providers for frameworks that are compatible with us.
 
@@ -72,12 +78,10 @@ def fill_in_missing_frameworks(providers):
 
         # There are at most 2 elements in FrameworkCompatibility[tfm], so this
         # nested loop isn't bad.
-        for compatible_tfm in FrameworkCompatibility[tfm]:
-            if compatible_tfm not in providers:
-                continue
-
+        # Order by providers that didn't "cross the netstandard boundary" so
+        # newer netstandard will be preferred, if applicable
+        for (base, compatible_tfm) in sorted([(providers[compatible_tfm], compatible_tfm) for compatible_tfm in FrameworkCompatibility[tfm] if compatible_tfm in providers], key=_get_provided_by_netstandard):
             # Copy the output from the compatible tfm, re-resolving the deps
-            base = providers[compatible_tfm]
             (refs, runfiles) = collect_transitive_info(base.deps, tfm)
             providers[tfm] = CSharpAssembly[tfm](
                 out = base.out,
@@ -86,6 +90,7 @@ def fill_in_missing_frameworks(providers):
                 deps = base.deps,
                 transitive_refs = refs,
                 transitive_runfiles = runfiles,
+                actual_tfm = base.actual_tfm
             )
             break
 
