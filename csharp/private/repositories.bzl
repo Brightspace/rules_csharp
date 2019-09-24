@@ -166,10 +166,27 @@ def _net_workspace():
 
     # .NET Core
     nuget_package(
-        name = "Microsoft.NETCore.App",
+        name = "netcoreapp2.1",
         package = "Microsoft.NETCore.App",
-        version = "2.2.6",
-        sha256 = "9b0ede75a9cc8311d503172ffa0177dc8b00bbfd2f3586a6b7d6152c0005f5ad",
+        version = "2.1.13",
+        sha256 = "8d4df9bf970096af0d73a0fd97384a98bce4bdb9006e8659b298c91f2fa2c47b",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/netcoreapp21.BUILD",
+    )
+
+    nuget_package(
+        name = "netcoreapp2.2",
+        package = "Microsoft.NETCore.App",
+        version = "2.2.7",
+        sha256 = "a4f166be783dedac38def8e9357ac74a4739119611635ac520b5fdd96645835e",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/netcoreapp22.BUILD",
+    )
+
+    nuget_package(
+        name = "netcoreapp3.0",
+        package = "Microsoft.NETCore.App.Ref",
+        version = "3.0.0",
+        sha256 = "3c7a2fbddfa63cdf47a02174ac51274b4d79a7b623efaf9ef5c7d253824023e2",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/netcoreapp30.BUILD",
     )
 
     nuget_package(
@@ -207,6 +224,14 @@ def _net_workspace():
         version = "2.0.3",
         sha256 = "3eb87644f79bcffb3c0331dbdac3c7837265f2cdf58a7bfd93e431776f77c9ba",
         build_file = "@d2l_rules_csharp//csharp/private:frameworks/netstandard20.BUILD",
+    )
+
+    nuget_package(
+        name = "NetStandard.Library.Ref",
+        package = "NetStandard.Library.Ref",
+        version = "2.1.0",
+        sha256 = "46ea2fcbd10a817685b85af7ce0c397d12944bdc81209e272de1e05efd33c78a",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/netstandard21.BUILD",
     )
 
     nuget_package(
