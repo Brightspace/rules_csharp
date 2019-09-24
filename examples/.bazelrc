@@ -1,0 +1,2 @@
+build --sandbox_tmpfs_path=/tmp
+test --sandbox_tmpfs_path=/tmp
