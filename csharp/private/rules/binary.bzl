@@ -3,7 +3,6 @@ load("@d2l_rules_csharp//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
     "@d2l_rules_csharp//csharp/private:common.bzl",
     "DEFAULT_LANGVERSION",
-    "DEFAULT_TARGET_FRAMEWORK",
     "fill_in_missing_frameworks",
     "is_debug",
     "is_standard_framework",
@@ -73,7 +72,6 @@ csharp_binary = rule(
         "target_frameworks": attr.string_list(
             doc = "A list of target framework monikers to build" +
                   "See https://docs.microsoft.com/en-us/dotnet/standard/frameworks",
-            default = [DEFAULT_TARGET_FRAMEWORK],
             allow_empty = False,
         ),
         "defines": attr.string_list(
