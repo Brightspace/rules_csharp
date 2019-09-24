@@ -77,10 +77,7 @@ def fill_in_missing_frameworks(providers):
         # nested loop isn't bad.
         # Order by providers that didn't "cross the netstandard boundary" so
         # newer netstandard will be preferred, if applicable
-        for compatible_tfm in sorted(FrameworkCompatibility[tfm], key=_get_provided_by_netstandard):
-            if compatible_tfm not in providers:
-                continue
-
+        for compatible_tfm in sorted([providers[compatible_tfm] for compatible_tfm in FrameworkCompatibility[tfm] if compatible_tfm in providers], key=_get_provided_by_netstandard):
             # Copy the output from the compatible tfm, re-resolving the deps
             base = providers[compatible_tfm]
             (refs, runfiles) = collect_transitive_info(base.deps, tfm)
