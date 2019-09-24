@@ -32,6 +32,7 @@ def _import_library(ctx):
             deps = ctx.attr.deps,
             transitive_refs = refs,
             transitive_runfiles = runfiles,
+            provided_by_netstandard = False
         ),
     }
 

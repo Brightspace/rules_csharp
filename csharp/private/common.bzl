@@ -52,6 +52,9 @@ def collect_transitive_info(deps, tfm):
         depset(direct = direct_runfiles, transitive = transitive_runfiles),
     )
 
+def _get_provided_by_netstandard(provider):
+    return provider.provided_by_netstandard
+
 def fill_in_missing_frameworks(providers):
     """Creates extra providers for frameworks that are compatible with us.
 
@@ -72,7 +75,9 @@ def fill_in_missing_frameworks(providers):
 
         # There are at most 2 elements in FrameworkCompatibility[tfm], so this
         # nested loop isn't bad.
-        for compatible_tfm in FrameworkCompatibility[tfm]:
+        # Order by providers that didn't "cross the netstandard boundary" so
+        # newer netstandard will be preferred, if applicable
+        for compatible_tfm in sorted(FrameworkCompatibility[tfm], key=_get_provided_by_netstandard):
             if compatible_tfm not in providers:
                 continue
 
@@ -86,6 +91,7 @@ def fill_in_missing_frameworks(providers):
                 deps = base.deps,
                 transitive_refs = refs,
                 transitive_runfiles = runfiles,
+                provided_by_netstandard = base.provided_by_netstandard or is_standard_framework(compatible_tfm) and not is_standard_framework(tfm) 
             )
             break
 
