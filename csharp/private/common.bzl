@@ -52,8 +52,8 @@ def collect_transitive_info(deps, tfm):
         depset(direct = direct_runfiles, transitive = transitive_runfiles),
     )
 
-def _get_provided_by_netstandard((provider, _)):
-    return provider.provided_by_netstandard
+def _get_provided_by_netstandard(providerInfo):
+    return providerInfo[0].provided_by_netstandard
 
 def fill_in_missing_frameworks(providers):
     """Creates extra providers for frameworks that are compatible with us.
