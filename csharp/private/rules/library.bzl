@@ -9,7 +9,7 @@ load(
 def _library_impl(ctx):
     providers = {}
 
-    stdlib = [ctx.attr.stdlib] if ctx.attr.stdlib else []
+    stdlib = [ctx.attr._stdlib] if ctx.attr.stdlib else []
 
     for tfm in ctx.attr.target_frameworks:
         providers[tfm] = AssemblyAction(
@@ -70,8 +70,12 @@ csharp_library = rule(
             default = [],
             allow_empty = True,
         ),
-        "stdlib": attr.label(
-            doc = "The standard library to reference. Set to None if you don't want one.",
+        "stdlib": attr.bool(
+            doc = "Whether to reference @net//:StandardLibrary (the default set of references that MSBuild adds to every project).",
+            default = True,
+        ),
+        "_stdlib": attr.label(
+            doc = "The standard library to reference.",
             default = "@net//:mscorlib", # TODO: change to @net//:StandardLibrary once it exists
         ),
         "deps": attr.label_list(

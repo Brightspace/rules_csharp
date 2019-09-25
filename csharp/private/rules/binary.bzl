@@ -10,7 +10,7 @@ load(
 def _binary_impl(ctx):
     providers = {}
 
-    stdlib = [ctx.attr.stdlib] if ctx.attr.stdlib else []
+    stdlib = [ctx.attr._stdlib] if ctx.attr.stdlib else []
 
     for tfm in ctx.attr.target_frameworks:
         if is_standard_framework(tfm):
@@ -84,7 +84,11 @@ csharp_binary = rule(
                   "output a console-style executable.",
             default = False,
         ),
-        "stdlib": attr.label(
+        "stdlib": attr.bool(
+            doc = "Whether to reference @net//:StandardLibrary (the default set of references that MSBuild adds to every project).",
+            default = True,
+        ),
+        "_stdlib": attr.label(
             doc = "The standard library to reference. Set to None if you don't want one.",
             default = "@net//:mscorlib", # TODO: change to @net//:StandardLibrary once it exists
         ),

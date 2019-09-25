@@ -11,7 +11,7 @@ def _nunit_test_impl(ctx):
     providers = {}
 
     extra_deps = [ctx.attr._nunitlite, ctx.attr._nunitframework]
-    stdlib = [ctx.attr.stdlib] if ctx.attr.stdlib else []
+    stdlib = [ctx.attr._stdlib] if ctx.attr.stdlib else []
 
     for tfm in ctx.attr.target_frameworks:
         if is_standard_framework(tfm):
@@ -80,7 +80,11 @@ csharp_nunit_test = rule(
             default = [],
             allow_empty = True,
         ),
-        "stdlib": attr.label(
+        "stdlib": attr.bool(
+            doc = "Whether to reference @net//:StandardLibrary (the default set of references that MSBuild adds to every project).",
+            default = True,
+        ),
+        "_stdlib": attr.label(
             doc = "The standard library to reference. Set to None if you don't want one.",
             default = "@net//:mscorlib", # TODO: change to @net//:StandardLibrary once it exists
         ),
