@@ -1,18 +1,27 @@
 load("//csharp/private:providers.bzl", "CSharpAssembly")
 load("//csharp/private:rules/imports.bzl", "import_library", "import_multiframework_library")
 
+NugetOnlyFrameworks = {
+    "net11": "net20",
+    "net30": "net40",
+    "net35": "net40",
+    "net403": "net45",
+}
+
 def _import_dll(dll, has_pdb, imports):
     path = dll.split("/")
 
     tfm = path[1]
-
-    # Ignore frameworks we don't support (like net35)
-    if tfm not in CSharpAssembly:
-        return
-
     lib_name = path[-1].rsplit(".", 1)[0]
-
     target_name = "%s-%s" % (lib_name, tfm)
+
+    if tfm in NugetOnlyFrameworks:
+        # Some frameworks we support from NuGet packages only, but we do it by
+        # pretending they are the next closest framework.
+        tfm = NugetOnlyFrameworks[tfm]
+    elif tfm not in CSharpAssembly:
+        # Ignore other frameworks
+        return
 
     if lib_name not in imports:
         imports[lib_name] = {tfm: target_name}
@@ -73,9 +82,9 @@ def setup_basic_nuget_package():
             netstandard1_6 = tfms.get("netstandard1.6"),
             netstandard2_0 = tfms.get("netstandard2.0"),
             netstandard2_1 = tfms.get("netstandard2.1"),
-            net20 = tfms.get("net20"),
-            net40 = tfms.get("net40"),
-            net45 = tfms.get("net45"),
+            net20 = tfms.get("net20") or tfms.get("net11"),
+            net40 = tfms.get("net40") or tfms.get("net35") or tfms.get("net30"),
+            net45 = tfms.get("net45") or tfms.get("net403"),
             net451 = tfms.get("net451"),
             net452 = tfms.get("net452"),
             net46 = tfms.get("net46"),
