@@ -29,7 +29,7 @@ csharp_library(
 csharp_library(
     name = "Bottom",
     srcs = ["Bottom.cs"],
-    stdlib = False, # TODO: remove this when we support netstandard1.4's stdlib
+    include_stdrefs = False, # TODO: remove this when we support netstandard1.4's stdlib
     target_frameworks= [
         "net48",
         "net40",

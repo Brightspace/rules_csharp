@@ -9,7 +9,7 @@ load(
 def _library_impl(ctx):
     providers = {}
 
-    stdlib = [ctx.attr._stdlib] if ctx.attr.stdlib else []
+    stdrefs = [ctx.attr._stdrefs] if ctx.attr.include_stdrefs else []
 
     for tfm in ctx.attr.target_frameworks:
         providers[tfm] = AssemblyAction(
@@ -19,7 +19,7 @@ def _library_impl(ctx):
             analyzers = ctx.attr.analyzers,
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
-            deps = ctx.attr.deps + stdlib,
+            deps = ctx.attr.deps + stdrefs,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
             srcs = ctx.files.srcs,
@@ -70,13 +70,13 @@ csharp_library = rule(
             default = [],
             allow_empty = True,
         ),
-        "stdlib": attr.bool(
-            doc = "Whether to reference @net//:StandardLibrary (the default set of references that MSBuild adds to every project).",
+        "include_stdrefs": attr.bool(
+            doc = "Whether to reference @net//:StandardReferences (the default set of references that MSBuild adds to every project).",
             default = True,
         ),
-        "_stdlib": attr.label(
-            doc = "The standard library to reference.",
-            default = "@net//:mscorlib", # TODO: change to @net//:StandardLibrary once it exists
+        "_stdrefs": attr.label(
+            doc = "The standard set of assemblies to reference.",
+            default = "@net//:mscorlib", # TODO: change to @net//:StandardReferences once it exists
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
