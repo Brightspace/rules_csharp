@@ -4,9 +4,6 @@ load(
     "FrameworkCompatibility",
 )
 
-# TODO: make this configurable
-DEFAULT_LANGVERSION = "7.3"
-
 def is_debug(ctx):
     # TODO: there are three modes: fastbuild, opt and dbg. fastbuild is supposed
     # to not output debug info (it's the default). We're treating fastbuild as
