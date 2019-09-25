@@ -8,3 +8,10 @@ csharp_library(
         "@ExamplePackageFolder//:SomePackage",
     ],
 )
+
+csharp_library(
+    name = "MultiTarget_DepOnPackageThatHasWeirdFrameworks",
+    target_frameworks = ["net20", "net40", "net48"],
+    srcs = ["Class.cs"],
+    deps = ["@ExamplePackageFolder//:SomePackage"],
+)

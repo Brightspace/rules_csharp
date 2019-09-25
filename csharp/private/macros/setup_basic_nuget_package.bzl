@@ -12,6 +12,7 @@ def _import_dll(dll, has_pdb, imports):
     path = dll.split("/")
 
     tfm = path[1]
+    nuget_only_framework = False
     lib_name = path[-1].rsplit(".", 1)[0]
     target_name = "%s-%s" % (lib_name, tfm)
 
@@ -19,13 +20,15 @@ def _import_dll(dll, has_pdb, imports):
         # Some frameworks we support from NuGet packages only, but we do it by
         # pretending they are the next closest framework.
         tfm = NugetOnlyFrameworks[tfm]
+        nuget_only_framework = True
     elif tfm not in CSharpAssembly:
         # Ignore other frameworks
         return
 
     if lib_name not in imports:
         imports[lib_name] = {tfm: target_name}
-    else:
+    elif tfm not in imports[lib_name] or not nuget_only_framework:
+        # We don't overwrite for nuget-only frameworks
         imports[lib_name][tfm] = target_name
 
     if dll in has_pdb:
