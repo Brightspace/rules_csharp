@@ -29,5 +29,10 @@ csharp_library(
 csharp_library(
     name = "Bottom",
     srcs = ["Bottom.cs"],
-    target_frameworks= ["net48", "net40", "netstandard1.4"],
+    target_frameworks= [
+        "net48",
+        "net40",
+        # TODO: change this back to "netstandard1.4" when we support it
+        "netstandard2.0",
+    ],
 )

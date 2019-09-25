@@ -11,6 +11,7 @@ def _nunit_test_impl(ctx):
     providers = {}
 
     extra_deps = [ctx.attr._nunitlite, ctx.attr._nunitframework]
+    stdlib = [ctx.attr.stdlib] if ctx.attr.stdlib else []
 
     for tfm in ctx.attr.target_frameworks:
         if is_standard_framework(tfm):
@@ -23,7 +24,7 @@ def _nunit_test_impl(ctx):
             analyzers = ctx.attr.analyzers,
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
-            deps = ctx.attr.deps + extra_deps,
+            deps = ctx.attr.deps + extra_deps + stdlib,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
             srcs = ctx.files.srcs + [ctx.file._nunit_shim],
@@ -78,6 +79,10 @@ csharp_nunit_test = rule(
             doc = "A list of preprocessor directive symbols to define.",
             default = [],
             allow_empty = True,
+        ),
+        "stdlib": attr.label(
+            doc = "The standard library to reference. Set to None if you don't want one.",
+            default = "@net//:mscorlib", # TODO: change to @net//:StandardLibrary once it exists
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
