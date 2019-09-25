@@ -7,9 +7,6 @@ load(
 # TODO: make this configurable
 DEFAULT_LANGVERSION = "7.3"
 
-# TODO: make this configurable
-DEFAULT_TARGET_FRAMEWORK = "net472"
-
 def is_debug(ctx):
     # TODO: there are three modes: fastbuild, opt and dbg. fastbuild is supposed
     # to not output debug info (it's the default). We're treating fastbuild as

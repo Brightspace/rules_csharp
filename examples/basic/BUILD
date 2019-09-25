@@ -9,6 +9,7 @@ load(
 csharp_binary(
     name = "hello",
     srcs = ["hello.cs"],
+    target_frameworks = ["net472"],
     deps = [":lib"],
 )
 
@@ -19,11 +20,13 @@ csharp_binary(
 csharp_nunit_test(
     name = "lib_test",
     srcs = ["libtest.cs"],
+    target_frameworks = ["net472"],
     deps = [":lib"],
 )
 
 csharp_library(
     name = "lib",
     srcs = ["lib.cs"],
+    target_frameworks = ["net472"],
     deps = ["@net//:System.Linq"],
 )
