@@ -154,6 +154,37 @@ SubsystemVersion = {
     "netcoreapp3.0": None,
 }
 
+DefaultLangVersion = {
+    "netstandard": "7.3",
+    "netstandard1.0": "7.3",
+    "netstandard1.1": "7.3",
+    "netstandard1.2": "7.3",
+    "netstandard1.3": "7.3",
+    "netstandard1.4": "7.3",
+    "netstandard1.5": "7.3",
+    "netstandard1.6": "7.3",
+    "netstandard2.0": "7.3",
+    "netstandard2.1": "7.3",
+    "net20": "7.3",
+    "net40": "7.3",
+    "net45": "7.3",
+    "net451": "7.3",
+    "net452": "7.3",
+    "net46": "7.3",
+    "net461": "7.3",
+    "net462": "7.3",
+    "net47": "7.3",
+    "net471": "7.3",
+    "net472": "7.3",
+    "net48": "7.3",
+    "netcoreapp1.0": "7.3",
+    "netcoreapp1.1": "7.3",
+    "netcoreapp2.0": "7.3",
+    "netcoreapp2.1": "7.3",
+    "netcoreapp2.2": "7.3",
+    "netcoreapp3.0": "8.0",
+}
+
 # A convenience used in attributes that need to specify that they accept any
 # kind of C# assembly. This is an array of single-element arrays.
 AnyTargetFramework = [[a] for a in CSharpAssembly.values()]

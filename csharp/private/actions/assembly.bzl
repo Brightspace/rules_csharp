@@ -4,7 +4,12 @@ load(
     "get_analyzer_dll",
     "use_highentropyva",
 )
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "CSharpAssembly", "SubsystemVersion")
+load(
+    "@d2l_rules_csharp//csharp/private:providers.bzl",
+    "CSharpAssembly",
+    "DefaultLangVersion",
+    "SubsystemVersion",
+)
 
 def _format_ref_arg(assembly):
     return "/r:" + assembly.path
@@ -82,7 +87,7 @@ def AssemblyAction(
     args.add("/warn:0")  # TODO: this stuff ought to be configurable
 
     args.add("/target:" + target)
-    args.add("/langversion:" + langversion)
+    args.add("/langversion:" + (langversion or DefaultLangVersion[target_framework]))
 
     if debug:
         args.add("/debug+")

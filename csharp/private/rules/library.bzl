@@ -2,7 +2,6 @@ load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework")
 load("@d2l_rules_csharp//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
     "@d2l_rules_csharp//csharp/private:common.bzl",
-    "DEFAULT_LANGVERSION",
     "fill_in_missing_frameworks",
     "is_debug",
 )
@@ -54,7 +53,6 @@ csharp_library = rule(
         ),
         "langversion": attr.string(
             doc = "The version string for the C# language.",
-            default = DEFAULT_LANGVERSION,
         ),
         "resources": attr.label_list(
             doc = "A list of files to embed in the DLL as resources.",
