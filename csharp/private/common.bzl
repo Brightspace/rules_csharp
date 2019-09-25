@@ -30,8 +30,12 @@ def collect_transitive_info(deps, tfm):
 
         assembly = dep[provider]
 
-        # See docs/ReferenceAssemblies.md for more info on why we use refout
-        direct_refs.append(assembly.refout or assembly.out)
+        # See docs/ReferenceAssemblies.md for more info on why we use (and prefer) refout
+        if assembly.refout:
+            direct_refs.append(assembly.refout)
+        elif assembly.out:
+            direct_refs.append(assembly.out)
+
         transitive_refs.append(assembly.transitive_refs)
 
         if assembly.out:

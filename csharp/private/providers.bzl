@@ -8,7 +8,7 @@ See docs/MultiTargetingDesign.md for more info.
 
 def _make_csharp_provider(tfm):
     return provider(
-        doc = "A (usually C#) DLL or exe, targetting %s. One of out or refout must exist." % tfm,
+        doc = "A (usually C#) DLL or exe, targetting %s." % tfm,
         fields = {
             "out": "a dll (for libraries and tests) or an exe (for binaries).",
             "refout": "A reference-only DLL/exe. See docs/ReferenceAssemblies.md for more info.",
