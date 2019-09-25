@@ -10,6 +10,8 @@ load(
 def _binary_impl(ctx):
     providers = {}
 
+    stdrefs = [ctx.attr._stdrefs] if ctx.attr.include_stdrefs else []
+
     for tfm in ctx.attr.target_frameworks:
         if is_standard_framework(tfm):
             fail("It doesn't make sense to build an executable for " + tfm)
@@ -21,7 +23,7 @@ def _binary_impl(ctx):
             analyzers = ctx.attr.analyzers,
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
-            deps = ctx.attr.deps,
+            deps = ctx.attr.deps + stdrefs,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
             srcs = ctx.files.srcs,
@@ -81,6 +83,14 @@ csharp_binary = rule(
             doc = "If true, output a winexe-style executable, otherwise" +
                   "output a console-style executable.",
             default = False,
+        ),
+        "include_stdrefs": attr.bool(
+            doc = "Whether to reference @net//:StandardReferences (the default set of references that MSBuild adds to every project).",
+            default = True,
+        ),
+        "_stdrefs": attr.label(
+            doc = "The standard set of assemblies to reference.",
+            default = "@net//:mscorlib", # TODO: change to @net//:StandardReferences once it exists
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
