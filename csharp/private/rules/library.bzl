@@ -63,6 +63,7 @@ csharp_library = rule(
         ),
         "out": attr.string(
             doc = "File name, without extension, of the built assembly.",
+            default = None,
         ),
         "target_frameworks": attr.string_list(
             doc = "A list of target framework monikers to build" +
