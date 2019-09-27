@@ -27,6 +27,7 @@ def _binary_impl(ctx):
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
             srcs = ctx.files.srcs,
+            out = ctx.attr.out,
             target = "winexe" if ctx.attr.winexe else "exe",
             target_framework = tfm,
             toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"],
@@ -68,6 +69,9 @@ csharp_binary = rule(
         "resources": attr.label_list(
             doc = "A list of files to embed in the DLL as resources.",
             allow_files = True,
+        ),
+        "out": attr.string(
+            doc = "File name, without extension, of the built assembly.",
         ),
         "target_frameworks": attr.string_list(
             doc = "A list of target framework monikers to build" +
