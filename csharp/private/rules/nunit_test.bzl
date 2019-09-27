@@ -28,6 +28,7 @@ def _nunit_test_impl(ctx):
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
             srcs = ctx.files.srcs + [ctx.file._nunit_shim],
+            out = ctx.attr.out,
             target = "exe",
             target_framework = tfm,
             toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"],
@@ -69,6 +70,9 @@ csharp_nunit_test = rule(
         "resources": attr.label_list(
             doc = "A list of files to embed in the DLL as resources.",
             allow_files = True,
+        ),
+        "out": attr.string(
+            doc = "File name, without extension, of the built assembly.",
         ),
         "target_frameworks": attr.string_list(
             doc = "A list of target framework monikers to build" +

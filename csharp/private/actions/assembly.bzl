@@ -53,15 +53,17 @@ def AssemblyAction(
         langversion,
         resources,
         srcs,
+        out,
         target,
         target_framework,
         toolchain):
 
+    out_file_name = name if out == "" else out
     out_dir = "bazelout/" + target_framework
     out_ext = "dll" if target == "library" else "exe"
-    out = actions.declare_file("%s/%s.%s" % (out_dir, name, out_ext))
-    refout = actions.declare_file("%s/%s.ref.%s" % (out_dir, name, out_ext))
-    pdb = actions.declare_file("%s/%s.pdb" % (out_dir, name))
+    out_file = actions.declare_file("%s/%s.%s" % (out_dir, out_file_name, out_ext))
+    refout = actions.declare_file("%s/%s.ref.%s" % (out_dir, out_file_name, out_ext))
+    pdb = actions.declare_file("%s/%s.pdb" % (out_dir, out_file_name))
 
     # Our goal is to match msbuild as much as reasonable
     # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically
@@ -101,7 +103,7 @@ def AssemblyAction(
     args.add("/debug:portable")
 
     # outputs
-    args.add("/out:" + out.path)
+    args.add("/out:" + out_file.path)
     args.add("/refout:" + refout.path)
     args.add("/pdb:" + pdb.path)
 
@@ -158,7 +160,7 @@ def AssemblyAction(
                      [toolchain.compiler],
             transitive = [refs],
         ),
-        outputs = [out, refout, pdb],
+        outputs = [out_file, refout, pdb],
         executable = toolchain.runtime,
         arguments = [
             toolchain.compiler.path,
@@ -171,7 +173,7 @@ def AssemblyAction(
     )
 
     return CSharpAssembly[target_framework](
-        out = out,
+        out = out_file,
         refout = refout,
         pdb = pdb,
         deps = deps,
