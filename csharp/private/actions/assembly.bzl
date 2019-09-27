@@ -58,7 +58,7 @@ def AssemblyAction(
         target_framework,
         toolchain):
 
-    out_file_name = name if out == None else out
+    out_file_name = name if out == "" else out
     out_dir = "bazelout/" + target_framework
     out_ext = "dll" if target == "library" else "exe"
     out_file = actions.declare_file("%s/%s.%s" % (out_dir, out_file_name, out_ext))

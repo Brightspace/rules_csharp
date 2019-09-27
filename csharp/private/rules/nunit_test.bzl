@@ -73,7 +73,7 @@ csharp_nunit_test = rule(
         ),
         "out": attr.string(
             doc = "File name, without extension, of the built assembly.",
-            default = None,
+            default = "",
         ),
         "target_frameworks": attr.string_list(
             doc = "A list of target framework monikers to build" +
