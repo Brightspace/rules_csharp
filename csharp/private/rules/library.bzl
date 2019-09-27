@@ -20,6 +20,7 @@ def _library_impl(ctx):
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
             deps = ctx.attr.deps + stdrefs,
+            keyfile = ctx.file.keyfile,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
             srcs = ctx.files.srcs,
@@ -53,6 +54,10 @@ csharp_library = rule(
         "analyzers": attr.label_list(
             doc = "A list of analyzer references.",
             providers = AnyTargetFramework,
+        ),
+        "keyfile": attr.label(
+            doc = "The key file used to sign the assembly with a strong name.",
+            allow_single_file = True,
         ),
         "langversion": attr.string(
             doc = "The version string for the C# language.",

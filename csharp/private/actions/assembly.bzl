@@ -50,6 +50,7 @@ def AssemblyAction(
         debug,
         defines,
         deps,
+        keyfile,
         langversion,
         resources,
         srcs,
@@ -128,6 +129,10 @@ def AssemblyAction(
         _framework_preprocessor_symbols(target_framework) + defines,
         map_each = _format_define,
     )
+
+    # keyfile
+    if keyfile != None:
+        args.add("/keyfile:" + keyfile.path)
 
     # TODO:
     # - appconfig(?)
