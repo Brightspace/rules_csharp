@@ -72,6 +72,7 @@ def nuget_package(
         name,
         package,
         version,
+        nuget_sources = None,
         sha256 = None,
         build_file = None,
         build_file_content = None):
@@ -84,15 +85,14 @@ def nuget_package(
     Args:
       name: A unique name for the package's workspace.
       package: The name of the package in the NuGet feed.
+      nuget_sources: A list of nuget package sources. Defaults to nuget.org.
       sha256: The SHA256 of the package.
       build_file: The path to a BUILD file to use for the package.
       build_file_content: A string containing the contents of a BUILD file.
     """
 
-    urls = [s + "/" + package + "/" + version for s in [
-        # TODO: allow this to be configured
-        "https://www.nuget.org/api/v2/package",
-    ]]
+    nuget_sources = nuget_sources or ["https://www.nuget.org/api/v2/package"]
+    urls = ["{}/{}/{}".format(s, package, version) for s in nuget_sources]
 
     build_file_content = _get_build_file_content(build_file, build_file_content)
 
