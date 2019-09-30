@@ -7,6 +7,7 @@ load(
 
 csharp_binary(
     name = "strong_binary_consumer",
+    srcs = ["min_main.cs"],
     keyfile = "example.snk",
     target_frameworks = ["net472"],
     deps = [":strong_lib"],
@@ -14,6 +15,7 @@ csharp_binary(
 
 csharp_binary(
     name = "binary_consumer",
+    srcs = ["min_main.cs"],
     target_frameworks = ["net472"],
     deps = [":strong_lib"],
 )
