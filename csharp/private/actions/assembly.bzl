@@ -155,14 +155,16 @@ def AssemblyAction(
     args.set_param_file_format("multiline")
     args.use_param_file("@%s")
 
+    direct_inputs = srcs + resources + analyzer_assemblies + additionalfiles + [toolchain.compiler]
+    direct_inputs += [keyfile] if keyfile else []
+
     # dotnet.exe csc.dll /noconfig <other csc args>
     # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/command-line-building-with-csc-exe
     actions.run(
         mnemonic = "CSharpCompile",
         progress_message = "Compiling " + name,
         inputs = depset(
-            direct = srcs + resources + analyzer_assemblies + additionalfiles +
-                     [toolchain.compiler],
+            direct = direct_inputs,
             transitive = [refs],
         ),
         outputs = [out_file, refout, pdb],
