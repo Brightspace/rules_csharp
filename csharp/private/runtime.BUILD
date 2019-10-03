@@ -9,3 +9,9 @@ exports_files(
     ]),
     visibility = ["//visibility:public"],
 )
+
+filegroup(
+    name = "everything",
+    srcs = glob(["**/*"]),
+    visibility = ["//visibility:public"],
+)
