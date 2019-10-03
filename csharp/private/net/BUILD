@@ -1,6 +1,28 @@
 load("@d2l_rules_csharp//csharp/private:rules/imports.bzl", "import_multiframework_library")
 
 import_multiframework_library(
+    name = "StandardReferences",
+    net20 = "@net20//:StandardReferences",
+    net40 = "@net40//:StandardReferences",
+    net45 = "@net45//:StandardReferences",
+    net451 = "@net451//:StandardReferences",
+    net452 = "@net452//:StandardReferences",
+    net46 = "@net46//:StandardReferences",
+    net461 = "@net461//:StandardReferences",
+    net462 = "@net462//:StandardReferences",
+    net47 = "@net47//:StandardReferences",
+    net471 = "@net471//:StandardReferences",
+    net472 = "@net472//:StandardReferences",
+    net48 = "@net48//:StandardReferences",
+    netstandard2_0 = "@NetStandard.Library//:StandardReferences",
+    netstandard2_1 = "@NetStandard.Library.Ref//:StandardReferences",
+    netcoreapp2_1 = "@netcoreapp2.1//:StandardReferences",
+    netcoreapp2_2 = "@netcoreapp2.2//:StandardReferences",
+    netcoreapp3_0 = "@netcoreapp3.0//:StandardReferences",
+    visibility = ["//visibility:public"],
+)
+
+import_multiframework_library(
     name = "Accessibility",
     net20 = "@net20//:Accessibility",
     net40 = "@net40//:Accessibility",

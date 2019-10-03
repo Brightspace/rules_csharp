@@ -28,5 +28,4 @@ csharp_library(
     name = "lib",
     srcs = ["lib.cs"],
     target_frameworks = ["net472"],
-    deps = ["@net//:System.Linq"],
 )

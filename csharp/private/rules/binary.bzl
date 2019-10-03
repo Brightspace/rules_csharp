@@ -99,7 +99,7 @@ csharp_binary = rule(
         ),
         "_stdrefs": attr.label(
             doc = "The standard set of assemblies to reference.",
-            default = "@net//:mscorlib", # TODO: change to @net//:StandardReferences once it exists
+            default = "@net//:StandardReferences",
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
