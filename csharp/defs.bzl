@@ -12,6 +12,10 @@ load(
     _csharp_library = "csharp_library",
 )
 load(
+    "//csharp/private:rules/library_set.bzl",
+    _csharp_library_set = "csharp_library_set",
+)
+load(
     "//csharp/private:rules/nunit_test.bzl",
     _csharp_nunit_test = "csharp_nunit_test",
 )
@@ -32,6 +36,7 @@ load(
 
 csharp_binary = _csharp_binary
 csharp_library = _csharp_library
+csharp_library_set = _csharp_library_set
 csharp_nunit_test = _csharp_nunit_test
 csharp_register_toolchains = _csharp_register_toolchains
 csharp_repositories = _csharp_repositories
