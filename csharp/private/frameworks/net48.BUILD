@@ -1231,6 +1231,9 @@ import_library(
     name = "System.EnterpriseServices-noncyclic",
     target_framework = "net48",
     refdll = "//:build/.NETFramework/v4.8/System.EnterpriseServices.dll",
+    native_dlls = [
+        "//:build/.NETFramework/v4.8/System.EnterpriseServices.Wrapper.dll",
+    ],
     deps = [
         "//:mscorlib",
         "//:System",

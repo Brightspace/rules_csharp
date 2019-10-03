@@ -109,7 +109,7 @@ def AssemblyAction(
     args.add("/pdb:" + pdb.path)
 
     # assembly references
-    (refs, runfiles) = collect_transitive_info(deps, target_framework)
+    (refs, runfiles, native_dlls) = collect_transitive_info(deps, target_framework)
     args.add_all(refs, map_each = _format_ref_arg)
 
     # analyzers
@@ -165,7 +165,7 @@ def AssemblyAction(
         progress_message = "Compiling " + name,
         inputs = depset(
             direct = direct_inputs,
-            transitive = [refs],
+            transitive = [refs] + [native_dlls],
         ),
         outputs = [out_file, refout, pdb],
         executable = toolchain.runtime,
@@ -183,6 +183,7 @@ def AssemblyAction(
         out = out_file,
         refout = refout,
         pdb = pdb,
+        native_dlls = native_dlls,
         deps = deps,
         transitive_refs = refs,
         transitive_runfiles = runfiles,

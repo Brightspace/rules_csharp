@@ -10,13 +10,14 @@ def _library_set(ctx):
 
     tfm = ctx.attr.target_framework
 
-    (refs, runfiles) = collect_transitive_info(ctx.attr.deps, tfm)
+    (refs, runfiles, native_dlls) = collect_transitive_info(ctx.attr.deps, tfm)
 
     providers = {
         tfm: CSharpAssembly[tfm](
             out = None,
             refout = None,
             pdb = None,
+            native_dlls = native_dlls,
             deps = ctx.attr.deps,
             transitive_refs = refs,
             transitive_runfiles = runfiles,
