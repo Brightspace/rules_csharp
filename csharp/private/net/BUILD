@@ -1536,40 +1536,6 @@ import_multiframework_library(
 )
 
 import_multiframework_library(
-    name = "System.EnterpriseServices.Thunk",
-    net20 = "@net20//:System.EnterpriseServices.Thunk",
-    net40 = "@net40//:System.EnterpriseServices.Thunk",
-    net45 = "@net45//:System.EnterpriseServices.Thunk",
-    net451 = "@net451//:System.EnterpriseServices.Thunk",
-    net452 = "@net452//:System.EnterpriseServices.Thunk",
-    net46 = "@net46//:System.EnterpriseServices.Thunk",
-    net461 = "@net461//:System.EnterpriseServices.Thunk",
-    net462 = "@net462//:System.EnterpriseServices.Thunk",
-    net47 = "@net47//:System.EnterpriseServices.Thunk",
-    net471 = "@net471//:System.EnterpriseServices.Thunk",
-    net472 = "@net472//:System.EnterpriseServices.Thunk",
-    net48 = "@net48//:System.EnterpriseServices.Thunk",
-    visibility = ["//visibility:public"],
-)
-
-import_multiframework_library(
-    name = "System.EnterpriseServices.Wrapper",
-    net20 = "@net20//:System.EnterpriseServices.Thunk",
-    net40 = "@net40//:System.EnterpriseServices.Thunk",
-    net45 = "@net45//:System.EnterpriseServices.Thunk",
-    net451 = "@net451//:System.EnterpriseServices.Thunk",
-    net452 = "@net452//:System.EnterpriseServices.Thunk",
-    net46 = "@net46//:System.EnterpriseServices.Thunk",
-    net461 = "@net461//:System.EnterpriseServices.Thunk",
-    net462 = "@net462//:System.EnterpriseServices.Thunk",
-    net47 = "@net47//:System.EnterpriseServices.Thunk",
-    net471 = "@net471//:System.EnterpriseServices.Thunk",
-    net472 = "@net472//:System.EnterpriseServices.Thunk",
-    net48 = "@net48//:System.EnterpriseServices.Thunk",
-    visibility = ["//visibility:public"],
-)
-
-import_multiframework_library(
     name = "System.Globalization",
     net45 = "@net45//:System.Globalization",
     net451 = "@net451//:System.Globalization",
