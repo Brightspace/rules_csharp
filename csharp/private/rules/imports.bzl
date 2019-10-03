@@ -20,15 +20,18 @@ def _import_library(ctx):
     if ctx.file.refdll != None:
         files.append(ctx.file.refdll)
 
+    files += ctx.files.native_dlls
+
     tfm = ctx.attr.target_framework
 
-    (refs, runfiles) = collect_transitive_info(ctx.attr.deps, tfm)
+    (refs, runfiles, native_dlls) = collect_transitive_info(ctx.attr.deps, tfm)
 
     providers = {
         tfm: CSharpAssembly[tfm](
             out = ctx.file.dll,
             refout = ctx.file.refdll,
             pdb = ctx.file.pdb,
+            native_dlls = depset(direct = ctx.files.native_dlls, transitive = [native_dlls]),
             deps = ctx.attr.deps,
             transitive_refs = refs,
             transitive_runfiles = runfiles,
@@ -59,6 +62,10 @@ import_library = rule(
         "refdll": attr.label(
             doc = "A metadata-only DLL, suitable for compiling against but not running",
             allow_single_file = [".dll"],
+        ),
+        "native_dlls": attr.label_list(
+            doc = "A list of native dlls, which while unreferenced, are required for running and compiling",
+            allow_files = [".dll"],
         ),
         "deps": attr.label_list(
             doc = "other DLLs that this DLL depends on.",

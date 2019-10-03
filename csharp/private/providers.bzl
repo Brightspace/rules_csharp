@@ -13,6 +13,7 @@ def _make_csharp_provider(tfm):
             "out": "a dll (for libraries and tests) or an exe (for binaries).",
             "refout": "A reference-only DLL/exe. See docs/ReferenceAssemblies.md for more info.",
             "pdb": "debug symbols",
+            "native_dlls": "A list of native DLLs required to build and run this assembly",
             "deps": "the non-transitive dependencies for this assembly (used by import_multiframework_library).",
             "transitive_refs": "A list of other assemblies to reference when referencing this assembly in a compilation.",
             "transitive_runfiles": "Runfiles from the transitive dependencies.",

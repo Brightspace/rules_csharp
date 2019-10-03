@@ -21,6 +21,7 @@ def collect_transitive_info(deps, tfm):
     transitive_refs = []
     direct_runfiles = []
     transitive_runfiles = []
+    native_dlls = []
 
     provider = CSharpAssembly[tfm]
 
@@ -44,10 +45,12 @@ def collect_transitive_info(deps, tfm):
             direct_runfiles.append(assembly.pdb)
 
         transitive_runfiles.append(assembly.transitive_runfiles)
+        native_dlls.append(assembly.native_dlls)
 
     return (
         depset(direct = direct_refs, transitive = transitive_refs),
         depset(direct = direct_runfiles, transitive = transitive_runfiles),
+        depset(transitive = native_dlls),
     )
 
 def _get_provided_by_netstandard(providerInfo):
@@ -80,11 +83,12 @@ def fill_in_missing_frameworks(providers):
         # newer netstandard will be preferred, if applicable
         for (base, compatible_tfm) in sorted([(providers[compatible_tfm], compatible_tfm) for compatible_tfm in FrameworkCompatibility[tfm] if compatible_tfm in providers], key=_get_provided_by_netstandard):
             # Copy the output from the compatible tfm, re-resolving the deps
-            (refs, runfiles) = collect_transitive_info(base.deps, tfm)
+            (refs, runfiles, native_dlls) = collect_transitive_info(base.deps, tfm)
             providers[tfm] = CSharpAssembly[tfm](
                 out = base.out,
                 refout = base.refout,
                 pdb = base.pdb,
+                native_dlls = native_dlls,
                 deps = base.deps,
                 transitive_refs = refs,
                 transitive_runfiles = runfiles,

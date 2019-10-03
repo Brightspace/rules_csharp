@@ -453,6 +453,9 @@ import_library(
     name = "System.EnterpriseServices-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.EnterpriseServices.dll",
+    native_dlls = [
+        "//:build/.NETFramework/v2.0/System.EnterpriseServices.Wrapper.dll",
+    ],
     deps = [
         "//:Microsoft.VisualC",
         "//:mscorlib",
