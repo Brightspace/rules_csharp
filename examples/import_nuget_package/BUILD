@@ -9,3 +9,11 @@ csharp_library(
         "@ExamplePackageFolder//:SomePackage",
     ],
 )
+
+csharp_library(
+    name = "OldThing",
+    srcs = ["Class.cs"],
+    target_frameworks = ["net11"],
+    include_stdrefs = False,
+    deps = ["@ExamplePackageFolder//:SomePackage"],
+)
