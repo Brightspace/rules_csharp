@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>{FRAMEWORK}</TargetFrameworks>
+        <EnableDefaultEmbeddedResourceItems>False</EnableDefaultEmbeddedResourceItems>
+    </PropertyGroup>
+
+    <ItemGroup>
+{RESOURCES}
+    </ItemGroup>
+</Project>
