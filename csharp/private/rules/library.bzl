@@ -34,7 +34,8 @@ def _library_impl(ctx):
 
     result = providers.values()
     result.append(DefaultInfo(
-        files = depset([result[0].out, result[0].refout, result[0].pdb]),
+        files = depset([result[0].out]),
+        default_runfiles = ctx.runfiles(files = [result[0].pdb]),
     ))
 
     return result
