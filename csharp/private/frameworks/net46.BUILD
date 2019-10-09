@@ -6,6 +6,7 @@ load("@d2l_rules_csharp//csharp:defs.bzl", "import_library", "csharp_library_set
 csharp_library_set(
     name = "StandardReferences",
     target_framework = "net46",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -25,6 +26,7 @@ import_library(
     name = "Accessibility",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Accessibility.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -33,6 +35,7 @@ import_library(
     name = "CustomMarshalers",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/CustomMarshalers.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -41,6 +44,7 @@ import_library(
     name = "ISymWrapper",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/ISymWrapper.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -52,6 +56,7 @@ import_library(
     name = "Microsoft.Activities.Build",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.Activities.Build.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",
@@ -69,6 +74,7 @@ import_library(
     name = "Microsoft.Build",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.Build.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Engine",
         "//:Microsoft.Build.Framework",
@@ -85,6 +91,7 @@ import_library(
     name = "Microsoft.Build.Conversion.v4.0",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.Build.Conversion.v4.0.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build",
         "//:Microsoft.Build.Engine",
@@ -100,6 +107,7 @@ import_library(
     name = "Microsoft.Build.Engine",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.Build.Engine.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
@@ -114,6 +122,7 @@ import_library(
     name = "Microsoft.Build.Framework",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.Build.Framework.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -126,6 +135,7 @@ import_library(
     name = "Microsoft.Build.Tasks.v4.0",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.Build.Tasks.v4.0.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",
@@ -144,6 +154,7 @@ import_library(
     name = "Microsoft.Build.Utilities.v4.0",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.Build.Utilities.v4.0.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
@@ -158,6 +169,7 @@ import_library(
     name = "Microsoft.CSharp",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.CSharp.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -171,6 +183,7 @@ import_library(
     name = "Microsoft.JScript",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.JScript.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -183,6 +196,7 @@ import_library(
     name = "Microsoft.VisualBasic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.VisualBasic.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -201,6 +215,7 @@ import_library(
     name = "Microsoft.VisualBasic.Compatibility",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.VisualBasic.Compatibility.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.VisualBasic",
         "//:mscorlib",
@@ -217,6 +232,7 @@ import_library(
     name = "Microsoft.VisualBasic.Compatibility.Data",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.VisualBasic.Compatibility.Data.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.VisualBasic",
         "//:Microsoft.VisualBasic.Compatibility",
@@ -233,6 +249,7 @@ import_library(
     name = "Microsoft.VisualC",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.VisualC.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -241,6 +258,7 @@ import_library(
     name = "Microsoft.VisualC.STLCLR",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Microsoft.VisualC.STLCLR.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -252,6 +270,7 @@ import_library(
     name = "mscorlib",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/mscorlib.dll",
+    version_smearing = False,
     visibility = ["@net//:__pkg__"],
 )
 
@@ -259,6 +278,7 @@ import_library(
     name = "PresentationBuildTasks",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/PresentationBuildTasks.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",
@@ -273,6 +293,7 @@ import_library(
     name = "PresentationCore",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/PresentationCore.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -292,6 +313,7 @@ import_library(
     name = "PresentationFramework",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/PresentationFramework.dll",
+    version_smearing = False,
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -315,6 +337,7 @@ import_library(
     name = "PresentationFramework.Aero",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/PresentationFramework.Aero.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -330,6 +353,7 @@ import_library(
     name = "PresentationFramework.Aero2",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/PresentationFramework.Aero2.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -345,6 +369,7 @@ import_library(
     name = "PresentationFramework.AeroLite",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/PresentationFramework.AeroLite.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -360,6 +385,7 @@ import_library(
     name = "PresentationFramework.Classic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/PresentationFramework.Classic.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -375,6 +401,7 @@ import_library(
     name = "PresentationFramework.Luna",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/PresentationFramework.Luna.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -390,6 +417,7 @@ import_library(
     name = "PresentationFramework.Royale",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/PresentationFramework.Royale.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -411,6 +439,7 @@ import_library(
     name = "ReachFramework-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/ReachFramework.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -427,6 +456,7 @@ import_library(
     name = "sysglobl",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/sysglobl.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -438,6 +468,7 @@ import_library(
     name = "System",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Configuration-noncyclic",
@@ -450,6 +481,7 @@ import_library(
     name = "System.Activities",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Activities.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.VisualBasic",
         "//:mscorlib",
@@ -469,6 +501,7 @@ import_library(
     name = "System.Activities.Core.Presentation",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Activities.Core.Presentation.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -494,6 +527,7 @@ import_library(
     name = "System.Activities.DurableInstancing",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Activities.DurableInstancing.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -513,6 +547,7 @@ import_library(
     name = "System.Activities.Presentation",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Activities.Presentation.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -541,6 +576,7 @@ import_library(
     name = "System.AddIn",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.AddIn.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -554,6 +590,7 @@ import_library(
     name = "System.AddIn.Contract",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.AddIn.Contract.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -562,6 +599,7 @@ import_library(
     name = "System.Collections",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Collections.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -574,6 +612,7 @@ import_library(
     name = "System.Collections.Concurrent",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Collections.Concurrent.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -585,6 +624,7 @@ import_library(
     name = "System.ComponentModel",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.ComponentModel.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -596,6 +636,7 @@ import_library(
     name = "System.ComponentModel.Annotations",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.ComponentModel.Annotations.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.ComponentModel.DataAnnotations",
@@ -607,6 +648,7 @@ import_library(
     name = "System.ComponentModel.Composition",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ComponentModel.Composition.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -619,6 +661,7 @@ import_library(
     name = "System.ComponentModel.Composition.Registration",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ComponentModel.Composition.Registration.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -633,6 +676,7 @@ import_library(
     name = "System.ComponentModel.DataAnnotations",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ComponentModel.DataAnnotations.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -645,6 +689,7 @@ import_library(
     name = "System.ComponentModel.EventBasedAsync",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.ComponentModel.EventBasedAsync.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -662,6 +707,7 @@ import_library(
     name = "System.Configuration-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Configuration.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Core-noncyclic",
@@ -674,6 +720,7 @@ import_library(
     name = "System.Configuration.Install",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Configuration.Install.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -694,6 +741,7 @@ import_library(
     name = "System.Core-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Core.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Numerics",
@@ -706,6 +754,7 @@ import_library(
     name = "System.Data",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -723,6 +772,7 @@ import_library(
     name = "System.Data.DataSetExtensions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.DataSetExtensions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -736,6 +786,7 @@ import_library(
     name = "System.Data.Entity",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.Entity.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -755,6 +806,7 @@ import_library(
     name = "System.Data.Entity.Design",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.Entity.Design.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -773,6 +825,7 @@ import_library(
     name = "System.Data.Linq",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.Linq.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -796,6 +849,7 @@ import_library(
     name = "System.Data.OracleClient-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.OracleClient.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -807,6 +861,7 @@ import_library(
     name = "System.Data.Services",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.Services.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -831,6 +886,7 @@ import_library(
     name = "System.Data.Services.Client",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.Services.Client.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -851,6 +907,7 @@ import_library(
     name = "System.Data.Services.Design-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.Services.Design.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -873,6 +930,7 @@ import_library(
     name = "System.Data.SqlXml-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Data.SqlXml.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
 )
 
@@ -886,6 +944,7 @@ import_library(
     name = "System.Deployment-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Deployment.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -906,6 +965,7 @@ import_library(
     name = "System.Design-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Design.dll",
+    version_smearing = False,
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -926,6 +986,7 @@ import_library(
     name = "System.Device",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Device.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -937,6 +998,7 @@ import_library(
     name = "System.Diagnostics.Contracts",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Diagnostics.Contracts.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -945,6 +1007,7 @@ import_library(
     name = "System.Diagnostics.Debug",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Diagnostics.Debug.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -956,6 +1019,7 @@ import_library(
     name = "System.Diagnostics.Tools",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Diagnostics.Tools.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -967,6 +1031,7 @@ import_library(
     name = "System.Diagnostics.Tracing",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Diagnostics.Tracing.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -975,6 +1040,7 @@ import_library(
     name = "System.DirectoryServices",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.DirectoryServices.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -988,6 +1054,7 @@ import_library(
     name = "System.DirectoryServices.AccountManagement",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.DirectoryServices.AccountManagement.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1003,6 +1070,7 @@ import_library(
     name = "System.DirectoryServices.Protocols",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.DirectoryServices.Protocols.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1016,6 +1084,7 @@ import_library(
     name = "System.Drawing",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Drawing.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1028,6 +1097,7 @@ import_library(
     name = "System.Drawing.Design",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Drawing.Design.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1042,6 +1112,7 @@ import_library(
     name = "System.Dynamic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Dynamic.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1054,6 +1125,7 @@ import_library(
     name = "System.Dynamic.Runtime",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Dynamic.Runtime.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1071,6 +1143,7 @@ import_library(
     name = "System.EnterpriseServices-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.EnterpriseServices.dll",
+    version_smearing = False,
     native_dlls = [
         "//:build/.NETFramework/v4.6/System.EnterpriseServices.Wrapper.dll",
     ],
@@ -1087,6 +1160,7 @@ import_library(
     name = "System.Globalization",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Globalization.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1095,6 +1169,7 @@ import_library(
     name = "System.IdentityModel",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.IdentityModel.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1112,6 +1187,7 @@ import_library(
     name = "System.IdentityModel.Selectors",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.IdentityModel.Selectors.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1126,6 +1202,7 @@ import_library(
     name = "System.IdentityModel.Services",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.IdentityModel.Services.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1144,6 +1221,7 @@ import_library(
     name = "System.IO",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.IO.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1155,6 +1233,7 @@ import_library(
     name = "System.IO.Compression",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.IO.Compression.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1166,6 +1245,7 @@ import_library(
     name = "System.IO.Compression.FileSystem",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.IO.Compression.FileSystem.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1178,6 +1258,7 @@ import_library(
     name = "System.IO.Log",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.IO.Log.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1189,6 +1270,7 @@ import_library(
     name = "System.Linq",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Linq.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1200,6 +1282,7 @@ import_library(
     name = "System.Linq.Expressions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Linq.Expressions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1211,6 +1294,7 @@ import_library(
     name = "System.Linq.Parallel",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Linq.Parallel.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1222,6 +1306,7 @@ import_library(
     name = "System.Linq.Queryable",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Linq.Queryable.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1233,6 +1318,7 @@ import_library(
     name = "System.Management",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Management.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.JScript",
         "//:mscorlib",
@@ -1246,6 +1332,7 @@ import_library(
     name = "System.Management.Instrumentation",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Management.Instrumentation.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1260,6 +1347,7 @@ import_library(
     name = "System.Messaging",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Messaging.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1277,6 +1365,7 @@ import_library(
     name = "System.Net",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Net.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1288,6 +1377,7 @@ import_library(
     name = "System.Net.Http",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Net.Http.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1300,6 +1390,7 @@ import_library(
     name = "System.Net.Http.WebRequest",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Net.Http.WebRequest.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1312,6 +1403,7 @@ import_library(
     name = "System.Net.NetworkInformation",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Net.NetworkInformation.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1323,6 +1415,7 @@ import_library(
     name = "System.Net.Primitives",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Net.Primitives.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1334,6 +1427,7 @@ import_library(
     name = "System.Net.Requests",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Net.Requests.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1345,6 +1439,7 @@ import_library(
     name = "System.Net.WebHeaderCollection",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Net.WebHeaderCollection.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1356,6 +1451,7 @@ import_library(
     name = "System.Numerics",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Numerics.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1364,6 +1460,7 @@ import_library(
     name = "System.Numerics.Vectors",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Numerics.Vectors.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Numerics",
@@ -1375,6 +1472,7 @@ import_library(
     name = "System.ObjectModel",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.ObjectModel.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1392,6 +1490,7 @@ import_library(
     name = "System.Printing-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Printing.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -1407,6 +1506,7 @@ import_library(
     name = "System.Reflection",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Reflection.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1415,6 +1515,7 @@ import_library(
     name = "System.Reflection.Context",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Reflection.Context.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1423,6 +1524,7 @@ import_library(
     name = "System.Reflection.Emit",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Reflection.Emit.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1431,6 +1533,7 @@ import_library(
     name = "System.Reflection.Emit.ILGeneration",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Reflection.Emit.ILGeneration.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1439,6 +1542,7 @@ import_library(
     name = "System.Reflection.Emit.Lightweight",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Reflection.Emit.Lightweight.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1447,6 +1551,7 @@ import_library(
     name = "System.Reflection.Extensions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Reflection.Extensions.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1455,6 +1560,7 @@ import_library(
     name = "System.Reflection.Primitives",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Reflection.Primitives.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1463,6 +1569,7 @@ import_library(
     name = "System.Resources.ResourceManager",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Resources.ResourceManager.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1471,6 +1578,7 @@ import_library(
     name = "System.Runtime",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Runtime.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1490,6 +1598,7 @@ import_library(
     name = "System.Runtime.Caching-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Runtime.Caching.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1501,6 +1610,7 @@ import_library(
     name = "System.Runtime.DurableInstancing",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Runtime.DurableInstancing.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1516,6 +1626,7 @@ import_library(
     name = "System.Runtime.Extensions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Runtime.Extensions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1527,6 +1638,7 @@ import_library(
     name = "System.Runtime.Handles",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Runtime.Handles.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1538,6 +1650,7 @@ import_library(
     name = "System.Runtime.InteropServices",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Runtime.InteropServices.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1550,6 +1663,7 @@ import_library(
     name = "System.Runtime.InteropServices.WindowsRuntime",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Runtime.InteropServices.WindowsRuntime.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1558,6 +1672,7 @@ import_library(
     name = "System.Runtime.Numerics",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Runtime.Numerics.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Numerics",
@@ -1569,6 +1684,7 @@ import_library(
     name = "System.Runtime.Remoting",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Runtime.Remoting.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1584,6 +1700,7 @@ import_library(
     name = "System.Runtime.Serialization",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Runtime.Serialization.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1597,6 +1714,7 @@ import_library(
     name = "System.Runtime.Serialization.Formatters.Soap",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Runtime.Serialization.Formatters.Soap.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -1608,6 +1726,7 @@ import_library(
     name = "System.Runtime.Serialization.Json",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Runtime.Serialization.Json.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Runtime.Serialization",
@@ -1619,6 +1738,7 @@ import_library(
     name = "System.Runtime.Serialization.Primitives",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Runtime.Serialization.Primitives.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Runtime.Serialization",
@@ -1630,6 +1750,7 @@ import_library(
     name = "System.Runtime.Serialization.Xml",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Runtime.Serialization.Xml.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Runtime.Serialization",
@@ -1647,6 +1768,7 @@ import_library(
     name = "System.Security-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Security.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Xml-noncyclic",
@@ -1657,6 +1779,7 @@ import_library(
     name = "System.Security.Principal",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Security.Principal.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1671,6 +1794,7 @@ import_library(
     name = "System.ServiceModel-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ServiceModel.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1699,6 +1823,7 @@ import_library(
     name = "System.ServiceModel.Activation",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ServiceModel.Activation.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1723,6 +1848,7 @@ import_library(
     name = "System.ServiceModel.Activities",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ServiceModel.Activities.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1746,6 +1872,7 @@ import_library(
     name = "System.ServiceModel.Channels",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ServiceModel.Channels.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1764,6 +1891,7 @@ import_library(
     name = "System.ServiceModel.Discovery",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ServiceModel.Discovery.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1781,6 +1909,7 @@ import_library(
     name = "System.ServiceModel.Duplex",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.ServiceModel.Duplex.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -1792,6 +1921,7 @@ import_library(
     name = "System.ServiceModel.Http",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.ServiceModel.Http.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -1803,6 +1933,7 @@ import_library(
     name = "System.ServiceModel.NetTcp",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.ServiceModel.NetTcp.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -1814,6 +1945,7 @@ import_library(
     name = "System.ServiceModel.Primitives",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.ServiceModel.Primitives.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -1825,6 +1957,7 @@ import_library(
     name = "System.ServiceModel.Routing",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ServiceModel.Routing.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1843,6 +1976,7 @@ import_library(
     name = "System.ServiceModel.Security",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.ServiceModel.Security.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -1854,6 +1988,7 @@ import_library(
     name = "System.ServiceModel.Web",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ServiceModel.Web.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1875,6 +2010,7 @@ import_library(
     name = "System.ServiceProcess",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.ServiceProcess.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1889,6 +2025,7 @@ import_library(
     name = "System.Speech",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Speech.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1901,6 +2038,7 @@ import_library(
     name = "System.Text.Encoding",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Text.Encoding.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1909,6 +2047,7 @@ import_library(
     name = "System.Text.Encoding.Extensions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Text.Encoding.Extensions.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1917,6 +2056,7 @@ import_library(
     name = "System.Text.RegularExpressions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Text.RegularExpressions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1928,6 +2068,7 @@ import_library(
     name = "System.Threading",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Threading.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1940,6 +2081,7 @@ import_library(
     name = "System.Threading.Tasks",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Threading.Tasks.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Core",
@@ -1951,6 +2093,7 @@ import_library(
     name = "System.Threading.Tasks.Parallel",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Threading.Tasks.Parallel.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1959,6 +2102,7 @@ import_library(
     name = "System.Threading.Timer",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Threading.Timer.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1967,6 +2111,7 @@ import_library(
     name = "System.Transactions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Transactions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -1987,6 +2132,7 @@ import_library(
     name = "System.Web-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Tasks.v4.0",
@@ -2015,6 +2161,7 @@ import_library(
     name = "System.Web.Abstractions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.Abstractions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Web",
@@ -2026,6 +2173,7 @@ import_library(
     name = "System.Web.ApplicationServices",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.ApplicationServices.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2038,6 +2186,7 @@ import_library(
     name = "System.Web.DataVisualization",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.DataVisualization.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2053,6 +2202,7 @@ import_library(
     name = "System.Web.DataVisualization.Design",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.DataVisualization.Design.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2072,6 +2222,7 @@ import_library(
     name = "System.Web.DynamicData",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.DynamicData.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2093,6 +2244,7 @@ import_library(
     name = "System.Web.DynamicData.Design",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.DynamicData.Design.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2109,6 +2261,7 @@ import_library(
     name = "System.Web.Entity",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.Entity.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2126,6 +2279,7 @@ import_library(
     name = "System.Web.Entity.Design",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.Entity.Design.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2146,6 +2300,7 @@ import_library(
     name = "System.Web.Extensions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.Extensions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2174,6 +2329,7 @@ import_library(
     name = "System.Web.Extensions.Design",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.Extensions.Design.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2192,6 +2348,7 @@ import_library(
     name = "System.Web.Mobile",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.Mobile.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2212,6 +2369,7 @@ import_library(
     name = "System.Web.RegularExpressions",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.RegularExpressions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2223,6 +2381,7 @@ import_library(
     name = "System.Web.Routing",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.Routing.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Web",
@@ -2240,6 +2399,7 @@ import_library(
     name = "System.Web.Services-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Web.Services.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2254,6 +2414,7 @@ import_library(
     name = "System.Windows",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Windows.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2265,6 +2426,7 @@ import_library(
     name = "System.Windows.Controls.Ribbon",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Windows.Controls.Ribbon.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -2283,6 +2445,7 @@ import_library(
     name = "System.Windows.Forms",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Windows.Forms.dll",
+    version_smearing = False,
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -2302,6 +2465,7 @@ import_library(
     name = "System.Windows.Forms.DataVisualization",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Windows.Forms.DataVisualization.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2317,6 +2481,7 @@ import_library(
     name = "System.Windows.Forms.DataVisualization.Design",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Windows.Forms.DataVisualization.Design.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2333,6 +2498,7 @@ import_library(
     name = "System.Windows.Input.Manipulations",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Windows.Input.Manipulations.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2345,6 +2511,7 @@ import_library(
     name = "System.Windows.Presentation",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Windows.Presentation.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -2361,6 +2528,7 @@ import_library(
     name = "System.Workflow.Activities",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Workflow.Activities.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2383,6 +2551,7 @@ import_library(
     name = "System.Workflow.ComponentModel",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Workflow.ComponentModel.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Tasks.v4.0",
@@ -2410,6 +2579,7 @@ import_library(
     name = "System.Workflow.Runtime-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Workflow.Runtime.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2433,6 +2603,7 @@ import_library(
     name = "System.WorkflowServices",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.WorkflowServices.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2462,6 +2633,7 @@ import_library(
     name = "System.Xaml",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Xaml.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2480,6 +2652,7 @@ import_library(
     name = "System.Xml-noncyclic",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Xml.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Data.SqlXml-noncyclic",
@@ -2490,6 +2663,7 @@ import_library(
     name = "System.Xml.Linq",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Xml.Linq.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -2504,6 +2678,7 @@ import_library(
     name = "System.Xml.ReaderWriter",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Xml.ReaderWriter.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -2515,6 +2690,7 @@ import_library(
     name = "System.Xml.Serialization",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/System.Xml.Serialization.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.ServiceModel",
@@ -2527,6 +2703,7 @@ import_library(
     name = "System.Xml.XDocument",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Xml.XDocument.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Xml.Linq",
@@ -2538,6 +2715,7 @@ import_library(
     name = "System.Xml.XmlSerializer",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/Facades/System.Xml.XmlSerializer.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -2549,6 +2727,7 @@ import_library(
     name = "UIAutomationClient",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/UIAutomationClient.dll",
+    version_smearing = False,
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -2564,6 +2743,7 @@ import_library(
     name = "UIAutomationClientsideProviders",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/UIAutomationClientsideProviders.dll",
+    version_smearing = False,
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -2580,6 +2760,7 @@ import_library(
     name = "UIAutomationProvider",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/UIAutomationProvider.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:UIAutomationTypes",
@@ -2592,6 +2773,7 @@ import_library(
     name = "UIAutomationTypes",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/UIAutomationTypes.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -2600,6 +2782,7 @@ import_library(
     name = "WindowsBase",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/WindowsBase.dll",
+    version_smearing = False,
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -2615,6 +2798,7 @@ import_library(
     name = "WindowsFormsIntegration",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/WindowsFormsIntegration.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:PresentationCore",
@@ -2633,6 +2817,7 @@ import_library(
     name = "XamlBuildTask",
     target_framework = "net46",
     refdll = "//:build/.NETFramework/v4.6/XamlBuildTask.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities.v4.0",

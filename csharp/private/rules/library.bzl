@@ -30,7 +30,8 @@ def _library_impl(ctx):
             toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"],
         )
 
-    fill_in_missing_frameworks(providers)
+    if (ctx.attr.version_smearing):
+        fill_in_missing_frameworks(providers)
 
     result = providers.values()
     result.append(DefaultInfo(
@@ -90,6 +91,10 @@ csharp_library = rule(
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
             providers = AnyTargetFramework,
+        ),
+        "version_smearing": attr.bool(
+            doc = "Indicates whether providers should be generated for newer frameworks as well",
+            default = True
         ),
     },
     executable = False,

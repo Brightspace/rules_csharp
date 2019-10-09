@@ -6,6 +6,7 @@ load("@d2l_rules_csharp//csharp:defs.bzl", "import_library", "csharp_library_set
 csharp_library_set(
     name = "StandardReferences",
     target_framework = "netcoreapp3.0",
+    version_smearing = False,
     deps = [
         "//:Microsoft.CSharp",
         "//:Microsoft.VisualBasic",
@@ -166,6 +167,7 @@ import_library(
     name = "Microsoft.CSharp",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/Microsoft.CSharp.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -174,6 +176,7 @@ import_library(
     name = "Microsoft.VisualBasic",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/Microsoft.VisualBasic.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.VisualBasic.Core",
         "//:System.Runtime",
@@ -185,6 +188,7 @@ import_library(
     name = "Microsoft.VisualBasic.Core",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/Microsoft.VisualBasic.Core.dll",
+    version_smearing = False,
     deps = [
         "//:System.Diagnostics.Debug",
         "//:System.IO.FileSystem",
@@ -200,6 +204,7 @@ import_library(
     name = "Microsoft.Win32.Primitives",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/Microsoft.Win32.Primitives.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -208,6 +213,7 @@ import_library(
     name = "mscorlib",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/mscorlib.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections",
         "//:System.Collections.Concurrent",
@@ -259,6 +265,7 @@ import_library(
     name = "netstandard",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/netstandard.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Win32.Primitives",
         "//:System.Buffers",
@@ -362,6 +369,7 @@ import_library(
     name = "System",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Win32.Primitives",
         "//:System.Collections",
@@ -413,6 +421,7 @@ import_library(
     name = "System.AppContext",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.AppContext.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -421,6 +430,7 @@ import_library(
     name = "System.Buffers",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Buffers.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -429,6 +439,7 @@ import_library(
     name = "System.Collections",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Collections.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -437,6 +448,7 @@ import_library(
     name = "System.Collections.Concurrent",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Collections.Concurrent.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -445,6 +457,7 @@ import_library(
     name = "System.Collections.Immutable",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Collections.Immutable.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections",
         "//:System.Runtime",
@@ -457,6 +470,7 @@ import_library(
     name = "System.Collections.NonGeneric",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Collections.NonGeneric.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -468,6 +482,7 @@ import_library(
     name = "System.Collections.Specialized",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Collections.Specialized.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -479,6 +494,7 @@ import_library(
     name = "System.ComponentModel",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ComponentModel.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -487,6 +503,7 @@ import_library(
     name = "System.ComponentModel.Annotations",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ComponentModel.Annotations.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -495,6 +512,7 @@ import_library(
     name = "System.ComponentModel.DataAnnotations",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ComponentModel.DataAnnotations.dll",
+    version_smearing = False,
     deps = [
         "//:System.ComponentModel.Annotations",
         "//:System.Runtime",
@@ -506,6 +524,7 @@ import_library(
     name = "System.ComponentModel.EventBasedAsync",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ComponentModel.EventBasedAsync.dll",
+    version_smearing = False,
     deps = [
         "//:System.ComponentModel",
         "//:System.ComponentModel.Primitives",
@@ -519,6 +538,7 @@ import_library(
     name = "System.ComponentModel.Primitives",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ComponentModel.Primitives.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.NonGeneric",
         "//:System.ComponentModel",
@@ -531,6 +551,7 @@ import_library(
     name = "System.ComponentModel.TypeConverter",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ComponentModel.TypeConverter.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.NonGeneric",
         "//:System.ComponentModel",
@@ -548,6 +569,7 @@ import_library(
     name = "System.Configuration",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Configuration.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -556,6 +578,7 @@ import_library(
     name = "System.Console",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Console.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -567,6 +590,7 @@ import_library(
     name = "System.Core",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Core.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections",
         "//:System.IO.MemoryMappedFiles",
@@ -590,6 +614,7 @@ import_library(
     name = "System.Data",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Data.dll",
+    version_smearing = False,
     deps = [
         "//:System.Data.Common",
         "//:System.Runtime",
@@ -601,6 +626,7 @@ import_library(
     name = "System.Data.Common",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Data.Common.dll",
+    version_smearing = False,
     deps = [
         "//:System.ComponentModel",
         "//:System.ComponentModel.Primitives",
@@ -618,6 +644,7 @@ import_library(
     name = "System.Data.DataSetExtensions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Data.DataSetExtensions.dll",
+    version_smearing = False,
     deps = [
         "//:System.Data.Common",
         "//:System.Runtime",
@@ -629,6 +656,7 @@ import_library(
     name = "System.Diagnostics.Contracts",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.Contracts.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -637,6 +665,7 @@ import_library(
     name = "System.Diagnostics.Debug",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.Debug.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -645,6 +674,7 @@ import_library(
     name = "System.Diagnostics.DiagnosticSource",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.DiagnosticSource.dll",
+    version_smearing = False,
     deps = [
         "//:netstandard",
         "//:System.Memory",
@@ -656,6 +686,7 @@ import_library(
     name = "System.Diagnostics.FileVersionInfo",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.FileVersionInfo.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -664,6 +695,7 @@ import_library(
     name = "System.Diagnostics.Process",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.Process.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.NonGeneric",
         "//:System.Collections.Specialized",
@@ -680,6 +712,7 @@ import_library(
     name = "System.Diagnostics.StackTrace",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.StackTrace.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -688,6 +721,7 @@ import_library(
     name = "System.Diagnostics.TextWriterTraceListener",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.TextWriterTraceListener.dll",
+    version_smearing = False,
     deps = [
         "//:System.Diagnostics.TraceSource",
         "//:System.Runtime",
@@ -700,6 +734,7 @@ import_library(
     name = "System.Diagnostics.Tools",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.Tools.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -708,6 +743,7 @@ import_library(
     name = "System.Diagnostics.TraceSource",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.TraceSource.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.NonGeneric",
         "//:System.Collections.Specialized",
@@ -720,6 +756,7 @@ import_library(
     name = "System.Diagnostics.Tracing",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Diagnostics.Tracing.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -728,6 +765,7 @@ import_library(
     name = "System.Drawing",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Drawing.dll",
+    version_smearing = False,
     deps = [
         "//:System.ComponentModel.TypeConverter",
         "//:System.Drawing.Primitives",
@@ -740,6 +778,7 @@ import_library(
     name = "System.Drawing.Primitives",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Drawing.Primitives.dll",
+    version_smearing = False,
     deps = [
         "//:System.ComponentModel.Primitives",
         "//:System.Runtime",
@@ -751,6 +790,7 @@ import_library(
     name = "System.Dynamic.Runtime",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Dynamic.Runtime.dll",
+    version_smearing = False,
     deps = [
         "//:System.Linq.Expressions",
         "//:System.Runtime",
@@ -762,6 +802,7 @@ import_library(
     name = "System.Globalization",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Globalization.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -770,6 +811,7 @@ import_library(
     name = "System.Globalization.Calendars",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Globalization.Calendars.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -778,6 +820,7 @@ import_library(
     name = "System.Globalization.Extensions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Globalization.Extensions.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -789,6 +832,7 @@ import_library(
     name = "System.IO",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -800,6 +844,7 @@ import_library(
     name = "System.IO.Compression",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.Compression.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -808,6 +853,7 @@ import_library(
     name = "System.IO.Compression.Brotli",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.Compression.Brotli.dll",
+    version_smearing = False,
     deps = [
         "//:System.IO.Compression",
         "//:System.Runtime",
@@ -819,6 +865,7 @@ import_library(
     name = "System.IO.Compression.FileSystem",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.Compression.FileSystem.dll",
+    version_smearing = False,
     deps = [
         "//:System.IO.Compression.ZipFile",
         "//:System.Runtime",
@@ -830,6 +877,7 @@ import_library(
     name = "System.IO.Compression.ZipFile",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.Compression.ZipFile.dll",
+    version_smearing = False,
     deps = [
         "//:System.IO.Compression",
         "//:System.Runtime",
@@ -841,6 +889,7 @@ import_library(
     name = "System.IO.FileSystem",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.FileSystem.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -852,6 +901,7 @@ import_library(
     name = "System.IO.FileSystem.DriveInfo",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.FileSystem.DriveInfo.dll",
+    version_smearing = False,
     deps = [
         "//:System.IO.FileSystem",
         "//:System.Runtime",
@@ -863,6 +913,7 @@ import_library(
     name = "System.IO.FileSystem.Primitives",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.FileSystem.Primitives.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -871,6 +922,7 @@ import_library(
     name = "System.IO.FileSystem.Watcher",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.FileSystem.Watcher.dll",
+    version_smearing = False,
     deps = [
         "//:System.ComponentModel.Primitives",
         "//:System.Runtime",
@@ -882,6 +934,7 @@ import_library(
     name = "System.IO.IsolatedStorage",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.IsolatedStorage.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -890,6 +943,7 @@ import_library(
     name = "System.IO.MemoryMappedFiles",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.MemoryMappedFiles.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.InteropServices",
@@ -901,6 +955,7 @@ import_library(
     name = "System.IO.Pipes",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.Pipes.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Security.Principal",
@@ -912,6 +967,7 @@ import_library(
     name = "System.IO.UnmanagedMemoryStream",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.IO.UnmanagedMemoryStream.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.InteropServices",
@@ -923,6 +979,7 @@ import_library(
     name = "System.Linq",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Linq.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections",
         "//:System.Runtime",
@@ -934,6 +991,7 @@ import_library(
     name = "System.Linq.Expressions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Linq.Expressions.dll",
+    version_smearing = False,
     deps = [
         "//:System.ObjectModel",
         "//:System.Runtime",
@@ -945,6 +1003,7 @@ import_library(
     name = "System.Linq.Parallel",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Linq.Parallel.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections",
         "//:System.Collections.Concurrent",
@@ -958,6 +1017,7 @@ import_library(
     name = "System.Linq.Queryable",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Linq.Queryable.dll",
+    version_smearing = False,
     deps = [
         "//:System.Linq",
         "//:System.Linq.Expressions",
@@ -970,6 +1030,7 @@ import_library(
     name = "System.Memory",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Memory.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.InteropServices",
@@ -981,6 +1042,7 @@ import_library(
     name = "System.Net",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.dll",
+    version_smearing = False,
     deps = [
         "//:System.Net.NetworkInformation",
         "//:System.Net.Primitives",
@@ -997,6 +1059,7 @@ import_library(
     name = "System.Net.Http",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.Http.dll",
+    version_smearing = False,
     deps = [
         "//:System.Net.Primitives",
         "//:System.Net.Security",
@@ -1010,6 +1073,7 @@ import_library(
     name = "System.Net.HttpListener",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.HttpListener.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Win32.Primitives",
         "//:System.Collections.Specialized",
@@ -1029,6 +1093,7 @@ import_library(
     name = "System.Net.Mail",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.Mail.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.Specialized",
         "//:System.ComponentModel.EventBasedAsync",
@@ -1044,6 +1109,7 @@ import_library(
     name = "System.Net.NameResolution",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.NameResolution.dll",
+    version_smearing = False,
     deps = [
         "//:System.Net.Primitives",
         "//:System.Runtime",
@@ -1055,6 +1121,7 @@ import_library(
     name = "System.Net.NetworkInformation",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.NetworkInformation.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Win32.Primitives",
         "//:System.Net.Primitives",
@@ -1067,6 +1134,7 @@ import_library(
     name = "System.Net.Ping",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.Ping.dll",
+    version_smearing = False,
     deps = [
         "//:System.ComponentModel.EventBasedAsync",
         "//:System.ComponentModel.Primitives",
@@ -1080,6 +1148,7 @@ import_library(
     name = "System.Net.Primitives",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.Primitives.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Win32.Primitives",
         "//:System.Runtime",
@@ -1092,6 +1161,7 @@ import_library(
     name = "System.Net.Requests",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.Requests.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.Specialized",
         "//:System.Net.Primitives",
@@ -1109,6 +1179,7 @@ import_library(
     name = "System.Net.Security",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.Security.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections",
         "//:System.Collections.NonGeneric",
@@ -1124,6 +1195,7 @@ import_library(
     name = "System.Net.ServicePoint",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.ServicePoint.dll",
+    version_smearing = False,
     deps = [
         "//:System.Net.Primitives",
         "//:System.Net.Security",
@@ -1137,6 +1209,7 @@ import_library(
     name = "System.Net.Sockets",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.Sockets.dll",
+    version_smearing = False,
     deps = [
         "//:System.Net.Primitives",
         "//:System.Runtime",
@@ -1148,6 +1221,7 @@ import_library(
     name = "System.Net.WebClient",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.WebClient.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.Specialized",
         "//:System.ComponentModel.EventBasedAsync",
@@ -1164,6 +1238,7 @@ import_library(
     name = "System.Net.WebHeaderCollection",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.WebHeaderCollection.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.Specialized",
         "//:System.Runtime",
@@ -1175,6 +1250,7 @@ import_library(
     name = "System.Net.WebProxy",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.WebProxy.dll",
+    version_smearing = False,
     deps = [
         "//:System.Net.Primitives",
         "//:System.Runtime",
@@ -1187,6 +1263,7 @@ import_library(
     name = "System.Net.WebSockets",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.WebSockets.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Win32.Primitives",
         "//:System.Collections.Specialized",
@@ -1201,6 +1278,7 @@ import_library(
     name = "System.Net.WebSockets.Client",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Net.WebSockets.Client.dll",
+    version_smearing = False,
     deps = [
         "//:System.Net.Primitives",
         "//:System.Net.Security",
@@ -1215,6 +1293,7 @@ import_library(
     name = "System.Numerics",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Numerics.dll",
+    version_smearing = False,
     deps = [
         "//:System.Numerics.Vectors",
         "//:System.Runtime",
@@ -1227,6 +1306,7 @@ import_library(
     name = "System.Numerics.Vectors",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Numerics.Vectors.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1235,6 +1315,7 @@ import_library(
     name = "System.ObjectModel",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ObjectModel.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections",
         "//:System.Runtime",
@@ -1246,6 +1327,7 @@ import_library(
     name = "System.Reflection",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Reflection.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1254,6 +1336,7 @@ import_library(
     name = "System.Reflection.DispatchProxy",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Reflection.DispatchProxy.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1262,6 +1345,7 @@ import_library(
     name = "System.Reflection.Emit",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Reflection.Emit.dll",
+    version_smearing = False,
     deps = [
         "//:System.Reflection.Emit.ILGeneration",
         "//:System.Reflection.Primitives",
@@ -1275,6 +1359,7 @@ import_library(
     name = "System.Reflection.Emit.ILGeneration",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Reflection.Emit.ILGeneration.dll",
+    version_smearing = False,
     deps = [
         "//:System.Reflection.Primitives",
         "//:System.Runtime",
@@ -1287,6 +1372,7 @@ import_library(
     name = "System.Reflection.Emit.Lightweight",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Reflection.Emit.Lightweight.dll",
+    version_smearing = False,
     deps = [
         "//:System.Reflection.Emit.ILGeneration",
         "//:System.Runtime",
@@ -1298,6 +1384,7 @@ import_library(
     name = "System.Reflection.Extensions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Reflection.Extensions.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1306,6 +1393,7 @@ import_library(
     name = "System.Reflection.Metadata",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Reflection.Metadata.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.Immutable",
         "//:System.Runtime",
@@ -1317,6 +1405,7 @@ import_library(
     name = "System.Reflection.Primitives",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Reflection.Primitives.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1325,6 +1414,7 @@ import_library(
     name = "System.Reflection.TypeExtensions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Reflection.TypeExtensions.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1333,6 +1423,7 @@ import_library(
     name = "System.Resources.Reader",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Resources.Reader.dll",
+    version_smearing = False,
     deps = [
         "//:System.Resources.ResourceManager",
         "//:System.Runtime",
@@ -1344,6 +1435,7 @@ import_library(
     name = "System.Resources.ResourceManager",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Resources.ResourceManager.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.InteropServices",
@@ -1355,6 +1447,7 @@ import_library(
     name = "System.Resources.Writer",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Resources.Writer.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1363,6 +1456,7 @@ import_library(
     name = "System.Runtime",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.dll",
+    version_smearing = False,
     visibility = ["@net//:__pkg__"],
 )
 
@@ -1370,6 +1464,7 @@ import_library(
     name = "System.Runtime.CompilerServices.Unsafe",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.CompilerServices.Unsafe.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1378,6 +1473,7 @@ import_library(
     name = "System.Runtime.CompilerServices.VisualC",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.CompilerServices.VisualC.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1386,6 +1482,7 @@ import_library(
     name = "System.Runtime.Extensions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Extensions.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Security.Principal",
@@ -1397,6 +1494,7 @@ import_library(
     name = "System.Runtime.Handles",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Handles.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1405,6 +1503,7 @@ import_library(
     name = "System.Runtime.InteropServices",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.InteropServices.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1413,6 +1512,7 @@ import_library(
     name = "System.Runtime.InteropServices.RuntimeInformation",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.InteropServices.RuntimeInformation.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1421,6 +1521,7 @@ import_library(
     name = "System.Runtime.InteropServices.WindowsRuntime",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.InteropServices.WindowsRuntime.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1429,6 +1530,7 @@ import_library(
     name = "System.Runtime.Intrinsics",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Intrinsics.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1437,6 +1539,7 @@ import_library(
     name = "System.Runtime.Loader",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Loader.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1445,6 +1548,7 @@ import_library(
     name = "System.Runtime.Numerics",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Numerics.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1453,6 +1557,7 @@ import_library(
     name = "System.Runtime.Serialization",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Serialization.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Serialization.Json",
@@ -1466,6 +1571,7 @@ import_library(
     name = "System.Runtime.Serialization.Formatters",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Serialization.Formatters.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.NonGeneric",
         "//:System.Runtime",
@@ -1477,6 +1583,7 @@ import_library(
     name = "System.Runtime.Serialization.Json",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Serialization.Json.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Serialization.Xml",
@@ -1489,6 +1596,7 @@ import_library(
     name = "System.Runtime.Serialization.Primitives",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Serialization.Primitives.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1497,6 +1605,7 @@ import_library(
     name = "System.Runtime.Serialization.Xml",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Runtime.Serialization.Xml.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Serialization.Primitives",
@@ -1509,6 +1618,7 @@ import_library(
     name = "System.Security",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Security.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1517,6 +1627,7 @@ import_library(
     name = "System.Security.Claims",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Security.Claims.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -1529,6 +1640,7 @@ import_library(
     name = "System.Security.Cryptography.Algorithms",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Security.Cryptography.Algorithms.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -1542,6 +1654,7 @@ import_library(
     name = "System.Security.Cryptography.Csp",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Security.Cryptography.Csp.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.InteropServices",
@@ -1555,6 +1668,7 @@ import_library(
     name = "System.Security.Cryptography.Encoding",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Security.Cryptography.Encoding.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Security.Cryptography.Primitives",
@@ -1566,6 +1680,7 @@ import_library(
     name = "System.Security.Cryptography.Primitives",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Security.Cryptography.Primitives.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1574,6 +1689,7 @@ import_library(
     name = "System.Security.Cryptography.X509Certificates",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Security.Cryptography.X509Certificates.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.NonGeneric",
         "//:System.Net.Primitives",
@@ -1590,6 +1706,7 @@ import_library(
     name = "System.Security.Principal",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Security.Principal.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1598,6 +1715,7 @@ import_library(
     name = "System.Security.SecureString",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Security.SecureString.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.InteropServices",
@@ -1609,6 +1727,7 @@ import_library(
     name = "System.ServiceModel.Web",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ServiceModel.Web.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Serialization.Json",
@@ -1620,6 +1739,7 @@ import_library(
     name = "System.ServiceProcess",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ServiceProcess.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1628,6 +1748,7 @@ import_library(
     name = "System.Text.Encoding",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Text.Encoding.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1636,6 +1757,7 @@ import_library(
     name = "System.Text.Encoding.CodePages",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Text.Encoding.CodePages.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1644,6 +1766,7 @@ import_library(
     name = "System.Text.Encoding.Extensions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Text.Encoding.Extensions.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1652,6 +1775,7 @@ import_library(
     name = "System.Text.Encodings.Web",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Text.Encodings.Web.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -1663,6 +1787,7 @@ import_library(
     name = "System.Text.Json",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Text.Json.dll",
+    version_smearing = False,
     deps = [
         "//:System.Memory",
         "//:System.Runtime",
@@ -1675,6 +1800,7 @@ import_library(
     name = "System.Text.RegularExpressions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Text.RegularExpressions.dll",
+    version_smearing = False,
     deps = [
         "//:System.Reflection.Emit.ILGeneration",
         "//:System.Runtime",
@@ -1687,6 +1813,7 @@ import_library(
     name = "System.Threading",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1695,6 +1822,7 @@ import_library(
     name = "System.Threading.Channels",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.Channels.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1703,6 +1831,7 @@ import_library(
     name = "System.Threading.Overlapped",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.Overlapped.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1711,6 +1840,7 @@ import_library(
     name = "System.Threading.Tasks",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.Tasks.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1719,6 +1849,7 @@ import_library(
     name = "System.Threading.Tasks.Dataflow",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.Tasks.Dataflow.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1727,6 +1858,7 @@ import_library(
     name = "System.Threading.Tasks.Extensions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.Tasks.Extensions.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1735,6 +1867,7 @@ import_library(
     name = "System.Threading.Tasks.Parallel",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.Tasks.Parallel.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.Concurrent",
         "//:System.Runtime",
@@ -1746,6 +1879,7 @@ import_library(
     name = "System.Threading.Thread",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.Thread.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -1759,6 +1893,7 @@ import_library(
     name = "System.Threading.ThreadPool",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.ThreadPool.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Threading.Overlapped",
@@ -1770,6 +1905,7 @@ import_library(
     name = "System.Threading.Timer",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Threading.Timer.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1778,6 +1914,7 @@ import_library(
     name = "System.Transactions",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Transactions.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Transactions.Local",
@@ -1789,6 +1926,7 @@ import_library(
     name = "System.Transactions.Local",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Transactions.Local.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.InteropServices",
@@ -1800,6 +1938,7 @@ import_library(
     name = "System.ValueTuple",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.ValueTuple.dll",
+    version_smearing = False,
     deps = ["//:System.Runtime"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1808,6 +1947,7 @@ import_library(
     name = "System.Web",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Web.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Web.HttpUtility",
@@ -1819,6 +1959,7 @@ import_library(
     name = "System.Web.HttpUtility",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Web.HttpUtility.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.Specialized",
         "//:System.Runtime",
@@ -1831,6 +1972,7 @@ import_library(
     name = "System.Windows",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Windows.dll",
+    version_smearing = False,
     deps = [
         "//:System.ObjectModel",
         "//:System.Runtime",
@@ -1842,6 +1984,7 @@ import_library(
     name = "System.Xml",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Xml.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Xml.ReaderWriter",
@@ -1855,6 +1998,7 @@ import_library(
     name = "System.Xml.Linq",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Xml.Linq.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Xml.XDocument",
@@ -1867,6 +2011,7 @@ import_library(
     name = "System.Xml.ReaderWriter",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Xml.ReaderWriter.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.NonGeneric",
         "//:System.Diagnostics.Debug",
@@ -1881,6 +2026,7 @@ import_library(
     name = "System.Xml.Serialization",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Xml.Serialization.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Xml.ReaderWriter",
@@ -1893,6 +2039,7 @@ import_library(
     name = "System.Xml.XDocument",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Xml.XDocument.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -1905,6 +2052,7 @@ import_library(
     name = "System.Xml.XmlDocument",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Xml.XmlDocument.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Xml.ReaderWriter",
@@ -1916,6 +2064,7 @@ import_library(
     name = "System.Xml.XmlSerializer",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Xml.XmlSerializer.dll",
+    version_smearing = False,
     deps = [
         "//:System.Collections.NonGeneric",
         "//:System.Collections.Specialized",
@@ -1930,6 +2079,7 @@ import_library(
     name = "System.Xml.XPath",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Xml.XPath.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Runtime.Extensions",
@@ -1942,6 +2092,7 @@ import_library(
     name = "System.Xml.XPath.XDocument",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/System.Xml.XPath.XDocument.dll",
+    version_smearing = False,
     deps = [
         "//:System.Runtime",
         "//:System.Xml.ReaderWriter",
@@ -1954,6 +2105,7 @@ import_library(
     name = "WindowsBase",
     target_framework = "netcoreapp3.0",
     refdll = "//:ref/netcoreapp3.0/WindowsBase.dll",
+    version_smearing = False,
     deps = [
         "//:System.ObjectModel",
         "//:System.Runtime",

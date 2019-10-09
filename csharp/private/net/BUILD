@@ -19,6 +19,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:StandardReferences",
     netcoreapp2_2 = "@netcoreapp2.2//:StandardReferences",
     netcoreapp3_0 = "@netcoreapp3.0//:StandardReferences",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -36,6 +37,7 @@ import_multiframework_library(
     net471 = "@net471//:Accessibility",
     net472 = "@net472//:Accessibility",
     net48 = "@net48//:Accessibility",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -65,6 +67,7 @@ import_multiframework_library(
     net471 = "@net471//:CustomMarshalers",
     net472 = "@net472//:CustomMarshalers",
     net48 = "@net48//:CustomMarshalers",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -94,6 +97,7 @@ import_multiframework_library(
     net471 = "@net471//:ISymWrapper",
     net472 = "@net472//:ISymWrapper",
     net48 = "@net48//:ISymWrapper",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -109,6 +113,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Activities.Build",
     net472 = "@net472//:Microsoft.Activities.Build",
     net48 = "@net48//:Microsoft.Activities.Build",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -125,6 +130,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build",
     net472 = "@net472//:Microsoft.Build",
     net48 = "@net48//:Microsoft.Build",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -141,6 +147,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Conversion.v4.0",
     net472 = "@net472//:Microsoft.Build.Conversion.v4.0",
     net48 = "@net48//:Microsoft.Build.Conversion.v4.0",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -158,6 +165,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Engine",
     net472 = "@net472//:Microsoft.Build.Engine",
     net48 = "@net48//:Microsoft.Build.Engine",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -175,6 +183,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Framework",
     net472 = "@net472//:Microsoft.Build.Framework",
     net48 = "@net48//:Microsoft.Build.Framework",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -203,6 +212,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Tasks.v4.0",
     net472 = "@net472//:Microsoft.Build.Tasks.v4.0",
     net48 = "@net48//:Microsoft.Build.Tasks.v4.0",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -219,6 +229,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.Build.Utilities.v4.0",
     net472 = "@net472//:Microsoft.Build.Utilities.v4.0",
     net48 = "@net48//:Microsoft.Build.Utilities.v4.0",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -238,6 +249,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:Microsoft.CSharp",
     netcoreapp2_2 = "@netcoreapp2.2//:Microsoft.CSharp",
     netcoreapp3_0 = "@netcoreapp3.0//:Microsoft.CSharp",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -255,6 +267,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.JScript",
     net472 = "@net472//:Microsoft.JScript",
     net48 = "@net48//:Microsoft.JScript",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -275,12 +288,14 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:Microsoft.VisualBasic",
     netcoreapp2_2 = "@netcoreapp2.2//:Microsoft.VisualBasic",
     netcoreapp3_0 = "@netcoreapp3.0//:Microsoft.VisualBasic",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "Microsoft.VisualBasic.Core",
     netcoreapp3_0 = "@netcoreapp3.0//:Microsoft.VisualBasic.Core",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -298,6 +313,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualBasic.Compatibility",
     net472 = "@net472//:Microsoft.VisualBasic.Compatibility",
     net48 = "@net48//:Microsoft.VisualBasic.Compatibility",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -315,6 +331,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualBasic.Compatibility.Data",
     net472 = "@net472//:Microsoft.VisualBasic.Compatibility.Data",
     net48 = "@net48//:Microsoft.VisualBasic.Compatibility.Data",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -338,6 +355,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualC",
     net472 = "@net472//:Microsoft.VisualC",
     net48 = "@net48//:Microsoft.VisualC",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -354,6 +372,7 @@ import_multiframework_library(
     net471 = "@net471//:Microsoft.VisualC.STLCLR",
     net472 = "@net472//:Microsoft.VisualC.STLCLR",
     net48 = "@net48//:Microsoft.VisualC.STLCLR",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -385,6 +404,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:Microsoft.Win32.Primitives",
     netcoreapp2_2 = "@netcoreapp2.2//:Microsoft.Win32.Primitives",
     netcoreapp3_0 = "@netcoreapp3.0//:Microsoft.Win32.Primitives",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -407,6 +427,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:mscorlib",
     netcoreapp2_2 = "@netcoreapp2.2//:mscorlib",
     netcoreapp3_0 = "@netcoreapp3.0//:mscorlib",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -420,6 +441,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:netstandard",
     netcoreapp2_2 = "@netcoreapp2.2//:netstandard",
     netcoreapp3_0 = "@netcoreapp3.0//:netstandard",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -436,6 +458,7 @@ import_multiframework_library(
     net471 = "@net471//:PresentationBuildTasks",
     net472 = "@net472//:PresentationBuildTasks",
     net48 = "@net48//:PresentationBuildTasks",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -452,6 +475,7 @@ import_multiframework_library(
     net471 = "@net471//:PresentationCore",
     net472 = "@net472//:PresentationCore",
     net48 = "@net48//:PresentationCore",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -468,6 +492,7 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework",
     net472 = "@net472//:PresentationFramework",
     net48 = "@net48//:PresentationFramework",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -484,6 +509,7 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Aero",
     net472 = "@net472//:PresentationFramework.Aero",
     net48 = "@net48//:PresentationFramework.Aero",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -500,6 +526,7 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Aero2",
     net472 = "@net472//:PresentationFramework.Aero2",
     net48 = "@net48//:PresentationFramework.Aero2",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -516,6 +543,7 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.AeroLite",
     net472 = "@net472//:PresentationFramework.AeroLite",
     net48 = "@net48//:PresentationFramework.AeroLite",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -532,6 +560,7 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Classic",
     net472 = "@net472//:PresentationFramework.Classic",
     net48 = "@net48//:PresentationFramework.Classic",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -548,6 +577,7 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Luna",
     net472 = "@net472//:PresentationFramework.Luna",
     net48 = "@net48//:PresentationFramework.Luna",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -564,6 +594,7 @@ import_multiframework_library(
     net471 = "@net471//:PresentationFramework.Royale",
     net472 = "@net472//:PresentationFramework.Royale",
     net48 = "@net48//:PresentationFramework.Royale",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -580,6 +611,7 @@ import_multiframework_library(
     net471 = "@net471//:ReachFramework",
     net472 = "@net472//:ReachFramework",
     net48 = "@net48//:ReachFramework",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -597,6 +629,7 @@ import_multiframework_library(
     net471 = "@net471//:sysglobl",
     net472 = "@net472//:sysglobl",
     net48 = "@net48//:sysglobl",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -619,6 +652,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System",
     netcoreapp2_2 = "@netcoreapp2.2//:System",
     netcoreapp3_0 = "@netcoreapp3.0//:System",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -635,6 +669,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Activities",
     net472 = "@net472//:System.Activities",
     net48 = "@net48//:System.Activities",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -651,6 +686,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Activities.Core.Presentation",
     net472 = "@net472//:System.Activities.Core.Presentation",
     net48 = "@net48//:System.Activities.Core.Presentation",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -667,6 +703,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Activities.DurableInstancing",
     net472 = "@net472//:System.Activities.DurableInstancing",
     net48 = "@net48//:System.Activities.DurableInstancing",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -683,6 +720,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Activities.Presentation",
     net472 = "@net472//:System.Activities.Presentation",
     net48 = "@net48//:System.Activities.Presentation",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -699,6 +737,7 @@ import_multiframework_library(
     net471 = "@net471//:System.AddIn",
     net472 = "@net472//:System.AddIn",
     net48 = "@net48//:System.AddIn",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -715,6 +754,7 @@ import_multiframework_library(
     net471 = "@net471//:System.AddIn.Contract",
     net472 = "@net472//:System.AddIn.Contract",
     net48 = "@net48//:System.AddIn.Contract",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -728,6 +768,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.AppContext",
     netcoreapp2_2 = "@netcoreapp2.2//:System.AppContext",
     netcoreapp3_0 = "@netcoreapp3.0//:System.AppContext",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -737,6 +778,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Buffers",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Buffers",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Buffers",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -757,6 +799,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Collections",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Collections",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Collections",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -777,6 +820,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Collections.Concurrent",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Collections.Concurrent",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Collections.Concurrent",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -785,6 +829,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Collections.Immutable",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Collections.Immutable",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Collections.Immutable",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -798,6 +843,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Collections.NonGeneric",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Collections.NonGeneric",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Collections.NonGeneric",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -811,6 +857,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Collections.Specialized",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Collections.Specialized",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Collections.Specialized",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -831,6 +878,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ComponentModel",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ComponentModel",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ComponentModel",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -849,6 +897,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ComponentModel.Annotations",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ComponentModel.Annotations",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ComponentModel.Annotations",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -867,6 +916,7 @@ import_multiframework_library(
     net48 = "@net48//:System.ComponentModel.Composition",
     netstandard2_0 = "@NetStandard.Library//:System.ComponentModel.Composition",
     netstandard2_1 = "@NetStandard.Library.Ref//:System.ComponentModel.Composition",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -882,6 +932,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ComponentModel.Composition.Registration",
     net472 = "@net472//:System.ComponentModel.Composition.Registration",
     net48 = "@net48//:System.ComponentModel.Composition.Registration",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -901,6 +952,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ComponentModel.DataAnnotations",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ComponentModel.DataAnnotations",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ComponentModel.DataAnnotations",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -921,6 +973,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ComponentModel.EventBasedAsync",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ComponentModel.EventBasedAsync",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ComponentModel.EventBasedAsync",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -934,6 +987,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ComponentModel.Primitives",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ComponentModel.Primitives",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ComponentModel.Primitives",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -947,6 +1001,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ComponentModel.TypeConverter",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ComponentModel.TypeConverter",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ComponentModel.TypeConverter",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -967,6 +1022,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Configuration",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Configuration",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Configuration",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -984,6 +1040,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Configuration.Install",
     net472 = "@net472//:System.Configuration.Install",
     net48 = "@net48//:System.Configuration.Install",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -997,6 +1054,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Console",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Console",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Console",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1018,6 +1076,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Core",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Core",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Core",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1040,6 +1099,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Data",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Data",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Data",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1053,6 +1113,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Data.Common",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Data.Common",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Data.Common",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1070,6 +1131,7 @@ import_multiframework_library(
     net472 = "@net472//:System.Data.DataSetExtensions",
     net48 = "@net48//:System.Data.DataSetExtensions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Data.DataSetExtensions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1086,6 +1148,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Entity",
     net472 = "@net472//:System.Data.Entity",
     net48 = "@net48//:System.Data.Entity",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1102,6 +1165,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Entity.Design",
     net472 = "@net472//:System.Data.Entity.Design",
     net48 = "@net48//:System.Data.Entity.Design",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1118,6 +1182,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Linq",
     net472 = "@net472//:System.Data.Linq",
     net48 = "@net48//:System.Data.Linq",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1135,6 +1200,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.OracleClient",
     net472 = "@net472//:System.Data.OracleClient",
     net48 = "@net48//:System.Data.OracleClient",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1151,6 +1217,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Services",
     net472 = "@net472//:System.Data.Services",
     net48 = "@net48//:System.Data.Services",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1167,6 +1234,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Services.Client",
     net472 = "@net472//:System.Data.Services.Client",
     net48 = "@net48//:System.Data.Services.Client",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1183,6 +1251,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.Services.Design",
     net472 = "@net472//:System.Data.Services.Design",
     net48 = "@net48//:System.Data.Services.Design",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1200,6 +1269,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Data.SqlXml",
     net472 = "@net472//:System.Data.SqlXml",
     net48 = "@net48//:System.Data.SqlXml",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1217,6 +1287,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Deployment",
     net472 = "@net472//:System.Deployment",
     net48 = "@net48//:System.Deployment",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1234,6 +1305,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Design",
     net472 = "@net472//:System.Design",
     net48 = "@net48//:System.Design",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1250,6 +1322,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Device",
     net472 = "@net472//:System.Device",
     net48 = "@net48//:System.Device",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1270,6 +1343,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.Contracts",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.Contracts",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.Contracts",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1290,6 +1364,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.Debug",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.Debug",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.Debug",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1298,6 +1373,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.DiagnosticSource",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.DiagnosticSource",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.DiagnosticSource",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1311,6 +1387,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.FileVersionInfo",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.FileVersionInfo",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.FileVersionInfo",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1324,6 +1401,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.Process",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.Process",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.Process",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1337,6 +1415,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.StackTrace",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.StackTrace",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.StackTrace",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1350,6 +1429,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.TextWriterTraceListener",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.TextWriterTraceListener",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.TextWriterTraceListener",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1370,6 +1450,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.Tools",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.Tools",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.Tools",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1383,6 +1464,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.TraceSource",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.TraceSource",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.TraceSource",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1403,6 +1485,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Diagnostics.Tracing",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Diagnostics.Tracing",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Diagnostics.Tracing",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1420,6 +1503,7 @@ import_multiframework_library(
     net471 = "@net471//:System.DirectoryServices",
     net472 = "@net472//:System.DirectoryServices",
     net48 = "@net48//:System.DirectoryServices",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1436,6 +1520,7 @@ import_multiframework_library(
     net471 = "@net471//:System.DirectoryServices.AccountManagement",
     net472 = "@net472//:System.DirectoryServices.AccountManagement",
     net48 = "@net48//:System.DirectoryServices.AccountManagement",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1453,6 +1538,7 @@ import_multiframework_library(
     net471 = "@net471//:System.DirectoryServices.Protocols",
     net472 = "@net472//:System.DirectoryServices.Protocols",
     net48 = "@net48//:System.DirectoryServices.Protocols",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1475,6 +1561,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Drawing",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Drawing",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Drawing",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1492,6 +1579,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Drawing.Design",
     net472 = "@net472//:System.Drawing.Design",
     net48 = "@net48//:System.Drawing.Design",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1505,6 +1593,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Drawing.Primitives",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Drawing.Primitives",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Drawing.Primitives",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1517,6 +1606,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Dynamic",
     net472 = "@net472//:System.Dynamic",
     net48 = "@net48//:System.Dynamic",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1537,6 +1627,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Dynamic.Runtime",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Dynamic.Runtime",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Dynamic.Runtime",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1554,6 +1645,7 @@ import_multiframework_library(
     net471 = "@net471//:System.EnterpriseServices",
     net472 = "@net472//:System.EnterpriseServices",
     net48 = "@net48//:System.EnterpriseServices",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1574,6 +1666,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Globalization",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Globalization",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Globalization",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1587,6 +1680,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Globalization.Calendars",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Globalization.Calendars",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Globalization.Calendars",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1600,6 +1694,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Globalization.Extensions",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Globalization.Extensions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Globalization.Extensions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1616,6 +1711,7 @@ import_multiframework_library(
     net471 = "@net471//:System.IdentityModel",
     net472 = "@net472//:System.IdentityModel",
     net48 = "@net48//:System.IdentityModel",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1632,6 +1728,7 @@ import_multiframework_library(
     net471 = "@net471//:System.IdentityModel.Selectors",
     net472 = "@net472//:System.IdentityModel.Selectors",
     net48 = "@net48//:System.IdentityModel.Selectors",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1647,6 +1744,7 @@ import_multiframework_library(
     net471 = "@net471//:System.IdentityModel.Services",
     net472 = "@net472//:System.IdentityModel.Services",
     net48 = "@net48//:System.IdentityModel.Services",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1667,6 +1765,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1687,6 +1786,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.Compression",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.Compression",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.Compression",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1695,6 +1795,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.Compression.Brotli",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.Compression.Brotli",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.Compression.Brotli",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1715,6 +1816,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.Compression.FileSystem",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.Compression.FileSystem",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.Compression.FileSystem",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1728,6 +1830,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.Compression.ZipFile",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.Compression.ZipFile",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.Compression.ZipFile",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1741,6 +1844,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.FileSystem",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.FileSystem",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.FileSystem",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1754,6 +1858,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.FileSystem.DriveInfo",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.FileSystem.DriveInfo",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.FileSystem.DriveInfo",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1767,6 +1872,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.FileSystem.Primitives",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.FileSystem.Primitives",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.FileSystem.Primitives",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1780,6 +1886,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.FileSystem.Watcher",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.FileSystem.Watcher",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.FileSystem.Watcher",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1793,6 +1900,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.IsolatedStorage",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.IsolatedStorage",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.IsolatedStorage",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1809,6 +1917,7 @@ import_multiframework_library(
     net471 = "@net471//:System.IO.Log",
     net472 = "@net472//:System.IO.Log",
     net48 = "@net48//:System.IO.Log",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1822,6 +1931,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.MemoryMappedFiles",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.MemoryMappedFiles",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.MemoryMappedFiles",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1835,6 +1945,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.Pipes",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.Pipes",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.Pipes",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1848,6 +1959,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.IO.UnmanagedMemoryStream",
     netcoreapp2_2 = "@netcoreapp2.2//:System.IO.UnmanagedMemoryStream",
     netcoreapp3_0 = "@netcoreapp3.0//:System.IO.UnmanagedMemoryStream",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1868,6 +1980,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Linq",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Linq",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Linq",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1888,6 +2001,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Linq.Expressions",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Linq.Expressions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Linq.Expressions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1908,6 +2022,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Linq.Parallel",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Linq.Parallel",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Linq.Parallel",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1928,6 +2043,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Linq.Queryable",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Linq.Queryable",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Linq.Queryable",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1937,6 +2053,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Memory",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Memory",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Memory",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1954,6 +2071,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Management",
     net472 = "@net472//:System.Management",
     net48 = "@net48//:System.Management",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1970,6 +2088,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Management.Instrumentation",
     net472 = "@net472//:System.Management.Instrumentation",
     net48 = "@net48//:System.Management.Instrumentation",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -1987,6 +2106,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Messaging",
     net472 = "@net472//:System.Messaging",
     net48 = "@net48//:System.Messaging",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2008,6 +2128,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2028,6 +2149,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.Http",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.Http",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.Http",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2036,6 +2158,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Net.Http.Rtc",
     net472 = "@net472//:System.Net.Http.Rtc",
     net48 = "@net48//:System.Net.Http.Rtc",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2051,6 +2174,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Net.Http.WebRequest",
     net472 = "@net472//:System.Net.Http.WebRequest",
     net48 = "@net48//:System.Net.Http.WebRequest",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2059,6 +2183,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.HttpListener",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.HttpListener",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.HttpListener",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2067,6 +2192,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.Mail",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.Mail",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.Mail",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2080,6 +2206,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.NameResolution",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.NameResolution",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.NameResolution",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2100,6 +2227,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.NetworkInformation",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.NetworkInformation",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.NetworkInformation",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2113,6 +2241,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.Ping",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.Ping",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.Ping",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2133,6 +2262,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.Primitives",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.Primitives",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.Primitives",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2153,6 +2283,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.Requests",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.Requests",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.Requests",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2166,6 +2297,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.Security",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.Security",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.Security",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2174,6 +2306,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.ServicePoint",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.ServicePoint",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.ServicePoint",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2187,6 +2320,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.Sockets",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.Sockets",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.Sockets",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2195,6 +2329,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.WebClient",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.WebClient",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.WebClient",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2212,6 +2347,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.WebHeaderCollection",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.WebHeaderCollection",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.WebHeaderCollection",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2220,6 +2356,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.WebProxy",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.WebProxy",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.WebProxy",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2233,6 +2370,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.WebSockets",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.WebSockets",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.WebSockets",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2246,6 +2384,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Net.WebSockets.Client",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Net.WebSockets.Client",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Net.WebSockets.Client",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2267,6 +2406,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Numerics",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Numerics",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Numerics",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2276,6 +2416,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Numerics.Vectors",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Numerics.Vectors",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Numerics.Vectors",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2296,6 +2437,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ObjectModel",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ObjectModel",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ObjectModel",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2312,6 +2454,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Printing",
     net472 = "@net472//:System.Printing",
     net48 = "@net48//:System.Printing",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2332,6 +2475,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Reflection",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Reflection",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Reflection",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2347,6 +2491,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Reflection.Context",
     net472 = "@net472//:System.Reflection.Context",
     net48 = "@net48//:System.Reflection.Context",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2356,6 +2501,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Reflection.DispatchProxy",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Reflection.DispatchProxy",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Reflection.DispatchProxy",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2375,6 +2521,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Reflection.Emit",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Reflection.Emit",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Reflection.Emit",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2394,6 +2541,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Reflection.Emit.ILGeneration",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Reflection.Emit.ILGeneration",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Reflection.Emit.ILGeneration",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2413,6 +2561,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Reflection.Emit.Lightweight",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Reflection.Emit.Lightweight",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Reflection.Emit.Lightweight",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2433,6 +2582,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Reflection.Extensions",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Reflection.Extensions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Reflection.Extensions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2441,6 +2591,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Reflection.Metadata",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Reflection.Metadata",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Reflection.Metadata",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2461,6 +2612,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Reflection.Primitives",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Reflection.Primitives",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Reflection.Primitives",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2469,6 +2621,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Reflection.TypeExtensions",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Reflection.TypeExtensions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Reflection.TypeExtensions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2482,6 +2635,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Resources.Reader",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Resources.Reader",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Resources.Reader",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2502,6 +2656,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Resources.ResourceManager",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Resources.ResourceManager",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Resources.ResourceManager",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2515,6 +2670,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Resources.Writer",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Resources.Writer",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Resources.Writer",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2535,6 +2691,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2551,12 +2708,14 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Caching",
     net472 = "@net472//:System.Runtime.Caching",
     net48 = "@net48//:System.Runtime.Caching",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.CompilerServices.Unsafe",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.CompilerServices.Unsafe",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2570,6 +2729,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.CompilerServices.VisualC",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.CompilerServices.VisualC",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.CompilerServices.VisualC",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2586,6 +2746,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.DurableInstancing",
     net472 = "@net472//:System.Runtime.DurableInstancing",
     net48 = "@net48//:System.Runtime.DurableInstancing",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2606,6 +2767,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.Extensions",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.Extensions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Extensions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2623,6 +2785,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.Handles",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.Handles",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Handles",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2643,6 +2806,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.InteropServices",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.InteropServices",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.InteropServices",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2656,6 +2820,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.InteropServices.RuntimeInformation",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.InteropServices.RuntimeInformation",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.InteropServices.RuntimeInformation",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2674,12 +2839,14 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.InteropServices.WindowsRuntime",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.InteropServices.WindowsRuntime",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.InteropServices.WindowsRuntime",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Runtime.Intrinsics",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Intrinsics",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2688,6 +2855,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.Loader",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.Loader",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Loader",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2708,6 +2876,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.Numerics",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.Numerics",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Numerics",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2725,6 +2894,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Remoting",
     net472 = "@net472//:System.Runtime.Remoting",
     net48 = "@net48//:System.Runtime.Remoting",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2746,6 +2916,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.Serialization",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.Serialization",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Serialization",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2759,6 +2930,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.Serialization.Formatters",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.Serialization.Formatters",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Serialization.Formatters",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2776,6 +2948,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Runtime.Serialization.Formatters.Soap",
     net472 = "@net472//:System.Runtime.Serialization.Formatters.Soap",
     net48 = "@net48//:System.Runtime.Serialization.Formatters.Soap",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2796,6 +2969,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.Serialization.Json",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.Serialization.Json",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Serialization.Json",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2816,6 +2990,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.Serialization.Primitives",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.Serialization.Primitives",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Serialization.Primitives",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2836,6 +3011,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Runtime.Serialization.Xml",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Runtime.Serialization.Xml",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Runtime.Serialization.Xml",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2856,6 +3032,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Security",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Security",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Security",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2869,6 +3046,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Security.Claims",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Security.Claims",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Security.Claims",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2882,6 +3060,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Security.Cryptography.Algorithms",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Security.Cryptography.Algorithms",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Security.Cryptography.Algorithms",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2895,6 +3074,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Security.Cryptography.Csp",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Security.Cryptography.Csp",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Security.Cryptography.Csp",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2908,6 +3088,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Security.Cryptography.Encoding",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Security.Cryptography.Encoding",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Security.Cryptography.Encoding",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2921,6 +3102,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Security.Cryptography.Primitives",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Security.Cryptography.Primitives",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Security.Cryptography.Primitives",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2934,6 +3116,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Security.Cryptography.X509Certificates",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Security.Cryptography.X509Certificates",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Security.Cryptography.X509Certificates",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2954,6 +3137,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Security.Principal",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Security.Principal",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Security.Principal",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2967,6 +3151,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Security.SecureString",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Security.SecureString",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Security.SecureString",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2983,6 +3168,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel",
     net472 = "@net472//:System.ServiceModel",
     net48 = "@net48//:System.ServiceModel",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -2999,6 +3185,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Activation",
     net472 = "@net472//:System.ServiceModel.Activation",
     net48 = "@net48//:System.ServiceModel.Activation",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3015,6 +3202,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Activities",
     net472 = "@net472//:System.ServiceModel.Activities",
     net48 = "@net48//:System.ServiceModel.Activities",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3031,6 +3219,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Channels",
     net472 = "@net472//:System.ServiceModel.Channels",
     net48 = "@net48//:System.ServiceModel.Channels",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3047,6 +3236,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Discovery",
     net472 = "@net472//:System.ServiceModel.Discovery",
     net48 = "@net48//:System.ServiceModel.Discovery",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3062,6 +3252,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Duplex",
     net472 = "@net472//:System.ServiceModel.Duplex",
     net48 = "@net48//:System.ServiceModel.Duplex",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3077,6 +3268,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Http",
     net472 = "@net472//:System.ServiceModel.Http",
     net48 = "@net48//:System.ServiceModel.Http",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3092,6 +3284,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.NetTcp",
     net472 = "@net472//:System.ServiceModel.NetTcp",
     net48 = "@net48//:System.ServiceModel.NetTcp",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3107,6 +3300,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Primitives",
     net472 = "@net472//:System.ServiceModel.Primitives",
     net48 = "@net48//:System.ServiceModel.Primitives",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3123,6 +3317,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Routing",
     net472 = "@net472//:System.ServiceModel.Routing",
     net48 = "@net48//:System.ServiceModel.Routing",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3138,6 +3333,7 @@ import_multiframework_library(
     net471 = "@net471//:System.ServiceModel.Security",
     net472 = "@net472//:System.ServiceModel.Security",
     net48 = "@net48//:System.ServiceModel.Security",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3159,6 +3355,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ServiceModel.Web",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ServiceModel.Web",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ServiceModel.Web",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3179,6 +3376,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ServiceProcess",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ServiceProcess",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ServiceProcess",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3195,6 +3393,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Speech",
     net472 = "@net472//:System.Speech",
     net48 = "@net48//:System.Speech",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3215,12 +3414,14 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Text.Encoding",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Text.Encoding",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Text.Encoding",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Text.Encoding.CodePages",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Text.Encoding.CodePages",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3241,18 +3442,21 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Text.Encoding.Extensions",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Text.Encoding.Extensions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Text.Encoding.Extensions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Text.Encodings.Web",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Text.Encodings.Web",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Text.Json",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Text.Json",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3273,6 +3477,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Text.RegularExpressions",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Text.RegularExpressions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Text.RegularExpressions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3293,12 +3498,14 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Threading",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Threading",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
 import_multiframework_library(
     name = "System.Threading.Channels",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading.Channels",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3312,6 +3519,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Threading.Overlapped",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Threading.Overlapped",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading.Overlapped",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3332,6 +3540,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Threading.Tasks",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Threading.Tasks",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading.Tasks",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3340,6 +3549,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Threading.Tasks.Dataflow",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Threading.Tasks.Dataflow",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading.Tasks.Dataflow",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3360,6 +3570,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Threading.Tasks.Extensions",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Threading.Tasks.Extensions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading.Tasks.Extensions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3380,6 +3591,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Threading.Tasks.Parallel",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Threading.Tasks.Parallel",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading.Tasks.Parallel",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3393,6 +3605,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Threading.Thread",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Threading.Thread",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading.Thread",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3406,6 +3619,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Threading.ThreadPool",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Threading.ThreadPool",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading.ThreadPool",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3425,6 +3639,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Threading.Timer",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Threading.Timer",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Threading.Timer",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3447,6 +3662,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Transactions",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Transactions",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Transactions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3455,6 +3671,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Transactions.Local",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Transactions.Local",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Transactions.Local",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3468,6 +3685,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.ValueTuple",
     netcoreapp2_2 = "@netcoreapp2.2//:System.ValueTuple",
     netcoreapp3_0 = "@netcoreapp3.0//:System.ValueTuple",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3490,6 +3708,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Web",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Web",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Web",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3506,6 +3725,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Abstractions",
     net472 = "@net472//:System.Web.Abstractions",
     net48 = "@net48//:System.Web.Abstractions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3522,6 +3742,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.ApplicationServices",
     net472 = "@net472//:System.Web.ApplicationServices",
     net48 = "@net48//:System.Web.ApplicationServices",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3538,6 +3759,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.DataVisualization",
     net472 = "@net472//:System.Web.DataVisualization",
     net48 = "@net48//:System.Web.DataVisualization",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3554,6 +3776,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.DataVisualization.Design",
     net472 = "@net472//:System.Web.DataVisualization.Design",
     net48 = "@net48//:System.Web.DataVisualization.Design",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3570,6 +3793,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.DynamicData",
     net472 = "@net472//:System.Web.DynamicData",
     net48 = "@net48//:System.Web.DynamicData",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3586,6 +3810,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.DynamicData.Design",
     net472 = "@net472//:System.Web.DynamicData.Design",
     net48 = "@net48//:System.Web.DynamicData.Design",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3602,6 +3827,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Entity",
     net472 = "@net472//:System.Web.Entity",
     net48 = "@net48//:System.Web.Entity",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3618,6 +3844,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Entity.Design",
     net472 = "@net472//:System.Web.Entity.Design",
     net48 = "@net48//:System.Web.Entity.Design",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3634,6 +3861,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Extensions",
     net472 = "@net472//:System.Web.Extensions",
     net48 = "@net48//:System.Web.Extensions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3650,6 +3878,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Extensions.Design",
     net472 = "@net472//:System.Web.Extensions.Design",
     net48 = "@net48//:System.Web.Extensions.Design",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3658,6 +3887,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Web.HttpUtility",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Web.HttpUtility",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Web.HttpUtility",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3675,6 +3905,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Mobile",
     net472 = "@net472//:System.Web.Mobile",
     net48 = "@net48//:System.Web.Mobile",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3692,6 +3923,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.RegularExpressions",
     net472 = "@net472//:System.Web.RegularExpressions",
     net48 = "@net48//:System.Web.RegularExpressions",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3708,6 +3940,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Routing",
     net472 = "@net472//:System.Web.Routing",
     net48 = "@net48//:System.Web.Routing",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3725,6 +3958,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Web.Services",
     net472 = "@net472//:System.Web.Services",
     net48 = "@net48//:System.Web.Services",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3745,6 +3979,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Windows",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Windows",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Windows",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3760,6 +3995,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Controls.Ribbon",
     net472 = "@net472//:System.Windows.Controls.Ribbon",
     net48 = "@net48//:System.Windows.Controls.Ribbon",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3777,6 +4013,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Forms",
     net472 = "@net472//:System.Windows.Forms",
     net48 = "@net48//:System.Windows.Forms",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3793,6 +4030,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Forms.DataVisualization",
     net472 = "@net472//:System.Windows.Forms.DataVisualization",
     net48 = "@net48//:System.Windows.Forms.DataVisualization",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3809,6 +4047,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Forms.DataVisualization.Design",
     net472 = "@net472//:System.Windows.Forms.DataVisualization.Design",
     net48 = "@net48//:System.Windows.Forms.DataVisualization.Design",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3825,6 +4064,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Input.Manipulations",
     net472 = "@net472//:System.Windows.Input.Manipulations",
     net48 = "@net48//:System.Windows.Input.Manipulations",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3841,6 +4081,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Windows.Presentation",
     net472 = "@net472//:System.Windows.Presentation",
     net48 = "@net48//:System.Windows.Presentation",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3857,6 +4098,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Workflow.Activities",
     net472 = "@net472//:System.Workflow.Activities",
     net48 = "@net48//:System.Workflow.Activities",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3873,6 +4115,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Workflow.ComponentModel",
     net472 = "@net472//:System.Workflow.ComponentModel",
     net48 = "@net48//:System.Workflow.ComponentModel",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3889,6 +4132,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Workflow.Runtime",
     net472 = "@net472//:System.Workflow.Runtime",
     net48 = "@net48//:System.Workflow.Runtime",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3905,6 +4149,7 @@ import_multiframework_library(
     net471 = "@net471//:System.WorkflowServices",
     net472 = "@net472//:System.WorkflowServices",
     net48 = "@net48//:System.WorkflowServices",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3921,6 +4166,7 @@ import_multiframework_library(
     net471 = "@net471//:System.Xaml",
     net472 = "@net472//:System.Xaml",
     net48 = "@net48//:System.Xaml",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3943,6 +4189,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Xml",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Xml",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Xml",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3964,6 +4211,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Xml.Linq",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Xml.Linq",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Xml.Linq",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -3984,6 +4232,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Xml.ReaderWriter",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Xml.ReaderWriter",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Xml.ReaderWriter",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4004,6 +4253,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Xml.Serialization",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Xml.Serialization",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Xml.Serialization",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4024,6 +4274,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Xml.XDocument",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Xml.XDocument",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Xml.XDocument",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4037,6 +4288,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Xml.XmlDocument",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Xml.XmlDocument",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Xml.XmlDocument",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4057,6 +4309,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Xml.XmlSerializer",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Xml.XmlSerializer",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Xml.XmlSerializer",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4070,6 +4323,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Xml.XPath",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Xml.XPath",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Xml.XPath",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4083,6 +4337,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:System.Xml.XPath.XDocument",
     netcoreapp2_2 = "@netcoreapp2.2//:System.Xml.XPath.XDocument",
     netcoreapp3_0 = "@netcoreapp3.0//:System.Xml.XPath.XDocument",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4099,6 +4354,7 @@ import_multiframework_library(
     net471 = "@net471//:UIAutomationClient",
     net472 = "@net472//:UIAutomationClient",
     net48 = "@net48//:UIAutomationClient",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4115,6 +4371,7 @@ import_multiframework_library(
     net471 = "@net471//:UIAutomationClientsideProviders",
     net472 = "@net472//:UIAutomationClientsideProviders",
     net48 = "@net48//:UIAutomationClientsideProviders",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4131,6 +4388,7 @@ import_multiframework_library(
     net471 = "@net471//:UIAutomationProvider",
     net472 = "@net472//:UIAutomationProvider",
     net48 = "@net48//:UIAutomationProvider",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4147,6 +4405,7 @@ import_multiframework_library(
     net471 = "@net471//:UIAutomationTypes",
     net472 = "@net472//:UIAutomationTypes",
     net48 = "@net48//:UIAutomationTypes",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4166,6 +4425,7 @@ import_multiframework_library(
     netcoreapp2_1 = "@netcoreapp2.1//:WindowsBase",
     netcoreapp2_2 = "@netcoreapp2.2//:WindowsBase",
     netcoreapp3_0 = "@netcoreapp3.0//:WindowsBase",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4182,6 +4442,7 @@ import_multiframework_library(
     net471 = "@net471//:WindowsFormsIntegration",
     net472 = "@net472//:WindowsFormsIntegration",
     net48 = "@net48//:WindowsFormsIntegration",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )
 
@@ -4198,5 +4459,6 @@ import_multiframework_library(
     net471 = "@net471//:XamlBuildTask",
     net472 = "@net472//:XamlBuildTask",
     net48 = "@net48//:XamlBuildTask",
+    version_smearing = False,
     visibility = ["//visibility:public"],
 )

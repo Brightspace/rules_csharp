@@ -6,6 +6,7 @@ load("@d2l_rules_csharp//csharp:defs.bzl", "import_library", "csharp_library_set
 csharp_library_set(
     name = "StandardReferences",
     target_framework = "net20",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -20,6 +21,7 @@ import_library(
     name = "Accessibility",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Accessibility.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -28,6 +30,7 @@ import_library(
     name = "AspNetMMCExt",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/AspNetMMCExt.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -42,6 +45,7 @@ import_library(
     name = "cscompmgd",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/cscompmgd.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -50,6 +54,7 @@ import_library(
     name = "CustomMarshalers",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/CustomMarshalers.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.VisualC",
         "//:mscorlib",
@@ -61,6 +66,7 @@ import_library(
     name = "IEExecRemote",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/IEExecRemote.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -69,6 +75,7 @@ import_library(
     name = "IEHost",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/IEHost.dll",
+    version_smearing = False,
     deps = [
         "//:IIEHost",
         "//:mscorlib",
@@ -83,6 +90,7 @@ import_library(
     name = "IIEHost",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/IIEHost.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -91,6 +99,7 @@ import_library(
     name = "ISymWrapper",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/ISymWrapper.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.VisualC",
         "//:mscorlib",
@@ -102,6 +111,7 @@ import_library(
     name = "Microsoft.Build.Engine",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.Build.Engine.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
@@ -115,6 +125,7 @@ import_library(
     name = "Microsoft.Build.Framework",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.Build.Framework.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -123,6 +134,7 @@ import_library(
     name = "Microsoft.Build.Tasks",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.Build.Tasks.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:Microsoft.Build.Utilities",
@@ -141,6 +153,7 @@ import_library(
     name = "Microsoft.Build.Utilities",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.Build.Utilities.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Build.Framework",
         "//:mscorlib",
@@ -153,6 +166,7 @@ import_library(
     name = "Microsoft.JScript",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.JScript.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Vsa",
         "//:mscorlib",
@@ -166,6 +180,7 @@ import_library(
     name = "Microsoft.VisualBasic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.VisualBasic.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -183,6 +198,7 @@ import_library(
     name = "Microsoft.VisualBasic.Compatibility",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.VisualBasic.Compatibility.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.VisualBasic",
         "//:mscorlib",
@@ -199,6 +215,7 @@ import_library(
     name = "Microsoft.VisualBasic.Compatibility.Data",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.VisualBasic.Compatibility.Data.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.VisualBasic",
         "//:Microsoft.VisualBasic.Compatibility",
@@ -215,6 +232,7 @@ import_library(
     name = "Microsoft.VisualBasic.Vsa",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.VisualBasic.Vsa.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Vsa",
         "//:Microsoft_VsaVb",
@@ -228,6 +246,7 @@ import_library(
     name = "Microsoft.VisualC",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.VisualC.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
     visibility = ["@net//:__pkg__"],
 )
@@ -236,6 +255,7 @@ import_library(
     name = "Microsoft.Vsa",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.Vsa.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -247,6 +267,7 @@ import_library(
     name = "Microsoft.Vsa.Vb.CodeDOMProcessor",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft.Vsa.Vb.CodeDOMProcessor.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -259,6 +280,7 @@ import_library(
     name = "Microsoft_VsaVb",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/Microsoft_VsaVb.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Vsa",
         "//:mscorlib",
@@ -270,6 +292,7 @@ import_library(
     name = "mscorlib",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/mscorlib.dll",
+    version_smearing = False,
     visibility = ["@net//:__pkg__"],
 )
 
@@ -277,6 +300,7 @@ import_library(
     name = "sysglobl",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/sysglobl.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -288,6 +312,7 @@ import_library(
     name = "System",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Xml-noncyclic",
@@ -299,6 +324,7 @@ import_library(
     name = "System.configuration",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.configuration.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -312,6 +338,7 @@ import_library(
     name = "System.Configuration.Install",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Configuration.Install.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -325,6 +352,7 @@ import_library(
     name = "System.Data",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Data.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.VisualC",
         "//:mscorlib",
@@ -340,6 +368,7 @@ import_library(
     name = "System.Data.OracleClient",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Data.OracleClient.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -360,6 +389,7 @@ import_library(
     name = "System.Data.SqlXml-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Data.SqlXml.dll",
+    version_smearing = False,
     deps = ["//:mscorlib"],
 )
 
@@ -373,6 +403,7 @@ import_library(
     name = "System.Deployment-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Deployment.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -392,6 +423,7 @@ import_library(
     name = "System.Design-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Design.dll",
+    version_smearing = False,
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -411,6 +443,7 @@ import_library(
     name = "System.DirectoryServices",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.DirectoryServices.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -423,6 +456,7 @@ import_library(
     name = "System.DirectoryServices.Protocols",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.DirectoryServices.Protocols.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -436,6 +470,7 @@ import_library(
     name = "System.Drawing",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Drawing.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -447,6 +482,7 @@ import_library(
     name = "System.Drawing.Design",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Drawing.Design.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -466,6 +502,7 @@ import_library(
     name = "System.EnterpriseServices-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.EnterpriseServices.dll",
+    version_smearing = False,
     native_dlls = [
         "//:build/.NETFramework/v2.0/System.EnterpriseServices.Wrapper.dll",
     ],
@@ -482,6 +519,7 @@ import_library(
     name = "System.Management",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Management.dll",
+    version_smearing = False,
     deps = [
         "//:Microsoft.JScript",
         "//:mscorlib",
@@ -495,6 +533,7 @@ import_library(
     name = "System.Messaging",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Messaging.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -512,6 +551,7 @@ import_library(
     name = "System.Runtime.Remoting",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Runtime.Remoting.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -527,6 +567,7 @@ import_library(
     name = "System.Runtime.Serialization.Formatters.Soap",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Runtime.Serialization.Formatters.Soap.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Xml",
@@ -538,6 +579,7 @@ import_library(
     name = "System.Security",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Security.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -550,6 +592,7 @@ import_library(
     name = "System.ServiceProcess",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.ServiceProcess.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -564,6 +607,7 @@ import_library(
     name = "System.Transactions",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Transactions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -577,6 +621,7 @@ import_library(
     name = "System.Web",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Web.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -599,6 +644,7 @@ import_library(
     name = "System.Web.Mobile",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Web.Mobile.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -617,6 +663,7 @@ import_library(
     name = "System.Web.RegularExpressions",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Web.RegularExpressions.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -634,6 +681,7 @@ import_library(
     name = "System.Web.Services-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Web.Services.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System",
@@ -649,6 +697,7 @@ import_library(
     name = "System.Windows.Forms",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Windows.Forms.dll",
+    version_smearing = False,
     deps = [
         "//:Accessibility",
         "//:mscorlib",
@@ -672,6 +721,7 @@ import_library(
     name = "System.Xml-noncyclic",
     target_framework = "net20",
     refdll = "//:build/.NETFramework/v2.0/System.Xml.dll",
+    version_smearing = False,
     deps = [
         "//:mscorlib",
         "//:System.Data.SqlXml-noncyclic",

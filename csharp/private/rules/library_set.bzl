@@ -25,7 +25,8 @@ def _library_set(ctx):
         ),
     }
 
-    fill_in_missing_frameworks(providers)
+    if ctx.attr.version_smearing:
+        fill_in_missing_frameworks(providers)
 
     return providers.values()
 
@@ -40,6 +41,10 @@ csharp_library_set = rule(
         "deps": attr.label_list(
             doc = "The set of libraries",
             providers = AnyTargetFramework,
+        ),
+        "version_smearing": attr.bool(
+            doc = "Indicates whether providers should be generated for newer frameworks as well",
+            default = True
         ),
     },
     executable = False,

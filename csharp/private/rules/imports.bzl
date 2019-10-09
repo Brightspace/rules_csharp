@@ -39,7 +39,8 @@ def _import_library(ctx):
         ),
     }
 
-    fill_in_missing_frameworks(providers)
+    if ctx.attr.version_smearing:
+        fill_in_missing_frameworks(providers)
 
     return [DefaultInfo(files = depset(files))] + providers.values()
 
@@ -70,6 +71,10 @@ import_library = rule(
         "deps": attr.label_list(
             doc = "other DLLs that this DLL depends on.",
             providers = AnyTargetFramework,
+        ),
+        "version_smearing": attr.bool(
+            doc = "Indicates whether providers should be generated for newer frameworks as well",
+            default = True
         ),
     },
     executable = False,
@@ -119,14 +124,20 @@ def _import_multiframework_library_impl(ctx):
         if attr != None:
             providers[tfm] = attr[CSharpAssembly[tfm]]
 
-    fill_in_missing_frameworks(providers)
+    if ctx.attr.version_smearing:
+        fill_in_missing_frameworks(providers)
 
     # TODO: we don't return an explicit DefaultInfo for this rule... maybe we
     # should construct one from a specific (indicated by the user) framework?
     return providers.values()
 
 def _generate_multiframework_attrs():
-    attrs = {}
+    attrs = {
+        "version_smearing": attr.bool(
+            doc = "Indicates whether providers should be generated for newer frameworks as well",
+            default = True
+        ),
+    }
     for (tfm, tf_provider) in CSharpAssembly.items():
         attrs[tfm.replace(".", "_")] = attr.label(
             doc = "The %s version of this library" % tfm,

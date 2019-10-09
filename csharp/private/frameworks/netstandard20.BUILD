@@ -6,6 +6,7 @@ load("@d2l_rules_csharp//csharp:defs.bzl", "import_library", "csharp_library_set
 csharp_library_set(
     name = "StandardReferences",
     target_framework = "netstandard2.0",
+    version_smearing = False,
     deps = [
         "//:Microsoft.Win32.Primitives",
         "//:mscorlib",
@@ -128,6 +129,7 @@ import_library(
     name = "Microsoft.Win32.Primitives",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -136,6 +138,7 @@ import_library(
     name = "mscorlib",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/mscorlib.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -144,6 +147,7 @@ import_library(
     name = "netstandard",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/netstandard.dll",
+    version_smearing = False,
     visibility = ["@net//:__pkg__"],
 )
 
@@ -151,6 +155,7 @@ import_library(
     name = "System",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -159,6 +164,7 @@ import_library(
     name = "System.AppContext",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.AppContext.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -167,6 +173,7 @@ import_library(
     name = "System.Collections",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Collections.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -175,6 +182,7 @@ import_library(
     name = "System.Collections.Concurrent",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Collections.Concurrent.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -183,6 +191,7 @@ import_library(
     name = "System.Collections.NonGeneric",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Collections.NonGeneric.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -191,6 +200,7 @@ import_library(
     name = "System.Collections.Specialized",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Collections.Specialized.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -199,6 +209,7 @@ import_library(
     name = "System.ComponentModel",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.ComponentModel.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -207,6 +218,7 @@ import_library(
     name = "System.ComponentModel.Composition",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.ComponentModel.Composition.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -215,6 +227,7 @@ import_library(
     name = "System.ComponentModel.EventBasedAsync",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.ComponentModel.EventBasedAsync.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -223,6 +236,7 @@ import_library(
     name = "System.ComponentModel.Primitives",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.ComponentModel.Primitives.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -231,6 +245,7 @@ import_library(
     name = "System.ComponentModel.TypeConverter",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.ComponentModel.TypeConverter.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -239,6 +254,7 @@ import_library(
     name = "System.Console",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Console.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -247,6 +263,7 @@ import_library(
     name = "System.Core",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Core.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -255,6 +272,7 @@ import_library(
     name = "System.Data",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Data.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -263,6 +281,7 @@ import_library(
     name = "System.Data.Common",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Data.Common.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -271,6 +290,7 @@ import_library(
     name = "System.Diagnostics.Contracts",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Diagnostics.Contracts.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -279,6 +299,7 @@ import_library(
     name = "System.Diagnostics.Debug",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Diagnostics.Debug.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -287,6 +308,7 @@ import_library(
     name = "System.Diagnostics.FileVersionInfo",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Diagnostics.FileVersionInfo.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -295,6 +317,7 @@ import_library(
     name = "System.Diagnostics.Process",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Diagnostics.Process.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -303,6 +326,7 @@ import_library(
     name = "System.Diagnostics.StackTrace",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Diagnostics.StackTrace.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -311,6 +335,7 @@ import_library(
     name = "System.Diagnostics.TextWriterTraceListener",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Diagnostics.TextWriterTraceListener.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -319,6 +344,7 @@ import_library(
     name = "System.Diagnostics.Tools",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Diagnostics.Tools.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -327,6 +353,7 @@ import_library(
     name = "System.Diagnostics.TraceSource",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Diagnostics.TraceSource.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -335,6 +362,7 @@ import_library(
     name = "System.Diagnostics.Tracing",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Diagnostics.Tracing.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -343,6 +371,7 @@ import_library(
     name = "System.Drawing",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Drawing.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -351,6 +380,7 @@ import_library(
     name = "System.Drawing.Primitives",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Drawing.Primitives.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -359,6 +389,7 @@ import_library(
     name = "System.Dynamic.Runtime",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Dynamic.Runtime.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -367,6 +398,7 @@ import_library(
     name = "System.Globalization",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Globalization.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -375,6 +407,7 @@ import_library(
     name = "System.Globalization.Calendars",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Globalization.Calendars.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -383,6 +416,7 @@ import_library(
     name = "System.Globalization.Extensions",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Globalization.Extensions.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -391,6 +425,7 @@ import_library(
     name = "System.IO",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -399,6 +434,7 @@ import_library(
     name = "System.IO.Compression",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.Compression.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -407,6 +443,7 @@ import_library(
     name = "System.IO.Compression.FileSystem",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.Compression.FileSystem.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -415,6 +452,7 @@ import_library(
     name = "System.IO.Compression.ZipFile",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.Compression.ZipFile.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -423,6 +461,7 @@ import_library(
     name = "System.IO.FileSystem",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.FileSystem.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -431,6 +470,7 @@ import_library(
     name = "System.IO.FileSystem.DriveInfo",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.FileSystem.DriveInfo.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -439,6 +479,7 @@ import_library(
     name = "System.IO.FileSystem.Primitives",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.FileSystem.Primitives.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -447,6 +488,7 @@ import_library(
     name = "System.IO.FileSystem.Watcher",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.FileSystem.Watcher.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -455,6 +497,7 @@ import_library(
     name = "System.IO.IsolatedStorage",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.IsolatedStorage.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -463,6 +506,7 @@ import_library(
     name = "System.IO.MemoryMappedFiles",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.MemoryMappedFiles.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -471,6 +515,7 @@ import_library(
     name = "System.IO.Pipes",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.Pipes.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -479,6 +524,7 @@ import_library(
     name = "System.IO.UnmanagedMemoryStream",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.IO.UnmanagedMemoryStream.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -487,6 +533,7 @@ import_library(
     name = "System.Linq",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Linq.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -495,6 +542,7 @@ import_library(
     name = "System.Linq.Expressions",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Linq.Expressions.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -503,6 +551,7 @@ import_library(
     name = "System.Linq.Parallel",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Linq.Parallel.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -511,6 +560,7 @@ import_library(
     name = "System.Linq.Queryable",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Linq.Queryable.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -519,6 +569,7 @@ import_library(
     name = "System.Net",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -527,6 +578,7 @@ import_library(
     name = "System.Net.Http",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.Http.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -535,6 +587,7 @@ import_library(
     name = "System.Net.NameResolution",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.NameResolution.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -543,6 +596,7 @@ import_library(
     name = "System.Net.NetworkInformation",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.NetworkInformation.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -551,6 +605,7 @@ import_library(
     name = "System.Net.Ping",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.Ping.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -559,6 +614,7 @@ import_library(
     name = "System.Net.Primitives",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.Primitives.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -567,6 +623,7 @@ import_library(
     name = "System.Net.Requests",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.Requests.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -575,6 +632,7 @@ import_library(
     name = "System.Net.Security",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.Security.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -583,6 +641,7 @@ import_library(
     name = "System.Net.Sockets",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.Sockets.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -591,6 +650,7 @@ import_library(
     name = "System.Net.WebHeaderCollection",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.WebHeaderCollection.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -599,6 +659,7 @@ import_library(
     name = "System.Net.WebSockets",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.WebSockets.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -607,6 +668,7 @@ import_library(
     name = "System.Net.WebSockets.Client",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Net.WebSockets.Client.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -615,6 +677,7 @@ import_library(
     name = "System.Numerics",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Numerics.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -623,6 +686,7 @@ import_library(
     name = "System.ObjectModel",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.ObjectModel.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -631,6 +695,7 @@ import_library(
     name = "System.Reflection",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Reflection.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -639,6 +704,7 @@ import_library(
     name = "System.Reflection.Extensions",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Reflection.Extensions.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -647,6 +713,7 @@ import_library(
     name = "System.Reflection.Primitives",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Reflection.Primitives.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -655,6 +722,7 @@ import_library(
     name = "System.Resources.Reader",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Resources.Reader.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -663,6 +731,7 @@ import_library(
     name = "System.Resources.ResourceManager",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Resources.ResourceManager.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -671,6 +740,7 @@ import_library(
     name = "System.Resources.Writer",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Resources.Writer.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -679,6 +749,7 @@ import_library(
     name = "System.Runtime",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -687,6 +758,7 @@ import_library(
     name = "System.Runtime.CompilerServices.VisualC",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.CompilerServices.VisualC.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -695,6 +767,7 @@ import_library(
     name = "System.Runtime.Extensions",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.Extensions.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -703,6 +776,7 @@ import_library(
     name = "System.Runtime.Handles",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.Handles.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -711,6 +785,7 @@ import_library(
     name = "System.Runtime.InteropServices",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.InteropServices.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -719,6 +794,7 @@ import_library(
     name = "System.Runtime.InteropServices.RuntimeInformation",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.InteropServices.RuntimeInformation.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -727,6 +803,7 @@ import_library(
     name = "System.Runtime.Numerics",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.Numerics.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -735,6 +812,7 @@ import_library(
     name = "System.Runtime.Serialization",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.Serialization.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -743,6 +821,7 @@ import_library(
     name = "System.Runtime.Serialization.Formatters",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.Serialization.Formatters.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -751,6 +830,7 @@ import_library(
     name = "System.Runtime.Serialization.Json",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.Serialization.Json.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -759,6 +839,7 @@ import_library(
     name = "System.Runtime.Serialization.Primitives",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.Serialization.Primitives.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -767,6 +848,7 @@ import_library(
     name = "System.Runtime.Serialization.Xml",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Runtime.Serialization.Xml.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -775,6 +857,7 @@ import_library(
     name = "System.Security.Claims",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Security.Claims.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -783,6 +866,7 @@ import_library(
     name = "System.Security.Cryptography.Algorithms",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Security.Cryptography.Algorithms.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -791,6 +875,7 @@ import_library(
     name = "System.Security.Cryptography.Csp",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Security.Cryptography.Csp.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -799,6 +884,7 @@ import_library(
     name = "System.Security.Cryptography.Encoding",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Security.Cryptography.Encoding.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -807,6 +893,7 @@ import_library(
     name = "System.Security.Cryptography.Primitives",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Security.Cryptography.Primitives.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -815,6 +902,7 @@ import_library(
     name = "System.Security.Cryptography.X509Certificates",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Security.Cryptography.X509Certificates.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -823,6 +911,7 @@ import_library(
     name = "System.Security.Principal",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Security.Principal.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -831,6 +920,7 @@ import_library(
     name = "System.Security.SecureString",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Security.SecureString.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -839,6 +929,7 @@ import_library(
     name = "System.ServiceModel.Web",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.ServiceModel.Web.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -847,6 +938,7 @@ import_library(
     name = "System.Text.Encoding",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Text.Encoding.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -855,6 +947,7 @@ import_library(
     name = "System.Text.Encoding.Extensions",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Text.Encoding.Extensions.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -863,6 +956,7 @@ import_library(
     name = "System.Text.RegularExpressions",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Text.RegularExpressions.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -871,6 +965,7 @@ import_library(
     name = "System.Threading",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Threading.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -879,6 +974,7 @@ import_library(
     name = "System.Threading.Overlapped",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Threading.Overlapped.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -887,6 +983,7 @@ import_library(
     name = "System.Threading.Tasks",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Threading.Tasks.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -895,6 +992,7 @@ import_library(
     name = "System.Threading.Tasks.Parallel",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Threading.Tasks.Parallel.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -903,6 +1001,7 @@ import_library(
     name = "System.Threading.Thread",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Threading.Thread.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -911,6 +1010,7 @@ import_library(
     name = "System.Threading.ThreadPool",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Threading.ThreadPool.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -919,6 +1019,7 @@ import_library(
     name = "System.Threading.Timer",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Threading.Timer.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -927,6 +1028,7 @@ import_library(
     name = "System.Transactions",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Transactions.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -935,6 +1037,7 @@ import_library(
     name = "System.ValueTuple",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.ValueTuple.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -943,6 +1046,7 @@ import_library(
     name = "System.Web",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Web.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -951,6 +1055,7 @@ import_library(
     name = "System.Windows",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Windows.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -959,6 +1064,7 @@ import_library(
     name = "System.Xml",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Xml.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -967,6 +1073,7 @@ import_library(
     name = "System.Xml.Linq",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Xml.Linq.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -975,6 +1082,7 @@ import_library(
     name = "System.Xml.ReaderWriter",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Xml.ReaderWriter.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -983,6 +1091,7 @@ import_library(
     name = "System.Xml.Serialization",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Xml.Serialization.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -991,6 +1100,7 @@ import_library(
     name = "System.Xml.XDocument",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Xml.XDocument.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -999,6 +1109,7 @@ import_library(
     name = "System.Xml.XmlDocument",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Xml.XmlDocument.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1007,6 +1118,7 @@ import_library(
     name = "System.Xml.XmlSerializer",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Xml.XmlSerializer.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1015,6 +1127,7 @@ import_library(
     name = "System.Xml.XPath",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Xml.XPath.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
@@ -1023,6 +1136,7 @@ import_library(
     name = "System.Xml.XPath.XDocument",
     target_framework = "netstandard2.0",
     refdll = "//:build/netstandard2.0/ref/System.Xml.XPath.XDocument.dll",
+    version_smearing = False,
     deps = ["//:netstandard"],
     visibility = ["@net//:__pkg__"],
 )
