@@ -1,5 +1,7 @@
 # rules_csharp
 
+[![Build status](https://badge.buildkite.com/3604affadbe7c01a052fb896ee1d83e0111ee3776e390e96b9.svg)](https://buildkite.com/bazel/github-dot-com-brightspace-rules-csharp)
+
 [Bazel](https://bazel.build) rules for C#.
 
 These are experimental and initially were built for use by D2L.
