@@ -28,3 +28,12 @@ tasks:
     working_directory: examples
     build_targets:
     - ...
+  examples-rbe_ubuntu1604:
+    name: Examples on the remote build environment
+    platform: rbe_ubuntu1604
+    include_json_profile:
+    - build
+    - test
+    working_directory: examples
+    build_targets:
+    - ...
