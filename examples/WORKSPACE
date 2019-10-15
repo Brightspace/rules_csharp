@@ -24,3 +24,19 @@ import_nuget_package(
     file = "import_nuget_package/Example.nupkg",
     sha256 = "a658761334ffab1773c10dc53c7aa964f61a793963bb8111d416d2e1e1e95635",
 )
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "bazel_toolchains",
+    sha256 = "e9bab54199722935f239cb1cd56a80be2ac3c3843e1a6d3492e2bc11f9c21daf",
+    strip_prefix = "bazel-toolchains-1.0.0",
+    urls = [
+        "https://github.com/bazelbuild/bazel-toolchains/releases/download/1.0.0/bazel-toolchains-1.0.0.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/1.0.0.tar.gz",
+    ],
+)
+
+load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
+
+rbe_autoconfig(name = "buildkite_config")
