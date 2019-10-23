@@ -22,7 +22,7 @@ def _library_impl(ctx):
             deps = ctx.attr.deps + stdrefs,
             keyfile = ctx.file.keyfile,
             langversion = ctx.attr.langversion,
-            resources = ctx.files.resources,
+            resources = ctx.attr.resources,
             srcs = ctx.files.srcs,
             out = ctx.attr.out,
             target = "library",
@@ -66,6 +66,7 @@ csharp_library = rule(
         "resources": attr.label_list(
             doc = "A list of files to embed in the DLL as resources.",
             allow_files = True,
+            providers = [CSharpResource],
         ),
         "out": attr.string(
             doc = "File name, without extension, of the built assembly.",
