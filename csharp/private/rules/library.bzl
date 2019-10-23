@@ -1,4 +1,4 @@
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework")
+load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework", "CSharpResource")
 load("@d2l_rules_csharp//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
     "@d2l_rules_csharp//csharp/private:common.bzl",
