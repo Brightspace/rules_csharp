@@ -28,8 +28,8 @@ csharp_toolchain = rule(
 def configure_toolchain(os, exe = "dotnet"):
     csharp_toolchain(
         name = "csharp_x86_64-" + os,
-        runtime = "@netcore-runtime-%s//:%s" % (os, exe),
-        compiler = "@csharp-build-tools//:tasks/netcoreapp2.1/bincore/csc.dll",
+        runtime = "@netcore-sdk-%s//:%s" % (os, exe),
+        compiler = "@netcore-sdk-%s//:sdk/3.0.100/Roslyn/bincore/csc.dll" % (os),
     )
 
     native.toolchain(

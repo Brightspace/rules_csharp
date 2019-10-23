@@ -3,14 +3,6 @@ load(":macros/nuget.bzl", "nuget_package")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def csharp_repositories():
-    nuget_package(
-        name = "csharp-build-tools",
-        package = "Microsoft.Net.Compilers.Toolset",
-        version = "3.1.1",
-        sha256 = "078e88a3f347e1428868cfd091634489f385379069e85a6707184ac07da9d481",
-        build_file = "@d2l_rules_csharp//csharp/private:build-tools.BUILD",
-    )
-
     _net_workspace()
 
     create_net_workspace()
@@ -31,7 +23,7 @@ def csharp_repositories():
     )
 
     # We need the .NET Core runtime, sdk and compiler for our current OS,
-    # so that we can run the .NET core build of the compiler (from @csharp-build-tools).
+    # so that we can run the .NET core build of the compiler.
 
     _download_dotnet(
         os = "windows",
