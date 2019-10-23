@@ -6,6 +6,10 @@ exports_files(
     glob([
         "host/**/*",
         "shared/**/*",
+    ]) +
+    # csharp compiler: csc
+    glob([
+        "sdk/3.0.100/Roslyn/bincore/**/*",
     ]),
     visibility = ["//visibility:public"],
 )
