@@ -16,6 +16,7 @@ def _bazel_to_relative_path(path):
   return "../../../../%s" % (path)
 
 def _csharp_resx_impl(ctx):
+    """_csharp_resx_impl emits actions for compiling a resx file."""
     if not ctx.attr.out:
         resource_name = ctx.attr.name
     else:
@@ -92,4 +93,7 @@ csharp_resx = rule(
         ),
     },
     toolchains = ["@d2l_rules_csharp//csharp/private:toolchain_type"],
+    doc = """
+Compiles an XML-based resource format (.resx) file into a binary resource (.resources) file.
+""",
 )
