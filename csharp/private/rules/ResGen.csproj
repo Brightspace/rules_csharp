@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>{TargetFramework}</TargetFrameworks>
+        <EnableDefaultEmbeddedResourceItems>False</EnableDefaultEmbeddedResourceItems>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="{Resx}">
+            <ManifestResourceName>{ManifestResourceName}</ManifestResourceName>
+        </EmbeddedResource>
+    </ItemGroup>
+</Project>

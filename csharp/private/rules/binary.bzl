@@ -1,4 +1,4 @@
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework")
+load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework", "CSharpResource")
 load("@d2l_rules_csharp//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
     "@d2l_rules_csharp//csharp/private:common.bzl",
@@ -26,7 +26,7 @@ def _binary_impl(ctx):
             deps = ctx.attr.deps + stdrefs,
             keyfile = ctx.file.keyfile,
             langversion = ctx.attr.langversion,
-            resources = ctx.files.resources,
+            resources = ctx.attr.resources,
             srcs = ctx.files.srcs,
             out = ctx.attr.out,
             target = "winexe" if ctx.attr.winexe else "exe",
@@ -74,6 +74,7 @@ csharp_binary = rule(
         "resources": attr.label_list(
             doc = "A list of files to embed in the DLL as resources.",
             allow_files = True,
+            providers = [CSharpResource],
         ),
         "out": attr.string(
             doc = "File name, without extension, of the built assembly.",

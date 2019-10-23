@@ -8,6 +8,10 @@ load(
     _csharp_binary = "csharp_binary",
 )
 load(
+    "//csharp/private:rules/resgen.bzl",
+    _csharp_resx = "csharp_resx",
+)
+load(
     "//csharp/private:rules/library.bzl",
     _csharp_library = "csharp_library",
 )
