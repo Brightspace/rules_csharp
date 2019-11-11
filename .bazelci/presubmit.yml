@@ -1,5 +1,5 @@
 ---
-bazel: 0.29.1
+bazel: 1.1.0
 tasks:
   examples-windows:
     name: Examples on Windows
