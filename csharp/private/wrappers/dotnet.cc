@@ -70,13 +70,17 @@ int main(int argc, char **argv)
   }
   dotnet_argv[argc] = 0;
 
-  // run `dotnet.exe` and wait for it to complete
-  // the output from this cmd will be emitted to stdout
 #ifdef _WIN32
+  // _spawnve has a limit on the size of the environment variables
+  // passed to the process. So here we will set the environment
+  // variables for this process, and the spawned instance will inherit them
   for (int i = 1; i < envvars.size(); i++)
   {
     putenv(envvars[i].c_str());
   }
+
+  // run `dotnet.exe` and wait for it to complete
+  // the output from this cmd will be emitted to stdout
   auto result = _spawnv(_P_WAIT, dotnet.c_str(), dotnet_argv);
 #else
   std::vector<char *> envp{};
@@ -84,6 +88,8 @@ int main(int argc, char **argv)
     envp.push_back(&envvar.front());
   envp.push_back(0);
 
+  // run `dotnet.exe` and wait for it to complete
+  // the output from this cmd will be emitted to stdout
   auto result = execve(dotnet.c_str(), dotnet_argv, envp.data());
 #endif // _WIN32
   if (result != 0)
