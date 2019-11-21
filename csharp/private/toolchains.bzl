@@ -1,7 +1,7 @@
 def _csharp_toolchain_impl(ctx):
     return [
         platform_common.ToolchainInfo(
-            runtime = ctx.file.runtime,
+            runtime = ctx.attr.runtime.files_to_run,
             compiler = ctx.file.compiler,
         ),
     ]
@@ -25,7 +25,7 @@ csharp_toolchain = rule(
 )
 
 # This is called in BUILD
-def configure_toolchain(os, exe = "dotnet"):
+def configure_toolchain(os, exe = "dotnetw"):
     csharp_toolchain(
         name = "csharp_x86_64-" + os,
         runtime = "@netcore-sdk-%s//:%s" % (os, exe),
