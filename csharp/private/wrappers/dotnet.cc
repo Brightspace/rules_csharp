@@ -82,16 +82,18 @@ int main(int argc, char **argv)
   // the output from this cmd will be emitted to stdout
   auto result = _spawnv(_P_WAIT, dotnet.c_str(), dotnet_argv);
 #else
-  std::vector<char *> envp{};
-  envp.reserve(envvars.size()+1);
-  for (auto &envvar : envvars) {
-    envp.push_back(&envvar.front());
+  auto envc = envvars.size();
+  auto envp = new char*[envc+1];
+  for (uint i = 0; i < envc; i++)
+  {
+    // envp[i] = envvars[i].c_str();
+    envp[i] = &envvars[i][0];
   }
-  envp.push_back(nullptr);
+  envp[envc] = nullptr;
 
   // run `dotnet.exe` and wait for it to complete
   // the output from this cmd will be emitted to stdout
-  auto result = execve(dotnet.c_str(), dotnet_argv, envp.data());
+  auto result = execve(dotnet.c_str(), dotnet_argv, envp);
 #endif // _WIN32
   if (result != 0)
   {
