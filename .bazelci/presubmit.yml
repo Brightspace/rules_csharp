@@ -22,6 +22,8 @@ tasks:
   examples-macos:
     name: Examples on macOS
     platform: macos
+    build_flags:
+      - "--sandbox_debug"
     include_json_profile:
     - build
     - test
