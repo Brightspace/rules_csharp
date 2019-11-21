@@ -93,7 +93,7 @@ int main(int argc, char **argv)
 
   // run `dotnet.exe` and wait for it to complete
   // the output from this cmd will be emitted to stdout
-  auto result = execve(dotnet.c_str(), dotnet_argv, envp);
+  auto result = execve(dotnet.c_str(), const_cast<char**>(dotnet_argv), envp);
 #endif // _WIN32
   if (result != 0)
   {
