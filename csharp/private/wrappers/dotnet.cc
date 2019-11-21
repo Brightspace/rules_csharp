@@ -86,7 +86,6 @@ int main(int argc, char **argv)
   auto envp = new char*[envc+1];
   for (uint i = 0; i < envc; i++)
   {
-    // envp[i] = envvars[i].c_str();
     envp[i] = &envvars[i][0];
   }
   envp[envc] = nullptr;
