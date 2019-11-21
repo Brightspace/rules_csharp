@@ -3,6 +3,7 @@
 #include <sstream>
 
 #ifdef _WIN32
+#include <fstream>
 #include <windows.h>
 #include <process.h>
 #include <errno.h>
@@ -56,8 +57,8 @@ int main(int argc, char **argv)
   envvars.push_back(evprintf("DOTNET_CLI_HOME", dotnetDir));
   envvars.push_back(evprintf("APPDATA", dotnetDir));
   envvars.push_back(evprintf("PROGRAMFILES", dotnetDir));
-  envvars.push_back(evprintf("TMP", dotnetDir));
-  envvars.push_back(evprintf("TEMP", dotnetDir));
+  // envvars.push_back(evprintf("TMP", dotnetDir));
+  // envvars.push_back(evprintf("TEMP", dotnetDir));
   envvars.push_back(evprintf("USERPROFILE", dotnetDir));
   envvars.push_back(evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1")); // disable telemetry
   
@@ -80,9 +81,9 @@ int main(int argc, char **argv)
   // the output from this cmd will be emitted to stdout
 #ifdef _WIN32
   auto result = _spawnve(_P_WAIT, dotnet.c_str(), dotnet_argv, envp.data());
-#else  // not _WIN32
+#else
   auto result = execve(dotnet.c_str(), dotnet_argv, envp.data());
-#endif  // _WIN32
+#endif // _WIN32
   if (result != 0)
   {
     std::cout << "dotnet failed: " << errno << std::endl;

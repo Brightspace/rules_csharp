@@ -1,7 +1,7 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 load("@d2l_rules_csharp//csharp:defs.bzl", "dotnet_wrapper")
 
-_WRAPPER_TEMPLATE = "@d2l_rules_csharp//csharp/private:rules/main.cc"
+_WRAPPER_TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/dotnet.cc"
 
 exports_files(
     glob(
