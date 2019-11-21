@@ -3,7 +3,6 @@
 #include <sstream>
 
 #ifdef _WIN32
-#include <fstream>
 #include <windows.h>
 #include <process.h>
 #include <errno.h>
@@ -68,7 +67,7 @@ int main(int argc, char **argv)
   {
     dotnet_argv[i] = argv[i];
   }
-  dotnet_argv[argc] = 0;
+  dotnet_argv[argc] = nullptr;
 
 #ifdef _WIN32
   // _spawnve has a limit on the size of the environment variables
@@ -84,9 +83,11 @@ int main(int argc, char **argv)
   auto result = _spawnv(_P_WAIT, dotnet.c_str(), dotnet_argv);
 #else
   std::vector<char *> envp{};
-  for (auto &envvar : envvars)
+  envp.reserve(envvars.size()+1);
+  for (auto &envvar : envvars) {
     envp.push_back(&envvar.front());
-  envp.push_back(0);
+  }
+  envp.push_back(nullptr);
 
   // run `dotnet.exe` and wait for it to complete
   // the output from this cmd will be emitted to stdout
