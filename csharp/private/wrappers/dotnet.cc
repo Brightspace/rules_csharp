@@ -7,10 +7,10 @@
 #include <windows.h>
 #include <process.h>
 #include <errno.h>
-#else  // not _WIN32
+#else // not _WIN32
 #include <stdlib.h>
 #include <unistd.h>
-#endif  // _WIN32
+#endif // _WIN32
 
 #include "tools/cpp/runfiles/runfiles.h"
 
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 
   // Get the name of the directory containing dotnet.exe
   auto dotnetDir = dotnet.substr(0, dotnet.find_last_of("/\\"));
-  
+
   /*
   dotnet and nuget require these environment variables to be set
   without them we cannot build/run anything with dotnet.
@@ -57,19 +57,12 @@ int main(int argc, char **argv)
   envvars.push_back(evprintf("DOTNET_CLI_HOME", dotnetDir));
   envvars.push_back(evprintf("APPDATA", dotnetDir));
   envvars.push_back(evprintf("PROGRAMFILES", dotnetDir));
-  // envvars.push_back(evprintf("TMP", dotnetDir));
-  // envvars.push_back(evprintf("TEMP", dotnetDir));
   envvars.push_back(evprintf("USERPROFILE", dotnetDir));
   envvars.push_back(evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1")); // disable telemetry
-  
-  std::vector<char*> envp{};
-  for(auto& envvar : envvars)
-    envp.push_back(&envvar.front());
-  envp.push_back(0);
 
   // dotnet wants this to either be dotnet or dotnet.exe but doesn't have a
   // preference otherwise.
-  auto dotnet_argv = new char*[argc];
+  auto dotnet_argv = new char *[argc];
   dotnet_argv[0] = (char *)"dotnet";
   for (int i = 1; i < argc; i++)
   {
@@ -80,8 +73,17 @@ int main(int argc, char **argv)
   // run `dotnet.exe` and wait for it to complete
   // the output from this cmd will be emitted to stdout
 #ifdef _WIN32
-  auto result = _spawnve(_P_WAIT, dotnet.c_str(), dotnet_argv, envp.data());
+  for (int i = 1; i < envvars.size(); i++)
+  {
+    putenv(envvars[i].c_str());
+  }
+  auto result = _spawnv(_P_WAIT, dotnet.c_str(), dotnet_argv);
 #else
+  std::vector<char *> envp{};
+  for (auto &envvar : envvars)
+    envp.push_back(&envvar.front());
+  envp.push_back(0);
+
   auto result = execve(dotnet.c_str(), dotnet_argv, envp.data());
 #endif // _WIN32
   if (result != 0)
