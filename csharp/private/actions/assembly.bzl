@@ -153,6 +153,8 @@ def AssemblyAction(
     # spill to a "response file" when the argument list gets too big (Bazel
     # makes that call based on limitations of the OS).
     args.set_param_file_format("multiline")
+    # Our wrapper uses _spawnv to launch dotnet, and that has a command line limit
+    # of 1024 bytes, so always use a param file.
     args.use_param_file("@%s", use_always=True)
 
     direct_inputs = srcs + resources + analyzer_assemblies + additionalfiles + [toolchain.compiler]
