@@ -12,6 +12,10 @@ load(
     _csharp_resx = "csharp_resx",
 )
 load(
+    "//csharp/private:rules/wrapper.bzl",
+    _dotnet_wrapper = "dotnet_wrapper",
+)
+load(
     "//csharp/private:rules/library.bzl",
     _csharp_library = "csharp_library",
 )
@@ -38,6 +42,7 @@ load(
     _setup_basic_nuget_package = "setup_basic_nuget_package",
 )
 
+dotnet_wrapper = _dotnet_wrapper
 csharp_binary = _csharp_binary
 csharp_library = _csharp_library
 csharp_library_set = _csharp_library_set
