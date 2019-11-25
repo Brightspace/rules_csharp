@@ -27,6 +27,7 @@ cc_binary(
             "dotnet",
             "dotnet.exe",
         ],
+        allow_empty = True,
     ),
     visibility = ["//visibility:public"],
     deps = ["@bazel_tools//tools/cpp/runfiles"],
@@ -39,5 +40,6 @@ dotnet_wrapper(
             "dotnet",
             "dotnet.exe",
         ],
+        allow_empty = True,
     ),
 )
