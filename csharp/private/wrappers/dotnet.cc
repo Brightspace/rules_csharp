@@ -47,14 +47,14 @@ int main(int argc, char** argv) {
   dotnet: HOME, DOTNET_CLI_HOME, APPDATA, PROGRAMFILES
   nuget: TMP, TEMP, USERPROFILE
   */
-  std::vector<std::string> envvars = {
-      evprintf("HOME", dotnetDir),
-      evprintf("DOTNET_CLI_HOME", dotnetDir),
-      evprintf("APPDATA", dotnetDir),
-      evprintf("PROGRAMFILES", dotnetDir),
-      evprintf("USERPROFILE", dotnetDir),
-      evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1"),  // disable telemetry
-  };
+  std::vector<std::string> envvars;
+  envvars.push_back(evprintf("HOME", dotnetDir));
+  envvars.push_back(evprintf("DOTNET_CLI_HOME", dotnetDir));
+  envvars.push_back(evprintf("APPDATA", dotnetDir));
+  envvars.push_back(evprintf("PROGRAMFILES", dotnetDir));
+  envvars.push_back(evprintf("USERPROFILE", dotnetDir));
+  envvars.push_back(
+      evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1"));  // disable telemetry
 
   // dotnet wants this to either be dotnet or dotnet.exe but doesn't have a
   // preference otherwise.
