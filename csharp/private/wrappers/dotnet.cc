@@ -48,6 +48,7 @@ int main(int argc, char** argv) {
       evprintf("DOTNET_CLI_HOME", dotnetDir),
       evprintf("APPDATA", dotnetDir),
       evprintf("PROGRAMFILES", dotnetDir),
+      evprintf("USERPROFILE", dotnetDir),
       evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1"),  // disable telemetry
   };
 
