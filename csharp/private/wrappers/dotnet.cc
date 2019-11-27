@@ -41,18 +41,13 @@ int main(int argc, char** argv) {
   auto dotnetDir = dotnet.substr(0, dotnet.find_last_of("/\\"));
 
   /*
-  dotnet and nuget require these environment variables to be set
-  without them we cannot build/run anything with dotnet.
-
-  dotnet: HOME, DOTNET_CLI_HOME, APPDATA, PROGRAMFILES
-  nuget: TMP, TEMP, USERPROFILE
+  dotnet requires these environment variables to be set.
   */
   std::vector<std::string> envvars = {
       evprintf("HOME", dotnetDir),
       evprintf("DOTNET_CLI_HOME", dotnetDir),
       evprintf("APPDATA", dotnetDir),
       evprintf("PROGRAMFILES", dotnetDir),
-      evprintf("USERPROFILE", dotnetDir),
       evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1"),  // disable telemetry
   };
 
