@@ -41,20 +41,16 @@ int main(int argc, char** argv) {
   auto dotnetDir = dotnet.substr(0, dotnet.find_last_of("/\\"));
 
   /*
-  dotnet and nuget require these environment variables to be set
-  without them we cannot build/run anything with dotnet.
-
-  dotnet: HOME, DOTNET_CLI_HOME, APPDATA, PROGRAMFILES
-  nuget: TMP, TEMP, USERPROFILE
+  dotnet requires these environment variables to be set.
   */
-  std::vector<std::string> envvars;
-  envvars.push_back(evprintf("HOME", dotnetDir));
-  envvars.push_back(evprintf("DOTNET_CLI_HOME", dotnetDir));
-  envvars.push_back(evprintf("APPDATA", dotnetDir));
-  envvars.push_back(evprintf("PROGRAMFILES", dotnetDir));
-  envvars.push_back(evprintf("USERPROFILE", dotnetDir));
-  envvars.push_back(
-      evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1"));  // disable telemetry
+  std::vector<std::string> envvars = {
+      evprintf("HOME", dotnetDir),
+      evprintf("DOTNET_CLI_HOME", dotnetDir),
+      evprintf("APPDATA", dotnetDir),
+      evprintf("PROGRAMFILES", dotnetDir),
+      evprintf("USERPROFILE", dotnetDir),
+      evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1"),  // disable telemetry
+  };
 
   // dotnet wants this to either be dotnet or dotnet.exe but doesn't have a
   // preference otherwise.
@@ -80,7 +76,7 @@ int main(int argc, char** argv) {
   auto envc = envvars.size();
   auto envp = new char*[envc + 1];
   for (uint i = 0; i < envc; i++) {
-    envp[i] = &envvars[i][0];
+    envp[i] = const_cast<char*>(&envvars[i][0]);
   }
   envp[envc] = nullptr;
 
