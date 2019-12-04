@@ -22,7 +22,7 @@ fi
 # --- end runfiles.bash initialization ---
 echo "Looking up {DotNetExe}"
 dotnet_exe="$(rlocation {DotNetExe})"
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ "$OSTYPE" == "linux-gnu" || "$OSTYPE" == "darwin"* ]]; then
     ${dotnet_exe} $@
 else
     dotnet_path=$(echo "/$dotnet_exe" | sed 's/\\/\//g' | sed 's/://')
