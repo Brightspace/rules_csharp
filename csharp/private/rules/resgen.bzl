@@ -6,7 +6,7 @@ load(
 # Labels for the template and execution wrappers
 _TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/resx.cc"
 _BASH_TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/resx.bash"
-_CSPROJ_TEMPLATE = "@d2l_rules_csharp//csharp/private:rules/ResGen.csproj"
+_CSPROJ_TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/ResGen.csproj"
 
 def _csharp_resx_execv_impl(ctx):
     toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"]
@@ -79,7 +79,7 @@ def _csharp_resx_template_impl(ctx):
         ),
     ]
 
-# Describes the tool for generating a csproj that wraps a ResX file 
+# Describes the tool for generating a csproj that wraps a ResX file
 csharp_resx_template = rule(
     implementation = _csharp_resx_template_impl,
     attrs = {

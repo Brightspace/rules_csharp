@@ -1,11 +1,11 @@
 def _csharp_toolchain_impl(ctx):
     return [
-        platform_common.ToolchainInfo(            
+        platform_common.ToolchainInfo(
             runtime = ctx.attr.runtime.files_to_run,
             compiler = ctx.file.compiler,
             tool = (
                 ctx.workspace_name + "/" + ctx.attr.runtime.files_to_run.executable.short_path,
-                ctx.attr.runtime.default_runfiles
+                ctx.attr.runtime.default_runfiles,
             ),
         ),
     ]
@@ -42,7 +42,6 @@ def configure_toolchain(os, exe = "dotnetw"):
             "@platforms//os:" + os,
             "@platforms//cpu:x86_64",
         ],
-
         toolchain = "csharp_x86_64-" + os,
         toolchain_type = ":toolchain_type",
     )

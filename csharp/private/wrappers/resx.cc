@@ -1,10 +1,10 @@
+#include <algorithm>
 #include <fstream>
 #include <ios>
 #include <iostream>
 #include <sstream>
 #include <stdio.h>
 #include <string>
-#include <algorithm>
 
 #ifdef _WIN32
 #include <errno.h>
@@ -66,8 +66,8 @@ int main(int argc, char** argv) {
   auto adjustedResX = tsstr.str();
   std::cout << "adjustedResX: " << adjustedResX << std::endl;
 
-//bazel-out/k8-fastbuild/bin/resgen/Hello.Strings-template.csproj
-//bazel-out/host/bin/resgen/Hello.Strings-execv.runfiles/csharp_examples/resgen/Strings.resx
+  // bazel-out/k8-fastbuild/bin/resgen/Hello.Strings-template.csproj
+  // bazel-out/host/bin/resgen/Hello.Strings-execv.runfiles/csharp_examples/resgen/Strings.resx
   // csproj template for building resx files
   std::cout << "csproj ref: "
             << "{CsProjTemplate}" << std::endl;
@@ -117,7 +117,8 @@ int main(int argc, char** argv) {
   auto result = execv(dotnet.c_str(), const_cast<char**>(argv));
 #endif  // _WIN32
   if (result != 0) {
-    std::cout << "dotnet failed: " << result << " errno: " << errno << std::endl;
+    std::cout << "dotnet failed: " << result << " errno: " << errno
+              << std::endl;
     return -1;
   }
 

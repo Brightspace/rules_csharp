@@ -5,7 +5,7 @@ exports_files([
     "wrappers/dotnet.cc",
     "wrappers/resx.cc",
     "wrappers/resx.bash",
-    "rules/ResGen.csproj",
+    "wrappers/ResGen.csproj",
 ])
 
 toolchain_type(name = "toolchain_type")
