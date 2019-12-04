@@ -66,9 +66,6 @@ int main(int argc, char** argv) {
   auto adjustedResX = tsstr.str();
   std::cout << "adjustedResX: " << adjustedResX << std::endl;
 
-  // bazel-out/k8-fastbuild/bin/resgen/Hello.Strings-template.csproj
-  // bazel-out/host/bin/resgen/Hello.Strings-execv.runfiles/csharp_examples/resgen/Strings.resx
-  // csproj template for building resx files
   std::cout << "csproj ref: "
             << "{CsProjTemplate}" << std::endl;
   auto csproj = runfiles->Rlocation("{CsProjTemplate}");
