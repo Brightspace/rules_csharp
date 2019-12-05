@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
 
   // dotnet wants this to either be dotnet or dotnet.exe but doesn't have a
   // preference otherwise.
-  auto dotnet_argv = new char*[argc];
+  auto dotnet_argv = new char*[argc + 1];
   dotnet_argv[0] = (char*)"dotnet";
   for (int i = 1; i < argc; i++) {
     dotnet_argv[i] = argv[i];
