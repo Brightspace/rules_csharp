@@ -49,7 +49,6 @@ BazelResXManifestResourceName="${_resx_manifest}"
 export BazelResXFile BazelResXFramework BazelResXManifestResourceName
 
 echo "$(apply_shell_expansion "${csproj_template}")" > "${CsProjFile}"
-cat "${CsProjFile}"
 
 dotnet_exe="$(rlocation ${_dotnet_exe})"
 if [[ "$OSTYPE" == "linux-gnu" || "$OSTYPE" == "darwin"* ]]; then
