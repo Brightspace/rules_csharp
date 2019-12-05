@@ -1,3 +1,4 @@
+load(":sdk.bzl", "DOTNET_SDK")
 load(":rules/create_net_workspace.bzl", "create_net_workspace")
 load(":macros/nuget.bzl", "nuget_package")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
@@ -27,20 +28,20 @@ def csharp_repositories():
 
     _download_dotnet(
         os = "windows",
-        url = "https://download.visualstudio.microsoft.com/download/pr/a24f4f34-ada1-433a-a437-5bc85fc2576a/7e886d06729949c15c96fe7e70faa8ae/dotnet-sdk-3.0.100-win-x64.zip",
-        hash = "faf8a92a523558e1659a6f9750c86610fe8430430f58099ccc659b83e3eee1bf",
+        url = DOTNET_SDK["windows"]["url"],
+        hash = DOTNET_SDK["windows"]["hash"],
     )
 
     _download_dotnet(
         os = "linux",
-        url = "https://download.visualstudio.microsoft.com/download/pr/886b4a4c-30af-454b-8bec-81c72b7b4e1f/d1a0c8de9abb36d8535363ede4a15de6/dotnet-sdk-3.0.100-linux-x64.tar.gz",
-        hash = "12098fe29d5c857fd6093b1fd63eda9f91b92798e3748fcedc0e0727f1ac01c2",
+        url = DOTNET_SDK["linux"]["url"],
+        hash = DOTNET_SDK["linux"]["hash"],
     )
 
     _download_dotnet(
         os = "osx",
-        url = "https://download.visualstudio.microsoft.com/download/pr/b9251194-4118-41cb-ae05-6763fb002e5d/1d398b4e97069fa4968628080b617587/dotnet-sdk-3.0.100-osx-x64.tar.gz",
-        hash = "f0f8af049e0ecbeea9c9c37c16679d6fc2cd4c165510b00e3fad3cd8d0fe0160",
+        url = DOTNET_SDK["osx"]["url"],
+        hash = DOTNET_SDK["osx"]["hash"],
     )
 
 def csharp_register_toolchains():
