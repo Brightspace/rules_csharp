@@ -14,7 +14,7 @@ exports_files(
     ]) +
     # csharp compiler: csc
     glob([
-        "sdk/3.0.100/Roslyn/bincore/**/*",
+        "sdk/**/Roslyn/bincore/**/*",
     ]),
     visibility = ["//visibility:public"],
 )
