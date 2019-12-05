@@ -26,12 +26,6 @@ _resx_manifest="{ResXManifest}"
 _csproj_template="{CsProjTemplate}"
 _net_framework="{NetFramework}"
 _dotnet_exe="{DotNetExe}"
-# only print if debugging
-echo "DotNetExe: ${_dotnet_exe}"
-echo "NetFramework: ${_net_framework}"
-echo "CsProjTemplate: ${_csproj_template}"
-echo "ResXManifest: ${_resx_manifest}"
-echo "ResXFile: ${_resx}"
 # --- end expand_template variables ---
 csproj_file="${CsProjFile}"
 
@@ -44,9 +38,7 @@ BazelResXManifestResourceName="${_resx_manifest}"
 export BazelResXFile BazelResXFramework BazelResXManifestResourceName
 
 envsubst < "${csproj_template}" > "${csproj_file}"
-cat "${csproj_file}"
 
-echo "Looking up ${_dotnet_exe}"
 dotnet_exe="$(rlocation ${_dotnet_exe})"
 if [[ "$OSTYPE" == "linux-gnu" || "$OSTYPE" == "darwin"* ]]; then
     ${dotnet_exe} build $@ ${csproj_file}
