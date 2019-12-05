@@ -89,8 +89,8 @@ def _csharp_resx_build_impl(ctx):
     ctx.actions.run_shell(
         inputs = [ctx.file.src],
         outputs = [csproj, resource],
-        tools = [toolchain.runtime, ctx.executable.dotnet],
-        command = ctx.executable.dotnet.path,
+        tools = [toolchain.runtime, ctx.executable.tool],
+        command = ctx.executable.tool.path,
         mnemonic = "CompileResX",
         progress_message = "Compiling resx file to binary",
         use_default_shell_env = False,
@@ -160,5 +160,5 @@ def csharp_resx(name, src):
         name = name,
         src = src,
         out = name,
-        dotnet = template,
+        tool = template,
     )
