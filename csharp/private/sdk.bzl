@@ -1,5 +1,5 @@
 # DotNET SDK Download URLs
-# These are the URLs to download the .NET SDKs for each of the support operating systems.
+# These are the URLs to download the .NET SDKs for each of the supported operating systems.
 #
 # You can get the latest URLs from here:
 #   https://dotnet.microsoft.com/download/dotnet-core
