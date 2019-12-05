@@ -12,11 +12,20 @@ def _csharp_resx_execv_impl(ctx):
     toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"]
     _, runfiles = toolchain.tool
 
+    if not ctx.attr.out:
+        resource_name = ctx.attr.name
+    else:
+        resource_name = ctx.attr.out
+
     tool_path = ctx.attr.tool[DefaultInfo].files_to_run.executable.short_path
     ctx.actions.expand_template(
         template = ctx.file._bash_template,
         output = ctx.outputs.executable,
         substitutions = {
+            "{ResXFile}": "%s/%s" % (ctx.workspace_name, ctx.file.srcs.path),
+            "{ResXManifest}": resource_name,
+            "{CsProjTemplate}": "%s" % (ctx.file._csproj_template.short_path[3:]),
+            "{NetFramework}": ctx.attr.target_framework,
             "{DotNetExe}": "%s/%s" % (ctx.workspace_name, tool_path),
         },
         is_executable = True,
@@ -48,6 +57,24 @@ csharp_resx_execv = rule(
             doc = "The csproj template used in compiling the resx file.",
             # Need this to load the runfiles for bash
             default = Label("@bazel_tools//tools/bash/runfiles"),
+            allow_single_file = True,
+        ),
+        "srcs": attr.label(
+            allow_single_file = True,
+        ),
+        "out": attr.string(
+            doc = "Specifies the name of the output (.resources) resource file. The extension is not necessary.",
+        ),
+        "target_framework": attr.string(
+            doc = "A target framework moniker used in building the resource file.",
+            default = "netcoreapp3.0",
+        ),
+        "_template": attr.label(
+            default = Label(_TEMPLATE),
+            allow_single_file = True,
+        ),
+        "_csproj_template": attr.label(
+            default = Label(_CSPROJ_TEMPLATE),
             allow_single_file = True,
         ),
     },
@@ -210,6 +237,7 @@ def csharp_resx(name, src):
     csharp_resx_execv(
         name = execv,
         tool = csproj,
+        srcs = src,
     )
 
     csharp_resx_build(

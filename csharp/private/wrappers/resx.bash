@@ -20,8 +20,25 @@ else
   exit 1
 fi
 # --- end runfiles.bash initialization ---
-echo "Looking up {DotNetExe}"
-dotnet_exe="$(rlocation {DotNetExe})"
+# --- begin expand_template variables ---
+_resx="{ResXFile}"
+_resx_manifest="{ResXManifest}"
+_csproj_template="{CsProjTemplate}"
+_net_framework="{NetFramework}"
+_dotnet_exe="{DotNetExe}"
+echo "DotNetExe: ${_dotnet_exe}"
+echo "NetFramework: ${_net_framework}"
+echo "CsProjTemplate: ${_csproj_template}"
+echo "ResXManifest: ${_resx_manifest}"
+echo "ResXFile: ${_resx}"
+# --- end expand_template variables ---
+echo "Looking up ${_csproj_template}"
+csproj_template="$(rlocation ${_csproj_template})"
+echo "Location is ${csproj_template}"
+
+
+echo "Looking up ${_dotnet_exe}"
+dotnet_exe="$(rlocation ${_dotnet_exe})"
 if [[ "$OSTYPE" == "linux-gnu" || "$OSTYPE" == "darwin"* ]]; then
     ${dotnet_exe} $@
 else
