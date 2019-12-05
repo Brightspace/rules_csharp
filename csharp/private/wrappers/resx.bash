@@ -36,9 +36,10 @@ echo "ResXFile: ${_resx}"
 csproj_file="${CsProjFile}"
 
 csproj_template="$(rlocation ${_csproj_template})"
+resx_file="$(rlocation ${_resx})"
 
 BazelResXFramework="${_net_framework}"
-BazelResXFile="$(rlocation ${_resx})"
+BazelResXFile="$(realpath --relative-base="${csproj_file}" "${resx_file}")"
 BazelResXManifestResourceName="${_resx_manifest}"
 export BazelResXFile BazelResXFramework BazelResXManifestResourceName
 
