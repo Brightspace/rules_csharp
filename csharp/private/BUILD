@@ -3,7 +3,6 @@ load(":toolchains.bzl", "configure_toolchain")
 exports_files([
     "nunit/shim.cs",
     "wrappers/dotnet.cc",
-    "wrappers/resx.cc",
     "wrappers/resx.bash",
     "wrappers/ResGen.csproj",
 ])
