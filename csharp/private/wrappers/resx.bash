@@ -27,12 +27,12 @@ _csproj_template="{CsProjTemplate}"
 _net_framework="{NetFramework}"
 _dotnet_exe="{DotNetExe}"
 # --- end expand_template variables ---
+
 # envsubst is not available unless gettext is installed
 # this is a pure-bash way of performing variable substitution
 #
 # see https://stackoverflow.com/a/20316582
 apply_shell_expansion() {
-
     declare file="$1"
     declare data=$(< "$file")
     declare delimiter="__apply_shell_expansion_delimiter__"
@@ -40,23 +40,21 @@ apply_shell_expansion() {
     eval "$command"
 }
 
-csproj_file="${CsProjFile}"
-
 csproj_template="$(rlocation ${_csproj_template})"
 resx_file="$(rlocation ${_resx})"
 
 BazelResXFramework="${_net_framework}"
-BazelResXFile="$(realpath --relative-base="${csproj_file}" "${resx_file}")"
+BazelResXFile="$(realpath --relative-base="${CsProjFile}" "${resx_file}")"
 BazelResXManifestResourceName="${_resx_manifest}"
 export BazelResXFile BazelResXFramework BazelResXManifestResourceName
 
-echo "$(apply_shell_expansion "${csproj_template}")" > "${csproj_file}"
-cat "${csproj_file}"
+echo "$(apply_shell_expansion "${csproj_template}")" > "${CsProjFile}"
+cat "${CsProjFile}"
 
 dotnet_exe="$(rlocation ${_dotnet_exe})"
 if [[ "$OSTYPE" == "linux-gnu" || "$OSTYPE" == "darwin"* ]]; then
-    ${dotnet_exe} build $@ ${csproj_file}
+    ${dotnet_exe} build $@ ${CsProjFile}
 else
     dotnet_path=$(echo "/$dotnet_exe" | sed 's/\\/\//g' | sed 's/://')
-    ${dotnet_path} build $@ ${csproj_file}
+    ${dotnet_path} build $@ ${CsProjFile}
 fi
