@@ -40,9 +40,7 @@ int main(int argc, char** argv) {
   // Get the name of the directory containing dotnet.exe
   auto dotnetDir = dotnet.substr(0, dotnet.find_last_of("/\\"));
 
-  /*
-  dotnet requires these environment variables to be set.
-  */
+  // dotnet requires these environment variables to be set.
   std::vector<std::string> envvars = {
       evprintf("HOME", dotnetDir),
       evprintf("DOTNET_CLI_HOME", dotnetDir),
