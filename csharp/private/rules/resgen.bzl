@@ -7,21 +7,24 @@ load(
 _BASH_TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/resx.bash"
 _CSPROJ_TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/ResGen.csproj"
 
+def _get_resource_name(name, output_name):
+    if not output_name:
+        return name
+    else:
+        return output_name
+
 def _csharp_resx_template_impl(ctx):
+    """_csharp_resx_template_impl emits a shell script that will perform the compilation of a ResX using a CsProj wrapper."""
     toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"]
     _, runfiles = toolchain.tool
 
-    if not ctx.attr.out:
-        resource_name = ctx.attr.name
-    else:
-        resource_name = ctx.attr.out
-
+    resource_name = _get_resource_name(ctx.attr.name, ctx.attr.out)
     script = ctx.actions.declare_file("%s.bash" % (ctx.attr.name))
     ctx.actions.expand_template(
-        template = ctx.file._template,
+        template = ctx.file._bash_template,
         output = script,
         substitutions = {
-            "{ResXFile}": "%s/%s" % (ctx.workspace_name, ctx.file.srcs.path),
+            "{ResXFile}": "%s/%s" % (ctx.workspace_name, ctx.file.src.path),
             "{ResXManifest}": resource_name,
             "{CsProjTemplate}": "%s" % (ctx.file._csproj_template.short_path[3:]),
             "{NetFramework}": ctx.attr.target_framework,
@@ -32,7 +35,7 @@ def _csharp_resx_template_impl(ctx):
     exec_runfiles = ctx.runfiles(files = [
         ctx.file._bash_runfiles,
         ctx.file._csproj_template,
-        ctx.file.srcs,
+        ctx.file.src,
     ])
     exec_runfiles = exec_runfiles.merge(runfiles)
     return [DefaultInfo(
@@ -43,33 +46,32 @@ def _csharp_resx_template_impl(ctx):
 csharp_resx_template = rule(
     implementation = _csharp_resx_template_impl,
     attrs = {
-        "srcs": attr.label(
+        "src": attr.label(
+            doc = "The XML-based resource format (.resx) file.",
             allow_single_file = True,
+            mandatory = True,
         ),
         "out": attr.string(
-            doc = "Specifies the name of the output (.resources) resource file. The extension is not necessary.",
+            doc = """Specifies the name of the output (.resources) resource file. 
+            The extension is not necessary. If not specified, the name of the rule will be used.""",
         ),
         "target_framework": attr.string(
-            doc = "A target framework moniker used in building the resource file.",
             default = "netcoreapp3.0",
-        ),
-        "_template": attr.label(
-            default = Label(_BASH_TEMPLATE),
-            allow_single_file = True,
+            doc = """A target framework moniker used in building the resource file.""",
         ),
         "_csproj_template": attr.label(
             default = Label(_CSPROJ_TEMPLATE),
+            doc = """The CSProj template used to wrap the compilation of a ResX file.""",
             allow_single_file = True,
         ),
         "_bash_template": attr.label(
-            doc = "The csproj template used in compiling the resx file.",
             default = Label(_BASH_TEMPLATE),
+            doc = """The bash script that will be used as the base for csproj generation.""",
             allow_single_file = True,
         ),
         "_bash_runfiles": attr.label(
-            doc = "The csproj template used in compiling the resx file.",
-            # Need this to load the runfiles for bash
             default = Label("@bazel_tools//tools/bash/runfiles"),
+            doc = "Bash runfiles for discovering a relative path to the ResX file.",
             allow_single_file = True,
         ),
     },
@@ -78,26 +80,17 @@ csharp_resx_template = rule(
 )
 
 def _csharp_resx_build_impl(ctx):
-    """_csharp_resx_impl emits actions for compiling a resx file."""
+    """_csharp_resx_build_impl compiles the ResX file using the bash script."""
     toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"]
+
+    resource_name = _get_resource_name(ctx.attr.name, ctx.attr.out)
     csproj = ctx.actions.declare_file("%s.csproj" % (ctx.attr.name))
-
-    if not ctx.attr.out:
-        resource_name = ctx.attr.name
-    else:
-        resource_name = ctx.attr.out
-
-    args = ctx.actions.args()
-    args.add("build")
-    args.add(csproj.path)
-
     resource = ctx.actions.declare_file("obj/Debug/%s/%s.resources" % (ctx.attr.target_framework, resource_name))
     ctx.actions.run_shell(
-        inputs = [ctx.file.srcs],
+        inputs = [ctx.file.src],
         outputs = [csproj, resource],
         tools = [toolchain.runtime, ctx.executable.dotnet],
         command = ctx.executable.dotnet.path,
-        arguments = [args],
         mnemonic = "CompileResX",
         progress_message = "Compiling resx file to binary",
         use_default_shell_env = False,
@@ -111,6 +104,7 @@ def _csharp_resx_build_impl(ctx):
         CSharpResource(
             name = ctx.attr.name,
             result = resource,
+            accessibility_modifier = ctx.attr.accessibility_modifier,
             identifier = resource.basename if not ctx.attr.identifier else ctx.attr.identifier,
         ),
         DefaultInfo(
@@ -121,34 +115,30 @@ def _csharp_resx_build_impl(ctx):
 csharp_resx_build = rule(
     implementation = _csharp_resx_build_impl,
     attrs = {
-        "srcs": attr.label(
+        "src": attr.label(
             doc = "The XML-based resource format (.resx) file.",
-            mandatory = True,
             allow_single_file = True,
-        ),
-        "dotnet": attr.label(
-            doc = "The tool responsible for generating a csproj file.",
             mandatory = True,
-            executable = True,
+        ),
+        "tool": attr.label(
+            doc = """Tool that compiles an XML-based resource format (.resx) file into a binary resource""",
             cfg = "host",
+            executable = True,
+            mandatory = True,
         ),
         "identifier": attr.string(
             doc = "The logical name for the resource; the name that is used to load the resource. The default is the name of the rule.",
         ),
+        "accessibility_modifier": attr.string(
+            default = "public",
+            doc = "The accessibility of the resource: public or private. The default is public.",
+        ),
         "out": attr.string(
             doc = "Specifies the name of the output (.resources) resource file. The extension is not necessary.",
         ),
-        "csproj": attr.string(
-            doc = "Specifies the name of the output (.resources) resource file. The extension is not necessary.",
-        ),
         "target_framework": attr.string(
-            doc = "A target framework moniker used in building the resource file.",
             default = "netcoreapp3.0",
-        ),
-        "_csproj_template": attr.label(
-            doc = "The csproj template used in compiling the resx file.",
-            default = Label(_CSPROJ_TEMPLATE),
-            allow_single_file = True,
+            doc = "A target framework moniker used in building the resource file.",
         ),
     },
     toolchains = ["@d2l_rules_csharp//csharp/private:toolchain_type"],
@@ -162,14 +152,13 @@ def csharp_resx(name, src):
 
     csharp_resx_template(
         name = template,
-        srcs = src,
+        src = src,
         out = name,
     )
 
     csharp_resx_build(
         name = name,
-        srcs = src,
+        src = src,
         out = name,
         dotnet = template,
-        csproj = "%s-template.csproj" % (name),
     )

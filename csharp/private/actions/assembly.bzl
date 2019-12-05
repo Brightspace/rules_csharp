@@ -24,7 +24,8 @@ def _format_additionalfile_arg(additionalfile):
 def _format_resource_arg(resource):
     identifier = resource[CSharpResource].identifier
     result = resource[CSharpResource].result
-    return "/resource:%s,%s" % (result.path, identifier)
+    modifier = resource[CSharpResource].accessibility_modifier
+    return "/resource:%s,%s,%s" % (result.path, identifier, modifier)
 
 def _format_define(symbol):
     return "/d:" + symbol
