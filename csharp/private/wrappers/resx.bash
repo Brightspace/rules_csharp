@@ -27,6 +27,19 @@ _csproj_template="{CsProjTemplate}"
 _net_framework="{NetFramework}"
 _dotnet_exe="{DotNetExe}"
 # --- end expand_template variables ---
+# envsubst is not available unless gettext is installed
+# this is a pure-bash way of performing variable substitution
+#
+# see https://stackoverflow.com/a/20316582
+apply_shell_expansion() {
+
+    declare file="$1"
+    declare data=$(< "$file")
+    declare delimiter="__apply_shell_expansion_delimiter__"
+    declare command="cat <<$delimiter"$'\n'"$data"$'\n'"$delimiter"
+    eval "$command"
+}
+
 csproj_file="${CsProjFile}"
 
 csproj_template="$(rlocation ${_csproj_template})"
@@ -37,7 +50,8 @@ BazelResXFile="$(realpath --relative-base="${csproj_file}" "${resx_file}")"
 BazelResXManifestResourceName="${_resx_manifest}"
 export BazelResXFile BazelResXFramework BazelResXManifestResourceName
 
-envsubst < "${csproj_template}" > "${csproj_file}"
+echo "$(apply_shell_expansion "${csproj_template}")" > "${csproj_file}"
+cat "${csproj_file}"
 
 dotnet_exe="$(rlocation ${_dotnet_exe})"
 if [[ "$OSTYPE" == "linux-gnu" || "$OSTYPE" == "darwin"* ]]; then
