@@ -16,6 +16,7 @@
 #include "tools/cpp/runfiles/runfiles.h"
 
 using bazel::tools::cpp::runfiles::Runfiles;
+using SubstitutionMap = std::map<std::string, std::string>;
 
 std::string evprintf(std::string name, std::string path) {
   std::stringstream ss;
@@ -23,53 +24,12 @@ std::string evprintf(std::string name, std::string path) {
   return ss.str();
 }
 
-bool copyFile(std::string source, std::string destination) {
-  std::ifstream src(source, std::ios::binary);
-  std::ofstream dest(destination, std::ios::binary);
-  dest << src.rdbuf();
-  return src && dest;
-}
-
-std::string resolveArgument(std::string argument,
-                            std::map<std::string, std::string> subst) {
-  for (const auto& kv : subst) {
-    size_t pos = argument.find(kv.first);
-    if (pos != std::string::npos)
-      argument.replace(pos, kv.first.length(), kv.second);
-  }
-
-  return argument;
-}
-
-bool resolveParamsFile(std::string file,
-                       std::map<std::string, std::string> subst) {
-  std::ifstream in(file);
-  std::ofstream paramsFile(file + ".bak");
-  if (!in) {
-    std::cerr << "Could not open " << file << std::endl;
-    return false;
-  }
-
-  std::string line;
-  while (std::getline(in, line)) {
-    line = resolveArgument(line, subst);
-    paramsFile << line << std::endl;
-
-    // while (true) {
-    //   size_t pos = line.find("__BAZEL_SOURCE_MAP__");
-    //   if (pos != std::string::npos)
-    //     line.replace(pos, target.length(), currentDir);
-    //   else
-    //     break;
-    // }
-  }
-
-  paramsFile.close();
-  in.close();
-  return copyFile(file + ".bak", file);
-}
-
-std::string pwd() {
+/**
+ * Returns the full path of the current working directory.
+ *
+ * @return Full path of the current working directory. Empty if cannot be set.
+ */
+std::string PWD() {
   char buffer[512];
   char* location = getcwd(buffer, sizeof(buffer));
   std::string result;
@@ -78,6 +38,76 @@ std::string pwd() {
   }
 
   return result;
+}
+
+/**
+ * Copies the contents of one file into another.
+ *
+ * @param source The source file.
+ * @param destination The destination file.
+ * @return true if the copy was successful; false otherwise.
+ */
+bool CopyFile(std::string source, std::string destination) {
+  std::ifstream src(source, std::ios::binary);
+  std::ofstream dest(destination, std::ios::binary);
+  dest << src.rdbuf();
+  return src && dest;
+}
+
+/**
+ * Determines if a command argument is a parameter file.
+ *
+ * @param arg An argument passed to an action.
+ * @return true if the argument is a parameter file; false otherwise.
+ */
+bool IsParameterFile(std::string arg) { return arg[0] == '@'; }
+
+/**
+ * Replaces one or more keyword items in a string using the substitutions
+ * dictionary.
+ *
+ * @param arg An argument passed to an action.
+ * @param subst Substitutions to make when replacing keywords.
+ * @return The string representation of arg with substitutions.
+ */
+std::string Resolve(std::string arg, SubstitutionMap subst) {
+  for (const auto& kv : subst) {
+    size_t pos = arg.find(kv.first);
+    if (pos != std::string::npos)
+      arg.replace(pos, kv.first.length(), kv.second);
+  }
+
+  return arg;
+}
+
+/**
+ * Replaces keyword items in a parameters file using the substitutions
+ * dictionary.
+ *
+ * @param file The path to the parameters file.
+ * @param subst Substitutions to make when replacing keywords.
+ * @return true if the substitutions were made; false otherwise.
+ */
+bool ResolveParamsFile(std::string file, SubstitutionMap subst) {
+  std::string backup_file = file + ".bak";
+
+  std::ifstream params(file);
+  std::ofstream formatted(backup_file);
+  if (!params) {
+    std::cerr << "Could not open " << file << std::endl;
+    return false;
+  }
+
+  std::string argument;
+  while (std::getline(params, argument)) {
+    argument = Resolve(argument, subst);
+    formatted << argument << std::endl;
+  }
+
+  params.close();
+  formatted.close();
+
+  return CopyFile(backup_file, file);
 }
 
 int main(int argc, char** argv) {
@@ -109,18 +139,22 @@ int main(int argc, char** argv) {
       evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1"),  // disable telemetry
   };
 
-  // variable substitutions for parameters
-  auto workspaceDir = pwd();
+  // variables available for substitution in arguments
+  auto workspaceDir = PWD();
   std::map<std::string, std::string> substitutions = {
       {"__BAZEL_WORKSPACE__", "\\"},
       {"__BAZEL_SANDBOX__", workspaceDir},
   };
 
+  // variable substitution of inputs + params file
   for (int i = 1; i < argc; i++) {
     std::string argument = argv[i];
-    argument = resolveArgument(argument, substitutions);
-    if (argument[0] == '@') {
-      resolveParamsFile(argument.substr(1), substitutions);
+    argument = Resolve(argument, substitutions);
+
+    // If we receive a parameter file, we must resolve all
+    // of the arguments in that file
+    if (IsParameterFile(argument)) {
+      ResolveParamsFile(argument.substr(1), substitutions);
     }
   }
 
