@@ -142,7 +142,11 @@ int main(int argc, char** argv) {
   // variables available for substitution in arguments
   auto workspaceDir = PWD();
   std::map<std::string, std::string> substitutions = {
+#ifdef _WIN32
       {"__BAZEL_WORKSPACE__", "\\"},
+#else   // not _WIN32
+      {"__BAZEL_WORKSPACE__", "/"},
+#endif  // _WIN32
       {"__BAZEL_SANDBOX__", workspaceDir},
   };
 
