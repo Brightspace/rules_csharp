@@ -102,6 +102,11 @@ def AssemblyAction(
 
     args.add("/debug:portable")
 
+    # Our aim with pathmap is to ensure that the PDBs created
+    # are deterministic, by not bundling in the path
+    # pathmap
+    args.add("/pathmap:%s=%s" % ("__BAZEL_SANDBOX__", "__BAZEL_WORKSPACE__"))
+
     # outputs
     args.add("/out:" + out_file.path)
     args.add("/refout:" + refout.path)

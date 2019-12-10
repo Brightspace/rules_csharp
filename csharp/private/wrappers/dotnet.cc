@@ -1,16 +1,18 @@
+#include <fstream>
 #include <iostream>
 #include <sstream>
 #include <string>
 
 #ifdef _WIN32
+#include <direct.h>
 #include <errno.h>
 #include <process.h>
 #include <windows.h>
+#define getcwd _getcwd
 #else  // not _WIN32
 #include <stdlib.h>
 #include <unistd.h>
 #endif  // _WIN32
-
 #include "tools/cpp/runfiles/runfiles.h"
 
 using bazel::tools::cpp::runfiles::Runfiles;
@@ -19,6 +21,63 @@ std::string evprintf(std::string name, std::string path) {
   std::stringstream ss;
   ss << name << "=" << path;
   return ss.str();
+}
+
+bool copyFile(std::string source, std::string destination) {
+  std::ifstream src(source, std::ios::binary);
+  std::ofstream dest(destination, std::ios::binary);
+  dest << src.rdbuf();
+  return src && dest;
+}
+
+std::string resolveArgument(std::string argument,
+                            std::map<std::string, std::string> subst) {
+  for (const auto& kv : subst) {
+    size_t pos = argument.find(kv.first);
+    if (pos != std::string::npos)
+      argument.replace(pos, kv.first.length(), kv.second);
+  }
+
+  return argument;
+}
+
+bool resolveParamsFile(std::string file,
+                       std::map<std::string, std::string> subst) {
+  std::ifstream in(file);
+  std::ofstream paramsFile(file + ".bak");
+  if (!in) {
+    std::cerr << "Could not open " << file << std::endl;
+    return false;
+  }
+
+  std::string line;
+  while (std::getline(in, line)) {
+    line = resolveArgument(line, subst);
+    paramsFile << line << std::endl;
+
+    // while (true) {
+    //   size_t pos = line.find("__BAZEL_SOURCE_MAP__");
+    //   if (pos != std::string::npos)
+    //     line.replace(pos, target.length(), currentDir);
+    //   else
+    //     break;
+    // }
+  }
+
+  paramsFile.close();
+  in.close();
+  return copyFile(file + ".bak", file);
+}
+
+std::string pwd() {
+  char buffer[512];
+  char* location = getcwd(buffer, sizeof(buffer));
+  std::string result;
+  if (location) {
+    result = location;
+  }
+
+  return result;
 }
 
 int main(int argc, char** argv) {
@@ -49,6 +108,21 @@ int main(int argc, char** argv) {
       evprintf("USERPROFILE", dotnetDir),
       evprintf("DOTNET_CLI_TELEMETRY_OPTOUT", "1"),  // disable telemetry
   };
+
+  // variable substitutions for parameters
+  auto workspaceDir = pwd();
+  std::map<std::string, std::string> substitutions = {
+      {"__BAZEL_WORKSPACE__", "\\"},
+      {"__BAZEL_SANDBOX__", workspaceDir},
+  };
+
+  for (int i = 1; i < argc; i++) {
+    std::string argument = argv[i];
+    argument = resolveArgument(argument, substitutions);
+    if (argument[0] == '@') {
+      resolveParamsFile(argument.substr(1), substitutions);
+    }
+  }
 
   // dotnet wants this to either be dotnet or dotnet.exe but doesn't have a
   // preference otherwise.
