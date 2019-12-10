@@ -4,11 +4,6 @@ package(default_visibility = ["//visibility:public"])
 
 bzl_library(
     name = "bzl",
-    srcs = [
-        "defs.for_docs.bzl",
-    ],
+    srcs = glob(["*.bzl"]),
     visibility = ["//visibility:public"],
-    deps = [
-        "//csharp/private:bzl",
-    ],
 )
