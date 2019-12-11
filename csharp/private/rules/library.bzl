@@ -1,7 +1,7 @@
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework")
-load("@d2l_rules_csharp//csharp/private:actions/assembly.bzl", "AssemblyAction")
+load("//csharp/private:providers.bzl", "AnyTargetFramework")
+load("//csharp/private/actions:assembly.bzl", "AssemblyAction")
 load(
-    "@d2l_rules_csharp//csharp/private:common.bzl",
+    "//csharp/private:common.bzl",
     "fill_in_missing_frameworks",
     "is_debug",
 )

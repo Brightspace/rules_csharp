@@ -1,9 +1,9 @@
 load(
-    "@d2l_rules_csharp//csharp/private:common.bzl",
+    "//csharp/private:common.bzl",
     "collect_transitive_info",
     "fill_in_missing_frameworks",
 )
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework", "CSharpAssembly")
+load("//csharp/private:providers.bzl", "AnyTargetFramework", "CSharpAssembly")
 
 def _library_set(ctx):
     files = []
