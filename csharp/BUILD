@@ -12,3 +12,15 @@ bzl_library(
         "//csharp/private:bzl",
     ],
 )
+
+filegroup(
+    name = "bzl_srcs",
+    srcs = glob(["*.bzl"]) + [
+        "//csharp/private:bzl_srcs",
+    ],
+    visibility = ["//visibility:public"],
+    # visibility = [
+    #     "//csharp:__pkg__",
+    #     "//docs:__pkg__",
+    # ],
+)
