@@ -1,5 +1,5 @@
 load(
-    "@d2l_rules_csharp//csharp/private:providers.bzl",
+    "//csharp/private:providers.bzl",
     "CSharpAssembly",
     "FrameworkCompatibility",
 )

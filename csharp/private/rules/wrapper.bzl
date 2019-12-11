@@ -1,4 +1,4 @@
-_TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/dotnet.cc"
+_TEMPLATE = "//csharp/private:wrappers/dotnet.cc"
 
 def _dotnet_wrapper_impl(ctx):
     cc_file = ctx.actions.declare_file("%s.cc" % (ctx.attr.name))

@@ -6,12 +6,12 @@ custom workspace rule.
 """
 
 def _create_net_workspace_impl(ctx):
-  # The "trick" here is that repository rules each create a workspace (named by
-  # their name attr). So when we create files with ctx it's inside that
-  # workspace.
+    # The "trick" here is that repository rules each create a workspace (named by
+    # their name attr). So when we create files with ctx it's inside that
+    # workspace.
 
-  ctx.file("WORKSPACE", "workspace(name = \"%s\")\n" % ctx.name)
-  ctx.symlink(ctx.attr.build_file, "BUILD.bazel")
+    ctx.file("WORKSPACE", "workspace(name = \"%s\")\n" % ctx.name)
+    ctx.symlink(ctx.attr.build_file, "BUILD.bazel")
 
 _create_net_workspace = repository_rule(
     _create_net_workspace_impl,
@@ -25,7 +25,6 @@ _create_net_workspace = repository_rule(
 )
 
 def create_net_workspace():
-  """Create the @net workspace."""
+    """Create the @net workspace."""
 
-  _create_net_workspace(name = "net")
-
+    _create_net_workspace(name = "net")
