@@ -8,29 +8,32 @@ load("@d2l_rules_csharp//csharp:defs.bzl", "csharp_library")
 csharp_library(
     name = "Top",
     srcs = ["Top.cs"],
-    target_frameworks= ["net48"],
-    deps = ["Left", "Right"],
+    target_frameworks = ["net48"],
+    deps = [
+        "Left",
+        "Right",
+    ],
 )
 
 csharp_library(
     name = "Left",
     srcs = ["Left.cs"],
-    target_frameworks= ["net45"],
+    target_frameworks = ["net45"],
     deps = ["Bottom"],
 )
 
 csharp_library(
     name = "Right",
     srcs = ["Right.cs"],
-    target_frameworks= ["netstandard2.0"],
+    target_frameworks = ["netstandard2.0"],
     deps = ["Bottom"],
 )
 
 csharp_library(
     name = "Bottom",
     srcs = ["Bottom.cs"],
-    include_stdrefs = False, # TODO: remove this when we support netstandard1.4's stdlib
-    target_frameworks= [
+    include_stdrefs = False,  # TODO: remove this when we support netstandard1.4's stdlib
+    target_frameworks = [
         "net48",
         "net40",
         "netstandard1.4",
