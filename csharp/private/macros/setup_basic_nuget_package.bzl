@@ -47,7 +47,7 @@ def setup_basic_nuget_package():
     dlls = native.glob(["lib/*/*.dll"])
     pdbs = native.glob(["lib/*/*.pdb"])
 
-    has_pdb = { (pdb[:-3] + "dll"): 1 for pdb in pdbs }
+    has_pdb = {(pdb[:-3] + "dll"): 1 for pdb in pdbs}
 
     # Map from lib name to dict from tfm to target name
     imports = {}

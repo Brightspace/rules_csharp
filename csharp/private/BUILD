@@ -1,6 +1,9 @@
 load(":toolchains.bzl", "configure_toolchain")
 
-exports_files(["nunit/shim.cs", "wrappers/dotnet.cc"])
+exports_files([
+    "nunit/shim.cs",
+    "wrappers/dotnet.cc",
+])
 
 toolchain_type(name = "toolchain_type")
 

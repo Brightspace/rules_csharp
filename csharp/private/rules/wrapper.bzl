@@ -27,7 +27,7 @@ dotnet_wrapper = rule(
             doc = """Path to the program that will wrap the dotnet executable.
 This program will be compiled and used instead of directly calling the dotnet executable.""",
             default = Label(_TEMPLATE),
-            allow_single_file = True
+            allow_single_file = True,
         ),
         "src": attr.label_list(
             doc = """The name of the dotnet executable.
