@@ -1,8 +1,6 @@
 load("@io_bazel_stardoc//stardoc:stardoc.bzl", "stardoc")
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 
-package(default_visibility = ["//visibility:public"])
-
 bzl_library(
     name = "bazel_dependencies",
     srcs = [

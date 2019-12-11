@@ -1,16 +1,6 @@
-load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
-
-package(default_visibility = ["//visibility:public"])
-
-bzl_library(
-    name = "bzl",
-    srcs = [
-        "defs.for_docs.bzl",
-    ],
-    visibility = ["//visibility:public"],
-    deps = [
-        "//csharp/private:bzl",
-    ],
+exports_files(
+    ["defs.for_docs.bzl"],
+    visibility = ["//docs:__pkg__"],
 )
 
 filegroup(
@@ -18,9 +8,5 @@ filegroup(
     srcs = glob(["*.bzl"]) + [
         "//csharp/private:bzl_srcs",
     ],
-    visibility = ["//visibility:public"],
-    # visibility = [
-    #     "//csharp:__pkg__",
-    #     "//docs:__pkg__",
-    # ],
+    visibility = ["//docs:__pkg__"],
 )
