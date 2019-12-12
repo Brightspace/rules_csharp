@@ -6,7 +6,7 @@ load(
     "collect_transitive_info",
     "fill_in_missing_frameworks",
 )
-load("//csharp/private:providers.bzl", "AnyTargetFramework", "CSharpAssembly")
+load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo", "CSharpAssemblyInfo")
 
 def _library_set(ctx):
     files = []
@@ -16,7 +16,7 @@ def _library_set(ctx):
     (refs, runfiles, native_dlls) = collect_transitive_info(ctx.attr.deps, tfm)
 
     providers = {
-        tfm: CSharpAssembly[tfm](
+        tfm: CSharpAssemblyInfo[tfm](
             out = None,
             refout = None,
             pdb = None,
@@ -42,7 +42,7 @@ csharp_library_set = rule(
         ),
         "deps": attr.label_list(
             doc = "The set of libraries",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
         ),
     },
     executable = False,

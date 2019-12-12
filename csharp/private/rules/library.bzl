@@ -1,7 +1,7 @@
 """
 Rules for compiling C# libraries.
 """
-load("//csharp/private:providers.bzl", "AnyTargetFramework")
+load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo")
 load("//csharp/private/actions:assembly.bzl", "AssemblyAction")
 load(
     "//csharp/private:common.bzl",
@@ -57,7 +57,7 @@ csharp_library = rule(
         ),
         "analyzers": attr.label_list(
             doc = "A list of analyzer references.",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
         ),
         "keyfile": attr.label(
             doc = "The key file used to sign the assembly with a strong name.",
@@ -93,7 +93,7 @@ csharp_library = rule(
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
         ),
     },
     executable = False,

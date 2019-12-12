@@ -1,4 +1,4 @@
-"""Define the CSharpAssembly_-prefixed providers
+"""Define the CSharp providers for each .NET framework
 
 This module defines one provider per target framework and creates some handy
 lookup tables for dealing with frameworks.
@@ -23,82 +23,80 @@ def _make_csharp_provider(tfm):
 
 # Bazel requires that providers be "top level" objects, so this stuff is a bit
 # more boilerplate than it could otherwise be.
-CSharpAssembly_netstandard = _make_csharp_provider("netstandard")  # buildifier: disable=name-conventions
-CSharpAssembly_netstandard10 = _make_csharp_provider("netstandard1.0")  # buildifier: disable=name-conventions
-CSharpAssembly_netstandard11 = _make_csharp_provider("netstandard1.1")  # buildifier: disable=name-conventions
-CSharpAssembly_netstandard12 = _make_csharp_provider("netstandard1.2")  # buildifier: disable=name-conventions
-CSharpAssembly_netstandard13 = _make_csharp_provider("netstandard1.3")  # buildifier: disable=name-conventions
-CSharpAssembly_netstandard14 = _make_csharp_provider("netstandard1.4")  # buildifier: disable=name-conventions
-CSharpAssembly_netstandard15 = _make_csharp_provider("netstandard1.5")  # buildifier: disable=name-conventions
-CSharpAssembly_netstandard16 = _make_csharp_provider("netstandard1.6")  # buildifier: disable=name-conventions
-CSharpAssembly_netstandard20 = _make_csharp_provider("netstandard2.0")  # buildifier: disable=name-conventions
-CSharpAssembly_netstandard21 = _make_csharp_provider("netstandard2.1")  # buildifier: disable=name-conventions
-CSharpAssembly_net11 = _make_csharp_provider("net11")  # buildifier: disable=name-conventions
-CSharpAssembly_net20 = _make_csharp_provider("net20")  # buildifier: disable=name-conventions
-CSharpAssembly_net30 = _make_csharp_provider("net30")  # buildifier: disable=name-conventions
-CSharpAssembly_net35 = _make_csharp_provider("net35")  # buildifier: disable=name-conventions
-CSharpAssembly_net40 = _make_csharp_provider("net40")  # buildifier: disable=name-conventions
-CSharpAssembly_net403 = _make_csharp_provider("net403")  # buildifier: disable=name-conventions
-CSharpAssembly_net45 = _make_csharp_provider("net45")  # buildifier: disable=name-conventions
-CSharpAssembly_net451 = _make_csharp_provider("net451")  # buildifier: disable=name-conventions
-CSharpAssembly_net452 = _make_csharp_provider("net452")  # buildifier: disable=name-conventions
-CSharpAssembly_net46 = _make_csharp_provider("net46")  # buildifier: disable=name-conventions
-CSharpAssembly_net461 = _make_csharp_provider("net461")  # buildifier: disable=name-conventions
-CSharpAssembly_net462 = _make_csharp_provider("net462")  # buildifier: disable=name-conventions
-CSharpAssembly_net47 = _make_csharp_provider("net47")  # buildifier: disable=name-conventions
-CSharpAssembly_net471 = _make_csharp_provider("net471")  # buildifier: disable=name-conventions
-CSharpAssembly_net472 = _make_csharp_provider("net472")  # buildifier: disable=name-conventions
-CSharpAssembly_net48 = _make_csharp_provider("net48")  # buildifier: disable=name-conventions
-CSharpAssembly_netcoreapp10 = _make_csharp_provider("netcoreapp1.0")  # buildifier: disable=name-conventions
-CSharpAssembly_netcoreapp11 = _make_csharp_provider("netcoreapp1.1")  # buildifier: disable=name-conventions
-CSharpAssembly_netcoreapp20 = _make_csharp_provider("netcoreapp2.0")  # buildifier: disable=name-conventions
-CSharpAssembly_netcoreapp21 = _make_csharp_provider("netcoreapp2.1")  # buildifier: disable=name-conventions
-CSharpAssembly_netcoreapp22 = _make_csharp_provider("netcoreapp2.2")  # buildifier: disable=name-conventions
-CSharpAssembly_netcoreapp30 = _make_csharp_provider("netcoreapp3.0")  # buildifier: disable=name-conventions
+CSharpNetStandardAssemblyInfo = _make_csharp_provider("netstandard")
+CSharpNetStandard10AssemblyInfo = _make_csharp_provider("netstandard1.0")
+CSharpNetStandard11AssemblyInfo = _make_csharp_provider("netstandard1.1")
+CSharpNetStandard12AssemblyInfo = _make_csharp_provider("netstandard1.2")
+CSharpNetStandard13AssemblyInfo = _make_csharp_provider("netstandard1.3")
+CSharpNetStandard14AssemblyInfo = _make_csharp_provider("netstandard1.4")
+CSharpNetStandard15AssemblyInfo = _make_csharp_provider("netstandard1.5")
+CSharpNetStandard16AssemblyInfo = _make_csharp_provider("netstandard1.6")
+CSharpNetStandard20AssemblyInfo = _make_csharp_provider("netstandard2.0")
+CSharpNetStandard21AssemblyInfo = _make_csharp_provider("netstandard2.1")
+CSharpNet11AssemblyInfo = _make_csharp_provider("net11")
+CSharpNet20AssemblyInfo = _make_csharp_provider("net20")
+CSharpNet30AssemblyInfo = _make_csharp_provider("net30")
+CSharpNet35AssemblyInfo = _make_csharp_provider("net35")
+CSharpNet40AssemblyInfo = _make_csharp_provider("net40")
+CSharpNet403AssemblyInfo = _make_csharp_provider("net403")
+CSharpNet45AssemblyInfo = _make_csharp_provider("net45")
+CSharpNet451AssemblyInfo = _make_csharp_provider("net451")
+CSharpNet452AssemblyInfo = _make_csharp_provider("net452")
+CSharpNet46AssemblyInfo = _make_csharp_provider("net46")
+CSharpNet461AssemblyInfo = _make_csharp_provider("net461")
+CSharpNet462AssemblyInfo = _make_csharp_provider("net462")
+CSharpNet47AssemblyInfo = _make_csharp_provider("net47")
+CSharpNet471AssemblyInfo = _make_csharp_provider("net471")
+CSharpNet472AssemblyInfo = _make_csharp_provider("net472")
+CSharpNet48AssemblyInfo = _make_csharp_provider("net48")
+CSharpNetCoreApp10AssemblyInfo = _make_csharp_provider("netcoreapp1.0")
+CSharpNetCoreApp11AssemblyInfo = _make_csharp_provider("netcoreapp1.1")
+CSharpNetCoreApp20AssemblyInfo = _make_csharp_provider("netcoreapp2.0")
+CSharpNetCoreApp21AssemblyInfo = _make_csharp_provider("netcoreapp2.1")
+CSharpNetCoreApp22AssemblyInfo = _make_csharp_provider("netcoreapp2.2")
+CSharpNetCoreApp30AssemblyInfo = _make_csharp_provider("netcoreapp3.0")
 
 # A dict from TFM to provider. The order of keys is not used.
-# buildifier: disable=name-conventions
-CSharpAssembly = {    
-    "netstandard": CSharpAssembly_netstandard,
-    "netstandard1.0": CSharpAssembly_netstandard10,
-    "netstandard1.1": CSharpAssembly_netstandard11,
-    "netstandard1.2": CSharpAssembly_netstandard12,
-    "netstandard1.3": CSharpAssembly_netstandard13,
-    "netstandard1.4": CSharpAssembly_netstandard14,
-    "netstandard1.5": CSharpAssembly_netstandard15,
-    "netstandard1.6": CSharpAssembly_netstandard16,
-    "netstandard2.0": CSharpAssembly_netstandard20,
-    "netstandard2.1": CSharpAssembly_netstandard21,
-    "net11": CSharpAssembly_net11,
-    "net20": CSharpAssembly_net20,
-    "net30": CSharpAssembly_net30,
-    "net35": CSharpAssembly_net35,
-    "net40": CSharpAssembly_net40,
-    "net403": CSharpAssembly_net403,
-    "net45": CSharpAssembly_net45,
-    "net451": CSharpAssembly_net451,
-    "net452": CSharpAssembly_net452,
-    "net46": CSharpAssembly_net46,
-    "net461": CSharpAssembly_net461,
-    "net462": CSharpAssembly_net462,
-    "net47": CSharpAssembly_net47,
-    "net471": CSharpAssembly_net471,
-    "net472": CSharpAssembly_net472,
-    "net48": CSharpAssembly_net48,
-    "netcoreapp1.0": CSharpAssembly_netcoreapp10,
-    "netcoreapp1.1": CSharpAssembly_netcoreapp11,
-    "netcoreapp2.0": CSharpAssembly_netcoreapp20,
-    "netcoreapp2.1": CSharpAssembly_netcoreapp21,
-    "netcoreapp2.2": CSharpAssembly_netcoreapp22,
-    "netcoreapp3.0": CSharpAssembly_netcoreapp30,
+CSharpAssemblyInfo = {
+    "netstandard": CSharpNetStandardAssemblyInfo,
+    "netstandard1.0": CSharpNetStandard10AssemblyInfo,
+    "netstandard1.1": CSharpNetStandard11AssemblyInfo,
+    "netstandard1.2": CSharpNetStandard12AssemblyInfo,
+    "netstandard1.3": CSharpNetStandard13AssemblyInfo,
+    "netstandard1.4": CSharpNetStandard14AssemblyInfo,
+    "netstandard1.5": CSharpNetStandard15AssemblyInfo,
+    "netstandard1.6": CSharpNetStandard16AssemblyInfo,
+    "netstandard2.0": CSharpNetStandard20AssemblyInfo,
+    "netstandard2.1": CSharpNetStandard21AssemblyInfo,
+    "net11": CSharpNet11AssemblyInfo,
+    "net20": CSharpNet20AssemblyInfo,
+    "net30": CSharpNet30AssemblyInfo,
+    "net35": CSharpNet35AssemblyInfo,
+    "net40": CSharpNet40AssemblyInfo,
+    "net403": CSharpNet403AssemblyInfo,
+    "net45": CSharpNet45AssemblyInfo,
+    "net451": CSharpNet451AssemblyInfo,
+    "net452": CSharpNet452AssemblyInfo,
+    "net46": CSharpNet46AssemblyInfo,
+    "net461": CSharpNet461AssemblyInfo,
+    "net462": CSharpNet462AssemblyInfo,
+    "net47": CSharpNet47AssemblyInfo,
+    "net471": CSharpNet471AssemblyInfo,
+    "net472": CSharpNet472AssemblyInfo,
+    "net48": CSharpNet48AssemblyInfo,
+    "netcoreapp1.0": CSharpNetCoreApp10AssemblyInfo,
+    "netcoreapp1.1": CSharpNetCoreApp11AssemblyInfo,
+    "netcoreapp2.0": CSharpNetCoreApp20AssemblyInfo,
+    "netcoreapp2.1": CSharpNetCoreApp21AssemblyInfo,
+    "netcoreapp2.2": CSharpNetCoreApp22AssemblyInfo,
+    "netcoreapp3.0": CSharpNetCoreApp30AssemblyInfo,
 }
 
 # A dict of target frameworks to the set of other framworks it can compile
 # against. This relationship is transitive. The order of this dictionary also
 # matters. netstandard should appear first, and keys within a family should
 # proceed from oldest to newest
-# buildifier: disable=name-conventions
-FrameworkCompatibility = {
+FRAMEWORK_COMPATIBILITY = {
     # .NET Standard
     "netstandard": [],
     "netstandard1.0": ["netstandard"],
@@ -138,8 +136,7 @@ FrameworkCompatibility = {
     "netcoreapp3.0": ["netcoreapp2.2", "netstandard2.1"],
 }
 
-# buildifier: disable=name-conventions
-SubsystemVersion = {
+_subsystem_version = {
     "netstandard": None,
     "netstandard1.0": None,
     "netstandard1.1": None,
@@ -174,8 +171,7 @@ SubsystemVersion = {
     "netcoreapp3.0": None,
 }
 
-# buildifier: disable=name-conventions
-DefaultLangVersion = {
+_default_lang_version = {
     "netstandard": "7.3",
     "netstandard1.0": "7.3",
     "netstandard1.1": "7.3",
@@ -210,6 +206,12 @@ DefaultLangVersion = {
     "netcoreapp3.0": "8.0",
 }
 
+def GetFrameworkVersionInfo(tfm):
+    return (
+        _subsystem_version[tfm],
+        _default_lang_version[tfm],
+    )
+
 # A convenience used in attributes that need to specify that they accept any
 # kind of C# assembly. This is an array of single-element arrays.
-AnyTargetFramework = [[a] for a in CSharpAssembly.values()]  # buildifier: disable=name-conventions
+AnyTargetFrameworkInfo = [[a] for a in CSharpAssemblyInfo.values()]

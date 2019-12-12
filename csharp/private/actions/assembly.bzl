@@ -9,9 +9,8 @@ load(
 )
 load(
     "//csharp/private:providers.bzl",
-    "CSharpAssembly",
-    "DefaultLangVersion",
-    "SubsystemVersion",
+    "CSharpAssemblyInfo",
+    "GetFrameworkVersionInfo",
 )
 
 def _format_ref_arg(assembly):
@@ -86,14 +85,14 @@ def AssemblyAction(
     else:
         args.add("/highentropyva-")
 
-    ssv = SubsystemVersion[target_framework]
+    (ssv, lang_version) = GetFrameworkVersionInfo(target_framework)
     if ssv != None:
         args.add("/subsystemversion:" + ssv)
 
     args.add("/warn:0")  # TODO: this stuff ought to be configurable
 
     args.add("/target:" + target)
-    args.add("/langversion:" + (langversion or DefaultLangVersion[target_framework]))
+    args.add("/langversion:" + (langversion or lang_version))
 
     if debug:
         args.add("/debug+")
@@ -185,7 +184,7 @@ def AssemblyAction(
         ],
     )
 
-    return CSharpAssembly[target_framework](
+    return CSharpAssemblyInfo[target_framework](
         out = out_file,
         refout = refout,
         pdb = pdb,
