@@ -57,8 +57,8 @@ CSharpAssembly_netcoreapp22 = _make_csharp_provider("netcoreapp2.2")  # buildifi
 CSharpAssembly_netcoreapp30 = _make_csharp_provider("netcoreapp3.0")  # buildifier: disable=name-conventions
 
 # A dict from TFM to provider. The order of keys is not used.
-CSharpAssembly = {
-    # buildifier: disable=name-conventions
+# buildifier: disable=name-conventions
+CSharpAssembly = {    
     "netstandard": CSharpAssembly_netstandard,
     "netstandard1.0": CSharpAssembly_netstandard10,
     "netstandard1.1": CSharpAssembly_netstandard11,
@@ -97,8 +97,8 @@ CSharpAssembly = {
 # against. This relationship is transitive. The order of this dictionary also
 # matters. netstandard should appear first, and keys within a family should
 # proceed from oldest to newest
+# buildifier: disable=name-conventions
 FrameworkCompatibility = {
-    # buildifier: disable=name-conventions
     # .NET Standard
     "netstandard": [],
     "netstandard1.0": ["netstandard"],
@@ -138,8 +138,8 @@ FrameworkCompatibility = {
     "netcoreapp3.0": ["netcoreapp2.2", "netstandard2.1"],
 }
 
+# buildifier: disable=name-conventions
 SubsystemVersion = {
-    # buildifier: disable=name-conventions
     "netstandard": None,
     "netstandard1.0": None,
     "netstandard1.1": None,
@@ -174,8 +174,8 @@ SubsystemVersion = {
     "netcoreapp3.0": None,
 }
 
+# buildifier: disable=name-conventions
 DefaultLangVersion = {
-    # buildifier: disable=name-conventions
     "netstandard": "7.3",
     "netstandard1.0": "7.3",
     "netstandard1.1": "7.3",

@@ -43,8 +43,8 @@ def _framework_preprocessor_symbols(tfm):
     else:
         return ["NETFRAMEWORK", specific]
 
+# buildifier: disable=function-docstring
 def AssemblyAction(
-        # buildifier: disable=function-docstring
         actions,
         name,
         additionalfiles,

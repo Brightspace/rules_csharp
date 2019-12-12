@@ -1,6 +1,4 @@
 # buildifier: disable=module-docstring
-# buildifier: disable=function-docstring
-# buildifier: disable=function-docstring-args
 load(
     "//csharp/private:providers.bzl",
     "CSharpAssembly",
@@ -19,6 +17,7 @@ def use_highentropyva(tfm):
 def is_standard_framework(tfm):
     return tfm.startswith("netstandard")
 
+# buildifier: disable=function-docstring
 def collect_transitive_info(deps, tfm):
     direct_refs = []
     transitive_refs = []
@@ -72,7 +71,6 @@ def fill_in_missing_frameworks(providers):
 
     Args:
       providers: a dict from TFM to a provider.
-      deps: the original deps used to generate the providers.
     """
 
     # iterate through the compatability table since it's in preference order
