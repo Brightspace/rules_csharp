@@ -1,3 +1,4 @@
+# buildifier: disable=name-conventions
 """Define the CSharpAssembly_-prefixed providers
 
 This module defines one provider per target framework and creates some handy

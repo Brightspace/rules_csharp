@@ -1,3 +1,4 @@
+# buildifier: disable=positional-args
 load(":toolchains.bzl", "configure_toolchain")
 
 filegroup(

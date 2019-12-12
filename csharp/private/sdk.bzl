@@ -1,3 +1,4 @@
+# buildifier: disable=module-docstring
 # DotNET SDK Download URLs
 # These are the URLs to download the .NET SDKs for each of the supported operating systems.
 #

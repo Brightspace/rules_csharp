@@ -1,3 +1,6 @@
+# buildifier: disable=module-docstring
+# buildifier: disable=function-docstring
+# buildifier: disable=function-docstring-args
 load(
     "//csharp/private:providers.bzl",
     "CSharpAssembly",

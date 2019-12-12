@@ -1,3 +1,5 @@
+# buildifier: disable=module-docstring
+# buildifier: disable=function-docstring
 load(":sdk.bzl", "DOTNET_SDK")
 load("//csharp/private/rules:create_net_workspace.bzl", "create_net_workspace")
 load("//csharp/private/macros:nuget.bzl", "nuget_package")
