@@ -1,11 +1,11 @@
 load(
-    "@d2l_rules_csharp//csharp/private:common.bzl",
+    "//csharp/private:common.bzl",
     "collect_transitive_info",
     "get_analyzer_dll",
     "use_highentropyva",
 )
 load(
-    "@d2l_rules_csharp//csharp/private:providers.bzl",
+    "//csharp/private:providers.bzl",
     "CSharpAssembly",
     "DefaultLangVersion",
     "SubsystemVersion",

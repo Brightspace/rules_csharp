@@ -1,6 +1,6 @@
 load(":sdk.bzl", "DOTNET_SDK")
-load(":rules/create_net_workspace.bzl", "create_net_workspace")
-load(":macros/nuget.bzl", "nuget_package")
+load("//csharp/private/rules:create_net_workspace.bzl", "create_net_workspace")
+load("//csharp/private/macros:nuget.bzl", "nuget_package")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def csharp_repositories():
