@@ -1,3 +1,4 @@
+# buildifier: disable=module-docstring
 load(
     "//csharp/private:common.bzl",
     "collect_transitive_info",

@@ -1,3 +1,4 @@
+# buildifier: disable=module-docstring
 load(
     "//csharp/private:repositories.bzl",
     _csharp_register_toolchains = "csharp_register_toolchains",

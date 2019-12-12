@@ -1,3 +1,4 @@
+# buildifier: disable=module-docstring
 _TEMPLATE = "//csharp/private:wrappers/dotnet.cc"
 
 def _dotnet_wrapper_impl(ctx):

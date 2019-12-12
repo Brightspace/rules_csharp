@@ -1,3 +1,4 @@
+# buildifier: disable=module-docstring
 load("//csharp/private:providers.bzl", "AnyTargetFramework")
 load("//csharp/private/actions:assembly.bzl", "AssemblyAction")
 load(

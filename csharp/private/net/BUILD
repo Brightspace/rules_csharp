@@ -1,3 +1,4 @@
+# buildifier: disable=bzl-visibility
 load("@d2l_rules_csharp//csharp/private/rules:imports.bzl", "import_multiframework_library")
 
 import_multiframework_library(
