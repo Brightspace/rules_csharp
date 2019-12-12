@@ -1,9 +1,8 @@
-# buildifier: disable=module-docstring
-# DotNET SDK Download URLs
-# These are the URLs to download the .NET SDKs for each of the supported operating systems.
-#
-# You can get the latest URLs from here:
-#   https://dotnet.microsoft.com/download/dotnet-core
+"""
+Declarations for the .NET SDK Downloads URLs and version
+
+These are the URLs to download the .NET SDKs for each of the supported operating systems. These URLs are accessible from: https://dotnet.microsoft.com/download/dotnet-core.
+"""
 DOTNET_SDK_VERSION = "3.1.100"
 DOTNET_SDK = {
     "windows": {

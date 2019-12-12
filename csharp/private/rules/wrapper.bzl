@@ -1,4 +1,6 @@
-# buildifier: disable=module-docstring
+"""
+A wrapper around `dotnet` for Bazel.
+"""
 _TEMPLATE = "//csharp/private:wrappers/dotnet.cc"
 
 def _dotnet_wrapper_impl(ctx):
