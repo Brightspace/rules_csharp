@@ -3,6 +3,7 @@ bazel: 1.2.1
 
 buildifier:
   version: latest
+  warnings: disable=module-docstring,disable=function-docstring,disable=function-docstring-args
 
 tasks:
   examples-windows:
