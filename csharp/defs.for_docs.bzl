@@ -1,3 +1,7 @@
+"""Public API surface is re-exported here for documentation.
+
+This is used by stardoc to describe the Public API.
+"""
 load(
     "//csharp/private:repositories.bzl",
     _csharp_register_toolchains = "csharp_register_toolchains",
