@@ -40,7 +40,6 @@ def configure_toolchain(os, exe = "dotnetw"):
             "@platforms//os:" + os,
             "@platforms//cpu:x86_64",
         ],
-
         toolchain = "csharp_x86_64-" + os,
         toolchain_type = ":toolchain_type",
     )

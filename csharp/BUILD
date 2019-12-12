@@ -6,7 +6,7 @@ exports_files(
 filegroup(
     name = "bzl_srcs",
     srcs = glob(["*.bzl"]) + [
-        "//csharp/private:bzl_srcs",
+        "//csharp/privates:bzl_srcs",
     ],
     visibility = ["//docs:__pkg__"],
 )

@@ -35,7 +35,7 @@ def _import_library(ctx):
             deps = ctx.attr.deps,
             transitive_refs = refs,
             transitive_runfiles = runfiles,
-            actual_tfm = tfm
+            actual_tfm = tfm,
         ),
     }
 

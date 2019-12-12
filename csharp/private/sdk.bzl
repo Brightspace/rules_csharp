@@ -3,7 +3,7 @@
 #
 # You can get the latest URLs from here:
 #   https://dotnet.microsoft.com/download/dotnet-core
-DOTNET_SDK_VERSION="3.1.100"
+DOTNET_SDK_VERSION = "3.1.100"
 DOTNET_SDK = {
     "windows": {
         "url": "https://download.visualstudio.microsoft.com/download/pr/28a2c4ff-6154-473b-bd51-c62c76171551/ea47eab2219f323596c039b3b679c3d6/dotnet-sdk-3.1.100-win-x64.zip",

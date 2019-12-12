@@ -1,5 +1,5 @@
 filegroup(
     name = "bzl_srcs",
-    srcs = glob(["**"]),
+    srcs = glob(["*.bzl"]),
     visibility = ["//csharp/private:__pkg__"],
 )
