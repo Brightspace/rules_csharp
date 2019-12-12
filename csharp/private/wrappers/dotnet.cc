@@ -41,20 +41,6 @@ std::string PWD() {
 }
 
 /**
- * Copies the contents of one file into another.
- *
- * @param source The source file.
- * @param destination The destination file.
- * @return true if the copy was successful; false otherwise.
- */
-bool CopyFile(std::string source, std::string destination) {
-  std::ifstream src(source, std::ios::binary);
-  std::ofstream dest(destination, std::ios::binary);
-  dest << src.rdbuf();
-  return src && dest;
-}
-
-/**
  * Determines if a command argument is a parameter file.
  *
  * @param arg An argument passed to an action.
@@ -89,25 +75,23 @@ std::string Resolve(std::string arg, SubstitutionMap subst) {
  * @return true if the substitutions were made; false otherwise.
  */
 bool ResolveParamsFile(std::string file, SubstitutionMap subst) {
-  std::string backup_file = file + ".bak";
+  std::string old_file = file + "~";
 
-  std::ifstream params(file);
-  std::ofstream formatted(backup_file);
-  if (!params) {
+  std::rename(file.c_str(), old_file.c_str());
+  std::ifstream src(old_file);
+  std::ofstream dest(file);
+  if (!src) {
     std::cerr << "Could not open " << file << std::endl;
     return false;
   }
 
   std::string argument;
-  while (std::getline(params, argument)) {
+  while (std::getline(src, argument)) {
     argument = Resolve(argument, subst);
-    formatted << argument << std::endl;
+    dest << argument << std::endl;
   }
-
-  params.close();
-  formatted.close();
-
-  return CopyFile(backup_file, file);
+  
+  return src && dest;
 }
 
 int main(int argc, char** argv) {
