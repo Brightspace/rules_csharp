@@ -284,25 +284,3 @@ up the package. See docs/UsingNuGetPacakges.md for more info.
 | build_file_content |  A string containing the contents of a BUILD file.   |  <code>None</code> |
 
 
-<a name="#setup_basic_nuget_package"></a>
-
-## setup_basic_nuget_package
-
-<pre>
-setup_basic_nuget_package()
-</pre>
-
-This macro gets used to implement the default NuGet BUILD file.
-
-   We are limited by the fact that Bazel does not allow the analysis phase to
-   read the contents of source files, e.g. to correctly configure deps. For
-   more advanced usages a BUILD file will need to be generated outside of
-   Bazel. See docs/UsingNuGetPackages.md for more info.
-
-   This has to be public so that packages can call it but you probably
-   shouldn't use it directly.
-
-**PARAMETERS**
-
-
-
