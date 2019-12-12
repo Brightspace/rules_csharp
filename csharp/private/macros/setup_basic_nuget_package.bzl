@@ -1,4 +1,6 @@
-# buildifier: disable=module-docstring
+"""
+Rules for interfacing with NuGet packages. 
+"""
 load("//csharp/private:providers.bzl", "CSharpAssembly")
 load("//csharp/private/rules:imports.bzl", "import_library", "import_multiframework_library")
 

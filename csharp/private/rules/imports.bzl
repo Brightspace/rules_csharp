@@ -1,4 +1,6 @@
-# buildifier: disable=module-docstring
+"""
+Rules for importing assemblies for .NET frameworks.
+"""
 load(
     "//csharp/private:common.bzl",
     "collect_transitive_info",

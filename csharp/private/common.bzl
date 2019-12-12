@@ -1,4 +1,6 @@
-# buildifier: disable=module-docstring
+"""
+Rules for compatability resolution of dependencies for .NET frameworks.
+"""
 load(
     "//csharp/private:providers.bzl",
     "CSharpAssembly",

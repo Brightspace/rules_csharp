@@ -1,4 +1,6 @@
-# buildifier: disable=module-docstring
+"""
+Actions for compiling targets with C#.
+"""
 load(
     "//csharp/private:common.bzl",
     "collect_transitive_info",
