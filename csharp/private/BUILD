@@ -1,4 +1,3 @@
-# buildifier: disable=positional-args
 load(":toolchains.bzl", "configure_toolchain")
 
 filegroup(
@@ -18,8 +17,8 @@ exports_files([
 
 toolchain_type(name = "toolchain_type")
 
-configure_toolchain("windows")
+configure_toolchain("windows")  # buildifier: disable=positional-args
 
-configure_toolchain("linux")
+configure_toolchain("linux")  # buildifier: disable=positional-args
 
-configure_toolchain("osx")
+configure_toolchain("osx")  # buildifier: disable=positional-args

@@ -1,4 +1,3 @@
-# buildifier: disable=function-docstring-args
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def _get_build_file_content(build_file, build_file_content):
@@ -11,6 +10,7 @@ setup_basic_nuget_package()
     return build_file_content
 
 def import_nuget_package(
+        # buildifier: disable=function-docstring-args
         name,
         dir = None,
         file = None,

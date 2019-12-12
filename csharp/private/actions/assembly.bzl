@@ -1,5 +1,4 @@
 # buildifier: disable=module-docstring
-# buildifier: disable=function-docstring
 load(
     "//csharp/private:common.bzl",
     "collect_transitive_info",
@@ -45,6 +44,7 @@ def _framework_preprocessor_symbols(tfm):
         return ["NETFRAMEWORK", specific]
 
 def AssemblyAction(
+        # buildifier: disable=function-docstring
         actions,
         name,
         additionalfiles,
