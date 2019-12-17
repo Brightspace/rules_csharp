@@ -17,8 +17,8 @@ exports_files([
 
 toolchain_type(name = "toolchain_type")
 
-configure_toolchain("windows")  # buildifier: disable=positional-args
+configure_toolchain(os = "windows")
 
-configure_toolchain("linux")  # buildifier: disable=positional-args
+configure_toolchain(os = "linux")
 
-configure_toolchain("osx")  # buildifier: disable=positional-args
+configure_toolchain(os = "osx")
