@@ -1,5 +1,5 @@
 # Use this to get the reference files for each framework
-nuget install Microsoft.NETFramework.ReferenceAssemblies -OutputDirectory ReferenceAssemblies -Framework net11
+nuget install Microsoft.NETFramework.ReferenceAssemblies -OutputDirectory ReferenceAssemblies -Framework net48
 
 # Then use this as a bazel run tool
 # This will:
