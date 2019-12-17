@@ -6,5 +6,5 @@ load(
 csharp_binary(
     name = "generator",
     srcs = ["Program.cs"],
-    target_frameworks = ["netcoreapp2.1"],
+    target_frameworks = ["net472"],
 )
