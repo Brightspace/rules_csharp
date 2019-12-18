@@ -37,7 +37,7 @@ namespace FrameworkBuilder {
         .Convert (index: null)
         .Single ());
 
-      var buildFile = new Label ("net", "", "BUILD.bazel");
+      var buildFile = new Label ("", "BUILD.bazel");
 
       // var imports = new INewBuildThing[] { };
 

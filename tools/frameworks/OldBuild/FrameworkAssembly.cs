@@ -14,11 +14,11 @@ namespace D2L.Build.BazelGenerator.OldBuild {
 		/// </summary>
 		/// <param name="packageRelativeDLLPath"></param>
 		/// <param name="references"></param>
-		public FrameworkAssembly(
+		public FrameworkAssembly (
 			string packageRelativeDLLPath,
 			ImmutableArray<string> references
 		) {
-			Name = Path.GetFileNameWithoutExtension( packageRelativeDLLPath );
+			Name = Path.GetFileNameWithoutExtension (packageRelativeDLLPath);
 			PackageRelativeDLLPath = packageRelativeDLLPath;
 			References = references;
 		}
@@ -28,20 +28,21 @@ namespace D2L.Build.BazelGenerator.OldBuild {
 		public ImmutableArray<string> References { get; }
 
 		public string SortKey => Name;
-		public string LocationHint => throw new NotImplementedException();
+		public string LocationHint =>
+			throw new NotImplementedException ();
 
 		// Load a FrameworkAssembly from a DLL on disk
-		public static FrameworkAssembly LoadFromFile(
+		public static FrameworkAssembly LoadFromFile (
 			string frameworkPackagePath,
 			string dllPath
 		) {
 			Assembly asm;
 
-			var packageRelativeDLLPath = dllPath.Substring(
+			var packageRelativeDLLPath = dllPath.Substring (
 				frameworkPackagePath.Length + 1
 			);
 
-			if( !packageRelativeDLLPath.Contains( "Facades" ) ) {
+			if (!packageRelativeDLLPath.Contains ("Facades")) {
 				// So we don't _really_ need to tell Bazel about deps... but
 				// for the Facade dlls we do. This is really weird and hacky
 				// but it works out. The reason we're not output deps for
@@ -50,50 +51,54 @@ namespace D2L.Build.BazelGenerator.OldBuild {
 				// and Bazel is just not at all about that. We could bundle up
 				// the cycles into a pool of DLLs that we import as one target,
 				// maybe...
-				return new FrameworkAssembly(
+				return new FrameworkAssembly (
 					packageRelativeDLLPath,
 
-					Path.GetFileNameWithoutExtension( packageRelativeDLLPath ) == "mscorlib"
-					? ImmutableArray<string>.Empty
-					: ImmutableArray.Create( "mscorlib" )
+					Path.GetFileNameWithoutExtension (packageRelativeDLLPath) == "mscorlib" ?
+					ImmutableArray<string>.Empty :
+					ImmutableArray.Create ("mscorlib")
 				);
 			}
 
 			try {
-				asm = Assembly.ReflectionOnlyLoadFrom( dllPath );
-			} catch( BadImageFormatException ) {
+				asm = Assembly.ReflectionOnlyLoadFrom (dllPath);
+			} catch (BadImageFormatException) {
 				// some DLLs are native DLLs. Just don't worry about those.
-				return new FrameworkAssembly(
+				return new FrameworkAssembly (
 					packageRelativeDLLPath,
 					ImmutableArray<string>.Empty
 				);
 			}
 
-			var deps = asm.GetReferencedAssemblies()
-				.Select( r => r.Name )
-				.ToImmutableArray();
+			var deps = asm.GetReferencedAssemblies ()
+				.Select (r => r.Name)
+				.ToImmutableArray ();
 
-			return new FrameworkAssembly(
+			return new FrameworkAssembly (
 				packageRelativeDLLPath,
 				deps
 			);
 		}
 
-		public IEnumerable<INewBuildThing> Convert( Index index ) {
+		public IEnumerable<INewBuildThing> Convert (Index index) {
 			var deps = References
-				.Select( r => new Label( "net", "", r ) )
-				.ToImmutableArray();
+				.Select (r => new Label ("net", "", r))
+				.ToImmutableArray ();
 
-			var refdll = new Label(
-				"net", "",
-				target: PackageRelativeDLLPath.Replace( '\\', '/' )
+			var refdll = new Label (
+				"", "",
+				target : PackageRelativeDLLPath.Replace ('\\', '/')
 			);
 
-			yield return new ImportLibrary(
+			var visibility = ImmutableArray.Create (
+				new Label ("net", "", "__pkg__")
+			);
+
+			yield return new ImportLibrary (
 				name: Name,
 				refdll: refdll,
 				deps: deps,
-				visibility: Label.PublicVisibility
+				visibility: visibility
 			);
 		}
 	}

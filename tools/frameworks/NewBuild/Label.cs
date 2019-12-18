@@ -112,7 +112,7 @@ namespace D2L.Build.BazelGenerator.NewBuild {
 
 			if( includeWorkspace && Workspace != "" ) {
 				str.Append( '@' );
-				str.Append( Workspace );
+				str.Append( Workspace );				
 			}
 
 			str.Append( "//" );
