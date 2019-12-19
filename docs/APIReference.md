@@ -277,7 +277,7 @@ up the package. See docs/UsingNuGetPacakges.md for more info.
 | :-------------: | :-------------: | :-------------: |
 | name |  A unique name for the package's workspace.   |  none |
 | package |  The name of the package in the NuGet feed.   |  none |
-| version |  <p align="center"> - </p>   |  none |
+| version |  The version of the package in the NuGet feed.   |  none |
 | nuget_sources |  A list of nuget package sources. Defaults to nuget.org.   |  <code>None</code> |
 | sha256 |  The SHA256 of the package.   |  <code>None</code> |
 | build_file |  The path to a BUILD file to use for the package.   |  <code>None</code> |
