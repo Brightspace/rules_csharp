@@ -3,4 +3,6 @@
 set -euo pipefail
 
 bazel build //docs/...
-cp bazel-bin/docs/*.md docs/
+
+# Copy the file, ignoring the permissions inside bazel-bin
+cat bazel-bin/docs/APIReference.md > docs/APIReference.md
