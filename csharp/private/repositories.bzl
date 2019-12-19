@@ -2,8 +2,8 @@
 Rules to load all the .NET SDK & framework dependencies of rules_csharp.
 """
 load(":sdk.bzl", "DOTNET_SDK")
-load("//csharp/private/rules:create_net_workspace.bzl", "create_net_workspace")
-load("//csharp/private/macros:nuget.bzl", "nuget_package")
+load("//csharp/private:rules/create_net_workspace.bzl", "create_net_workspace")
+load("//csharp/private:macros/nuget.bzl", "nuget_package")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # buildifier: disable=function-docstring

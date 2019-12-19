@@ -9,9 +9,9 @@ bzl_library(
 )
 
 bzl_library(
-    name = "bazel_csharp",
+    name = "rules_csharp",
     srcs = [
-        "//csharp:bzl_srcs",
+        "//csharp/private:bzl_srcs",
     ],
 )
 
@@ -21,7 +21,7 @@ stardoc(
     input = "//csharp:defs.for_docs.bzl",
     tags = ["fix-windows"],
     deps = [
-        ":bazel_csharp",
+        ":rules_csharp",
         ":bazel_dependencies",
     ],
 )
