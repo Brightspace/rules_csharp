@@ -19,6 +19,9 @@ def use_highentropyva(tfm):
 def is_standard_framework(tfm):
     return tfm.startswith("netstandard")
 
+def is_core_framework(tfm):
+    return tfm.startswith("netcoreapp")
+
 # buildifier: disable=function-docstring
 def collect_transitive_info(deps, tfm):
     direct_refs = []

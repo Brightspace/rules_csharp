@@ -60,7 +60,8 @@ def AssemblyAction(
         out,
         target,
         target_framework,
-        toolchain):
+        toolchain,
+        runtimeconfig = None):
     out_file_name = name if out == "" else out
     out_dir = "bazelout/" + target_framework
     out_ext = "dll" if target == "library" else "exe"
@@ -193,4 +194,5 @@ def AssemblyAction(
         transitive_refs = refs,
         transitive_runfiles = runfiles,
         actual_tfm = target_framework,
+        runtimeconfig = runtimeconfig,
     )

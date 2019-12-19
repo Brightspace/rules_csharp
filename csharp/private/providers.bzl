@@ -18,6 +18,7 @@ def _make_csharp_provider(tfm):
             "transitive_refs": "A list of other assemblies to reference when referencing this assembly in a compilation.",
             "transitive_runfiles": "Runfiles from the transitive dependencies.",
             "actual_tfm": "The target framework of the actual dlls",
+            "runtimeconfig": "An optional runtimeconfig.json for executable assemblies",
         },
     )
 
