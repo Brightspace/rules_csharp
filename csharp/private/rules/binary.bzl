@@ -2,7 +2,7 @@
 Rules for compiling C# binaries.
 """
 load("//csharp/private:providers.bzl", "AnyTargetFramework")
-load("//csharp/private/actions:assembly.bzl", "AssemblyAction")
+load("//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
     "//csharp/private:common.bzl",
     "fill_in_missing_frameworks",
