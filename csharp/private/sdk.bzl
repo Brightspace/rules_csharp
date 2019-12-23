@@ -18,3 +18,6 @@ DOTNET_SDK = {
         "hash": "b38e6f8935d4b82b283d85c6b83cd24b5253730bab97e0e5e6f4c43e2b741aab",
     },
 }
+
+RUNTIME_TFM = "netcoreapp3.1"
+RUNTIME_FRAMEWORK_VERSION = "3.1.0"

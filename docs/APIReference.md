@@ -6,7 +6,7 @@
 
 <pre>
 csharp_binary(<a href="#csharp_binary-name">name</a>, <a href="#csharp_binary-additionalfiles">additionalfiles</a>, <a href="#csharp_binary-analyzers">analyzers</a>, <a href="#csharp_binary-defines">defines</a>, <a href="#csharp_binary-deps">deps</a>, <a href="#csharp_binary-include_stdrefs">include_stdrefs</a>, <a href="#csharp_binary-keyfile">keyfile</a>,
-              <a href="#csharp_binary-langversion">langversion</a>, <a href="#csharp_binary-out">out</a>, <a href="#csharp_binary-resources">resources</a>, <a href="#csharp_binary-srcs">srcs</a>, <a href="#csharp_binary-target_frameworks">target_frameworks</a>, <a href="#csharp_binary-winexe">winexe</a>)
+              <a href="#csharp_binary-langversion">langversion</a>, <a href="#csharp_binary-out">out</a>, <a href="#csharp_binary-resources">resources</a>, <a href="#csharp_binary-runtimeconfig_template">runtimeconfig_template</a>, <a href="#csharp_binary-srcs">srcs</a>, <a href="#csharp_binary-target_frameworks">target_frameworks</a>, <a href="#csharp_binary-winexe">winexe</a>)
 </pre>
 
 Compile a C# exe
@@ -26,6 +26,7 @@ Compile a C# exe
 | langversion |  The version string for the C# language.   | String | optional | "" |
 | out |  File name, without extension, of the built assembly.   | String | optional | "" |
 | resources |  A list of files to embed in the DLL as resources.   | <a href="https://bazel.build/docs/build-ref.html#labels">List of labels</a> | optional | [] |
+| runtimeconfig_template |  A template file to use for generating runtimeconfig.json   | <a href="https://bazel.build/docs/build-ref.html#labels">Label</a> | optional | :runtimeconfig.json.tpl |
 | srcs |  C# source files.   | <a href="https://bazel.build/docs/build-ref.html#labels">List of labels</a> | optional | [] |
 | target_frameworks |  A list of target framework monikers to buildSee https://docs.microsoft.com/en-us/dotnet/standard/frameworks   | List of strings | optional | [] |
 | winexe |  If true, output a winexe-style executable, otherwiseoutput a console-style executable.   | Boolean | optional | False |

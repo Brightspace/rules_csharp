@@ -9,6 +9,7 @@ filegroup(
 exports_files([
     "nunit/shim.cs",
     "wrappers/dotnet.cc",
+    "runtimeconfig.json.tpl",
 ])
 
 toolchain_type(name = "toolchain_type")

@@ -8,7 +8,9 @@ load(
     "fill_in_missing_frameworks",
     "is_debug",
     "is_standard_framework",
+    "is_core_framework",
 )
+load("//csharp/private:actions/write_runtimeconfig.bzl", "write_runtimeconfig")
 
 def _binary_impl(ctx):
     providers = {}
@@ -18,6 +20,15 @@ def _binary_impl(ctx):
     for tfm in ctx.attr.target_frameworks:
         if is_standard_framework(tfm):
             fail("It doesn't make sense to build an executable for " + tfm)
+
+        runtimeconfig = None
+        if is_core_framework(tfm):
+            runtimeconfig = write_runtimeconfig(
+                ctx.actions,
+                template = ctx.file.runtimeconfig_template,
+                name = ctx.attr.name,
+                tfm = tfm,
+            )
 
         providers[tfm] = AssemblyAction(
             ctx.actions,
@@ -35,15 +46,22 @@ def _binary_impl(ctx):
             target = "winexe" if ctx.attr.winexe else "exe",
             target_framework = tfm,
             toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"],
+            runtimeconfig = runtimeconfig,
         )
 
     fill_in_missing_frameworks(providers)
 
     result = providers.values()
+
+    direct_runfiles = [result[0].out, result[0].pdb]
+
+    if result[0].runtimeconfig != None:
+        direct_runfiles += [result[0].runtimeconfig]
+
     result.append(DefaultInfo(
         executable = result[0].out,
         runfiles = ctx.runfiles(
-            files = [result[0].out, result[0].pdb],
+            files = direct_runfiles,
             transitive_files = result[0].transitive_runfiles,
         ),
         files = depset([result[0].out, result[0].refout, result[0].pdb]),
@@ -103,6 +121,11 @@ csharp_binary = rule(
         "_stdrefs": attr.label(
             doc = "The standard set of assemblies to reference.",
             default = "@net//:StandardReferences",
+        ),
+        "runtimeconfig_template": attr.label(
+            doc = "A template file to use for generating runtimeconfig.json",
+            default = ":runtimeconfig.json.tpl",
+            allow_single_file = True,
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
