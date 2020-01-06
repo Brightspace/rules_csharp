@@ -1,5 +1,5 @@
 ---
-bazel: 1.2.1
+bazel: 2.0.0
 
 buildifier:
   version: latest
