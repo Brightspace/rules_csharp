@@ -1,4 +1,4 @@
 exports_files(
-    ["defs.for_docs.bzl"],
+    ["defs.bzl"],
     visibility = ["//docs:__pkg__"],
 )
