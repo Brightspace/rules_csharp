@@ -1,7 +1,10 @@
+"""
+Rules for compatability resolution of dependencies for .NET frameworks.
+"""
 load(
-    "@d2l_rules_csharp//csharp/private:providers.bzl",
-    "CSharpAssembly",
-    "FrameworkCompatibility",
+    "//csharp/private:providers.bzl",
+    "CSharpAssemblyInfo",
+    "FRAMEWORK_COMPATIBILITY",
 )
 
 def is_debug(ctx):
@@ -16,6 +19,10 @@ def use_highentropyva(tfm):
 def is_standard_framework(tfm):
     return tfm.startswith("netstandard")
 
+def is_core_framework(tfm):
+    return tfm.startswith("netcoreapp")
+
+# buildifier: disable=function-docstring
 def collect_transitive_info(deps, tfm):
     direct_refs = []
     transitive_refs = []
@@ -23,7 +30,7 @@ def collect_transitive_info(deps, tfm):
     transitive_runfiles = []
     native_dlls = []
 
-    provider = CSharpAssembly[tfm]
+    provider = CSharpAssemblyInfo[tfm]
 
     for dep in deps:
         if provider not in dep:
@@ -69,22 +76,21 @@ def fill_in_missing_frameworks(providers):
 
     Args:
       providers: a dict from TFM to a provider.
-      deps: the original deps used to generate the providers.
     """
 
     # iterate through the compatability table since it's in preference order
-    for tfm in FrameworkCompatibility.keys():
+    for tfm in FRAMEWORK_COMPATIBILITY.keys():
         if tfm in providers:
             continue
 
-        # There are at most 2 elements in FrameworkCompatibility[tfm], so this
+        # There are at most 2 elements in FRAMEWORK_COMPATIBILITY[tfm], so this
         # nested loop isn't bad.
         # Order by providers that didn't "cross the netstandard boundary" so
         # newer netstandard will be preferred, if applicable
-        for (base, compatible_tfm) in sorted([(providers[compatible_tfm], compatible_tfm) for compatible_tfm in FrameworkCompatibility[tfm] if compatible_tfm in providers], key = _get_provided_by_netstandard):
+        for (base, compatible_tfm) in sorted([(providers[compatible_tfm], compatible_tfm) for compatible_tfm in FRAMEWORK_COMPATIBILITY[tfm] if compatible_tfm in providers], key = _get_provided_by_netstandard):
             # Copy the output from the compatible tfm, re-resolving the deps
             (refs, runfiles, native_dlls) = collect_transitive_info(base.deps, tfm)
-            providers[tfm] = CSharpAssembly[tfm](
+            providers[tfm] = CSharpAssemblyInfo[tfm](
                 out = base.out,
                 refout = base.refout,
                 pdb = base.pdb,
@@ -97,4 +103,4 @@ def fill_in_missing_frameworks(providers):
             break
 
 def get_analyzer_dll(analyzer_target):
-    return analyzer_target[CSharpAssembly["netstandard"]]
+    return analyzer_target[CSharpAssemblyInfo["netstandard"]]

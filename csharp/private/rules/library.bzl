@@ -1,7 +1,10 @@
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework")
-load("@d2l_rules_csharp//csharp/private:actions/assembly.bzl", "AssemblyAction")
+"""
+Rules for compiling C# libraries.
+"""
+load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo")
+load("//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
-    "@d2l_rules_csharp//csharp/private:common.bzl",
+    "//csharp/private:common.bzl",
     "fill_in_missing_frameworks",
     "is_debug",
 )
@@ -54,7 +57,7 @@ csharp_library = rule(
         ),
         "analyzers": attr.label_list(
             doc = "A list of analyzer references.",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
         ),
         "keyfile": attr.label(
             doc = "The key file used to sign the assembly with a strong name.",
@@ -90,7 +93,7 @@ csharp_library = rule(
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
         ),
     },
     executable = False,

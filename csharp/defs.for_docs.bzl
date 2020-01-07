@@ -1,6 +1,6 @@
-"""Public API surface is re-exported here.
+"""Public API surface is re-exported here for documentation.
 
-Users should not load files under "/csharp"
+This is used by stardoc to describe the Public API.
 """
 load(
     "//csharp/private:repositories.bzl",
@@ -10,10 +10,6 @@ load(
 load(
     "//csharp/private:rules/binary.bzl",
     _csharp_binary = "csharp_binary",
-)
-load(
-    "//csharp/private:rules/wrapper.bzl",
-    _dotnet_wrapper = "dotnet_wrapper",
 )
 load(
     "//csharp/private:rules/library.bzl",
@@ -37,12 +33,7 @@ load(
     _import_nuget_package = "import_nuget_package",
     _nuget_package = "nuget_package",
 )
-load(
-    "//csharp/private:macros/setup_basic_nuget_package.bzl",
-    _setup_basic_nuget_package = "setup_basic_nuget_package",
-)
 
-dotnet_wrapper = _dotnet_wrapper
 csharp_binary = _csharp_binary
 csharp_library = _csharp_library
 csharp_library_set = _csharp_library_set
@@ -53,4 +44,3 @@ import_multiframework_library = _import_multiframework_library
 import_library = _import_library
 import_nuget_package = _import_nuget_package
 nuget_package = _nuget_package
-setup_basic_nuget_package = _setup_basic_nuget_package

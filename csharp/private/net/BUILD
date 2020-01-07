@@ -1,4 +1,4 @@
-load("@d2l_rules_csharp//csharp/private:rules/imports.bzl", "import_multiframework_library")
+load("@d2l_rules_csharp//csharp:defs.bzl", "import_multiframework_library")
 
 import_multiframework_library(
     name = "StandardReferences",

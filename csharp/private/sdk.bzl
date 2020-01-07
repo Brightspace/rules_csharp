@@ -1,8 +1,8 @@
-# DotNET SDK Download URLs
-# These are the URLs to download the .NET SDKs for each of the supported operating systems.
-#
-# You can get the latest URLs from here:
-#   https://dotnet.microsoft.com/download/dotnet-core
+"""
+Declarations for the .NET SDK Downloads URLs and version
+
+These are the URLs to download the .NET SDKs for each of the supported operating systems. These URLs are accessible from: https://dotnet.microsoft.com/download/dotnet-core.
+"""
 DOTNET_SDK_VERSION = "3.1.100"
 DOTNET_SDK = {
     "windows": {
@@ -18,3 +18,6 @@ DOTNET_SDK = {
         "hash": "b38e6f8935d4b82b283d85c6b83cd24b5253730bab97e0e5e6f4c43e2b741aab",
     },
 }
+
+RUNTIME_TFM = "netcoreapp3.1"
+RUNTIME_FRAMEWORK_VERSION = "3.1.0"

@@ -1,14 +1,16 @@
+"""
+Actions for compiling targets with C#.
+"""
 load(
-    "@d2l_rules_csharp//csharp/private:common.bzl",
+    "//csharp/private:common.bzl",
     "collect_transitive_info",
     "get_analyzer_dll",
     "use_highentropyva",
 )
 load(
-    "@d2l_rules_csharp//csharp/private:providers.bzl",
-    "CSharpAssembly",
-    "DefaultLangVersion",
-    "SubsystemVersion",
+    "//csharp/private:providers.bzl",
+    "CSharpAssemblyInfo",
+    "GetFrameworkVersionInfo",
 )
 
 def _format_ref_arg(assembly):
@@ -42,6 +44,7 @@ def _framework_preprocessor_symbols(tfm):
     else:
         return ["NETFRAMEWORK", specific]
 
+# buildifier: disable=function-docstring
 def AssemblyAction(
         actions,
         name,
@@ -57,7 +60,8 @@ def AssemblyAction(
         out,
         target,
         target_framework,
-        toolchain):
+        toolchain,
+        runtimeconfig = None):
     out_file_name = name if out == "" else out
     out_dir = "bazelout/" + target_framework
     out_ext = "dll" if target == "library" else "exe"
@@ -82,14 +86,14 @@ def AssemblyAction(
     else:
         args.add("/highentropyva-")
 
-    ssv = SubsystemVersion[target_framework]
+    (ssv, lang_version) = GetFrameworkVersionInfo(target_framework)
     if ssv != None:
         args.add("/subsystemversion:" + ssv)
 
     args.add("/warn:0")  # TODO: this stuff ought to be configurable
 
     args.add("/target:" + target)
-    args.add("/langversion:" + (langversion or DefaultLangVersion[target_framework]))
+    args.add("/langversion:" + (langversion or lang_version))
 
     if debug:
         args.add("/debug+")
@@ -192,7 +196,7 @@ def AssemblyAction(
         ],
     )
 
-    return CSharpAssembly[target_framework](
+    return CSharpAssemblyInfo[target_framework](
         out = out_file,
         refout = refout,
         pdb = pdb,
@@ -201,4 +205,5 @@ def AssemblyAction(
         transitive_refs = refs,
         transitive_runfiles = runfiles,
         actual_tfm = target_framework,
+        runtimeconfig = runtimeconfig,
     )

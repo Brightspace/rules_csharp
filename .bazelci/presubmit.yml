@@ -1,30 +1,34 @@
 ---
-bazel: 1.2.1
+bazel: 2.0.0
+
+buildifier:
+  version: latest
+
 tasks:
   examples-windows:
     name: Examples on Windows
     platform: windows
     include_json_profile:
-    - build
-    - test
+      - build
+      - test
     working_directory: examples
     build_targets:
-    - ...
+      - ...
   examples-ubuntu1804:
     name: Examples on Ubuntu 18.04
     platform: ubuntu1804
     include_json_profile:
-    - build
-    - test
+      - build
+      - test
     working_directory: examples
     build_targets:
-    - ...
+      - ...
   examples-macos:
     name: Examples on macOS
     platform: macos
     include_json_profile:
-    - build
-    - test
+      - build
+      - test
     working_directory: examples
     build_targets:
-    - ...
+      - ...

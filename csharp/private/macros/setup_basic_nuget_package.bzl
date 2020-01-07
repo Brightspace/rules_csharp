@@ -1,4 +1,7 @@
-load("//csharp/private:providers.bzl", "CSharpAssembly")
+"""
+Rules for interfacing with NuGet packages. 
+"""
+load("//csharp/private:providers.bzl", "CSharpAssemblyInfo")
 load("//csharp/private:rules/imports.bzl", "import_library", "import_multiframework_library")
 
 def _import_dll(dll, has_pdb, imports):
@@ -7,7 +10,7 @@ def _import_dll(dll, has_pdb, imports):
     tfm = path[1]
 
     # Ignore frameworks we don't support (like net35)
-    if tfm not in CSharpAssembly:
+    if tfm not in CSharpAssemblyInfo:
         return
 
     lib_name = path[-1].rsplit(".", 1)[0]
