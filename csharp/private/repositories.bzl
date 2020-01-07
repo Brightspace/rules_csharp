@@ -90,8 +90,8 @@ def _net_workspace():
     nuget_package(
         name = "netcoreapp2.1",
         package = "Microsoft.NETCore.App",
-        version = "2.1.13",
-        sha256 = "8d4df9bf970096af0d73a0fd97384a98bce4bdb9006e8659b298c91f2fa2c47b",
+        version = "2.1.14",
+        sha256 = "5f2b5c98addeab2de380302ac26caa3e38cb2c050b38f8f25b451415a2e79c0b",
         build_file = "@d2l_rules_csharp//csharp/private:frameworks/netcoreapp21.BUILD",
     )
 
