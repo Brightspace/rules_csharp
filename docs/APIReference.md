@@ -213,7 +213,7 @@ csharp_register_toolchains()
 csharp_repositories()
 </pre>
 
-
+Download dependencies of csharp rules.
 
 **PARAMETERS**
 
