@@ -62,7 +62,7 @@ def AssemblyAction(
         target_framework,
         toolchain,
         runtimeconfig = None):
-    """Creates an action that runs the CSharp compiler with the specified inputs
+    """Creates an action that runs the CSharp compiler with the specified inputs.
 
     This macro aims to match the [C# compiler](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically), with the inputs mapping to compiler options.
 
@@ -83,7 +83,6 @@ def AssemblyAction(
         target_framework: The target framework moniker for the assembly.
         toolchain: The toolchain that supply the C# compiler.
         runtimeconfig: The runtime configuration of the assembly.
-
     """
 
     out_file_name = name if out == "" else out
