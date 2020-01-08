@@ -29,6 +29,9 @@ def collect_transitive_info(deps, tfm):
     Args:
         deps: Dependencies that the compilation target depends on.
         tfm: The target framework moniker.
+
+    Returns:
+        A collection of the references, runfiles and native dlls.
     """
     direct_refs = []
     transitive_refs = []

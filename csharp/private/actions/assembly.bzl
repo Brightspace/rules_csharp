@@ -83,6 +83,9 @@ def AssemblyAction(
         target_framework: The target framework moniker for the assembly.
         toolchain: The toolchain that supply the C# compiler.
         runtimeconfig: The runtime configuration of the assembly.
+
+    Returns:
+        The compiled csharp artifacts.
     """
 
     out_file_name = name if out == "" else out
