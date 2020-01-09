@@ -18,10 +18,22 @@ bzl_library(
 stardoc(
     name = "core",
     out = "APIReference.md",
-    input = "//csharp:defs.for_docs.bzl",
+    input = "//csharp:defs.bzl",
+    symbol_names = [
+        "csharp_binary",
+        "csharp_library",
+        "csharp_library_set",
+        "csharp_nunit_test",
+        "csharp_register_toolchains",
+        "csharp_repositories",
+        "import_multiframework_library",
+        "import_library",
+        "import_nuget_package",
+        "nuget_package",
+    ],
     tags = ["fix-windows"],
     deps = [
-        ":rules_csharp",
         ":bazel_dependencies",
+        ":rules_csharp",
     ],
 )
