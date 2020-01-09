@@ -1,6 +1,7 @@
 """
 Rules for compatability resolution of dependencies for .NET frameworks.
 """
+
 load(
     "//csharp/private:providers.bzl",
     "CSharpAssemblyInfo",
@@ -22,8 +23,16 @@ def is_standard_framework(tfm):
 def is_core_framework(tfm):
     return tfm.startswith("netcoreapp")
 
-# buildifier: disable=function-docstring
 def collect_transitive_info(deps, tfm):
+    """Determine the transitive dependencies by the target framework.
+
+    Args:
+        deps: Dependencies that the compilation target depends on.
+        tfm: The target framework moniker.
+
+    Returns:
+        A collection of the references, runfiles and native dlls.
+    """
     direct_refs = []
     transitive_refs = []
     direct_runfiles = []

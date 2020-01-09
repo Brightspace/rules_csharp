@@ -1,6 +1,7 @@
 """
 Actions for compiling targets with C#.
 """
+
 load(
     "//csharp/private:common.bzl",
     "collect_transitive_info",
@@ -44,7 +45,6 @@ def _framework_preprocessor_symbols(tfm):
     else:
         return ["NETFRAMEWORK", specific]
 
-# buildifier: disable=function-docstring
 def AssemblyAction(
         actions,
         name,
@@ -62,6 +62,32 @@ def AssemblyAction(
         target_framework,
         toolchain,
         runtimeconfig = None):
+    """Creates an action that runs the CSharp compiler with the specified inputs.
+
+    This macro aims to match the [C# compiler](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically), with the inputs mapping to compiler options.
+
+    Args:
+        actions: Bazel module providing functions to create actions.
+        name: A unique name for this target.
+        additionalfiles: Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.
+        analyzers: The list of analyzers to run from this assembly.
+        debug: Emits debugging information.
+        defines: The list of conditional compilation symbols.
+        deps: The list of other libraries to be linked in to the assembly.
+        keyfile: Specifies a strong name key file of the assembly.
+        langversion: Specify language version: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, or Latest
+        resources: The list of resouces to be embedded in the assembly.
+        srcs: The list of source (.cs) files that are processed to create the assembly.
+        out: Specifies the output file name.
+        target: Specifies the format of the output file by using one of four options.
+        target_framework: The target framework moniker for the assembly.
+        toolchain: The toolchain that supply the C# compiler.
+        runtimeconfig: The runtime configuration of the assembly.
+
+    Returns:
+        The compiled csharp artifacts.
+    """
+
     out_file_name = name if out == "" else out
     out_dir = "bazelout/" + target_framework
     out_ext = "dll" if target == "library" else "exe"
