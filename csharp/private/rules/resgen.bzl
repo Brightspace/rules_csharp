@@ -2,14 +2,11 @@
 Rules for compiling XML-based resource files.
 """
 
-load(
-    "//csharp/private:providers.bzl",
-    "CSharpResourceInfo",
-)
+load("//csharp/private:providers.bzl", "CSharpResourceInfo")
 
 # Labels for the template and execution wrappers
-_BASH_TEMPLATE = "//csharp/private:wrappers/resx.bash"
-_CSPROJ_TEMPLATE = "//csharp/private:wrappers/ResGen.csproj"
+_BASH_TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/resx.bash"
+_CSPROJ_TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/ResGen.csproj"
 
 def _get_resource_name(name, output_name):
     if not output_name:
@@ -19,7 +16,7 @@ def _get_resource_name(name, output_name):
 
 def _csharp_resx_template_impl(ctx):
     """_csharp_resx_template_impl emits a shell script that will perform the compilation of a ResX using a CsProj wrapper."""
-    toolchain = ctx.toolchains["//csharp/private:toolchain_type"]
+    toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"]
     _, runfiles = toolchain.tool
 
     resource_name = _get_resource_name(ctx.attr.name, ctx.attr.out)
@@ -80,12 +77,12 @@ csharp_resx_template = rule(
         ),
     },
     executable = True,
-    toolchains = ["//csharp/private:toolchain_type"],
+    toolchains = ["@d2l_rules_csharp//csharp/private:toolchain_type"],
 )
 
 def _csharp_resx_build_impl(ctx):
     """_csharp_resx_build_impl compiles the ResX file using the bash script."""
-    toolchain = ctx.toolchains["//csharp/private:toolchain_type"]
+    toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"]
 
     resource_name = _get_resource_name(ctx.attr.name, ctx.attr.out)
     csproj = ctx.actions.declare_file("%s.csproj" % (ctx.attr.name))
@@ -145,7 +142,7 @@ csharp_resx_build = rule(
             doc = "A target framework moniker used in building the resource file.",
         ),
     },
-    toolchains = ["//csharp/private:toolchain_type"],
+    toolchains = ["@d2l_rules_csharp//csharp/private:toolchain_type"],
     doc = """
 Compiles an XML-based resource format (.resx) file into a binary resource (.resources) file.
 """,
