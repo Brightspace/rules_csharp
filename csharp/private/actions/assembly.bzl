@@ -10,10 +10,8 @@ load(
 )
 load(
     "//csharp/private:providers.bzl",
-    "CSharpResource",
-    "DefaultLangVersion",
-    "SubsystemVersion",
     "CSharpAssemblyInfo",
+    "CSharpResource",
     "GetFrameworkVersionInfo",
 )
 
