@@ -219,6 +219,25 @@ Download dependencies of csharp rules.
 
 
 
+<a name="#csharp_resx"></a>
+
+## csharp_resx
+
+<pre>
+csharp_resx(<a href="#csharp_resx-name">name</a>, <a href="#csharp_resx-src">src</a>)
+</pre>
+
+    Compiles an XML-based resource format (.resx) file into a binary resource (.resources) file.
+
+**PARAMETERS**
+
+
+| Name  | Description | Default Value |
+| :-------------: | :-------------: | :-------------: |
+| name |  <p align="center"> - </p>   |  none |
+| src |  <p align="center"> - </p>   |  none |
+
+
 <a name="#import_nuget_package"></a>
 
 ## import_nuget_package

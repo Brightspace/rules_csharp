@@ -21,6 +21,7 @@ stardoc(
     input = "//csharp:defs.bzl",
     symbol_names = [
         "csharp_binary",
+        "csharp_resx",
         "csharp_library",
         "csharp_library_set",
         "csharp_nunit_test",

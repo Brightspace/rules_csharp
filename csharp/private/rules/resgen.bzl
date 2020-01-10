@@ -1,13 +1,14 @@
 """
 Rules for compiling XML-based resource files.
 """
+
 load(
     "//csharp/private:providers.bzl",
     "CSharpResourceInfo",
 )
 
 # Labels for the template and execution wrappers
-_BASH_TEMPLATE = "//csharp/private::wrappers/resx.bash"
+_BASH_TEMPLATE = "//csharp/private:wrappers/resx.bash"
 _CSPROJ_TEMPLATE = "//csharp/private:wrappers/ResGen.csproj"
 
 def _get_resource_name(name, output_name):
@@ -151,6 +152,9 @@ Compiles an XML-based resource format (.resx) file into a binary resource (.reso
 )
 
 def csharp_resx(name, src):
+    """
+    Compiles an XML-based resource format (.resx) file into a binary resource (.resources) file.
+    """
     template = "%s-template" % (name)
 
     csharp_resx_template(
