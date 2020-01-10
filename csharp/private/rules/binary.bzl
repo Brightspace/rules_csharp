@@ -1,7 +1,7 @@
 """
 Rules for compiling C# binaries.
 """
-load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo", "CSharpResource")
+load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo", "CSharpResourceInfo")
 load("//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
     "//csharp/private:common.bzl",
@@ -95,7 +95,7 @@ csharp_binary = rule(
         "resources": attr.label_list(
             doc = "A list of files to embed in the DLL as resources.",
             allow_files = True,
-            providers = [CSharpResource],
+            providers = [CSharpResourceInfo],
         ),
         "out": attr.string(
             doc = "File name, without extension, of the built assembly.",

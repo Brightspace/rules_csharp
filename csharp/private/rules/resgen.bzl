@@ -1,6 +1,6 @@
 load(
     "@d2l_rules_csharp//csharp/private:providers.bzl",
-    "CSharpResource",
+    "CSharpResourceInfo",
 )
 
 # Labels for the template and execution wrappers
@@ -101,7 +101,7 @@ def _csharp_resx_build_impl(ctx):
 
     files = depset(direct = [resource])
     return [
-        CSharpResource(
+        CSharpResourceInfo(
             name = ctx.attr.name,
             result = resource,
             accessibility_modifier = ctx.attr.accessibility_modifier,

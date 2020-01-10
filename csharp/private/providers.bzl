@@ -217,7 +217,7 @@ def GetFrameworkVersionInfo(tfm):
 # kind of C# assembly. This is an array of single-element arrays.
 AnyTargetFrameworkInfo = [[a] for a in CSharpAssemblyInfo.values()]
 
-CSharpResource = provider()
+CSharpResourceInfo = provider()
 """
 Represents a common language runtime binary resource file (.resources).
 """

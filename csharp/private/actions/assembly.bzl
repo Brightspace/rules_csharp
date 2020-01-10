@@ -11,7 +11,7 @@ load(
 load(
     "//csharp/private:providers.bzl",
     "CSharpAssemblyInfo",
-    "CSharpResource",
+    "CSharpResourceInfo",
     "GetFrameworkVersionInfo",
 )
 
@@ -25,9 +25,9 @@ def _format_additionalfile_arg(additionalfile):
     return "/additionalfile:" + additionalfile.path
 
 def _format_resource_arg(resource):
-    identifier = resource[CSharpResource].identifier
-    result = resource[CSharpResource].result
-    modifier = resource[CSharpResource].accessibility_modifier
+    identifier = resource[CSharpResourceInfo].identifier
+    result = resource[CSharpResourceInfo].result
+    modifier = resource[CSharpResourceInfo].accessibility_modifier
     return "/resource:%s,%s,%s" % (result.path, identifier, modifier)
 
 def _format_define(symbol):
@@ -155,7 +155,7 @@ def AssemblyAction(
     args.add_all([cs.path for cs in srcs])
 
     # resources
-    resourcefiles = [res[CSharpResource].result for res in resources]
+    resourcefiles = [res[CSharpResourceInfo].result for res in resources]
     args.add_all(resources, map_each = _format_resource_arg)
 
     # defines
