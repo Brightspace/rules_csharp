@@ -1,4 +1,7 @@
-load("//csharp/private:providers.bzl", "CSharpAssembly")
+"""
+Rules for interfacing with NuGet packages. 
+"""
+load("//csharp/private:providers.bzl", "CSharpAssemblyInfo")
 load("//csharp/private:rules/imports.bzl", "import_library", "import_multiframework_library")
 
 def _import_dll(dll, has_pdb, imports):
@@ -7,7 +10,7 @@ def _import_dll(dll, has_pdb, imports):
     tfm = path[1]
 
     # Ignore frameworks we don't support (like net35)
-    if tfm not in CSharpAssembly:
+    if tfm not in CSharpAssemblyInfo:
         return
 
     lib_name = path[-1].rsplit(".", 1)[0]
@@ -47,7 +50,7 @@ def setup_basic_nuget_package():
     dlls = native.glob(["lib/*/*.dll"])
     pdbs = native.glob(["lib/*/*.pdb"])
 
-    has_pdb = { (pdb[:-3] + "dll"): 1 for pdb in pdbs }
+    has_pdb = {(pdb[:-3] + "dll"): 1 for pdb in pdbs}
 
     # Map from lib name to dict from tfm to target name
     imports = {}

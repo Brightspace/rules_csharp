@@ -1,7 +1,10 @@
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework")
-load("@d2l_rules_csharp//csharp/private:actions/assembly.bzl", "AssemblyAction")
+"""
+Rules for compiling NUnit tests.
+"""
+load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo")
+load("//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
-    "@d2l_rules_csharp//csharp/private:common.bzl",
+    "//csharp/private:common.bzl",
     "fill_in_missing_frameworks",
     "is_debug",
     "is_standard_framework",
@@ -63,7 +66,7 @@ csharp_nunit_test = rule(
         ),
         "analyzers": attr.label_list(
             doc = "A list of analyzer references.",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
         ),
         "keyfile": attr.label(
             doc = "The key file used to sign the assembly with a strong name.",
@@ -99,7 +102,7 @@ csharp_nunit_test = rule(
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
         ),
         "_nunit_shim": attr.label(
             doc = "Entry point for NUnitLite",
@@ -108,12 +111,12 @@ csharp_nunit_test = rule(
         ),
         "_nunitlite": attr.label(
             doc = "The NUnitLite library",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
             default = "@NUnitLite//:nunitlite",
         ),
         "_nunitframework": attr.label(
             doc = "The NUnit framework",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
             default = "@NUnit//:nunit.framework",
         ),
     },

@@ -1,15 +1,20 @@
+"""
+Actions for compiling targets with C#.
+"""
+
 load(
-    "@d2l_rules_csharp//csharp/private:common.bzl",
+    "//csharp/private:common.bzl",
     "collect_transitive_info",
     "get_analyzer_dll",
     "use_highentropyva",
 )
 load(
-    "@d2l_rules_csharp//csharp/private:providers.bzl",
-    "CSharpAssembly",
+    "//csharp/private:providers.bzl",
     "CSharpResource",
     "DefaultLangVersion",
     "SubsystemVersion",
+    "CSharpAssemblyInfo",
+    "GetFrameworkVersionInfo",
 )
 
 def _format_ref_arg(assembly):
@@ -61,7 +66,34 @@ def AssemblyAction(
         out,
         target,
         target_framework,
-        toolchain):
+        toolchain,
+        runtimeconfig = None):
+    """Creates an action that runs the CSharp compiler with the specified inputs.
+
+    This macro aims to match the [C# compiler](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically), with the inputs mapping to compiler options.
+
+    Args:
+        actions: Bazel module providing functions to create actions.
+        name: A unique name for this target.
+        additionalfiles: Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.
+        analyzers: The list of analyzers to run from this assembly.
+        debug: Emits debugging information.
+        defines: The list of conditional compilation symbols.
+        deps: The list of other libraries to be linked in to the assembly.
+        keyfile: Specifies a strong name key file of the assembly.
+        langversion: Specify language version: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, or Latest
+        resources: The list of resouces to be embedded in the assembly.
+        srcs: The list of source (.cs) files that are processed to create the assembly.
+        out: Specifies the output file name.
+        target: Specifies the format of the output file by using one of four options.
+        target_framework: The target framework moniker for the assembly.
+        toolchain: The toolchain that supply the C# compiler.
+        runtimeconfig: The runtime configuration of the assembly.
+
+    Returns:
+        The compiled csharp artifacts.
+    """
+
     out_file_name = name if out == "" else out
     out_dir = "bazelout/" + target_framework
     out_ext = "dll" if target == "library" else "exe"
@@ -86,14 +118,14 @@ def AssemblyAction(
     else:
         args.add("/highentropyva-")
 
-    ssv = SubsystemVersion[target_framework]
+    (ssv, lang_version) = GetFrameworkVersionInfo(target_framework)
     if ssv != None:
         args.add("/subsystemversion:" + ssv)
 
     args.add("/warn:0")  # TODO: this stuff ought to be configurable
 
     args.add("/target:" + target)
-    args.add("/langversion:" + (langversion or DefaultLangVersion[target_framework]))
+    args.add("/langversion:" + (langversion or lang_version))
 
     if debug:
         args.add("/debug+")
@@ -186,7 +218,7 @@ def AssemblyAction(
         ],
     )
 
-    return CSharpAssembly[target_framework](
+    return CSharpAssemblyInfo[target_framework](
         out = out_file,
         refout = refout,
         pdb = pdb,
@@ -195,4 +227,5 @@ def AssemblyAction(
         transitive_refs = refs,
         transitive_runfiles = runfiles,
         actual_tfm = target_framework,
+        runtimeconfig = runtimeconfig,
     )

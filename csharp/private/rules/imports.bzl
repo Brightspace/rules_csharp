@@ -1,9 +1,12 @@
+"""
+Rules for importing assemblies for .NET frameworks.
+"""
 load(
-    "@d2l_rules_csharp//csharp/private:common.bzl",
+    "//csharp/private:common.bzl",
     "collect_transitive_info",
     "fill_in_missing_frameworks",
 )
-load("@d2l_rules_csharp//csharp/private:providers.bzl", "AnyTargetFramework", "CSharpAssembly")
+load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo", "CSharpAssemblyInfo")
 
 def _import_library(ctx):
     files = []
@@ -27,7 +30,7 @@ def _import_library(ctx):
     (refs, runfiles, native_dlls) = collect_transitive_info(ctx.attr.deps, tfm)
 
     providers = {
-        tfm: CSharpAssembly[tfm](
+        tfm: CSharpAssemblyInfo[tfm](
             out = ctx.file.dll,
             refout = ctx.file.refdll,
             pdb = ctx.file.pdb,
@@ -35,7 +38,7 @@ def _import_library(ctx):
             deps = ctx.attr.deps,
             transitive_refs = refs,
             transitive_runfiles = runfiles,
-            actual_tfm = tfm
+            actual_tfm = tfm,
         ),
     }
 
@@ -69,7 +72,7 @@ import_library = rule(
         ),
         "deps": attr.label_list(
             doc = "other DLLs that this DLL depends on.",
-            providers = AnyTargetFramework,
+            providers = AnyTargetFrameworkInfo,
         ),
     },
     executable = False,
@@ -117,7 +120,7 @@ def _import_multiframework_library_impl(ctx):
 
     for (tfm, attr) in attrs.items():
         if attr != None:
-            providers[tfm] = attr[CSharpAssembly[tfm]]
+            providers[tfm] = attr[CSharpAssemblyInfo[tfm]]
 
     fill_in_missing_frameworks(providers)
 
@@ -127,7 +130,7 @@ def _import_multiframework_library_impl(ctx):
 
 def _generate_multiframework_attrs():
     attrs = {}
-    for (tfm, tf_provider) in CSharpAssembly.items():
+    for (tfm, tf_provider) in CSharpAssemblyInfo.items():
         attrs[tfm.replace(".", "_")] = attr.label(
             doc = "The %s version of this library" % tfm,
             providers = [tf_provider],

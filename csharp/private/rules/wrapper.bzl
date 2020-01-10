@@ -1,4 +1,7 @@
-_TEMPLATE = "@d2l_rules_csharp//csharp/private:wrappers/dotnet.cc"
+"""
+A wrapper around `dotnet` for Bazel.
+"""
+_TEMPLATE = "//csharp/private:wrappers/dotnet.cc"
 
 def _dotnet_wrapper_impl(ctx):
     cc_file = ctx.actions.declare_file("%s.cc" % (ctx.attr.name))
@@ -27,7 +30,7 @@ dotnet_wrapper = rule(
             doc = """Path to the program that will wrap the dotnet executable.
 This program will be compiled and used instead of directly calling the dotnet executable.""",
             default = Label(_TEMPLATE),
-            allow_single_file = True
+            allow_single_file = True,
         ),
         "src": attr.label_list(
             doc = """The name of the dotnet executable.

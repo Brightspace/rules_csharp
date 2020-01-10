@@ -1,8 +1,13 @@
-load(":rules/create_net_workspace.bzl", "create_net_workspace")
-load(":macros/nuget.bzl", "nuget_package")
+"""
+Rules to load all the .NET SDK & framework dependencies of rules_csharp.
+"""
+load(":sdk.bzl", "DOTNET_SDK")
+load("//csharp/private:rules/create_net_workspace.bzl", "create_net_workspace")
+load("//csharp/private:macros/nuget.bzl", "nuget_package")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def csharp_repositories():
+    """Download dependencies of csharp rules."""
     _net_workspace()
 
     create_net_workspace()
@@ -27,20 +32,20 @@ def csharp_repositories():
 
     _download_dotnet(
         os = "windows",
-        url = "https://download.visualstudio.microsoft.com/download/pr/a24f4f34-ada1-433a-a437-5bc85fc2576a/7e886d06729949c15c96fe7e70faa8ae/dotnet-sdk-3.0.100-win-x64.zip",
-        hash = "faf8a92a523558e1659a6f9750c86610fe8430430f58099ccc659b83e3eee1bf",
+        url = DOTNET_SDK["windows"]["url"],
+        hash = DOTNET_SDK["windows"]["hash"],
     )
 
     _download_dotnet(
         os = "linux",
-        url = "https://download.visualstudio.microsoft.com/download/pr/886b4a4c-30af-454b-8bec-81c72b7b4e1f/d1a0c8de9abb36d8535363ede4a15de6/dotnet-sdk-3.0.100-linux-x64.tar.gz",
-        hash = "12098fe29d5c857fd6093b1fd63eda9f91b92798e3748fcedc0e0727f1ac01c2",
+        url = DOTNET_SDK["linux"]["url"],
+        hash = DOTNET_SDK["linux"]["hash"],
     )
 
     _download_dotnet(
         os = "osx",
-        url = "https://download.visualstudio.microsoft.com/download/pr/b9251194-4118-41cb-ae05-6763fb002e5d/1d398b4e97069fa4968628080b617587/dotnet-sdk-3.0.100-osx-x64.tar.gz",
-        hash = "f0f8af049e0ecbeea9c9c37c16679d6fc2cd4c165510b00e3fad3cd8d0fe0160",
+        url = DOTNET_SDK["osx"]["url"],
+        hash = DOTNET_SDK["osx"]["hash"],
     )
 
 def csharp_register_toolchains():
@@ -58,117 +63,43 @@ def _download_dotnet(os, url, hash):
         build_file = "@d2l_rules_csharp//csharp/private:runtime.BUILD",
     )
 
+def _net_framework_pkg(tfm, sha256):
+    nuget_package(
+        name = tfm,
+        package = "Microsoft.NETFramework.ReferenceAssemblies.%s" % tfm,
+        version = "1.0.0",
+        sha256 = sha256,
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/%s.BUILD" % tfm,
+    )
+
 def _net_workspace():
-    nuget_package(
-        name = "net20",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net20",
-        version = "1.0.0-preview.2",
-        sha256 = "caaa20a20da4e5e3b408b5479fae15e81effb5601b303efc9d171fbb0f49ac18",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net20.BUILD",
-    )
-
-    nuget_package(
-        name = "net40",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net40",
-        version = "1.0.0-preview.2",
-        sha256 = "65347e2f553081424aee2ed3507224d92bfee2b7d2e2bed66484bdc948d4637a",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net40.BUILD",
-    )
-
-    nuget_package(
-        name = "net45",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net45",
-        version = "1.0.0-preview.2",
-        sha256 = "a39af6dc89f75a153661c9c98290da0a810ce431e0e3e10fa7d137eb73c0b837",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net45.BUILD",
-    )
-
-    nuget_package(
-        name = "net451",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net451",
-        version = "1.0.0-preview.2",
-        sha256 = "dbb2cb1698d54f7b65b40cc8bb930915eb194bc967ea07521e47331c2277894f",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net451.BUILD",
-    )
-
-    nuget_package(
-        name = "net452",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net452",
-        version = "1.0.0-preview.2",
-        sha256 = "fbf74fe47de381632ef1564d1599b503ece6e56674c43f5ac36846710bc05888",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net452.BUILD",
-    )
-
-    nuget_package(
-        name = "net46",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net46",
-        version = "1.0.0-preview.2",
-        sha256 = "118fcb427ac365ad74d80a2906d412842548f58cf933ffcdf81c8ecf41225cd3",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net46.BUILD",
-    )
-
-    nuget_package(
-        name = "net461",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net461",
-        version = "1.0.0-preview.2",
-        sha256 = "5ac0c8b6e26e6cb525a09cda5a47df971ca126e4c953d993c688b7a74ce40724",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net461.BUILD",
-    )
-
-    nuget_package(
-        name = "net462",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net462",
-        version = "1.0.0-preview.2",
-        sha256 = "22fdc05543faa9ab7a638d9a238a6e6b4280bfac5348b96345062e10dc6c9b36",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net462.BUILD",
-    )
-
-    nuget_package(
-        name = "net47",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net47",
-        version = "1.0.0-preview.2",
-        sha256 = "164d7cbcc3c020b06a0b28ebe60a3c291ce2c568e816ca6d8a0a7911694f6015",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net47.BUILD",
-    )
-
-    nuget_package(
-        name = "net471",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net471",
-        version = "1.0.0-preview.2",
-        sha256 = "8d90b26b1bb7247ef8e52d46523532428b1043a53de5d5db08ed7f94b1a879f8",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net471.BUILD",
-    )
-
-    nuget_package(
-        name = "net472",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net472",
-        version = "1.0.0-preview.2",
-        sha256 = "ebca4bd6142f768e9ab96115a820fa2f5705cb07355e67f67613f58b0c0e3e97",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net472.BUILD",
-    )
-
-    nuget_package(
-        name = "net48",
-        package = "Microsoft.NETFramework.ReferenceAssemblies.net48",
-        version = "1.0.0-preview.2",
-        sha256 = "912f6eed993e77c83cb8b92db72d50df7d06e4c4a02486474eae460728291989",
-        build_file = "@d2l_rules_csharp//csharp/private:frameworks/net48.BUILD",
-    )
+    _net_framework_pkg("net20", "82450fb8a67696bdde41174918d385d50691f18945a246907cd96dfa3f670c82")
+    _net_framework_pkg("net40", "4e97e946e032ab5538ff97d1a215c6814336b3ffda6806495e3f3150f3ca06ee")
+    _net_framework_pkg("net45", "9b9e76d6497bfc6d0328528eb50f5fcc886a3eba4f47cdabd3df66f94174eac6")
+    _net_framework_pkg("net451", "706278539689d45219715ff3fa19ff459127fc90104102eefcc236c1550f71e7")
+    _net_framework_pkg("net452", "e8a90f1699d9b542e1bd6fdbc9f60f36acf420b95cace59e23d6be376dc61bb8")
+    _net_framework_pkg("net46", "514e991aaacd84759f01b2933e6f4aa44a7d4caa39599f7d6c0a454b630286fa")
+    _net_framework_pkg("net461", "a12eec50ccca0642e686082a6c8e9e06a6f538f022a47d130d36836818b17303")
+    _net_framework_pkg("net462", "c4115c862f5ca778dc3fb649f455d38c095dfd10a1dc116b687944111462734d")
+    _net_framework_pkg("net47", "261e3476e6be010a525064ce0901b8f77b09cdb7ea1fec88832a00ebe0356503")
+    _net_framework_pkg("net471", "554c9305a9f064086861ae7db57b407147ec0850de2dfc5d86adabfa35b33180")
+    _net_framework_pkg("net472", "2c8fd79ea19bd03cece40ed92b7bafde024f87c73abcebe3eff8da6e05b611af")
+    _net_framework_pkg("net48", "fd0ba0a0c5ccce36e104abd055d2f4bf596ff3afc0dbc1f201d6cf9a50b783ce")
 
     # .NET Core
     nuget_package(
         name = "netcoreapp2.1",
         package = "Microsoft.NETCore.App",
-        version = "2.1.13",
-        sha256 = "8d4df9bf970096af0d73a0fd97384a98bce4bdb9006e8659b298c91f2fa2c47b",
+        version = "2.1.14",
+        sha256 = "5f2b5c98addeab2de380302ac26caa3e38cb2c050b38f8f25b451415a2e79c0b",
         build_file = "@d2l_rules_csharp//csharp/private:frameworks/netcoreapp21.BUILD",
     )
 
     nuget_package(
         name = "netcoreapp2.2",
         package = "Microsoft.NETCore.App",
-        version = "2.2.7",
-        sha256 = "a4f166be783dedac38def8e9357ac74a4739119611635ac520b5fdd96645835e",
+        version = "2.2.8",
+        sha256 = "987b05eabc15cb625f1f9c6ee7bfad8408afca5b4761397f66c93a999c4011a1",
         build_file = "@d2l_rules_csharp//csharp/private:frameworks/netcoreapp22.BUILD",
     )
 

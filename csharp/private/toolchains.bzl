@@ -1,3 +1,8 @@
+"""
+Rules to configure the .NET toolchain of rules_csharp.
+"""
+load(":sdk.bzl", "DOTNET_SDK_VERSION")
+
 def _csharp_toolchain_impl(ctx):
     return [
         platform_common.ToolchainInfo(
@@ -33,7 +38,7 @@ def configure_toolchain(os, exe = "dotnetw"):
     csharp_toolchain(
         name = "csharp_x86_64-" + os,
         runtime = "@netcore-sdk-%s//:%s" % (os, exe),
-        compiler = "@netcore-sdk-%s//:sdk/3.0.100/Roslyn/bincore/csc.dll" % (os),
+        compiler = "@netcore-sdk-%s//:sdk/%s/Roslyn/bincore/csc.dll" % (os, DOTNET_SDK_VERSION),
     )
 
     native.toolchain(
