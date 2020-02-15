@@ -56,7 +56,7 @@ def _binary_impl(ctx):
     direct_runfiles = [result[0].out, result[0].pdb]
 
     if result[0].runtimeconfig != None:
-        direct_runfiles += [result[0].runtimeconfig]
+        direct_runfiles.append(result[0].runtimeconfig)
 
     result.append(DefaultInfo(
         executable = result[0].out,
