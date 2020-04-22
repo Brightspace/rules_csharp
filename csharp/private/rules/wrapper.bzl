@@ -2,12 +2,27 @@
 A wrapper around `dotnet` for Bazel.
 """
 
-load("//csharp/private:actions/wrapper.bzl", "write_wrapper_main_cc")
-
 def _dotnet_wrapper_impl(ctx):
-    cc_file = write_wrapper_main_cc(ctx, ctx.attr.name, ctx.file.template, ctx.files.src[0])
+    if len(ctx.attr.args) > 2:
+      fail("args is too long")
 
-    files = depset(direct = [cc_file])
+    main_cc = ctx.actions.declare_file("%s.main.cc" % ctx.attr.name)
+
+    # Trim leading "../"
+    # e.g. ../netcore-sdk-osx/dotnet
+    dotnetexe_path = ctx.files.dotnet[0].short_path[3:]
+
+    ctx.actions.expand_template(
+        template = ctx.file.template,
+        output = main_cc,
+        substitutions = {
+            "{DotnetExe}": dotnetexe_path,
+            "{Argv1}": ctx.attr.args[0] if len(ctx.attr.args) > 0 else "",
+            "{Argv2}": ctx.attr.args[1] if len(ctx.attr.args) > 1 else "",
+        },
+    )
+
+    files = depset(direct = [main_cc])
     return [
         DefaultInfo(
             files = files,
@@ -23,11 +38,15 @@ This program will be compiled and used instead of directly calling the dotnet ex
             default = Label("//csharp/private:wrappers/dotnet.cc"),
             allow_single_file = True,
         ),
-        "src": attr.label_list(
-            doc = """The name of the dotnet executable.
-On windows this should be 'dotnet.exe', and 'dotnet' on linux/macOS.""",
+        "dotnet": attr.label_list(
+            doc = "The dotnet executable.",
             mandatory = True,
             allow_files = True,
+        ),
+        "args": attr.label_list(
+            doc = """Extra arguments to use when invoking dotnet.
+At most 2 extra arguments are supported.""",
+            allow_files = False,
         ),
     },
 )
