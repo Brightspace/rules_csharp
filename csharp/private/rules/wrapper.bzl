@@ -43,10 +43,9 @@ This program will be compiled and used instead of directly calling the dotnet ex
             mandatory = True,
             allow_files = True,
         ),
-        "args": attr.label_list(
+        "args": attr.string_list(
             doc = """Extra arguments to use when invoking dotnet.
 At most 2 extra arguments are supported.""",
-            allow_files = False,
         ),
     },
 )
