@@ -35,7 +35,7 @@ cc_binary(
 
 dotnet_wrapper(
     name = "main-cc",
-    src = glob(
+    dotnet = glob(
         [
             "dotnet",
             "dotnet.exe",
