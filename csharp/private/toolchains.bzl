@@ -30,6 +30,7 @@ csharp_toolchain = rule(
 )
 
 # This is called in BUILD
+# buildifier: disable=unnamed-macro
 def configure_toolchain(os, exe = "dotnetw"):
     csharp_toolchain(
         name = "csharp_x86_64-" + os,
