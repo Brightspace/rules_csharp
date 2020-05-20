@@ -6,6 +6,9 @@ load("//csharp/private:rules/create_net_workspace.bzl", "create_net_workspace")
 load("//csharp/private:macros/nuget.bzl", "nuget_package")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+# This macro does a bunch of random targets and doesn't have a unique name.
+# This is an idiomatic pattern for rule initialization.
+# buildifier: disable=unnamed-macro
 def csharp_repositories():
     """Download dependencies of csharp rules."""
     _net_workspace()
