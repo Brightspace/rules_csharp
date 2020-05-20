@@ -4,6 +4,8 @@ Rules for interfacing with NuGet packages.
 load("//csharp/private:providers.bzl", "CSharpAssemblyInfo")
 load("//csharp/private:rules/imports.bzl", "import_library", "import_multiframework_library")
 
+# name is generated. This macro is not exported from this file.
+# buildifier: disable=unnamed-macro
 def _import_dll(dll, has_pdb, imports):
     path = dll.split("/")
 
