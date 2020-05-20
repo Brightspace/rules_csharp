@@ -51,6 +51,7 @@ def csharp_repositories():
         hash = DOTNET_SDK["osx"]["hash"],
     )
 
+# buildifier: disable=unnamed-macro
 def csharp_register_toolchains():
     native.register_toolchains(
         "@d2l_rules_csharp//csharp/private:csharp_windows_toolchain",
