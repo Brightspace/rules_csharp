@@ -1,5 +1,5 @@
 """
-Rules for interfacing with NuGet packages. 
+Rules for interfacing with NuGet packages.
 """
 load("//csharp/private:providers.bzl", "CSharpAssemblyInfo")
 load("//csharp/private:rules/imports.bzl", "import_library", "import_multiframework_library")
@@ -103,4 +103,5 @@ def setup_basic_nuget_package():
             netcoreapp2_1 = tfms.get("netcoreapp2.1"),
             netcoreapp2_2 = tfms.get("netcoreapp2.2"),
             netcoreapp3_0 = tfms.get("netcoreapp3.0"),
+            netcoreapp3_1 = tfms.get("netcoreapp3.1"),
         )
