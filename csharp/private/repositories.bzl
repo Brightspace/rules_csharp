@@ -119,7 +119,7 @@ def _net_workspace():
         name = "netcoreapp3.1",
         package = "Microsoft.NETCore.App.Ref",
         version = "3.1.0",
-        sha256 = "3c7a2fbddfa63cdf47a02174ac51274b4d79a7b623efaf9ef5c7d253824023e2",
+        sha256 = "9ee02f1f0989dacdce6f5a8d0c7d7eb95ddac0e65a5a5695dc57a74e63d45b23",
         build_file = "@d2l_rules_csharp//csharp/private:frameworks/netcoreapp31.BUILD",
     )
 
