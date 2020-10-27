@@ -79,6 +79,11 @@ csharp_library(
 )
 
 csharp_library(
+    name = "netcoreapp3.1",
+    target_frameworks = ["netcoreapp3.1"],
+)
+
+csharp_library(
     name = "netstandard2.0",
     target_frameworks = ["netstandard2.0"],
 )
