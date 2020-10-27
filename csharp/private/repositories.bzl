@@ -115,6 +115,14 @@ def _net_workspace():
         build_file = "@d2l_rules_csharp//csharp/private:frameworks/netcoreapp30.BUILD",
     )
 
+    nuget_package(
+        name = "netcoreapp3.1",
+        package = "Microsoft.NETCore.App.Ref",
+        version = "3.1.0",
+        sha256 = "3c7a2fbddfa63cdf47a02174ac51274b4d79a7b623efaf9ef5c7d253824023e2",
+        build_file = "@d2l_rules_csharp//csharp/private:frameworks/netcoreapp31.BUILD",
+    )
+
     # .NET Standard (& .NET Core)
     nuget_package(
         name = "NetStandard.Library",
