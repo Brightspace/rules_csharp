@@ -148,7 +148,7 @@ def AssemblyAction(
     args.add_all(additionalfiles, map_each = _format_additionalfile_arg)
 
     # .cs files
-    args.add_all([cs.path for cs in srcs])
+    args.add_all([cs for cs in srcs])
 
     # resources
     args.add_all(resources, map_each = _format_resource_arg)
