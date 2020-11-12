@@ -84,6 +84,11 @@ csharp_library(
 )
 
 csharp_library(
+    name = "net5.0",
+    target_frameworks = ["net5.0"],
+)
+
+csharp_library(
     name = "netstandard2.0",
     target_frameworks = ["netstandard2.0"],
 )
