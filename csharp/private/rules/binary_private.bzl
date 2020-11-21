@@ -39,6 +39,7 @@ def _binary_private_impl(ctx):
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
             deps = ctx.attr.deps + stdrefs,
+            internals_visible_to = ctx.attr.internals_visible_to,
             keyfile = ctx.file.keyfile,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
@@ -128,6 +129,9 @@ This is a private rule used to implement csharp_binary and should not be used di
             doc = "A template file to use for generating runtimeconfig.json",
             default = ":runtimeconfig.json.tpl",
             allow_single_file = True,
+        ),
+        "internals_visible_to": attr.string_list(
+            doc = "Other C# libraries that can see the assembly's internal symbols. Using this rather than the InternalsVisibleTo assembly attribute will improve build caching.",
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
