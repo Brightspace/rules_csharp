@@ -28,4 +28,5 @@ csharp_library(
     name = "lib",
     srcs = ["lib.cs"],
     target_frameworks = ["net5.0"],
+    internals_visible_to = ["lib_test"]
 )

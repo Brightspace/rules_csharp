@@ -23,6 +23,7 @@ def _library_impl(ctx):
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
             deps = ctx.attr.deps + stdrefs,
+            internals_visible_to = ctx.attr.internals_visible_to,
             keyfile = ctx.file.keyfile,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
@@ -90,6 +91,9 @@ csharp_library = rule(
         "_stdrefs": attr.label(
             doc = "The standard set of assemblies to reference.",
             default = "@net//:StandardReferences",
+        ),
+        "internals_visible_to": attr.string_list(
+            doc = "Other C# libraries that can see the assembly's internal symbols. Using this rather than the InternalsVisibleTo assembly attribute will improve build caching.",
         ),
         "deps": attr.label_list(
             doc = "Other C# libraries, binaries, or imported DLLs",
