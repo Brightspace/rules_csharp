@@ -45,21 +45,6 @@ def _framework_preprocessor_symbols(tfm):
     else:
         return ["NETFRAMEWORK", specific]
 
-def _write_internalsvisibleto(actions, name, others):
-    attrs = actions.args()
-    attrs.set_param_file_format(format = "multiline")
-
-    attrs.add_all(
-        others, 
-        format_each = "[assembly: System.Runtime.CompilerServices.InternalsVisibleTo(\"%s\")]"
-    )
-
-    output = actions.declare_file("bazelout/%s/internalsvisibleto.cs" % name)
-
-    actions.write(output, attrs)
-
-    return output
-
 def AssemblyAction(
         actions,
         name,
@@ -90,7 +75,7 @@ def AssemblyAction(
         debug: Emits debugging information.
         defines: The list of conditional compilation symbols.
         deps: The list of other libraries to be linked in to the assembly.
-        internals_visible_to: Other C# libraries that can see the assembly's internal symbols.
+        internals_visible_to: An optional generated .cs file with InternalsVisibleTo attributes.
         keyfile: Specifies a strong name key file of the assembly.
         langversion: Specify language version: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, or Latest
         resources: The list of resouces to be embedded in the assembly.
@@ -164,8 +149,8 @@ def AssemblyAction(
     args.add_all(analyzer_assemblies, map_each = _format_analyzer_arg)
     args.add_all(additionalfiles, map_each = _format_additionalfile_arg)
 
-    if len(internals_visible_to) != 0:
-        srcs = srcs + [_write_internalsvisibleto(actions, name, internals_visible_to)]
+    if internals_visible_to != None:
+        srcs = srcs + [internals_visible_to]
 
     # .cs files
     args.add_all([cs for cs in srcs])

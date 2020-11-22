@@ -3,6 +3,7 @@ Rules for compiling C# libraries.
 """
 load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo")
 load("//csharp/private:actions/assembly.bzl", "AssemblyAction")
+load("//csharp/private:actions/misc.bzl", "write_internals_visible_to")
 load(
     "//csharp/private:common.bzl",
     "fill_in_missing_frameworks",
@@ -14,6 +15,12 @@ def _library_impl(ctx):
 
     stdrefs = [ctx.attr._stdrefs] if ctx.attr.include_stdrefs else []
 
+    internals_visible_to = write_internals_visible_to(
+        ctx.actions,
+        name = ctx.attr.name,
+        others = ctx.attr.internals_visible_to,
+    )
+
     for tfm in ctx.attr.target_frameworks:
         providers[tfm] = AssemblyAction(
             ctx.actions,
@@ -23,7 +30,7 @@ def _library_impl(ctx):
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
             deps = ctx.attr.deps + stdrefs,
-            internals_visible_to = ctx.attr.internals_visible_to,
+            internals_visible_to = internals_visible_to,
             keyfile = ctx.file.keyfile,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,

@@ -5,18 +5,28 @@ Base rule for compiling C# binaries and tests.
 load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo")
 load("//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
+    "//csharp/private:actions/misc.bzl",
+    "write_internals_visible_to",
+    "write_runtimeconfig"
+)
+load(
     "//csharp/private:common.bzl",
     "fill_in_missing_frameworks",
     "is_core_framework",
     "is_debug",
     "is_standard_framework",
 )
-load("//csharp/private:actions/write_runtimeconfig.bzl", "write_runtimeconfig")
 
 def _binary_private_impl(ctx):
     providers = {}
 
     stdrefs = [ctx.attr._stdrefs] if ctx.attr.include_stdrefs else []
+
+    internals_visible_to = write_internals_visible_to(
+        ctx.actions,
+        name = ctx.attr.name,
+        others = ctx.attr.internals_visible_to,
+    )
 
     for tfm in ctx.attr.target_frameworks:
         if is_standard_framework(tfm):
@@ -39,7 +49,7 @@ def _binary_private_impl(ctx):
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
             deps = ctx.attr.deps + stdrefs,
-            internals_visible_to = ctx.attr.internals_visible_to,
+            internals_visible_to = internals_visible_to,
             keyfile = ctx.file.keyfile,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
