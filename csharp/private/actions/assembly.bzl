@@ -54,6 +54,7 @@ def AssemblyAction(
         defines,
         deps,
         internals_visible_to,
+        internals_visible_to_cs,
         keyfile,
         langversion,
         resources,
@@ -75,7 +76,8 @@ def AssemblyAction(
         debug: Emits debugging information.
         defines: The list of conditional compilation symbols.
         deps: The list of other libraries to be linked in to the assembly.
-        internals_visible_to: An optional generated .cs file with InternalsVisibleTo attributes.
+        internals_visible_to: An optional list of assemblies that can see this assemblies internal symbols.
+        internals_visible_to_cs: An optional generated .cs file with InternalsVisibleTo attributes.
         keyfile: Specifies a strong name key file of the assembly.
         langversion: Specify language version: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, or Latest
         resources: The list of resouces to be embedded in the assembly.
@@ -140,7 +142,7 @@ def AssemblyAction(
     args.add("/pdb:" + pdb.path)
 
     # assembly references
-    (refs, runfiles, native_dlls) = collect_transitive_info(deps, target_framework)
+    (refs, runfiles, native_dlls) = collect_transitive_info(name, deps, target_framework)
     args.add_all(refs, map_each = _format_ref_arg)
 
     # analyzers
@@ -149,8 +151,8 @@ def AssemblyAction(
     args.add_all(analyzer_assemblies, map_each = _format_analyzer_arg)
     args.add_all(additionalfiles, map_each = _format_additionalfile_arg)
 
-    if internals_visible_to != None:
-        srcs = srcs + [internals_visible_to]
+    if internals_visible_to_cs != None:
+        srcs = srcs + [internals_visible_to_cs]
 
     # .cs files
     args.add_all([cs for cs in srcs])
@@ -218,7 +220,9 @@ def AssemblyAction(
 
     return CSharpAssemblyInfo[target_framework](
         out = out_file,
-        refout = refout,
+        irefout = refout, # TODO: generate both
+        prefout = refout,
+        internals_visible_to = internals_visible_to or [],
         pdb = pdb,
         native_dlls = native_dlls,
         deps = deps,

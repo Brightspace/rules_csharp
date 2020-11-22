@@ -11,7 +11,9 @@ def _make_csharp_provider(tfm):
         doc = "A (usually C#) DLL or exe, targetting %s." % tfm,
         fields = {
             "out": "a dll (for libraries and tests) or an exe (for binaries).",
-            "refout": "A reference-only DLL/exe. See docs/ReferenceAssemblies.md for more info.",
+            "prefout": "A reference-only assembly containing only public symbols. See docs/ReferenceAssemblies.md for more info.",
+            "irefout": "A reference-only assembly containing public and internal symbols. See docs/ReferenceAssemblies.md for more info.",
+            "internals_visible_to": "A list of assemblies that can must use irefout for compilation. See docs/ReferenceAssemblies.md for more info.",
             "pdb": "debug symbols",
             "native_dlls": "A list of native DLLs required to build and run this assembly",
             "deps": "the non-transitive dependencies for this assembly (used by import_multiframework_library).",

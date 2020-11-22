@@ -27,12 +27,14 @@ def _import_library(ctx):
 
     tfm = ctx.attr.target_framework
 
-    (refs, runfiles, native_dlls) = collect_transitive_info(ctx.attr.deps, tfm)
+    (refs, runfiles, native_dlls) = collect_transitive_info(ctx.attr.name, ctx.attr.deps, tfm)
 
     providers = {
         tfm: CSharpAssemblyInfo[tfm](
             out = ctx.file.dll,
-            refout = ctx.file.refdll,
+            prefout = ctx.file.refdll,
+            irefout = None,
+            internals_visible_to = [],
             pdb = ctx.file.pdb,
             native_dlls = depset(direct = ctx.files.native_dlls, transitive = [native_dlls]),
             deps = ctx.attr.deps,
@@ -42,7 +44,7 @@ def _import_library(ctx):
         ),
     }
 
-    fill_in_missing_frameworks(providers)
+    fill_in_missing_frameworks(ctx.attr.name, providers)
 
     return [DefaultInfo(files = depset(files))] + providers.values()
 
@@ -124,7 +126,7 @@ def _import_multiframework_library_impl(ctx):
         if attr != None:
             providers[tfm] = attr[CSharpAssemblyInfo[tfm]]
 
-    fill_in_missing_frameworks(providers)
+    fill_in_missing_frameworks(ctx.attr.name, providers)
 
     # TODO: we don't return an explicit DefaultInfo for this rule... maybe we
     # should construct one from a specific (indicated by the user) framework?

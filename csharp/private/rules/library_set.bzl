@@ -13,12 +13,14 @@ def _library_set(ctx):
 
     tfm = ctx.attr.target_framework
 
-    (refs, runfiles, native_dlls) = collect_transitive_info(ctx.attr.deps, tfm)
+    (refs, runfiles, native_dlls) = collect_transitive_info(ctx.attr.name, ctx.attr.deps, tfm)
 
     providers = {
         tfm: CSharpAssemblyInfo[tfm](
             out = None,
-            refout = None,
+            prefout = None,
+            irefout = None,
+            internals_visible_to = [],
             pdb = None,
             native_dlls = native_dlls,
             deps = ctx.attr.deps,
@@ -28,7 +30,7 @@ def _library_set(ctx):
         ),
     }
 
-    fill_in_missing_frameworks(providers)
+    fill_in_missing_frameworks(ctx.attr.name, providers)
 
     return providers.values()
 
