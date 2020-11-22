@@ -15,7 +15,7 @@ def _library_impl(ctx):
 
     stdrefs = [ctx.attr._stdrefs] if ctx.attr.include_stdrefs else []
 
-    internals_visible_to = write_internals_visible_to(
+    internals_visible_to_cs = write_internals_visible_to(
         ctx.actions,
         name = ctx.attr.name,
         others = ctx.attr.internals_visible_to,
@@ -30,7 +30,8 @@ def _library_impl(ctx):
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
             deps = ctx.attr.deps + stdrefs,
-            internals_visible_to = internals_visible_to,
+            internals_visible_to = ctx.attr.internals_visible_to,
+            internals_visible_to_cs = internals_visible_to_cs,
             keyfile = ctx.file.keyfile,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
@@ -41,7 +42,7 @@ def _library_impl(ctx):
             toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"],
         )
 
-    fill_in_missing_frameworks(providers)
+    fill_in_missing_frameworks(ctx.attr.name, providers)
 
     result = providers.values()
     result.append(DefaultInfo(

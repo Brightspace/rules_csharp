@@ -23,10 +23,11 @@ def is_standard_framework(tfm):
 def is_core_framework(tfm):
     return tfm.startswith("netcoreapp")
 
-def collect_transitive_info(deps, tfm):
+def collect_transitive_info(name, deps, tfm):
     """Determine the transitive dependencies by the target framework.
 
     Args:
+        name: The name of the assembly that is asking.
         deps: Dependencies that the compilation target depends on.
         tfm: The target framework moniker.
 
@@ -48,9 +49,15 @@ def collect_transitive_info(deps, tfm):
         assembly = dep[provider]
 
         # See docs/ReferenceAssemblies.md for more info on why we use (and prefer) refout
-        if assembly.refout:
-            direct_refs.append(assembly.refout)
+        # and the mechanics of irefout vs. prefout.
+        if name not in assembly.internals_visible_to and assembly.prefout:
+            # Best compile caching (prefout changes less frequently than irefout or out)
+            direct_refs.append(assembly.prefout)
+        elif assembly.irefout:
+            # Ok compile caching (irefout changes less frequently than out)
+            direct_refs.append(assembly.irefout)
         elif assembly.out:
+            # No compile caching when the dependencies change
             direct_refs.append(assembly.out)
 
         transitive_refs.append(assembly.transitive_refs)
@@ -75,7 +82,7 @@ def _get_provided_by_netstandard(providerInfo):
 
     return is_standard_framework(actual_tfm) and not is_standard_framework(tfm)
 
-def fill_in_missing_frameworks(providers):
+def fill_in_missing_frameworks(name, providers):
     """Creates extra providers for frameworks that are compatible with us.
 
     Since we may not have built this DLL for all possible frameworks that we're
@@ -84,6 +91,7 @@ def fill_in_missing_frameworks(providers):
     See docs/MultiTargetingDesign.md for more info.
 
     Args:
+      name: The name of the assembly.
       providers: a dict from TFM to a provider.
     """
 
@@ -98,10 +106,12 @@ def fill_in_missing_frameworks(providers):
         # newer netstandard will be preferred, if applicable
         for (base, compatible_tfm) in sorted([(providers[compatible_tfm], compatible_tfm) for compatible_tfm in FRAMEWORK_COMPATIBILITY[tfm] if compatible_tfm in providers], key = _get_provided_by_netstandard):
             # Copy the output from the compatible tfm, re-resolving the deps
-            (refs, runfiles, native_dlls) = collect_transitive_info(base.deps, tfm)
+            (refs, runfiles, native_dlls) = collect_transitive_info(name, base.deps, tfm)
             providers[tfm] = CSharpAssemblyInfo[tfm](
                 out = base.out,
-                refout = base.refout,
+                prefout = base.prefout,
+                irefout = base.irefout,
+                internals_visible_to = base.internals_visible_to,
                 pdb = base.pdb,
                 native_dlls = native_dlls,
                 deps = base.deps,

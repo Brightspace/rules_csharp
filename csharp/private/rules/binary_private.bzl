@@ -22,7 +22,7 @@ def _binary_private_impl(ctx):
 
     stdrefs = [ctx.attr._stdrefs] if ctx.attr.include_stdrefs else []
 
-    internals_visible_to = write_internals_visible_to(
+    internals_visible_to_cs = write_internals_visible_to(
         ctx.actions,
         name = ctx.attr.name,
         others = ctx.attr.internals_visible_to,
@@ -49,7 +49,8 @@ def _binary_private_impl(ctx):
             debug = is_debug(ctx),
             defines = ctx.attr.defines,
             deps = ctx.attr.deps + stdrefs,
-            internals_visible_to = internals_visible_to,
+            internals_visible_to = ctx.attr.internals_visible_to,
+            internals_visible_to_cs = internals_visible_to_cs,
             keyfile = ctx.file.keyfile,
             langversion = ctx.attr.langversion,
             resources = ctx.files.resources,
@@ -61,7 +62,7 @@ def _binary_private_impl(ctx):
             runtimeconfig = runtimeconfig,
         )
 
-    fill_in_missing_frameworks(providers)
+    fill_in_missing_frameworks(ctx.attr.name, providers)
 
     result = providers.values()
 
@@ -76,7 +77,7 @@ def _binary_private_impl(ctx):
             files = direct_runfiles,
             transitive_files = result[0].transitive_runfiles,
         ),
-        files = depset([result[0].out, result[0].refout, result[0].pdb]),
+        files = depset([result[0].out, result[0].prefout, result[0].pdb]),
     ))
 
     return result
