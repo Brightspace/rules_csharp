@@ -1,4 +1,4 @@
 {
-    "postCreateCommand": "npm install -g @bazel/bazelisk && bazel --version",
+    "postCreateCommand": "npm install -g @bazel/bazelisk && bazel --version && go get github.com/bazelbuild/buildtools/buildifier",
     "extensions": ["BazelBuild.vscode-bazel"]
 }
