@@ -47,7 +47,6 @@ def _framework_preprocessor_symbols(tfm):
 
 def AssemblyAction(
         actions,
-        name,
         additionalfiles,
         analyzers,
         debug,
@@ -61,6 +60,7 @@ def AssemblyAction(
         srcs,
         out,
         target,
+        target_name,
         target_framework,
         toolchain,
         runtimeconfig = None):
@@ -70,7 +70,6 @@ def AssemblyAction(
 
     Args:
         actions: Bazel module providing functions to create actions.
-        name: A unique name for this target.
         additionalfiles: Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.
         analyzers: The list of analyzers to run from this assembly.
         debug: Emits debugging information.
@@ -82,6 +81,7 @@ def AssemblyAction(
         langversion: Specify language version: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, or Latest
         resources: The list of resouces to be embedded in the assembly.
         srcs: The list of source (.cs) files that are processed to create the assembly.
+        target_name: A unique name for this target.
         out: Specifies the output file name.
         target: Specifies the format of the output file by using one of four options.
         target_framework: The target framework moniker for the assembly.
@@ -92,12 +92,115 @@ def AssemblyAction(
         The compiled csharp artifacts.
     """
 
-    out_file_name = name if out == "" else out
+    assembly_name = target_name if out == "" else out
+    (subsystem_version, default_lang_version) = GetFrameworkVersionInfo(target_framework)
+    (refs, runfiles, native_dlls) = collect_transitive_info(target_name, deps, target_framework)
+    analyzer_assemblies = [get_analyzer_dll(a) for a in analyzers]
+    defines = _framework_preprocessor_symbols(target_framework) + defines
+
     out_dir = "bazelout/" + target_framework
     out_ext = "dll" if target == "library" else "exe"
-    out_file = actions.declare_file("%s/%s.%s" % (out_dir, out_file_name, out_ext))
-    refout = actions.declare_file("%s/%s.ref.%s" % (out_dir, out_file_name, out_ext))
-    pdb = actions.declare_file("%s/%s.pdb" % (out_dir, out_file_name))
+
+    out_dll = actions.declare_file("%s/%s.%s" % (out_dir, assembly_name, out_ext))
+    out_iref = None
+    out_ref = actions.declare_file("%s/%s.ref.%s" % (out_dir, assembly_name, out_ext))
+    out_pdb = actions.declare_file("%s/%s.pdb" % (out_dir, assembly_name))
+
+    _compile(
+        actions,
+        additionalfiles,
+        analyzer_assemblies,
+        debug,
+        default_lang_version,
+        defines,
+        deps,
+        keyfile,
+        langversion,
+        native_dlls,
+        refs,
+        resources,
+        runfiles,
+        srcs,
+        subsystem_version,
+        target,
+        target_name,
+        target_framework,
+        toolchain,
+        runtimeconfig,
+        out_dll = out_dll,
+        out_ref = out_ref,
+        out_pdb = out_pdb,
+    )
+
+    if internals_visible_to_cs != None:
+        # If the user is using internals_visible_to generate an additional
+        # reference-only DLL that contains the internals.
+        out_iref = actions.declare_file("%s/%s.iref.%s" % (out_dir, assembly_name, out_ext))
+
+        _compile(
+            actions,
+            additionalfiles,
+            analyzer_assemblies,
+            debug,
+            default_lang_version,
+            defines,
+            deps,
+            keyfile,
+            langversion,
+            native_dlls,
+            refs,
+            resources,
+            runfiles,
+            srcs + [internals_visible_to_cs],
+            subsystem_version,
+            target,
+            target_name,
+            target_framework,
+            toolchain,
+            runtimeconfig,
+            out_ref = out_iref,
+            out_dll = None,
+            out_pdb = None,
+        )
+
+    return CSharpAssemblyInfo[target_framework](
+        out = out_dll,
+        irefout = out_iref or out_ref,
+        prefout = out_ref,
+        internals_visible_to = internals_visible_to or [],
+        pdb = out_pdb,
+        native_dlls = native_dlls,
+        deps = deps,
+        transitive_refs = refs,
+        transitive_runfiles = runfiles,
+        actual_tfm = target_framework,
+        runtimeconfig = runtimeconfig,
+    )
+
+def _compile(
+        actions,
+        additionalfiles,
+        analyzer_assemblies,
+        debug,
+        default_lang_version,
+        defines,
+        deps,
+        keyfile,
+        langversion,
+        native_dlls,
+        refs,
+        resources,
+        runfiles,
+        srcs,
+        subsystem_version,
+        target,
+        target_name,
+        target_framework,
+        toolchain,
+        runtimeconfig,
+        out_dll = None,
+        out_ref = None,
+        out_pdb = None):
 
     # Our goal is to match msbuild as much as reasonable
     # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically
@@ -116,14 +219,13 @@ def AssemblyAction(
     else:
         args.add("/highentropyva-")
 
-    (ssv, lang_version) = GetFrameworkVersionInfo(target_framework)
-    if ssv != None:
-        args.add("/subsystemversion:" + ssv)
+    if subsystem_version != None:
+        args.add("/subsystemversion:" + subsystem_version)
 
     args.add("/warn:0")  # TODO: this stuff ought to be configurable
 
     args.add("/target:" + target)
-    args.add("/langversion:" + (langversion or lang_version))
+    args.add("/langversion:" + (langversion or default_lang_version))
 
     if debug:
         args.add("/debug+")
@@ -137,22 +239,22 @@ def AssemblyAction(
     args.add("/debug:portable")
 
     # outputs
-    args.add("/out:" + out_file.path)
-    args.add("/refout:" + refout.path)
-    args.add("/pdb:" + pdb.path)
+    if out_dll != None:
+        args.add("/out:" + out_dll.path)
+        args.add("/refout:" + out_ref.path)
+        args.add("/pdb:" + out_pdb.path)
+        outputs = [out_dll, out_ref, out_pdb]
+    else:
+        args.add("/refonly")
+        args.add("/out:" + out_ref.path)
+        outputs = [out_ref]
 
     # assembly references
-    (refs, runfiles, native_dlls) = collect_transitive_info(name, deps, target_framework)
     args.add_all(refs, map_each = _format_ref_arg)
 
     # analyzers
-    analyzer_assemblies = [get_analyzer_dll(a) for a in analyzers]
-
     args.add_all(analyzer_assemblies, map_each = _format_analyzer_arg)
     args.add_all(additionalfiles, map_each = _format_additionalfile_arg)
-
-    if internals_visible_to_cs != None:
-        srcs = srcs + [internals_visible_to_cs]
 
     # .cs files
     args.add_all([cs for cs in srcs])
@@ -161,10 +263,7 @@ def AssemblyAction(
     args.add_all(resources, map_each = _format_resource_arg)
 
     # defines
-    args.add_all(
-        _framework_preprocessor_symbols(target_framework) + defines,
-        map_each = _format_define,
-    )
+    args.add_all(defines, map_each = _format_define)
 
     # keyfile
     if keyfile != None:
@@ -201,12 +300,12 @@ def AssemblyAction(
     # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/command-line-building-with-csc-exe
     actions.run(
         mnemonic = "CSharpCompile",
-        progress_message = "Compiling " + name,
+        progress_message = "Compiling " + target_name + (" (internals ref-only dll)" if out_dll == None else ""),
         inputs = depset(
             direct = direct_inputs,
             transitive = [refs] + [native_dlls],
         ),
-        outputs = [out_file, refout, pdb],
+        outputs = outputs,
         executable = toolchain.runtime,
         arguments = [
             toolchain.compiler.path,
@@ -216,18 +315,4 @@ def AssemblyAction(
             "/noconfig",
             args,
         ],
-    )
-
-    return CSharpAssemblyInfo[target_framework](
-        out = out_file,
-        irefout = refout, # TODO: generate both
-        prefout = refout,
-        internals_visible_to = internals_visible_to or [],
-        pdb = pdb,
-        native_dlls = native_dlls,
-        deps = deps,
-        transitive_refs = refs,
-        transitive_runfiles = runfiles,
-        actual_tfm = target_framework,
-        runtimeconfig = runtimeconfig,
     )

@@ -43,7 +43,6 @@ def _binary_private_impl(ctx):
 
         providers[tfm] = AssemblyAction(
             ctx.actions,
-            name = ctx.attr.name,
             additionalfiles = ctx.files.additionalfiles,
             analyzers = ctx.attr.analyzers,
             debug = is_debug(ctx),
@@ -57,6 +56,7 @@ def _binary_private_impl(ctx):
             srcs = ctx.files.srcs,
             out = ctx.attr.out,
             target = "winexe" if ctx.attr.winexe else "exe",
+            target_name = ctx.attr.name,
             target_framework = tfm,
             toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"],
             runtimeconfig = runtimeconfig,
