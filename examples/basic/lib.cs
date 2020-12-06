@@ -17,5 +17,7 @@ namespace Lib {
     }
 
     public static bool IsEven( int x ) => x%2 == 0;
+    
+    internal static int NonPublicMethod() => 42;
   }
 }
