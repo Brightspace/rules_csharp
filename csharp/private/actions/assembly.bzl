@@ -106,35 +106,36 @@ def AssemblyAction(
     out_ref = actions.declare_file("%s/%s.ref.%s" % (out_dir, assembly_name, out_ext))
     out_pdb = actions.declare_file("%s/%s.pdb" % (out_dir, assembly_name))
 
-    _compile(
-        actions,
-        additionalfiles,
-        analyzer_assemblies,
-        debug,
-        default_lang_version,
-        defines,
-        deps,
-        keyfile,
-        langversion,
-        native_dlls,
-        refs,
-        resources,
-        runfiles,
-        srcs,
-        subsystem_version,
-        target,
-        target_name,
-        target_framework,
-        toolchain,
-        runtimeconfig,
-        out_dll = out_dll,
-        out_ref = out_ref,
-        out_pdb = out_pdb,
-    )
-
-    if internals_visible_to_cs != None:
+    if internals_visible_to_cs == None:
+        _compile(
+            actions,
+            additionalfiles,
+            analyzer_assemblies,
+            debug,
+            default_lang_version,
+            defines,
+            deps,
+            keyfile,
+            langversion,
+            native_dlls,
+            refs,
+            resources,
+            runfiles,
+            srcs,
+            subsystem_version,
+            target,
+            target_name,
+            target_framework,
+            toolchain,
+            runtimeconfig,
+            out_dll = out_dll,
+            out_ref = out_ref,
+            out_pdb = out_pdb,
+        )
+    else:
         # If the user is using internals_visible_to generate an additional
-        # reference-only DLL that contains the internals.
+        # reference-only DLL that contains the internals. We want the
+        # InternalsVisibleTo in the main DLL too to be less suprising to users.
         out_iref = actions.declare_file("%s/%s.iref.%s" % (out_dir, assembly_name, out_ext))
 
         _compile(
@@ -159,7 +160,34 @@ def AssemblyAction(
             toolchain,
             runtimeconfig,
             out_ref = out_iref,
+            out_dll = out_dll,
+            out_pdb = out_pdb,
+        )
+        
+        # Generate a ref-only DLL without internals
+        _compile(
+            actions,
+            additionalfiles,
+            analyzer_assemblies,
+            debug,
+            default_lang_version,
+            defines,
+            deps,
+            keyfile,
+            langversion,
+            native_dlls,
+            refs,
+            resources,
+            runfiles,
+            srcs,
+            subsystem_version,
+            target,
+            target_name,
+            target_framework,
+            toolchain,
+            runtimeconfig,
             out_dll = None,
+            out_ref = out_ref,
             out_pdb = None,
         )
 
