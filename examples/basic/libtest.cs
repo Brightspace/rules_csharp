@@ -11,5 +11,10 @@ public sealed class LibTests {
             Stuff.Fibonacci( 0, 1 ).Take( 9 )
         );
     }
+    
+    [Test]
+    public void CanSeeInternals() {
+        Assert.AreEqual(42, Stuff.NonPublicMethod());
+    }
 }
 
