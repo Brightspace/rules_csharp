@@ -24,7 +24,6 @@ def _library_impl(ctx):
     for tfm in ctx.attr.target_frameworks:
         providers[tfm] = AssemblyAction(
             ctx.actions,
-            name = ctx.attr.name,
             additionalfiles = ctx.files.additionalfiles,
             analyzers = ctx.attr.analyzers,
             debug = is_debug(ctx),
@@ -38,6 +37,7 @@ def _library_impl(ctx):
             srcs = ctx.files.srcs,
             out = ctx.attr.out,
             target = "library",
+            target_name = ctx.attr.name,
             target_framework = tfm,
             toolchain = ctx.toolchains["@d2l_rules_csharp//csharp/private:toolchain_type"],
         )
