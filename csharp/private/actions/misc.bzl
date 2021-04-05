@@ -6,7 +6,7 @@ load("//csharp/private:sdk.bzl", "RUNTIME_FRAMEWORK_VERSION", "RUNTIME_TFM")
 
 def write_runtimeconfig(actions, template, name, tfm):
     """Create a *.runtimeconfig.json file.
-    
+
     This file is necessary when running a .NET Core binary.
 
     Args:
@@ -53,8 +53,8 @@ def write_internals_visible_to(actions, name, others):
     attrs.set_param_file_format(format = "multiline")
 
     attrs.add_all(
-        others, 
-        format_each = "[assembly: System.Runtime.CompilerServices.InternalsVisibleTo(\"%s\")]"
+        others,
+        format_each = "[assembly: System.Runtime.CompilerServices.InternalsVisibleTo(\"%s\")]",
     )
 
     output = actions.declare_file("bazelout/%s/internalsvisibleto.cs" % name)

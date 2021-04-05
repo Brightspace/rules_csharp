@@ -4,7 +4,7 @@ A wrapper around `dotnet` for Bazel.
 
 def _dotnet_wrapper_impl(ctx):
     if len(ctx.attr.args) > 2:
-      fail("args is too long")
+        fail("args is too long")
 
     main_cc = ctx.actions.declare_file("%s.main.cc" % ctx.attr.name)
 

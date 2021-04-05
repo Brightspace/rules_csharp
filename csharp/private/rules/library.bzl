@@ -1,6 +1,7 @@
 """
 Rules for compiling C# libraries.
 """
+
 load("//csharp/private:providers.bzl", "AnyTargetFrameworkInfo")
 load("//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load("//csharp/private:actions/misc.bzl", "write_internals_visible_to")

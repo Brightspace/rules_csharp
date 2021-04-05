@@ -7,7 +7,7 @@ load("//csharp/private:actions/assembly.bzl", "AssemblyAction")
 load(
     "//csharp/private:actions/misc.bzl",
     "write_internals_visible_to",
-    "write_runtimeconfig"
+    "write_runtimeconfig",
 )
 load(
     "//csharp/private:common.bzl",
