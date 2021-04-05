@@ -163,7 +163,7 @@ def AssemblyAction(
             out_dll = out_dll,
             out_pdb = out_pdb,
         )
-        
+
         # Generate a ref-only DLL without internals
         _compile(
             actions,
@@ -229,7 +229,6 @@ def _compile(
         out_dll = None,
         out_ref = None,
         out_pdb = None):
-
     # Our goal is to match msbuild as much as reasonable
     # https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/listed-alphabetically
     args = actions.args()

@@ -1,6 +1,7 @@
 """
 Rules for importing NuGet packages.
 """
+
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def _get_build_file_content(build_file, build_file_content):

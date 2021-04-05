@@ -27,6 +27,6 @@ csharp_nunit_test(
 csharp_library(
     name = "lib",
     srcs = ["lib.cs"],
+    internals_visible_to = ["lib_test"],
     target_frameworks = ["net5.0"],
-    internals_visible_to = ["lib_test"]
 )
