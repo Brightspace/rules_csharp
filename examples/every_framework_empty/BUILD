@@ -89,6 +89,11 @@ csharp_library(
 )
 
 csharp_library(
+    name = "net6.0",
+    target_frameworks = ["net6.0"],
+)
+
+csharp_library(
     name = "netstandard2.0",
     target_frameworks = ["netstandard2.0"],
 )

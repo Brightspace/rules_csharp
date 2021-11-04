@@ -107,4 +107,5 @@ def setup_basic_nuget_package():
             netcoreapp3_0 = tfms.get("netcoreapp3.0"),
             netcoreapp3_1 = tfms.get("netcoreapp3.1"),
             net5_0 = tfms.get("net5.0"),
+            net6_0 = tfms.get("net6.0"),
         )
