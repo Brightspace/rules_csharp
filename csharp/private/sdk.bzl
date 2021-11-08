@@ -3,19 +3,19 @@ Declarations for the .NET SDK Downloads URLs and version
 
 These are the URLs to download the .NET SDKs for each of the supported operating systems. These URLs are accessible from: https://dotnet.microsoft.com/download/dotnet-core.
 """
-DOTNET_SDK_VERSION = "6.0.100-rc.2.21505.57"
+DOTNET_SDK_VERSION = "6.0.100"
 DOTNET_SDK = {
     "windows": {
-        "url": "https://download.visualstudio.microsoft.com/download/pr/abbdf8c4-cf89-4d7c-972e-398aad2b56ac/b4c6204cc2c7e667e3fe72b6be090252/dotnet-sdk-6.0.100-rc.2.21505.57-win-x64.zip",
-        "hash": "eb0f1cc60c6a44060acd06a66fc6605046e817483b1322cf85b081db71ffbff8",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/ca65b248-9750-4c2d-89e6-ef27073d5e95/05c682ca5498bfabc95985a4c72ac635/dotnet-sdk-6.0.100-win-x64.zip",
+        "hash": "21422989e10fb7ed46e639fc4eccef4b6d09eff842b3f517e80f5569567f4852",
     },
     "linux": {
-        "url": "https://download.visualstudio.microsoft.com/download/pr/20283373-1d83-4879-8278-0afb7fd4035e/56f204f174743b29a656499ad0fc93c3/dotnet-sdk-6.0.100-rc.2.21505.57-linux-x64.tar.gz",
-        "hash": "506752857752512f199e97827c1e102656dc6490585758a93f37a792de2f9461",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/17b6759f-1af0-41bc-ab12-209ba0377779/e8d02195dbf1434b940e0f05ae086453/dotnet-sdk-6.0.100-linux-x64.tar.gz",
+        "hash": "8489a798fcd904a32411d64636e2747edf108192e0b65c6c3ccfb0d302da5ecb",
     },
     "osx": {
-        "url": "https://download.visualstudio.microsoft.com/download/pr/35655ed6-3e37-4fa3-8990-5c1827469ce5/f9f920ff05b0aa5961a8b30e2824de7d/dotnet-sdk-6.0.100-rc.2.21505.57-osx-x64.tar.gz",
-        "hash": "b42a7b378166bee735523f3ee656adbcc28ec6c0bc103ab1379e81a2fbd191f5",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/62f78047-71de-460e-85ca-254f1fa848de/ecabeefdca2902f3f06819612cd9d45c/dotnet-sdk-6.0.100-osx-x64.tar.gz",
+        "hash": "6938e387b3e0c059683ef6ffb4c3ef726189ea88134462666cd6e346ad41294a",
     },
 }
 
