@@ -9,7 +9,7 @@ load(
 csharp_binary(
     name = "hello",
     srcs = ["hello.cs"],
-    target_frameworks = ["net5.0"],
+    target_frameworks = ["net6.0"],
     deps = [":lib"],
 )
 
@@ -20,7 +20,7 @@ csharp_binary(
 csharp_nunit_test(
     name = "lib_test",
     srcs = ["libtest.cs"],
-    target_frameworks = ["net5.0"],
+    target_frameworks = ["net6.0"],
     deps = [":lib"],
 )
 
@@ -28,5 +28,5 @@ csharp_library(
     name = "lib",
     srcs = ["lib.cs"],
     internals_visible_to = ["lib_test"],
-    target_frameworks = ["net5.0"],
+    target_frameworks = ["net6.0"],
 )

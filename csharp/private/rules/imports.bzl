@@ -119,6 +119,7 @@ def _import_multiframework_library_impl(ctx):
         "netcoreapp3.0": ctx.attr.netcoreapp3_0,
         "netcoreapp3.1": ctx.attr.netcoreapp3_1,
         "net5.0": ctx.attr.net5_0,
+        "net6.0": ctx.attr.net6_0,
     }
 
     providers = {}

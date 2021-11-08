@@ -60,6 +60,7 @@ CSharpAssemblyNetCoreApp22Info = _make_csharp_provider("netcoreapp2.2")
 CSharpAssemblyNetCoreApp30Info = _make_csharp_provider("netcoreapp3.0")
 CSharpAssemblyNetCoreApp31Info = _make_csharp_provider("netcoreapp3.1")
 CSharpAssemblyNet50Info = _make_csharp_provider("net5.0")
+CSharpAssemblyNet60Info = _make_csharp_provider("net6.0")
 
 # A dict from TFM to provider. The order of keys is not used.
 CSharpAssemblyInfo = {
@@ -97,6 +98,7 @@ CSharpAssemblyInfo = {
     "netcoreapp3.0": CSharpAssemblyNetCoreApp30Info,
     "netcoreapp3.1": CSharpAssemblyNetCoreApp31Info,
     "net5.0": CSharpAssemblyNet50Info,
+    "net6.0": CSharpAssemblyNet60Info,
 }
 
 # A dict of target frameworks to the set of other framworks it can compile
@@ -143,6 +145,7 @@ FRAMEWORK_COMPATIBILITY = {
     "netcoreapp3.0": ["netcoreapp2.2", "netstandard2.1"],
     "netcoreapp3.1": ["netcoreapp3.0"],
     "net5.0": ["netcoreapp3.1"],
+    "net6.0": ["net5.0"],
 }
 
 _subsystem_version = {
@@ -180,6 +183,7 @@ _subsystem_version = {
     "netcoreapp3.0": None,
     "netcoreapp3.1": None,
     "net5.0": None,
+    "net6.0": None,
 }
 
 _default_lang_version = {
@@ -217,6 +221,7 @@ _default_lang_version = {
     "netcoreapp3.0": "8.0",
     "netcoreapp3.1": "8.0",
     "net5.0": "9.0",
+    "net6.0": "10.0",
 }
 
 def GetFrameworkVersionInfo(tfm):
